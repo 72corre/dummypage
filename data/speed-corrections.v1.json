@@ -1,0 +1,211 @@
+{
+  "kind": "speed-corrections",
+  "version": 1,
+  "source": "特性は build/data/abilities の原文、オーブは corpus-orbs の原文、霊宝の割合%は corpus-reishou の原文への機械検出（無条件の分だけ）。ME はアプリ側が me.v1.json から読む。霊宝の固定値は reishou.v1.json の stats。",
+  "megido": {
+    "真01_リリムR": {
+      "pct": 30,
+      "source": "正邪の双翼"
+    },
+    "祖44_シャックス": {
+      "pct": 30,
+      "source": "暴走少女"
+    },
+    "祖67_アムドゥスキアス": {
+      "pct": 30,
+      "source": "漆黒の翼"
+    }
+  },
+  "orbs": {
+    "orb_433": {
+      "pct": 24,
+      "pctMax": 34,
+      "source": "エルシーハーパー"
+    },
+    "orb_381": {
+      "pct": 24,
+      "pctMax": 34,
+      "source": "エージェント"
+    },
+    "orb_214": {
+      "pct": -6,
+      "pctMax": -14,
+      "source": "ヌメローン"
+    },
+    "orb_401": {
+      "pct": 24,
+      "pctMax": 34,
+      "source": "ネクロス"
+    },
+    "orb_088": {
+      "pct": 6,
+      "pctMax": 14,
+      "source": "プロッキュ"
+    },
+    "orb_548": {
+      "pct": 6,
+      "pctMax": 14,
+      "source": "マイゴエル"
+    },
+    "orb_099": {
+      "pct": 6,
+      "pctMax": 14,
+      "source": "ライトフロッグ"
+    },
+    "orb_528": {
+      "pct": 12,
+      "pctMax": 20,
+      "source": "火殻竜"
+    },
+    "orb_054": {
+      "pct": 6,
+      "pctMax": 14,
+      "source": "オーク熟練槍兵"
+    },
+    "orb_329": {
+      "pct": 16,
+      "pctMax": 24,
+      "source": "コンダコター"
+    },
+    "orb_207": {
+      "pct": 18,
+      "pctMax": 26,
+      "source": "ゴウギ"
+    },
+    "orb_252": {
+      "pct": 15,
+      "pctMax": 25,
+      "source": "ジャガーノート"
+    },
+    "orb_076": {
+      "pct": 6,
+      "pctMax": 14,
+      "source": "ソニックバード"
+    },
+    "orb_322": {
+      "pct": -5,
+      "pctMax": -5,
+      "source": "ピロリン"
+    },
+    "orb_380": {
+      "pct": 24,
+      "pctMax": 34,
+      "source": "プロデューサー"
+    },
+    "orb_429": {
+      "pct": 24,
+      "pctMax": 34,
+      "source": "マスクド・マッド"
+    },
+    "orb_464": {
+      "pct": 18,
+      "pctMax": 26,
+      "source": "メイジマーマン"
+    },
+    "orb_084": {
+      "pct": 6,
+      "pctMax": 14,
+      "source": "レッドラット"
+    },
+    "orb_572": {
+      "pct": 6,
+      "pctMax": 14,
+      "source": "ワン・O・ワン"
+    },
+    "orb_345": {
+      "pct": -10,
+      "pctMax": -10,
+      "source": "竜骨王イルベガン"
+    },
+    "orb_536": {
+      "pct": 24,
+      "pctMax": 34,
+      "source": "エルタニン"
+    },
+    "orb_335": {
+      "pct": 14,
+      "pctMax": 34,
+      "source": "エンキドゥ"
+    },
+    "orb_526": {
+      "pct": 12,
+      "pctMax": 20,
+      "source": "シェルドレイク"
+    },
+    "orb_109": {
+      "pct": 6,
+      "pctMax": 14,
+      "source": "チアリナ"
+    },
+    "orb_562": {
+      "pct": 6,
+      "pctMax": 14,
+      "source": "ハーメルン"
+    },
+    "orb_346": {
+      "pct": 20,
+      "pctMax": 30,
+      "source": "ユアーズ"
+    },
+    "orb_605": {
+      "pct": 18,
+      "pctMax": 26,
+      "source": "俊甲の大角蟲"
+    },
+    "orb_138": {
+      "pct": 12,
+      "pctMax": 20,
+      "source": "黒き淵の鋏手"
+    }
+  },
+  "reishou": {
+    "reishou_m036": {
+      "pct": -5,
+      "source": "蒼星のブレスレット"
+    },
+    "reishou_m037": {
+      "pct": -5,
+      "source": "蒼星のブローチ"
+    },
+    "reishou_m035": {
+      "pct": -5,
+      "source": "蒼星のループタイ"
+    },
+    "reishou_c048": {
+      "pct": -5,
+      "source": "紅蓮の大盾"
+    },
+    "reishou_b054": {
+      "pct": -5,
+      "source": "堅氷の大盾"
+    },
+    "reishou_r014": {
+      "pct": 5,
+      "source": "エベーヌフェイス"
+    },
+    "reishou_r035": {
+      "pct": 5,
+      "source": "ネオンスカル"
+    },
+    "reishou_r020": {
+      "pct": 6,
+      "source": "漆黒のロゴス"
+    },
+    "reishou_r040": {
+      "pct": 7,
+      "source": "絢爛のアルカナ"
+    },
+    "reishou_r057": {
+      "pct": -5,
+      "source": "霹靂の大盾"
+    },
+    "reishou_m011": {
+      "pct": 6,
+      "source": "フォトン焼けの紙束"
+    },
+    "reishou_m029": {
+      "pct": 7,
+      "source": "探求と研鑽の道導"
+    }
+  }
+}
