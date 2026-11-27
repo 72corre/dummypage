@@ -1,0 +1,4382 @@
+{
+  "kind": "enemy-facts",
+  "version": 1,
+  "floor": 34,
+  "squares": {
+    "f34-bs1": {
+      "type": "battle",
+      "enemies": [
+        "ギガンテス",
+        "マセタン",
+        "ディヴァガル"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-bl1": {
+      "type": "battle",
+      "enemies": [
+        "アフロンタレング",
+        "ドラギナッツオ",
+        "ノラモデウス"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-bl2": {
+      "type": "battle",
+      "enemies": [
+        "バリバリアン",
+        "水樹ガオケレナ",
+        "死を育む者"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-bl3": {
+      "type": "battle",
+      "enemies": [
+        "ディヴァガル",
+        "ギガンテス",
+        "マセタン"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-bl4": {
+      "type": "battle",
+      "enemies": [
+        "アフロンタレング",
+        "ノラモデウス",
+        "ドラギナッツオ"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-bl5": {
+      "type": "battle",
+      "enemies": [
+        "水樹ガオケレナ",
+        "死を育む者",
+        "バリバリアン"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-bl6": {
+      "type": "battle",
+      "enemies": [
+        "アフロンタレング",
+        "ノラモデウス",
+        "ドラギナッツオ"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-bl7": {
+      "type": "battle",
+      "enemies": [
+        "バリバリアン",
+        "水樹ガオケレナ",
+        "死を育む者"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-br1": {
+      "type": "battle",
+      "enemies": [
+        "ディヴァガル",
+        "ギガンテス",
+        "マセタン"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-br2": {
+      "type": "battle",
+      "enemies": [
+        "アフロンタレング",
+        "ノラモデウス",
+        "ドラギナッツオ"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-br3": {
+      "type": "battle",
+      "enemies": [
+        "ディヴァガル",
+        "ギガンテス",
+        "マセタン"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-br4": {
+      "type": "battle",
+      "enemies": [
+        "死を育む者",
+        "水樹ガオケレナ",
+        "バリバリアン"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-br5": {
+      "type": "battle",
+      "enemies": [
+        "アフロンタレング",
+        "ノラモデウス",
+        "ドラギナッツオ"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-br6": {
+      "type": "battle",
+      "enemies": [
+        "バリバリアン",
+        "水樹ガオケレナ",
+        "死を育む者"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-br7": {
+      "type": "battle",
+      "enemies": [
+        "アフロンタレング",
+        "ドラギナッツオ",
+        "ノラモデウス"
+      ],
+      "rules": [
+        "全能力+20%（幻獣）"
+      ]
+    },
+    "f34-o": {
+      "type": "boss",
+      "enemies": [
+        "ロクス"
+      ],
+      "rules": [
+        "全能力+20%(幻獣)"
+      ]
+    }
+  },
+  "enemies": {
+    "アフロンタレング": {
+      "name": "アフロンタレング",
+      "qrId": "097",
+      "party": [
+        {
+          "name": "アフロンタレング",
+          "style": "ラッシュ",
+          "class": "スナイパー",
+          "gauge": 4,
+          "hp": 212086,
+          "atk": 1972,
+          "def": 508,
+          "spd": 217,
+          "trait": "「焼弩掃射」戦闘開始時、Bアーツ状態。味方が多いほどダメージ軽減(最大100%)",
+          "skills": null,
+          "leader": true,
+          "race": [
+            "物体",
+            "飛行"
+          ]
+        },
+        {
+          "name": "玉魔虫",
+          "style": "ラッシュ",
+          "class": "スナイパー",
+          "gauge": 2,
+          "hp": 38484,
+          "atk": 1542,
+          "def": 1051,
+          "spd": 534,
+          "trait": "2ターン目まで、行動開始時、スキルを追加する",
+          "skills": null,
+          "leader": false,
+          "race": [
+            "虫",
+            "神"
+          ],
+          "note": "穿通種/暴悪種/体動種/雷毒種の4種でステータス共通。出現数・種の内訳は記事から確定できず"
+        }
+      ],
+      "locations": [
+        {
+          "floor": 32,
+          "squareId": "f32-bl1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl6",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br7",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl1",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl6",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br5",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br7",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl6",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br7",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bs1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        }
+      ],
+      "race": {
+        "values": [
+          "物体",
+          "飛行"
+        ],
+        "status": "取得",
+        "statusDetail": "取得"
+      },
+      "resistances": {
+        "status": "取得",
+        "statusDetail": "取得（ソース表示経由で本体表を取得）",
+        "poles": {
+          "◎（一部難易度）": [
+            "暗闇（N）"
+          ],
+          "◎（全難易度）": [
+            "執心"
+          ],
+          "無効（VHのみ）": [
+            "覚醒↓"
+          ],
+          "無効（全難易度）": [
+            "即死",
+            "毒",
+            "病気",
+            "睡眠",
+            "凍結",
+            "弱体",
+            "位置",
+            "めまい",
+            "感電",
+            "呪い",
+            "混乱",
+            "煉獄",
+            "ねずみ",
+            "ゾンビ",
+            "悪夢",
+            "完殺",
+            "F壊",
+            "F奪",
+            "F転",
+            "F容↓",
+            "F劣",
+            "覚醒+↓"
+          ]
+        },
+        "symbolTable": {
+          "F劣": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F壊": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F奪": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F容↓": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F転": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "ねずみ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "めまい": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "ゾンビ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "位置": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "凍結": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "即死": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "呪い": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "執心": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "完殺": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "弱体": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "悪夢": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "感電": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "暗闇": [
+            "◎",
+            "○",
+            "△"
+          ],
+          "束縛": [
+            "△",
+            "△",
+            "△"
+          ],
+          "毒": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "混乱": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "煉獄": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "病気": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "睡眠": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "覚醒+↓": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "覚醒↓": [
+            "○",
+            "△",
+            "無効"
+          ]
+        },
+        "symbolLegend": "◎=マイナス耐性〜0%（弱点）、○=1〜30%、△=31〜99%、×=100%以上、無効=完全無効（ゲーム内ステータス画面の耐性詳細に対応）",
+        "minionTables": {},
+        "partialEvidence": [],
+        "versionNote": null,
+        "detail": "megido72wiki のソース表示（index.php?cmd=source&page=ステージ93ボス「アフロンタレング」攻略）で、敵ステータス／有効な妨害手段節の「耐性詳細表（記号）」の生テキストを取得。下記は記号表の転記（セル結合は全難易度共通として展開済み）。これはメインクエスト版（N/H/VH）の検証値であり、塔版の耐性と同一とは限らない。版の区別を保持すること。",
+        "provenance": "main"
+      },
+      "traitNote": {
+        "value": "「焼弩掃射」戦闘開始時、Bアーツ状態。味方が多いほどダメージ軽減(最大100%)。毎ターン終了時ランダムな敵単体に攻撃力2倍のダメージを与えバレットを最大5個消費する",
+        "source": "megido72wiki.com ステージ93ボス「アフロンタレング」攻略 敵ステータス／有効な妨害手段節 ステータス表"
+      },
+      "stats": {
+        "hp": 212086,
+        "atk": 1972,
+        "def": 508,
+        "spd": 217,
+        "difficulty": "VH",
+        "state": null,
+        "source": "Wiki「ステージ93ボス「アフロンタレング」攻略」敵ステータス表（VH）",
+        "note": null
+      },
+      "partySource": "corpus-enemies/partyStats（Wiki敵ステータス表）"
+    },
+    "ギガンテス": {
+      "name": "ギガンテス",
+      "qrId": "094",
+      "party": [
+        {
+          "name": "ギガンテス",
+          "style": "ラッシュ",
+          "class": "ファイター",
+          "gauge": 4,
+          "hp": 18150,
+          "atk": 2033,
+          "def": 373,
+          "spd": 305,
+          "trait": "「荒れ狂う氷腕」自身がめまいのとき、状態異常命中率が20%上昇する",
+          "skills": null,
+          "leader": true,
+          "race": [
+            "獣人"
+          ]
+        },
+        {
+          "name": "ウォーロック",
+          "style": "ラッシュ",
+          "class": "スナイパー",
+          "gauge": 3,
+          "hp": 6611,
+          "atk": 1546,
+          "def": 430,
+          "spd": 473,
+          "trait": null,
+          "skills": null,
+          "leader": false,
+          "race": [
+            "獣人"
+          ],
+          "note": "出現数は記事から確定できず"
+        }
+      ],
+      "locations": [
+        {
+          "floor": 32,
+          "squareId": "f32-bs1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bs1",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br1",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bs1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bs2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        }
+      ],
+      "race": {
+        "values": [
+          "獣人"
+        ],
+        "status": "取得",
+        "statusDetail": "取得"
+      },
+      "resistances": {
+        "status": "取得",
+        "statusDetail": "取得（ソース表示経由で本体表を取得）",
+        "poles": {
+          "◎（全難易度）": [
+            "睡眠",
+            "めまい",
+            "煉獄",
+            "完殺",
+            "執心",
+            "覚醒↓"
+          ],
+          "無効（全難易度）": [
+            "即死",
+            "凍結"
+          ]
+        },
+        "symbolTable": {
+          "F劣": [
+            "△",
+            "△",
+            "△"
+          ],
+          "F壊": [
+            "△",
+            "△",
+            "△"
+          ],
+          "F奪": [
+            "○",
+            "○",
+            "○"
+          ],
+          "F容↓": [
+            "△",
+            "△",
+            "△"
+          ],
+          "F転": [
+            "○",
+            "○",
+            "○"
+          ],
+          "ねずみ": [
+            "△",
+            "△",
+            "△"
+          ],
+          "めまい": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "ゾンビ": [
+            "△",
+            "△",
+            "△"
+          ],
+          "位置": [
+            "△",
+            "△",
+            "△"
+          ],
+          "凍結": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "即死": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "呪い": [
+            "△",
+            "△",
+            "△"
+          ],
+          "執心": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "完殺": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "弱体": [
+            "△",
+            "△",
+            "△"
+          ],
+          "悪夢": [
+            "△",
+            "△",
+            "△"
+          ],
+          "感電": [
+            "△",
+            "△",
+            "△"
+          ],
+          "暗闇": [
+            "△",
+            "△",
+            "△"
+          ],
+          "束縛": [
+            "△",
+            "△",
+            "△"
+          ],
+          "毒": [
+            "△",
+            "△",
+            "△"
+          ],
+          "混乱": [
+            "△",
+            "△",
+            "△"
+          ],
+          "煉獄": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "病気": [
+            "△",
+            "△",
+            "△"
+          ],
+          "睡眠": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "覚醒+↓": [
+            "△",
+            "△",
+            "△"
+          ],
+          "覚醒↓": [
+            "◎",
+            "◎",
+            "◎"
+          ]
+        },
+        "symbolLegend": "◎=マイナス耐性〜0%（弱点）、○=1〜30%、△=31〜99%、×=100%以上、無効=完全無効（ゲーム内ステータス画面の耐性詳細に対応）",
+        "minionTables": {},
+        "partialEvidence": [],
+        "versionNote": "耐性・種族はメインクエスト版（ステージ30、N/H/VH）の値。塔版との同一性は未検証。",
+        "detail": "megido72wiki のソース表示（index.php?cmd=source&page=4章その他ステージ攻略）で、ステージ30ボス「ギガンテス」節の「耐性詳細表（記号）」の生テキストを取得。下記は記号表の転記（セル結合は全難易度共通として展開済み）。これはメインクエスト版（N/H/VH）の検証値であり、塔版の耐性と同一とは限らない。版の区別を保持すること。",
+        "provenance": "main"
+      },
+      "traitNote": {
+        "value": "「荒れ狂う氷腕」自身がめまいのとき、状態異常命中率が20%上昇する",
+        "source": "megido72wiki.com 4章その他ステージ攻略 ステージ30ボス「ギガンテス」節 ステータス表"
+      },
+      "stats": {
+        "hp": 18150,
+        "atk": 2033,
+        "def": 373,
+        "spd": 305,
+        "difficulty": "VH",
+        "state": null,
+        "source": "Wiki「4章その他ステージ攻略（ステージ30）」敵ステータス表（VH）",
+        "note": null
+      },
+      "partySource": "corpus-enemies/partyStats（Wiki敵ステータス表）"
+    },
+    "ディヴァガル": {
+      "name": "ディヴァガル",
+      "qrId": "093",
+      "party": [
+        {
+          "name": "ディヴァガル",
+          "style": "ラッシュ",
+          "class": "ファイター",
+          "gauge": 3,
+          "hp": 11320,
+          "atk": 2215,
+          "def": 378,
+          "spd": 486,
+          "trait": "「飢餓」HPが30%以下のとき、フォトン奪取の命中率が20%上昇する",
+          "skills": null,
+          "leader": true,
+          "race": [
+            "虫"
+          ]
+        },
+        {
+          "name": "レリックアンバー",
+          "style": "ラッシュ",
+          "class": "トルーパー",
+          "gauge": 3,
+          "hp": 7607,
+          "atk": 1719,
+          "def": 352,
+          "spd": 484,
+          "trait": null,
+          "skills": null,
+          "leader": false,
+          "race": [
+            "虫"
+          ],
+          "note": "出現数は記事から確定できず"
+        }
+      ],
+      "locations": [
+        {
+          "floor": 32,
+          "squareId": "f32-bs1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bs1",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br1",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bs1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bs2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        }
+      ],
+      "race": {
+        "values": [
+          "虫"
+        ],
+        "status": "取得",
+        "statusDetail": "取得"
+      },
+      "resistances": {
+        "status": "取得",
+        "statusDetail": "取得（ソース表示経由で本体表を取得）",
+        "poles": {
+          "◎（全難易度）": [
+            "完殺",
+            "執心",
+            "覚醒↓",
+            "F壊",
+            "F奪",
+            "F転"
+          ],
+          "無効（全難易度）": [
+            "即死",
+            "感電"
+          ]
+        },
+        "symbolTable": {
+          "F劣": [
+            "△",
+            "△",
+            "△"
+          ],
+          "F壊": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "F奪": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "F容↓": [
+            "△",
+            "△",
+            "△"
+          ],
+          "F転": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "ねずみ": [
+            "△",
+            "△",
+            "△"
+          ],
+          "めまい": [
+            "△",
+            "△",
+            "△"
+          ],
+          "ゾンビ": [
+            "○",
+            "○",
+            "○"
+          ],
+          "位置": [
+            "△",
+            "△",
+            "△"
+          ],
+          "凍結": [
+            "○",
+            "○",
+            "○"
+          ],
+          "即死": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "呪い": [
+            "△",
+            "△",
+            "△"
+          ],
+          "執心": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "完殺": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "弱体": [
+            "△",
+            "△",
+            "△"
+          ],
+          "悪夢": [
+            "△",
+            "△",
+            "△"
+          ],
+          "感電": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "暗闇": [
+            "△",
+            "△",
+            "△"
+          ],
+          "束縛": [
+            "△",
+            "△",
+            "△"
+          ],
+          "毒": [
+            "○",
+            "○",
+            "○"
+          ],
+          "混乱": [
+            "△",
+            "△",
+            "△"
+          ],
+          "煉獄": [
+            "○",
+            "○",
+            "○"
+          ],
+          "病気": [
+            "△",
+            "△",
+            "△"
+          ],
+          "睡眠": [
+            "△",
+            "△",
+            "△"
+          ],
+          "覚醒+↓": [
+            "△",
+            "△",
+            "△"
+          ],
+          "覚醒↓": [
+            "◎",
+            "◎",
+            "◎"
+          ]
+        },
+        "symbolLegend": "◎=マイナス耐性〜0%（弱点）、○=1〜30%、△=31〜99%、×=100%以上、無効=完全無効（ゲーム内ステータス画面の耐性詳細に対応）",
+        "minionTables": {},
+        "partialEvidence": [],
+        "versionNote": "耐性・種族はメインクエスト版（ステージ26、N/H/VH）の値。塔版との同一性は未検証。",
+        "detail": "megido72wiki のソース表示（index.php?cmd=source&page=4章その他ステージ攻略）で、ステージ26ボス「ディヴァガル」節の「耐性詳細表（記号）」の生テキストを取得。下記は記号表の転記（セル結合は全難易度共通として展開済み）。これはメインクエスト版（N/H/VH）の検証値であり、塔版の耐性と同一とは限らない。版の区別を保持すること。",
+        "provenance": "main"
+      },
+      "traitNote": {
+        "value": "「飢餓」HPが30%以下のとき、フォトン奪取の命中率が20%上昇する",
+        "source": "megido72wiki.com 4章その他ステージ攻略 ステージ26ボス「ディヴァガル」節 ステータス表"
+      },
+      "stats": {
+        "hp": 11320,
+        "atk": 2215,
+        "def": 378,
+        "spd": 486,
+        "difficulty": "VH",
+        "state": null,
+        "source": "Wiki「4章その他ステージ攻略（ステージ26）」敵ステータス表（VH）",
+        "note": null
+      },
+      "partySource": "corpus-enemies/partyStats（Wiki敵ステータス表）"
+    },
+    "ドラギナッツオ": {
+      "name": "ドラギナッツオ",
+      "qrId": "099",
+      "party": [
+        {
+          "name": "ドラギナッツオ",
+          "style": "ラッシュ",
+          "class": "ファイター",
+          "gauge": 5,
+          "hp": 170451,
+          "atk": 1762,
+          "def": 662,
+          "spd": 600,
+          "trait": "「懲罰の長」戦闘開始と毎ターン終了時、敵味方をFインパルス状態にし、1ターンの間、敵全体を突風地形にする。消耗状態にならない。フォトン容量+1",
+          "skills": null,
+          "leader": true,
+          "race": [
+            "龍",
+            "飛行"
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "floor": 32,
+          "squareId": "f32-bl1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl6",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br7",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl1",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl6",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br5",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br7",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl6",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br7",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bs1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        }
+      ],
+      "race": {
+        "values": [
+          "龍",
+          "飛行"
+        ],
+        "status": "取得",
+        "statusDetail": "取得"
+      },
+      "resistances": {
+        "status": "取得",
+        "statusDetail": "取得（ソース表示経由で本体表を取得）",
+        "poles": {
+          "×（100%以上）": [
+            "F容↓（H/VH）",
+            "F劣（H/VH）"
+          ],
+          "◎（全難易度）": [
+            "暗闇",
+            "執心"
+          ],
+          "無効（全難易度）": [
+            "即死",
+            "毒",
+            "病気",
+            "睡眠",
+            "凍結",
+            "位置",
+            "呪い",
+            "混乱",
+            "煉獄",
+            "ねずみ",
+            "ゾンビ",
+            "悪夢",
+            "完殺",
+            "覚醒↓",
+            "F壊",
+            "F奪",
+            "F転"
+          ]
+        },
+        "symbolTable": {
+          "F劣": [
+            "△",
+            "×",
+            "×"
+          ],
+          "F壊": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F奪": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F容↓": [
+            "△",
+            "×",
+            "×"
+          ],
+          "F転": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "ねずみ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "めまい": [
+            "△",
+            "△",
+            "△"
+          ],
+          "ゾンビ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "位置": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "凍結": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "即死": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "呪い": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "執心": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "完殺": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "弱体": [
+            "△",
+            "△",
+            "△"
+          ],
+          "悪夢": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "感電": [
+            "△",
+            "△",
+            "△"
+          ],
+          "暗闇": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "束縛": [
+            "△",
+            "△",
+            "△"
+          ],
+          "毒": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "混乱": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "煉獄": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "病気": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "睡眠": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "覚醒+↓": [
+            "△",
+            "△",
+            "△"
+          ],
+          "覚醒↓": [
+            "無効",
+            "無効",
+            "無効"
+          ]
+        },
+        "symbolLegend": "◎=マイナス耐性〜0%（弱点）、○=1〜30%、△=31〜99%、×=100%以上、無効=完全無効（ゲーム内ステータス画面の耐性詳細に対応）",
+        "minionTables": {},
+        "partialEvidence": [],
+        "versionNote": null,
+        "detail": "megido72wiki のソース表示（index.php?cmd=source&page=ステージ95ボス「ドラギナッツオ」攻略）で、敵ステータス／有効な妨害手段節の「耐性詳細表（記号）」の生テキストを取得。下記は記号表の転記（セル結合は全難易度共通として展開済み）。これはメインクエスト版（N/H/VH）の検証値であり、塔版の耐性と同一とは限らない。版の区別を保持すること。",
+        "provenance": "main"
+      },
+      "traitNote": {
+        "value": "「懲罰の長」戦闘開始と毎ターン終了時、敵味方をFインパルス状態にし、1ターンの間、敵全体を突風地形にする。消耗状態にならない。フォトン容量+1",
+        "source": "megido72wiki.com ステージ95ボス「ドラギナッツオ」攻略 敵ステータス／有効な妨害手段節 ステータス表"
+      },
+      "stats": {
+        "hp": 170451,
+        "atk": 1762,
+        "def": 662,
+        "spd": 600,
+        "difficulty": "VH",
+        "state": null,
+        "source": "Wiki「ステージ95ボス「ドラギナッツオ」攻略」敵ステータス表（VH）",
+        "note": null
+      },
+      "partySource": "corpus-enemies/partyStats（Wiki敵ステータス表）"
+    },
+    "ノラモデウス": {
+      "name": "ノラモデウス",
+      "qrId": "098",
+      "party": [
+        {
+          "name": "ノラモデウス",
+          "style": null,
+          "class": null,
+          "gauge": null,
+          "hp": 88800,
+          "atk": 3313,
+          "def": 320,
+          "spd": 730,
+          "trait": null,
+          "skills": null,
+          "leader": true,
+          "race": [
+            "飛行",
+            "不定形",
+            "大幻獣"
+          ],
+          "note": "取り巻き未収集"
+        }
+      ],
+      "locations": [
+        {
+          "floor": 32,
+          "squareId": "f32-bl1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl6",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br7",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl1",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl6",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br5",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br7",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl6",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br7",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bs1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        }
+      ],
+      "race": {
+        "values": [
+          "飛行",
+          "不定形",
+          "大幻獣"
+        ],
+        "status": "取得",
+        "statusDetail": "取得"
+      },
+      "resistances": {
+        "status": "取得",
+        "statusDetail": "取得（ソース表示経由で本体表を取得）",
+        "poles": {
+          "◎（全難易度）": [
+            "暗闇",
+            "執心"
+          ],
+          "無効（全難易度）": [
+            "即死",
+            "病気",
+            "睡眠",
+            "凍結",
+            "位置",
+            "めまい",
+            "感電",
+            "呪い",
+            "混乱",
+            "煉獄",
+            "ねずみ",
+            "ゾンビ",
+            "悪夢",
+            "完殺",
+            "覚醒↓",
+            "F壊",
+            "F奪",
+            "F転",
+            "F容↓"
+          ]
+        },
+        "symbolTable": {
+          "F劣": [
+            "△",
+            "△",
+            "△"
+          ],
+          "F壊": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F奪": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F容↓": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F転": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "ねずみ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "めまい": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "ゾンビ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "位置": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "凍結": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "即死": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "呪い": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "執心": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "完殺": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "弱体": [
+            "○",
+            "○",
+            "○"
+          ],
+          "悪夢": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "感電": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "暗闇": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "束縛": [
+            "△",
+            "△",
+            "△"
+          ],
+          "毒": [
+            "○",
+            "○",
+            "○"
+          ],
+          "混乱": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "煉獄": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "病気": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "睡眠": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "覚醒+↓": [
+            "○",
+            "○",
+            "○"
+          ],
+          "覚醒↓": [
+            "無効",
+            "無効",
+            "無効"
+          ]
+        },
+        "symbolLegend": "◎=マイナス耐性〜0%（弱点）、○=1〜30%、△=31〜99%、×=100%以上、無効=完全無効（ゲーム内ステータス画面の耐性詳細に対応）",
+        "minionTables": {},
+        "partialEvidence": [],
+        "versionNote": null,
+        "detail": "megido72wiki のソース表示（index.php?cmd=source&page=9章その他ステージ攻略）で、ステージ94ボス「ノラモデウス」節の「耐性詳細表（記号）」の生テキストを取得。下記は記号表の転記（セル結合は全難易度共通として展開済み）。これはメインクエスト版（N/H/VH）の検証値であり、塔版の耐性と同一とは限らない。版の区別を保持すること。",
+        "provenance": "main"
+      },
+      "traitNote": {
+        "value": "自身のHPが[100%～30%]の状態で敵から致死ダメージを受けた時踏みとどまり、敵全体の強化を解除し、攻撃力999倍のダメージ。[HP7860以下]のとき、行動開始時覚醒状態",
+        "source": "megido72wiki.com 9章その他ステージ攻略 ステージ94ボス「ノラモデウス」節 ステータス表"
+      },
+      "stats": {
+        "hp": 88800,
+        "atk": 3313,
+        "def": 320,
+        "spd": 730,
+        "difficulty": "VH",
+        "state": null,
+        "source": "Wiki「9章その他ステージ攻略」敵ステータス表の転記（コーパス race.sources 原文より）（VH行に付け替え 2026-11-19）",
+        "note": "取り巻きの個別ステータスは未収集（本体のみ）"
+      },
+      "partySource": "corpus-enemies/partyStats（Wiki敵ステータス表）"
+    },
+    "バリバリアン": {
+      "name": "バリバリアン",
+      "qrId": "075",
+      "party": [
+        {
+          "name": "バリバリアン",
+          "style": null,
+          "class": null,
+          "gauge": null,
+          "hp": 75456,
+          "atk": 1805,
+          "def": 528,
+          "spd": 604,
+          "trait": null,
+          "skills": null,
+          "leader": true,
+          "race": [
+            "獣"
+          ],
+          "note": "取り巻き未収集"
+        }
+      ],
+      "locations": [
+        {
+          "floor": 26,
+          "squareId": "f26-br2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 26,
+          "squareId": "f26-bl4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 26,
+          "squareId": "f26-br4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 27,
+          "squareId": "f27-br2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "被ダメージ20%上昇（メギド）"
+          ]
+        },
+        {
+          "floor": 27,
+          "squareId": "f27-bl3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "被ダメージ20%上昇（メギド）"
+          ]
+        },
+        {
+          "floor": 27,
+          "squareId": "f27-br4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "被ダメージ20%上昇（メギド）"
+          ]
+        },
+        {
+          "floor": 28,
+          "squareId": "f28-br2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 28,
+          "squareId": "f28-bl3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 28,
+          "squareId": "f28-br4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 29,
+          "squareId": "f29-br2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 29,
+          "squareId": "f29-bl3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 29,
+          "squareId": "f29-br4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl7",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br6",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl5",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl7",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br6",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl7",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br6",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        }
+      ],
+      "race": {
+        "values": [
+          "獣"
+        ],
+        "status": "取得",
+        "statusDetail": "取得"
+      },
+      "resistances": {
+        "status": "取得",
+        "statusDetail": "取得（ソース表示経由で本体表を取得）",
+        "poles": {
+          "×（100%以上）": [
+            "感電（VH）",
+            "F容↓（VH）"
+          ],
+          "◎（一部難易度）": [
+            "暗闇（N）",
+            "睡眠（N）",
+            "感電（N）",
+            "束縛（N）",
+            "覚醒↓（N）"
+          ],
+          "◎（全難易度）": [
+            "執心"
+          ],
+          "無効（VHのみ）": [
+            "束縛"
+          ],
+          "無効（全難易度）": [
+            "即死",
+            "毒",
+            "病気",
+            "凍結",
+            "位置",
+            "めまい",
+            "呪い",
+            "混乱",
+            "煉獄",
+            "ねずみ",
+            "ゾンビ",
+            "悪夢",
+            "完殺",
+            "F壊",
+            "F奪",
+            "F転"
+          ]
+        },
+        "symbolTable": {
+          "F劣": [
+            "△",
+            "△",
+            "△"
+          ],
+          "F壊": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F奪": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F容↓": [
+            "△",
+            "△",
+            "×"
+          ],
+          "F転": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "ねずみ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "めまい": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "ゾンビ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "位置": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "凍結": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "即死": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "呪い": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "執心": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "完殺": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "弱体": [
+            "△",
+            "△",
+            "△"
+          ],
+          "悪夢": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "感電": [
+            "◎",
+            "△",
+            "×"
+          ],
+          "暗闇": [
+            "◎",
+            "○",
+            "△"
+          ],
+          "束縛": [
+            "◎",
+            "△",
+            "無効"
+          ],
+          "毒": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "混乱": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "煉獄": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "病気": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "睡眠": [
+            "◎",
+            "○",
+            "△"
+          ],
+          "覚醒+↓": [
+            "△",
+            "△",
+            "△"
+          ],
+          "覚醒↓": [
+            "◎",
+            "○",
+            "△"
+          ]
+        },
+        "symbolLegend": "◎=マイナス耐性〜0%（弱点）、○=1〜30%、△=31〜99%、×=100%以上、無効=完全無効（ゲーム内ステータス画面の耐性詳細に対応）",
+        "minionTables": {},
+        "partialEvidence": [],
+        "versionNote": null,
+        "detail": "megido72wiki のソース表示（index.php?cmd=source&page=9章その他ステージ攻略）で、ステージ89ボス「バリバリアン」節の「耐性詳細表（記号）」の生テキストを取得。下記は記号表の転記（セル結合は全難易度共通として展開済み）。これはメインクエスト版（N/H/VH）の検証値であり、塔版の耐性と同一とは限らない。版の区別を保持すること。",
+        "provenance": "main"
+      },
+      "traitNote": {
+        "value": "「怨念支配」ターン終了時、攻撃を1回無効化する。戦闘不能時、2ターンの間、味方全体の攻撃力を50%上昇、スキル追加。戦闘不能の味方がいるときスキルの範囲が全体化",
+        "source": "megido72wiki.com 9章その他ステージ攻略 ステージ89ボス「バリバリアン」節 ステータス表"
+      },
+      "stats": {
+        "hp": 75456,
+        "atk": 1805,
+        "def": 528,
+        "spd": 604,
+        "difficulty": "VH",
+        "state": null,
+        "source": "Wiki「9章その他ステージ攻略」敵ステータス表の転記（コーパス race.sources 原文より）（VH行に付け替え 2026-11-19）",
+        "note": "取り巻きの個別ステータスは未収集（本体のみ）"
+      },
+      "partySource": "corpus-enemies/partyStats（Wiki敵ステータス表）"
+    },
+    "マセタン": {
+      "name": "マセタン",
+      "qrId": "074",
+      "party": [
+        {
+          "name": "マセタン",
+          "style": "カウンター",
+          "class": "ファイター",
+          "gauge": 5,
+          "hp": 110160,
+          "atk": 1548,
+          "def": 1012,
+          "spd": 525,
+          "trait": "「レイジヒール」戦闘開始時、自身をバーサーク状態にする。怒闘状態中、ターン終了時に自身のHPを20%回復し、状態異常を治療する",
+          "skills": {
+            "awakened": "「強襲の下準備」自身にアタックフォトンを2つ追加し、2ターンの間、アタックを強化する",
+            "skill": "「暗殺者の怒気」敵単体に攻撃力1.5倍のダメージ。さらに70%の確率で自身にアタックフォトンを1つ追加。敵と味方の編成を怒闘状態にする",
+            "ultimate": "「殺しの極意」敵単体に無敵と回数バリアの効果を無視する攻撃力3倍ダメージ"
+          },
+          "leader": true,
+          "race": [
+            "神"
+          ]
+        },
+        {
+          "name": "オコリンA",
+          "style": "カウンター",
+          "class": "ファイター",
+          "gauge": 4,
+          "hp": 45619,
+          "atk": 1428,
+          "def": 900,
+          "spd": 500,
+          "trait": "「怒気の連鎖」範囲ダメージを50%軽減。リーダーがバーサーク状態のとき、ターン終了時に自身をバーサーク状態にする",
+          "skills": {
+            "awakened": "「怒りの献上」味方単体の状態異常を治癒する。さらにアタックフォトンを1つ追加する",
+            "skill": "「膨れ上がる恨み」敵単体に攻撃力1.3倍のダメージ。さらに50%の確率で、自身にアタックフォトンを1つ追加する",
+            "ultimate": "「激怒の追い打ち」2ターンの間、味方のアタックに対して自身が追撃する状態になる。さらにリーダーにアタックフォトンを1つ追加する"
+          },
+          "leader": false,
+          "race": [
+            "虫"
+          ]
+        },
+        {
+          "name": "オコリンB",
+          "style": "カウンター",
+          "class": "ファイター",
+          "gauge": 4,
+          "hp": 45619,
+          "atk": 1428,
+          "def": 900,
+          "spd": 500,
+          "trait": "「怒気の連鎖」範囲ダメージを50%軽減。リーダーがバーサーク状態のとき、ターン終了時に自身をバーサーク状態にする",
+          "skills": {
+            "awakened": "「怒りの献上」味方単体の状態異常を治癒する。さらにアタックフォトンを1つ追加する",
+            "skill": "「膨れ上がる恨み」敵単体に攻撃力1.3倍のダメージ。さらに50%の確率で、自身にアタックフォトンを1つ追加する",
+            "ultimate": "「激怒の追い打ち」2ターンの間、味方のアタックに対して自身が追撃する状態になる。さらにリーダーにアタックフォトンを1つ追加する"
+          },
+          "leader": false,
+          "race": [
+            "虫"
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "floor": 26,
+          "squareId": "f26-bs1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 26,
+          "squareId": "f26-bl2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 26,
+          "squareId": "f26-br2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 26,
+          "squareId": "f26-br3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 26,
+          "squareId": "f26-bl4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 26,
+          "squareId": "f26-br4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 27,
+          "squareId": "f27-bl2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "被ダメージ20%上昇（メギド）"
+          ]
+        },
+        {
+          "floor": 27,
+          "squareId": "f27-br2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "被ダメージ20%上昇（メギド）"
+          ]
+        },
+        {
+          "floor": 27,
+          "squareId": "f27-bl3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "被ダメージ20%上昇（メギド）"
+          ]
+        },
+        {
+          "floor": 27,
+          "squareId": "f27-br3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "被ダメージ20%上昇（メギド）"
+          ]
+        },
+        {
+          "floor": 27,
+          "squareId": "f27-bl4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "被ダメージ20%上昇（メギド）"
+          ]
+        },
+        {
+          "floor": 27,
+          "squareId": "f27-br4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "被ダメージ20%上昇（メギド）"
+          ]
+        },
+        {
+          "floor": 28,
+          "squareId": "f28-bl2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 28,
+          "squareId": "f28-br2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 28,
+          "squareId": "f28-bl3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 28,
+          "squareId": "f28-br3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 28,
+          "squareId": "f28-bl4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 28,
+          "squareId": "f28-br4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 29,
+          "squareId": "f29-bl2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 29,
+          "squareId": "f29-br2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 29,
+          "squareId": "f29-bl3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 29,
+          "squareId": "f29-br3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 29,
+          "squareId": "f29-bl4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 29,
+          "squareId": "f29-br4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "ペインフォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bs1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bs1",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br1",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br3",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bs1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bs2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl1",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        }
+      ],
+      "race": {
+        "values": [
+          "神"
+        ],
+        "status": "取得",
+        "statusDetail": "取得"
+      },
+      "resistances": {
+        "status": "取得",
+        "statusDetail": "取得（ソース表示経由で本体表を取得）",
+        "poles": {
+          "×（100%以上）": [
+            "F劣（VH）"
+          ],
+          "◎（一部難易度）": [
+            "めまい（N/H）",
+            "束縛（N/H）"
+          ],
+          "◎（全難易度）": [
+            "病気",
+            "執心"
+          ],
+          "無効（全難易度）": [
+            "即死",
+            "毒",
+            "暗闇",
+            "睡眠",
+            "凍結",
+            "位置",
+            "感電",
+            "呪い",
+            "混乱",
+            "煉獄",
+            "ねずみ",
+            "悪夢",
+            "完殺",
+            "覚醒↓",
+            "F奪",
+            "F転",
+            "F容↓"
+          ]
+        },
+        "symbolTable": {
+          "F劣": [
+            "△",
+            "△",
+            "×"
+          ],
+          "F壊": [
+            "○",
+            "○",
+            "△"
+          ],
+          "F奪": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F容↓": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F転": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "ねずみ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "めまい": [
+            "◎",
+            "◎",
+            "○"
+          ],
+          "ゾンビ": [
+            "△",
+            "△",
+            "△"
+          ],
+          "位置": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "凍結": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "即死": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "呪い": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "執心": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "完殺": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "弱体": [
+            "○",
+            "○",
+            "△"
+          ],
+          "悪夢": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "感電": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "暗闇": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "束縛": [
+            "◎",
+            "◎",
+            "○"
+          ],
+          "毒": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "混乱": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "煉獄": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "病気": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "睡眠": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "覚醒+↓": [
+            "○",
+            "○",
+            "△"
+          ],
+          "覚醒↓": [
+            "無効",
+            "無効",
+            "無効"
+          ]
+        },
+        "symbolLegend": "◎=マイナス耐性〜0%（弱点）、○=1〜30%、△=31〜99%、×=100%以上、無効=完全無効（ゲーム内ステータス画面の耐性詳細に対応）",
+        "minionTables": {},
+        "partialEvidence": [],
+        "versionNote": null,
+        "detail": "megido72wiki のソース表示（index.php?cmd=source&page=ステージ88ボス「マセタン」攻略）で、敵ステータス／有効な妨害手段節の「耐性詳細表（記号）」の生テキストを取得。下記は記号表の転記（セル結合は全難易度共通として展開済み）。これはメインクエスト版（N/H/VH）の検証値であり、塔版の耐性と同一とは限らない。版の区別を保持すること。",
+        "provenance": "main"
+      },
+      "traitNote": {
+        "value": "「レイジヒール」戦闘開始時、自身をバーサーク状態にする。怒闘状態中、ターン終了時に自身のHPを10%回復し、状態異常を治療する",
+        "source": "megido72wiki.com ステージ88ボス「マセタン」攻略 敵ステータス／有効な妨害手段節 ステータス表"
+      },
+      "stats": {
+        "hp": 110160,
+        "atk": 1548,
+        "def": 1012,
+        "spd": 525,
+        "difficulty": "VH",
+        "state": null,
+        "source": "Wiki「ステージ88ボス「マセタン」攻略」敵ステータス表の転記（コーパス race.sources 原文より）（VH行に付け替え 2026-11-19）",
+        "note": "取り巻きはオコリンA・オコリンB（partyStatsに統合済み。Wikiステージ88表のVH行、2026-11-20収集）"
+      },
+      "partySource": "corpus-enemies/partyStats（Wiki敵ステータス表）",
+      "partyNote": "取り巻きはオコリンA・Bの2体（出典ページの見出し「オコリンA～B」）。"
+    },
+    "ロクス": {
+      "name": "ロクス",
+      "qrId": "102",
+      "party": [
+        {
+          "name": "ロクス",
+          "style": null,
+          "class": null,
+          "gauge": null,
+          "hp": 202340,
+          "atk": 1909,
+          "def": 621,
+          "spd": 550,
+          "trait": null,
+          "skills": null,
+          "leader": true,
+          "race": [
+            "悪魔"
+          ],
+          "note": "取り巻き未収集"
+        }
+      ],
+      "locations": [
+        {
+          "floor": 34,
+          "squareId": "f34-o",
+          "squareType": "boss",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%(幻獣)"
+          ]
+        }
+      ],
+      "race": {
+        "values": [
+          "悪魔"
+        ],
+        "status": "取得",
+        "statusDetail": "取得"
+      },
+      "resistances": {
+        "status": "取得",
+        "statusDetail": "取得（ソース表示経由で本体表を取得）",
+        "poles": {
+          "◎（全難易度）": [
+            "執心"
+          ],
+          "無効（全難易度）": [
+            "即死",
+            "毒",
+            "病気",
+            "睡眠",
+            "凍結",
+            "位置",
+            "混乱",
+            "煉獄",
+            "ねずみ",
+            "ゾンビ",
+            "悪夢",
+            "完殺",
+            "F壊",
+            "F奪",
+            "F転",
+            "F容↓",
+            "F劣"
+          ]
+        },
+        "symbolTable": {
+          "F劣": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F壊": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F奪": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F容↓": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F転": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "ねずみ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "めまい": [
+            "△",
+            "△",
+            "△"
+          ],
+          "ゾンビ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "位置": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "凍結": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "即死": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "呪い": [
+            "○",
+            "△",
+            "△"
+          ],
+          "執心": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "完殺": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "弱体": [
+            "△",
+            "△",
+            "△"
+          ],
+          "悪夢": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "感電": [
+            "○",
+            "△",
+            "△"
+          ],
+          "暗闇": [
+            "△",
+            "△",
+            "△"
+          ],
+          "束縛": [
+            "△",
+            "△",
+            "△"
+          ],
+          "毒": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "混乱": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "煉獄": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "病気": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "睡眠": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "覚醒+↓": [
+            "△",
+            "△",
+            "△"
+          ],
+          "覚醒↓": [
+            "○",
+            "△",
+            "△"
+          ]
+        },
+        "symbolLegend": "◎=マイナス耐性〜0%（弱点）、○=1〜30%、△=31〜99%、×=100%以上、無効=完全無効（ゲーム内ステータス画面の耐性詳細に対応）",
+        "minionTables": {},
+        "partialEvidence": [],
+        "versionNote": null,
+        "detail": "megido72wiki のソース表示（index.php?cmd=source&page=ステージ96ボス「ロクス」攻略）で、敵ステータス／有効な妨害手段節の「耐性詳細表（記号）」の生テキストを取得。下記は記号表の転記（セル結合は全難易度共通として展開済み）。これはメインクエスト版（N/H/VH）の検証値であり、塔版の耐性と同一とは限らない。版の区別を保持すること。",
+        "provenance": "main"
+      },
+      "traitNote": {
+        "value": "シフト1「自己再生機構」1ターンの間に受けた攻撃ダメージが2回以下ならターン終了時HP10%回復。敵の数が多いほど受けるダメージを軽減（最大50%）。奥義のたびにシフトし、機構が自己超再生機構→生存渇望機構→存在証明機構へ変化する",
+        "source": "megido72wiki.com ステージ96ボス「ロクス」攻略 敵ステータス／有効な妨害手段節 ステータス表"
+      },
+      "stats": {
+        "hp": 202340,
+        "atk": 1909,
+        "def": 621,
+        "spd": 550,
+        "difficulty": "VH",
+        "state": null,
+        "source": "Wiki「ステージ96ボス「ロクス」攻略」敵ステータス表の転記（コーパス race.sources 原文より）（VH行に付け替え 2026-11-19）",
+        "note": "取り巻きの個別ステータスは未収集（本体のみ）"
+      },
+      "partySource": "corpus-enemies/partyStats（Wiki敵ステータス表）"
+    },
+    "死を育む者": {
+      "name": "死を育む者",
+      "qrId": "096",
+      "party": [
+        {
+          "name": "死を育む者",
+          "style": "ラッシュ",
+          "class": "スナイパー",
+          "gauge": 4,
+          "hp": 32171,
+          "atk": 1736,
+          "def": 563,
+          "spd": 822,
+          "trait": "「夢への誘い」通常攻撃時、40%の確率で、2ターンの間、敵を睡眠状態にする。さらに地形の効果を受けない",
+          "skills": null,
+          "leader": true,
+          "race": [
+            "死者",
+            "大幻獣"
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "floor": 32,
+          "squareId": "f32-bl2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl7",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br6",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl5",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl7",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br6",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl7",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br6",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        }
+      ],
+      "race": {
+        "values": [
+          "死者",
+          "大幻獣"
+        ],
+        "status": "取得",
+        "statusDetail": "取得",
+        "note": "オーブ側の種族属性と、敵ボス種族の一覧（二次情報）が一致したため敵種族として採用。megido72wiki の敵ステータス表そのものでは未確認"
+      },
+      "resistances": {
+        "status": "取得",
+        "statusDetail": "取得（ソース表示経由で本体表を取得）",
+        "poles": {
+          "◎（全難易度）": [
+            "完殺",
+            "執心"
+          ],
+          "無効（全難易度）": [
+            "即死",
+            "病気",
+            "睡眠",
+            "凍結",
+            "位置",
+            "めまい",
+            "感電",
+            "混乱",
+            "ねずみ",
+            "ゾンビ",
+            "悪夢",
+            "F容↓"
+          ]
+        },
+        "symbolTable": {
+          "F劣": [
+            "○",
+            "△",
+            "△"
+          ],
+          "F壊": [
+            "○",
+            "△",
+            "△"
+          ],
+          "F奪": [
+            "○",
+            "○",
+            "○"
+          ],
+          "F容↓": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F転": [
+            "○",
+            "○",
+            "△"
+          ],
+          "ねずみ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "めまい": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "ゾンビ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "位置": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "凍結": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "即死": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "呪い": [
+            "○",
+            "○",
+            "△"
+          ],
+          "執心": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "完殺": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "弱体": [
+            "○",
+            "△",
+            "△"
+          ],
+          "悪夢": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "感電": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "暗闇": [
+            "○",
+            "△",
+            "△"
+          ],
+          "束縛": [
+            "○",
+            "○",
+            "△"
+          ],
+          "毒": [
+            "○",
+            "△",
+            "△"
+          ],
+          "混乱": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "煉獄": [
+            "△",
+            "△",
+            "△"
+          ],
+          "病気": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "睡眠": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "覚醒+↓": [
+            "○",
+            "△",
+            "△"
+          ],
+          "覚醒↓": [
+            "○",
+            "△",
+            "△"
+          ]
+        },
+        "symbolLegend": "◎=マイナス耐性〜0%（弱点）、○=1〜30%、△=31〜99%、×=100%以上、無効=完全無効（ゲーム内ステータス画面の耐性詳細に対応）",
+        "minionTables": {},
+        "partialEvidence": [],
+        "versionNote": null,
+        "detail": "megido72wiki のソース表示（index.php?cmd=source&page=死を育む者討伐）で、敵ステータス／有効な妨害手段節の「耐性詳細表（記号）」の生テキストを取得。下記は記号表の転記（セル結合は全難易度共通として展開済み）。これはメインクエスト版（N/H/VH）の検証値であり、塔版の耐性と同一とは限らない。版の区別を保持すること。注意：この討伐ページの記号表は難易度がN/H/VH/EXの4段階。下記[N,H,VH]はN/H/VH列の転記（EXもほぼ同型で、F奪のみEXで△に落ちる）。パイロット調査では心深圏ページ側のみを確認し本ページの表に到達できなかったため、基本形ファイルの耐性は「見つからなかった」のまま残してある。本ファイルに討伐版の本体表を格納する。",
+        "provenance": "main"
+      },
+      "traitNote": {
+        "value": "「夢への誘い」通常攻撃時、[40%]の確率で、2ターンの間、敵を睡眠状態にする。さらに地形の効果を受けない",
+        "source": "連鎖のDCGブログ「状態異常を使うボスと耐性オーブまとめ」睡眠節 / megido72wiki.com 心深圏「幻糸の禁盤」攻略 死を育む者節（確定睡眠への対策が主題）"
+      },
+      "stats": {
+        "hp": 32171,
+        "atk": 1736,
+        "def": 563,
+        "spd": 822,
+        "difficulty": "VH（Lv70）",
+        "state": "通常",
+        "source": "Wiki「死を育む者討伐」敵ステータス表（VH（Lv70））",
+        "note": null
+      },
+      "partySource": "corpus-enemies/partyStats（Wiki敵ステータス表）"
+    },
+    "水樹ガオケレナ": {
+      "name": "水樹ガオケレナ",
+      "qrId": "095",
+      "party": [
+        {
+          "name": "水樹ガオケレナ",
+          "style": "バースト",
+          "class": "スナイパー",
+          "gauge": 8,
+          "hp": 14608,
+          "atk": 1100,
+          "def": 782,
+          "spd": 644,
+          "trait": "「世界海の大樹」行動開始時、スキルを追加する。さらに、受けるダメージを50%軽減する。ただし、凍結中は軽減効果を発揮しない",
+          "skills": null,
+          "leader": true,
+          "race": [
+            "植物",
+            "大幻獣"
+          ]
+        },
+        {
+          "name": "ライセミニブス",
+          "style": "バースト",
+          "class": "ファイター",
+          "gauge": 6,
+          "hp": 9475,
+          "atk": 1632,
+          "def": 394,
+          "spd": 603,
+          "trait": "「水樹の加護」受けるダメージを50%軽減する。ただし、凍結中は効果を発揮しない",
+          "skills": null,
+          "leader": false,
+          "race": [
+            "植物"
+          ],
+          "note": "ライセミニブスA～Dの4体（ステータス共通）"
+        },
+        {
+          "name": "ライセミニブス",
+          "style": "バースト",
+          "class": "ファイター",
+          "gauge": 6,
+          "hp": 9475,
+          "atk": 1632,
+          "def": 394,
+          "spd": 603,
+          "trait": "「水樹の加護」受けるダメージを50%軽減する。ただし、凍結中は効果を発揮しない",
+          "skills": null,
+          "leader": false,
+          "race": [
+            "植物"
+          ],
+          "note": "ライセミニブスA～Dの4体（ステータス共通）"
+        },
+        {
+          "name": "ライセミニブス",
+          "style": "バースト",
+          "class": "ファイター",
+          "gauge": 6,
+          "hp": 9475,
+          "atk": 1632,
+          "def": 394,
+          "spd": 603,
+          "trait": "「水樹の加護」受けるダメージを50%軽減する。ただし、凍結中は効果を発揮しない",
+          "skills": null,
+          "leader": false,
+          "race": [
+            "植物"
+          ],
+          "note": "ライセミニブスA～Dの4体（ステータス共通）"
+        },
+        {
+          "name": "ライセミニブス",
+          "style": "バースト",
+          "class": "ファイター",
+          "gauge": 6,
+          "hp": 9475,
+          "atk": 1632,
+          "def": 394,
+          "spd": 603,
+          "trait": "「水樹の加護」受けるダメージを50%軽減する。ただし、凍結中は効果を発揮しない",
+          "skills": null,
+          "leader": false,
+          "race": [
+            "植物"
+          ],
+          "note": "ライセミニブスA～Dの4体（ステータス共通）"
+        }
+      ],
+      "locations": [
+        {
+          "floor": 32,
+          "squareId": "f32-bl2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-bl7",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 32,
+          "squareId": "f32-br6",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "特殊フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl2",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl5",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-bl7",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br4",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 33,
+          "squareId": "f33-br6",
+          "squareType": "battle",
+          "theme": "HP引き継ぎ禁止",
+          "rules": [
+            "劣化フォトン発生"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl5",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-bl7",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 34,
+          "squareId": "f34-br6",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "全能力+20%（幻獣）"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-bl3",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br2",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        },
+        {
+          "floor": 35,
+          "squareId": "f35-br4",
+          "squareType": "battle",
+          "theme": "なし",
+          "rules": [
+            "スキル強化"
+          ]
+        }
+      ],
+      "race": {
+        "values": [
+          "植物",
+          "大幻獣"
+        ],
+        "status": "取得",
+        "statusDetail": "取得"
+      },
+      "resistances": {
+        "status": "取得",
+        "statusDetail": "取得（ソース表示経由で本体表を取得）",
+        "poles": {
+          "◎（一部難易度）": [
+            "凍結（N/H）",
+            "めまい（H）"
+          ],
+          "◎（全難易度）": [
+            "完殺",
+            "執心",
+            "覚醒↓"
+          ],
+          "無効（VHのみ）": [
+            "毒"
+          ],
+          "無効（全難易度）": [
+            "即死",
+            "病気",
+            "暗闇",
+            "睡眠",
+            "弱体",
+            "位置",
+            "呪い",
+            "束縛",
+            "混乱",
+            "煉獄",
+            "ねずみ",
+            "ゾンビ",
+            "悪夢",
+            "F壊",
+            "F奪",
+            "F容↓",
+            "F劣",
+            "覚醒+↓"
+          ]
+        },
+        "symbolTable": {
+          "F劣": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F壊": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F奪": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F容↓": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "F転": [
+            "○",
+            "○",
+            "△"
+          ],
+          "ねずみ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "めまい": [
+            "無効",
+            "◎",
+            "○"
+          ],
+          "ゾンビ": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "位置": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "凍結": [
+            "◎",
+            "◎",
+            "○"
+          ],
+          "即死": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "呪い": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "執心": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "完殺": [
+            "◎",
+            "◎",
+            "◎"
+          ],
+          "弱体": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "悪夢": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "感電": [
+            "無効",
+            "△",
+            "○"
+          ],
+          "暗闇": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "束縛": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "毒": [
+            "○",
+            "無効",
+            "無効"
+          ],
+          "混乱": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "煉獄": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "病気": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "睡眠": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "覚醒+↓": [
+            "無効",
+            "無効",
+            "無効"
+          ],
+          "覚醒↓": [
+            "◎",
+            "◎",
+            "◎"
+          ]
+        },
+        "symbolLegend": "◎=マイナス耐性〜0%（弱点）、○=1〜30%、△=31〜99%、×=100%以上、無効=完全無効（ゲーム内ステータス画面の耐性詳細に対応）",
+        "minionTables": {},
+        "partialEvidence": [],
+        "versionNote": null,
+        "detail": "megido72wiki のソース表示（index.php?cmd=source&page=水樹ガオケレナ討伐）で、敵ステータス／有効な妨害手段節の「耐性詳細表（記号）」の生テキストを取得。下記は記号表の転記（セル結合は全難易度共通として展開済み）。これはメインクエスト版（N/H/VH）の検証値であり、塔版の耐性と同一とは限らない。版の区別を保持すること。注意：この討伐ページの記号表は難易度がN/H/VH/EXの4段階。下記[N,H,VH]はN/H/VH列の転記で、EX列は一部異なる（感電はEXで◎、めまいはEXで△、凍結はEXも○、F転はEXも△）。難易度が上がるほど感電・めまい耐性が下がる逆転型の実例（本文にも「EXでは感電耐性がほぼ皆無」と明記）。",
+        "provenance": "main"
+      },
+      "traitNote": {
+        "value": "「世界海の大樹」行動開始時、スキルを追加する。さらに、受けるダメージを[50%]軽減する。ただし、凍結中は軽減効果を発揮しない",
+        "source": "megido72wiki.com 水樹ガオケレナ討伐 敵ステータス／有効な妨害手段節 ステータス表"
+      },
+      "stats": {
+        "hp": 14608,
+        "atk": 1100,
+        "def": 782,
+        "spd": 644,
+        "difficulty": "VH（Lv70）",
+        "state": "通常",
+        "source": "Wiki「水樹ガオケレナ討伐」敵ステータス表（VH（Lv70））",
+        "note": null
+      },
+      "partySource": "corpus-enemies/partyStats（Wiki敵ステータス表）"
+    }
+  }
+}

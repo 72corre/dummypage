@@ -1,0 +1,6761 @@
+{
+  "kind": "hbomb-actions",
+  "version": 1,
+  "note": "Hボムプランナーのボム行動の索引。corpus/・corpus-orbs/・corpus-me/・corpus-reishou/ から生成（build/pipeline/generate-hbomb.mjs）。倍率は＋版（専用霊宝版は needsReishou）を正とし、オーブは最大強化前提。reishouBoost は霊宝ID→ハイドロボムのダメージ上昇率。debuff は編成が付ける防御力低下・虚弱と、虚弱の数えに入る弱体・状態異常の種類（条件つきの効果と持続が確定できない効果は含まない。ただし同一行動内の逐次条件＝前段が条件の状態を付ける場合は後段も含む）。branchOnHeavy は対象の状態で分岐する行動（ウァプラR奥義の専用霊宝版: 重が付与されていなければ重を付与し、重が付与されていれば錬成する）。levels は Lv で数値が変わる能力（6件）の Lv ごとのスナップショット（トップレベルの値は Lv1。levelMode は Lv の上がり方で、アガリアレプトの覚醒スキルだけターン経過の turn、他は使用回数の use）。form は分岐形（大協奏・ネクロ・封印時・チェイン1・チェイン2・全体・お返し状態時）で、基本形と弱体・範囲が食い違う分岐だけを別行動として持つ（範囲は基本形の部分だけで決める）。stacks は「この効果は重複して付与される」行動（サルガタナスのスキルの専用霊宝版だけ）で、同じ発生源でも上書きせず付け足す。key が trait の行動は特性が置くボム（シャミハザRだけ）で、free（手数を消費しない）を持ち、ボタン文面は buttonText。",
+  "megido": {
+    "宵03_エウリノーム": {
+      "name": "エウリノーム",
+      "gauge": 6,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "タフネスシャウト＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "執心",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵横一列を85%の確率で執心状態にし、自身が攻撃を受けたとき、攻撃力1.75倍のダメージで反撃する"
+        }
+      ]
+    },
+    "真01_リリム": {
+      "name": "リリム",
+      "gauge": 5,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "苦痛のパトス＋",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.3,
+              "turns": 2
+            },
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.3,
+                "turns": 2
+              },
+              {
+                "type": "素早さ低下",
+                "pct": 0.3,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "2ターンの間、敵単体の攻撃力、防御力、素早さを30%低下させる"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "苦痛のパトス＋",
+          "range": "all",
+          "debuff": {
+            "defDown": {
+              "pct": 0.25,
+              "turns": 2
+            },
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.25,
+                "turns": 2
+              },
+              {
+                "type": "素早さ低下",
+                "pct": 0.25,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "2ターンの間、敵全体の攻撃力、防御力、素早さを25%低下させる。さらにMISSまたはキャンセルが発生したとき夢幻の地形効果で1.5倍のダメージを与える"
+        }
+      ]
+    },
+    "真01_リリムR": {
+      "name": "リリムR",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "探りの夢見＋",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.25,
+              "turns": 2
+            }
+          },
+          "sourceText": "2ターンの間、敵単体の防御力を25%低下させる。さらに、味方単体のアタックを強化する"
+        }
+      ]
+    },
+    "真06_アラストール": {
+      "name": "アラストール",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "天誅アレグロ＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.2,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに80%の確率で、2ターンの間、攻撃力を20%低下させる"
+        },
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "天誅アレグロ＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.25,
+                "turns": 2
+              }
+            ]
+          },
+          "levels": [
+            {
+              "lv": 1,
+              "range": "single",
+              "debuff": {
+                "types": [
+                  {
+                    "type": "攻撃力低下",
+                    "pct": 0.25,
+                    "turns": 2
+                  }
+                ]
+              }
+            },
+            {
+              "lv": 2,
+              "range": "single",
+              "debuff": {
+                "defDown": {
+                  "pct": 0.25,
+                  "turns": 2
+                },
+                "types": [
+                  {
+                    "type": "攻撃力低下",
+                    "pct": 0.25,
+                    "turns": 2
+                  }
+                ]
+              }
+            },
+            {
+              "lv": 3,
+              "range": "single",
+              "debuff": {
+                "defDown": {
+                  "pct": 0.25,
+                  "turns": 2
+                },
+                "types": [
+                  {
+                    "type": "攻撃力低下",
+                    "pct": 0.25,
+                    "turns": 2
+                  },
+                  {
+                    "type": "素早さ低下",
+                    "pct": 0.25,
+                    "turns": 2
+                  }
+                ]
+              }
+            }
+          ],
+          "levelMode": "use",
+          "needsReishou": true,
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに2ターンの間、攻撃力を25%低下させる"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "贖罪のシルフィード＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に攻撃力1.75倍のダメージ。さらに80%の確率で、2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "真06_アラストールB": {
+      "name": "アラストールB",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "死のパピリオー＋（チェインなし）",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.1,
+                "turns": 2
+              },
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵横一列を60%の確率で暗闇状態にし、90%の確率で攻撃力を10%低下させる。チェイン中、味方単体にチェイン。チェイン数に応じて効果が変化"
+        }
+      ]
+    },
+    "真07_ヒュトギン": {
+      "name": "ヒュトギン",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "ラ・フォンターナ＋",
+          "range": "row",
+          "place": {
+            "kind": "fast",
+            "mult": 0.5,
+            "fuse": 3
+          },
+          "sourceText": "敵横一列に攻撃力0.9倍のダメージ。さらに80%の確率で、0.5倍で3ターン後に弾けるハイドロボム速を付与する"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ヴァンタジオルチェ＋",
+          "range": "all",
+          "enhance": {
+            "pct": 0.4,
+            "scope": "all"
+          },
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.15,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵全体に付与されているハイドロボムのダメージを40%上昇させる。さらに2ターンの間攻撃力を15%低下させる"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ヴァンタジオルチェ＋",
+          "range": "all",
+          "enhance": {
+            "pct": 0.7,
+            "scope": "all"
+          },
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.2,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "敵全体に付与されているハイドロボムのダメージを70%上昇させる。さらに2ターンの間攻撃力を20%低下させる"
+        }
+      ]
+    },
+    "真09_インキュバス": {
+      "name": "インキュバス",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ドゥルケソムニウム＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "悪夢",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵横一列に攻撃力2.25倍のダメージ。敵編成の女性1体につき倍率が0.2上昇し、対象の女性を2ターンの間、悪夢状態にする"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ドゥルケソムニウム＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "悪夢",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "敵横一列に攻撃力2.25倍のダメージ。敵味方の女性1体につき倍率が0.35上昇、対象の敵女性を2ターンの間、悪夢状態にし、自身の両隣の女性を魅了状態にする"
+        }
+      ]
+    },
+    "真10_グリマルキンR": {
+      "name": "グリマルキンR",
+      "gauge": 2,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "秘技！ねこ電撃星！＋",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.3,
+              "turns": 2
+            }
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵単体に攻撃力0.85倍の3連続雷ダメージ。さらに2ターンの間、防御力を30%低下させる"
+        }
+      ]
+    },
+    "真11_コルソン": {
+      "name": "コルソン",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "ヒミツのおまじない＋（通常時）",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              },
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵単体を束縛状態にし、対象が束縛状態の場合、80%の確率で呪い状態にする"
+        },
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "ヒミツのおまじない＋（通常時・専用霊宝「<剛>とらまるくん」装備時）",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              },
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "needsReishou": true,
+          "sourceText": "2ターンの間、敵単体を束縛状態にし、対象が束縛状態の場合、呪い状態にする"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "一緒にあそぼっ！＋（通常時・専用霊宝「<剛>とらまるくん」装備時）",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "敵単体に攻撃力2.5倍のダメージ。さらに2ターンの間、敵を束縛状態にする。自身をぬいぐるみ巨大化状態にする [最大HP50%分のダメージ無効/スキル変化]"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ストレイシープ＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "混乱",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵横一列に攻撃力1倍の4連続ダメージ。さらに80%の確率で2ターンの間、敵を混乱状態にする"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ストレイシープ＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "混乱",
+                "turns": 2
+              },
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "敵横一列に攻撃力1倍の4連続ダメージ。さらにそれぞれ80%の確率で、2ターンの間、敵を混乱、束縛状態にする"
+        }
+      ]
+    },
+    "真11_コルソンR": {
+      "name": "コルソンR",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "awakened_skill:お返し状態時",
+          "medium": "覚醒スキル",
+          "name": "肉球ナックル＋（お返し状態時）",
+          "range": "row",
+          "levels": [
+            {
+              "lv": 1,
+              "range": "row"
+            },
+            {
+              "lv": 2,
+              "range": "row",
+              "debuff": {
+                "types": [
+                  {
+                    "type": "めまい",
+                    "turns": 2
+                  }
+                ]
+              }
+            }
+          ],
+          "levelMode": "use",
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に攻撃力1.5倍のダメージ。さらに積まれているフォトンを1つ破壊する。自身の覚醒ゲージを+1する",
+          "form": "お返し状態時"
+        }
+      ]
+    },
+    "真12_ジニマル": {
+      "name": "ジニマル",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "トーテンタンツ＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "病気",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力1倍のダメージ。さらに40%（束縛状態の敵の場合70%）の確率で2ターンの間、敵を病気状態にする"
+        },
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "トーテンタンツ＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "病気",
+                "turns": 2
+              },
+              {
+                "type": "ゾンビ",
+                "turns": 2
+              }
+            ]
+          },
+          "needsReishou": true,
+          "sourceText": "敵横一列に攻撃力1倍のダメージ。さらにそれぞれ80%（状態異常の敵の場合100%）の確率で2ターンの間、敵を病気、ゾンビ状態にする"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ギフトヴィアベル＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に攻撃力1.5倍のダメージ。さらに50%（束縛状態の敵の場合100%）の確率で2ターンの間、敵を毒状態にする"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ギフトヴィアベル＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "敵横一列に攻撃力1.5倍のダメージ。さらに50%（状態異常の敵の場合100%）の確率で2ターンの間、敵を毒状態にする"
+        }
+      ]
+    },
+    "真12_ジニマルR": {
+      "name": "ジニマルR",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "ギフティガフィッシュ＋",
+          "range": "single",
+          "place": {
+            "kind": "heavy",
+            "mult": 2.5,
+            "fuse": 7
+          },
+          "debuff": {
+            "types": [
+              {
+                "type": "混乱",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に2.5倍で7ターン後に弾けるハイドロボム重を付与する。さらに80%の確率で、2ターンの間、敵を混乱状態にする"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ヴァッサーテンツァ＋",
+          "range": "single",
+          "ren": {
+            "base": 0.1,
+            "fuse": 9
+          },
+          "enhance": {
+            "pct": 0.2,
+            "scope": "target"
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵単体に、0.1倍で9ターン後に弾けるハイドロボム錬を錬成する。さらに付与されているハイドロボムのダメージを20%上昇させる"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ティーフゼプロスト＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.25,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵単体をハイドロアンカー状態にする。さらに2ターンの間、攻撃力を25％低下させる"
+        }
+      ]
+    },
+    "真13_バフォメット": {
+      "name": "バフォメット",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "封邪のコントラクト＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵単体に掛かっている強化を解除する。さらに2ターンの間、束縛状態にする"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "封邪のコントラクト＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "敵単体に掛かっている強化を解除し、点穴を2回還元する状態にする。さらに2ターンの間、束縛状態にする。自身にスキルフォトンを1つ追加する ※点穴1～30:点穴+5/点穴31～60:点穴+15/点穴61～90:点穴+25/点穴91以上:点穴+35"
+        }
+      ]
+    },
+    "真21_リヴァイアサン": {
+      "name": "リヴァイアサン",
+      "gauge": 6,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "大海の水分り+",
+          "range": "single",
+          "ren": {
+            "base": 0.1,
+            "fuse": 9
+          },
+          "sourceText": "敵単体に0.1倍で9ターン後に弾けるHボム錬を錬成し、1ターンの間、滞水の地形効果で0.75倍の継続ダメージを与え、雷に弱くする"
+        },
+        {
+          "key": "secret_ougi",
+          "medium": "秘奥義",
+          "name": "マリヌスインビディア",
+          "range": "all",
+          "ren": {
+            "base": 5,
+            "fuse": 1
+          },
+          "debuff": {
+            "defDown": {
+              "pct": 0.3,
+              "turns": 2
+            }
+          },
+          "secret": true,
+          "sourceText": "敵全体に、5倍で1ターン後に弾けるハイドロボム錬を錬成する。さらに2ターンの間、防御力を30%低下させる"
+        }
+      ]
+    },
+    "真22_カスピエル": {
+      "name": "カスピエル",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "ナイトストーカー+",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力0.75倍のダメージ。さらに2ターンの間、敵を束縛状態にする"
+        }
+      ]
+    },
+    "真26_オレイ": {
+      "name": "オレイ",
+      "gauge": 5,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "華麗なる予告状＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "執心",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵単体を執心状態にする。さらに80%の確率で、攻撃力を15%低下させる。チェイン中、味方単体にチェイン"
+        },
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "華麗なる予告状＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "執心",
+                "turns": 2
+              }
+            ]
+          },
+          "needsReishou": true,
+          "sourceText": "2ターンの間、敵横一列を執心状態にする。さらに80%の確率で、攻撃力を15%低下させる。味方単体にチェイン"
+        }
+      ]
+    },
+    "真30_バラキエル": {
+      "name": "バラキエル",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "エヴァーフローズン＋（通常）",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵単体に攻撃力4倍のダメージ。さらに2ターンの間、敵を凍結状態にする"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "エヴァーフローズン＋（通常）",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "敵単体に攻撃力4倍のダメージ。さらに2ターンの間、敵を凍結状態にする"
+        }
+      ]
+    },
+    "真31_フルーレティ": {
+      "name": "フルーレティ",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "目眩く観察＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              },
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵単体をめまい状態にし、対象がめまい状態の場合、束縛状態にする"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "紙上の暴走＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "病気",
+                "turns": 2
+              },
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "それぞれ60%の確率で、敵横一列を2ターンの間、病気、毒状態にする。さらに自身の攻撃力を40%上昇する"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "紙上の暴走＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "病気",
+                "turns": 2
+              },
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "それぞれ60%の確率で、敵横一列を2ターンの間、病気、毒状態にする。さらに自身の攻撃力を40%上昇する／状態異常の敵がいる場合: それぞれ70%の確率で、敵横一列を2ターンの間、病気、毒状態にする。さらに自身の攻撃力を50%上昇する"
+        }
+      ]
+    },
+    "真32_ガギゾン": {
+      "name": "ガギゾン",
+      "gauge": 5,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "アプレッションコード＋",
+          "range": "all",
+          "debuff": {
+            "weak": {
+              "turns": 3
+            },
+            "types": [
+              {
+                "type": "素早さ低下",
+                "pct": 0.15,
+                "turns": 3
+              },
+              {
+                "type": "病気",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "80%の確率で、3ターンの間敵全体の素早さを15%低下させる。さらに3ターンの間虚弱状態。対象が虚弱状態の場合それぞれ80%の確率で、2ターンの間病気、積めるフォトンの量-1"
+        }
+      ]
+    },
+    "真38_アガリアレプト": {
+      "name": "アガリアレプト",
+      "gauge": 6,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ディストード+",
+          "range": "row",
+          "levels": [
+            {
+              "lv": 1,
+              "range": "row"
+            },
+            {
+              "lv": 2,
+              "range": "row",
+              "debuff": {
+                "types": [
+                  {
+                    "type": "感電",
+                    "turns": 2
+                  }
+                ]
+              }
+            },
+            {
+              "lv": 3,
+              "range": "row",
+              "debuff": {
+                "types": [
+                  {
+                    "type": "感電",
+                    "turns": 2
+                  },
+                  {
+                    "type": "めまい",
+                    "turns": 2
+                  }
+                ]
+              }
+            }
+          ],
+          "levelMode": "turn",
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に攻撃力1.4倍の2連続ダメージ"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ツインアブソーブ+",
+          "range": "all",
+          "debuff": {
+            "defDown": {
+              "pct": 0.2,
+              "turns": 2
+            },
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.2,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵全体に攻撃力2倍のダメージ、2ターンの間、攻撃力と防御力を20％低下させ自身の攻撃力と防御力を50％上昇する"
+        }
+      ]
+    },
+    "真39_ウコバク": {
+      "name": "ウコバク",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "藍蝶+",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.2,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍の火ダメージ。さらに80%の確率で、2ターンの間、攻撃力を20%低下させる"
+        },
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "藍蝶＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.2,
+                "turns": 2
+              }
+            ]
+          },
+          "needsReishou": true,
+          "sourceText": "敵単体に攻撃力1.25倍の火ダメージ。さらに2ターンの間、攻撃力を20%低下させ、味方単体の攻撃力を20%上昇させる"
+        }
+      ]
+    },
+    "真41_アマイモン": {
+      "name": "アマイモン",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "妄執ノ太刀＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに2ターンの間、敵を束縛状態にする"
+        }
+      ]
+    },
+    "真42_ルキフゲス": {
+      "name": "ルキフゲス",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "無価値の代償＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.3,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵単体に攻撃力4.5倍の破断ダメージ。さらに2ターンの間、敵単体の攻撃力を30%低下させる"
+        }
+      ]
+    },
+    "真43_サルガタナス": {
+      "name": "サルガタナス",
+      "gauge": 6,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "イレイズミスト+",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.2,
+              "turns": 2
+            }
+          },
+          "sourceText": "敵単体に掛かっている強化を解除する。さらに2ターンの間、防御力を20%低下させる"
+        },
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "イレイズミスト+（チェイン1）",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.2,
+              "turns": 2
+            }
+          },
+          "needsReishou": true,
+          "sourceText": "敵単体に掛かっている強化を解除する。さらに2ターンの間、防御力を20%低下させる。この効果は重複して付与される。チェイン数に応じて効果が変化／Ch2: 敵単体に掛かっている強化を解除する。さらに2ターンの間、攻撃力と防御力をそれぞれ20%低下させる。この効果は重複して付与される",
+          "stacks": true,
+          "form": "チェイン1"
+        },
+        {
+          "key": "skill:チェイン2",
+          "medium": "スキル",
+          "name": "イレイズミスト+（チェイン2）",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.2,
+              "turns": 2
+            },
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.2,
+                "turns": 2
+              }
+            ]
+          },
+          "needsReishou": true,
+          "sourceText": "Ch2: 敵単体に掛かっている強化を解除する。さらに2ターンの間、攻撃力と防御力をそれぞれ20%低下させる。この効果は重複して付与される",
+          "stacks": true,
+          "form": "チェイン2"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ソウルプリズン+",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "完殺",
+                "turns": 99
+              },
+              {
+                "type": "攻撃力低下",
+                "pct": 0.25,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵全体を完殺状態（永続）にする。さらに2ターンの間、攻撃力を25%低下させる"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ソウルプリズン+",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "完殺",
+                "turns": 99
+              },
+              {
+                "type": "攻撃力低下",
+                "pct": 0.25,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "敵全体を完殺状態（永続）にする。さらに2ターンの間、攻撃力を25%低下させる／Ch1: 敵全体に掛かっている強化を解除し、2ターンの間、防御力を30%低下させる。さらに自身以外の味方全体に回数チェイン1回を付与する"
+        },
+        {
+          "key": "awakened_skill:チェイン1",
+          "medium": "覚醒スキル",
+          "name": "ソウルプリズン+（チェイン1）",
+          "range": "all",
+          "debuff": {
+            "defDown": {
+              "pct": 0.3,
+              "turns": 2
+            }
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "Ch1: 敵全体に掛かっている強化を解除し、2ターンの間、防御力を30%低下させる。さらに自身以外の味方全体に回数チェイン1回を付与する",
+          "form": "チェイン1"
+        }
+      ]
+    },
+    "真45_チェルノボグ": {
+      "name": "チェルノボグ",
+      "gauge": 6,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "穢刃＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "ゾンビ",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに80%の確率で、2ターンの間、敵をゾンビ状態にし、味方編成をネクロ状態にする"
+        }
+      ]
+    },
+    "真46_アガシオン": {
+      "name": "アガシオン",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "決死の挑発＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "執心",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "自身にレイズギフトを付与する。さらに2ターンの間、敵単体を執心状態にする蘇生されたとき、自身のHPを35%回復し、さらに2ターンの間、敵単体を執心状態にする"
+        }
+      ]
+    },
+    "真49_サタナイル": {
+      "name": "サタナイル",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ラ・ヌッラロンド＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.2,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵横一列に攻撃力2.25倍の響撃ダメージ。さらに80%の確率で、2ターンの間、攻撃力を20%低下させる"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ラ・ヌッラロンド＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.2,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "敵横一列に攻撃力3.5倍の響撃ダメージ。さらに80%の確率で、2ターンの間、攻撃力を20%低下させる"
+        }
+      ]
+    },
+    "真50_シャミハザR": {
+      "name": "シャミハザR",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "マッシブマリン＋",
+          "range": "single",
+          "place": {
+            "kind": "fast",
+            "mult": 0.5,
+            "fuse": 2
+          },
+          "levels": [
+            {
+              "lv": 1,
+              "range": "single",
+              "place": {
+                "kind": "fast",
+                "mult": 0.5,
+                "fuse": 2
+              }
+            },
+            {
+              "lv": 2,
+              "range": "single",
+              "place": {
+                "kind": "fast",
+                "mult": 0.5,
+                "fuse": 1
+              }
+            }
+          ],
+          "levelMode": "use",
+          "gaugeUse": "ougi",
+          "sourceText": "敵単体に攻撃力3.25倍のダメージ。さらに0.5倍で2ターン後に弾けるハイドロボム速を付与する"
+        },
+        {
+          "key": "trait",
+          "medium": "特性",
+          "name": "ボルテックスバディ",
+          "range": "single",
+          "place": {
+            "kind": "heavy",
+            "mult": 3,
+            "fuse": 7
+          },
+          "free": true,
+          "buttonText": "いずれかのアタック（敵単体に3倍で7ターン後に弾けるハイドロボム重を付与）",
+          "sourceText": "自身が追撃状態のとき、アタック時、敵単体に3倍で7ターン後に弾けるハイドロボム重を付与"
+        }
+      ]
+    },
+    "真54_アバラムC": {
+      "name": "アバラムC",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ハイパーカッション＋（通常）",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.25,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵単体に攻撃力2.5倍のダメージ。さらに2ターンの間、攻撃力を25%低下させる"
+        }
+      ]
+    },
+    "真55_アリトン": {
+      "name": "アリトン",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "非情なる粛清＋（通常）",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.25,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に攻撃力1.1倍の2連続ダメージ。さらに80%の確率で、2ターンの間、攻撃力を25%低下させる"
+        }
+      ]
+    },
+    "真60_メルコム": {
+      "name": "メルコム",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "かきいれ時や！＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "素早さ低下",
+                "pct": 0.6,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "80%の確率で、2ターンの間敵単体の素早さ60%低下、積めるフォトンの量を-2する。クエストリザルトで受け取る報酬に1000ゴルドを追加する(重複不可)"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "エコノミーデボート＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.5,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "2ターンの間、敵単体の攻撃力を50%低下させる"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "エコノミーデボート＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.6,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "2ターンの間、敵単体の攻撃力を60%低下させる"
+        }
+      ]
+    },
+    "真62_インプ": {
+      "name": "インプ",
+      "gauge": 5,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "サンダードドンパー＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力0.75倍の3連続雷ダメージ。さらに2ターンの間、敵を感電状態にする"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "全力マジマゲドン！＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵全体に攻撃力2倍の雷ダメージ。さらに90%の確率で、2ターンの間、敵を感電状態にする"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "全力マジマゲドン！＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "敵全体に攻撃力2倍の雷ダメージ。さらに80%の確率で誘雷状態にし90%の確率で、2ターンの間、敵を感電状態にする"
+        }
+      ]
+    },
+    "真62_インプR": {
+      "name": "インプR",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ティアオブデッド+",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵横一列に攻撃力1.25倍の2連続雷ダメージ。さらに80%の確率で、2ターンの間、敵を感電状態にする"
+        }
+      ]
+    },
+    "真63_アマゼロト": {
+      "name": "アマゼロト",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "廻転凍突き＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに60%の確率で、2ターンの間、敵を凍結状態にする"
+        },
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "廻転凍突き+",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "needsReishou": true,
+          "sourceText": "通常: 敵単体に攻撃力1.25倍のダメージ。さらに60%の確率で、2ターンの間、敵を凍結状態にする／封印時: 敵単体に攻撃力1.75倍のダメージ。さらに2ターンの間、敵の防御力を15%低下させ、60%の確率で、敵を凍結状態にする"
+        },
+        {
+          "key": "skill:封印時",
+          "medium": "スキル",
+          "name": "廻転凍突き+（封印時）",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.15,
+              "turns": 2
+            },
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "needsReishou": true,
+          "sourceText": "封印時: 敵単体に攻撃力1.75倍のダメージ。さらに2ターンの間、敵の防御力を15%低下させ、60%の確率で、敵を凍結状態にする",
+          "form": "封印時"
+        }
+      ]
+    },
+    "真69_バールゼフォン": {
+      "name": "バールゼフォン",
+      "gauge": 5,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "流浪の胡蝶と空涙＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "混乱",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵全体にペインフォトンを1つ追加し、50%の確率で、2ターンの間、敵を混乱状態にする。味方単体にチェイン"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "夢描く苦悩の涙＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "素早さ低下",
+                "pct": 0.4,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "2ターンの間、敵全体の素早さを40%低下し、対象がフォトンを使用するたび、浸食の地形効果で1.75倍のダメージを与える"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "夢描く苦悩の涙＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "素早さ低下",
+                "pct": 0.4,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "2ターンの間、敵全体の素早さを40%低下し、対象がフォトンを使用するたび、浸食の地形効果で1.75倍のダメージを与える。さらに2ターンの間、リザーブ状態になる 味方全体のHPを20%回復。さらにリザーブを発動したターン内に敵全体で消費したペインフォトン1個につき回復量が20%上昇する（最大値100%）"
+        }
+      ]
+    },
+    "真72_ゲイボルグ": {
+      "name": "ゲイボルグ",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "狼牙槍＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "needsReishou": true,
+          "sourceText": "通常: 敵単体に攻撃力0.75倍の3連続ダメージ。さらに80%の確率で、2ターンの間、敵を暗闇状態にする／コロッセオ: 敵単体に攻撃力1.05倍の3連続ダメージ。さらに2ターンの間、敵を暗闇状態にする"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "戦士の威嚇＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "執心",
+                "turns": 3
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "3ターンの間、敵と味方の編成をコロッセオ状態にする（効果ターン終了時まで持続）。さらに3ターンの間、自身を幻影状態にし、敵単体を執心状態にする"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "戦士の威嚇＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "執心",
+                "turns": 3
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "3ターンの間、敵と味方の編成をコロッセオ状態にする（効果ターン終了時まで持続）。さらに3ターンの間、自身を幻影状態にし、敵全体を執心状態にする"
+        }
+      ]
+    },
+    "祖01_バエルC": {
+      "name": "バエルC",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "スタブウェブ＋",
+          "range": "all",
+          "debuff": {
+            "defDown": {
+              "pct": 0.1,
+              "turns": 2
+            }
+          },
+          "sourceText": "敵全体を75%の確率で誘雷状態にする。さらに2ターンの間、防御力を10%低下させる"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "サンダージェイル＋",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.2,
+              "turns": 2
+            }
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵単体を誘雷状態にする。さらに2ターンの間、敵単体の防御力を20%低下させ受ける雷ダメージを100%上昇させる"
+        }
+      ]
+    },
+    "祖03_ウァサゴ": {
+      "name": "ウァサゴ",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "血の契約＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに80%の確率で、2ターンの間、敵を呪い状態にする"
+        }
+      ]
+    },
+    "祖04_ガミジン": {
+      "name": "ガミジン",
+      "gauge": 5,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ブラッドネメシス＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.25,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵横一列に攻撃力1.15倍の4連続ダメージ。さらに80%の確率で、2ターンの間、敵の攻撃力を25%低下させる"
+        }
+      ]
+    },
+    "祖04_ガミジンB": {
+      "name": "ガミジンB",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "鋭利な濃煙＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "素早さ低下",
+                "pct": 0.5,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに2ターンの間、素早さを50%低下させる"
+        }
+      ]
+    },
+    "祖06_ウァレフォル": {
+      "name": "ウァレフォル",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ロウオブザサバンナ＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵単体に攻撃力1.2倍の4連続ダメージ。さらに2ターンの間、敵を毒状態にする"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ロウオブザサバンナ＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "敵単体に攻撃力1.2倍の4連続ダメージ。さらに2ターンの間、敵を毒状態にし、自身のチャージを強化する"
+        }
+      ]
+    },
+    "祖09_パイモン": {
+      "name": "パイモン",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ローズプロポーズ＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "魅了",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "2ターンの間、女性キャラクター1人を魅了状態にし、自身のアタックに追撃させ、攻撃力を20%上昇させる"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ローズプロポーズ＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "魅了",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "2ターンの間、女性キャラクター1人を魅了状態にし、攻撃力と素早さを30%上昇させる。さらに自身にアタックフォトンを1つ追加する"
+        }
+      ]
+    },
+    "祖11_グシオン": {
+      "name": "グシオン",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "子守唄+",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "睡眠",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに60%の確率で、2ターンの間、敵を睡眠状態にする／大協奏: 敵単体に攻撃力1.25倍の響撃ダメージ。さらに80%の確率で、2ターンの間、敵を睡眠状態にする"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ビーストファング＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.35,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵単体に攻撃力4.25倍のダメージ。さらに2ターンの間、攻撃力を35%低下させる"
+        }
+      ]
+    },
+    "祖12_シトリー": {
+      "name": "シトリー",
+      "gauge": 5,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "エアリアルグロー+",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵単体に攻撃力5.25倍の雷ダメージ。さらに2ターンの間、敵を感電状態にする。"
+        }
+      ]
+    },
+    "祖12_シトリーR": {
+      "name": "シトリーR",
+      "gauge": 2,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "水天彷彿戟＋",
+          "range": "single",
+          "place": {
+            "kind": "fast",
+            "mult": 0.5,
+            "fuse": 3
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに0.5倍で3ターン後に弾けるハイドロボム速を付与する"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "水落魚竜ノ夜＋",
+          "range": "single",
+          "place": {
+            "kind": "heavy",
+            "mult": 4.5,
+            "fuse": 7
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "自身の覚醒ゲージを全て消費し、敵単体に4.5倍で7ターン後に弾けるハイドロボム重を付与する"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "水落魚竜ノ夜＋",
+          "range": "single",
+          "place": {
+            "kind": "heavy",
+            "mult": 5.5,
+            "fuse": 7
+          },
+          "enhance": {
+            "pct": 0.4,
+            "scope": "target"
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "自身の覚醒ゲージを全て消費し、敵単体に5.5倍で7ターン後に弾けるハイドロボム重を付与し、付与されているハイドロボムのダメージを40%上昇させる"
+        }
+      ]
+    },
+    "祖15_エリゴス": {
+      "name": "エリゴス",
+      "gauge": 2,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "滅多打ち＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵単体に攻撃力0.75倍の4連続ダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "祖18_バティン": {
+      "name": "バティン",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ニューロトキシン＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵単体に攻撃力2倍のダメージ。さらに2ターンの間、敵を毒状態にする"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ニューロトキシン＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "敵単体に攻撃力3倍のダメージ。さらに2ターンの間、敵を毒状態にする。敵が毒状態の場合、ダメージが2倍になる"
+        }
+      ]
+    },
+    "祖19_サレオス": {
+      "name": "サレオス",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "腐食のブレス＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵横一列に攻撃力2.5倍のダメージさらに80%の確率で、2ターンの間、敵を呪い状態にする"
+        }
+      ]
+    },
+    "祖20_プルソン": {
+      "name": "プルソン",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "グランドドライバー＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに80%の確率で、2ターンの間、敵を暗闇状態にする"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "大地を沈めし鉄槌＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵単体に攻撃力3.25倍のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "祖23_アイム": {
+      "name": "アイム",
+      "gauge": 6,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "強火クッキング＋",
+          "range": "single",
+          "levels": [
+            {
+              "lv": 1,
+              "range": "single"
+            },
+            {
+              "lv": 2,
+              "range": "single"
+            },
+            {
+              "lv": 3,
+              "range": "single"
+            },
+            {
+              "lv": 4,
+              "range": "single",
+              "debuff": {
+                "defDown": {
+                  "pct": 0.5,
+                  "turns": 2
+                }
+              }
+            }
+          ],
+          "levelMode": "use",
+          "sourceText": "敵単体に攻撃力1.25倍の火ダメージ"
+        },
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "強火クッキング＋",
+          "range": "single",
+          "levels": [
+            {
+              "lv": 1,
+              "range": "single"
+            },
+            {
+              "lv": 2,
+              "range": "single"
+            },
+            {
+              "lv": 3,
+              "range": "single"
+            },
+            {
+              "lv": 4,
+              "range": "single",
+              "debuff": {
+                "defDown": {
+                  "pct": 0.6,
+                  "turns": 2
+                }
+              }
+            }
+          ],
+          "levelMode": "use",
+          "needsReishou": true,
+          "sourceText": "敵単体に攻撃力1.25倍の火ダメージ"
+        }
+      ]
+    },
+    "祖23_アイムR": {
+      "name": "アイムR",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "ブレンドウォッシュ＋",
+          "range": "single",
+          "ren": {
+            "base": 0.1,
+            "fuse": 9
+          },
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.25,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に、0.1倍で9ターン後に弾けるハイドロボム錬を錬成する。さらに2ターンの間、攻撃力を25%低下させる"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "シュトロームテイル＋",
+          "range": "row",
+          "place": {
+            "kind": "heavy",
+            "mult": 2.75,
+            "fuse": 7
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に2.75倍で7ターン後に弾けるハイドロボム重を付与する"
+        }
+      ]
+    },
+    "祖28_ベリト": {
+      "name": "ベリト",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "グリムスティンガー＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに80%の確率で、2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "祖29_アスタロト": {
+      "name": "アスタロト",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "極北のブレス＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵横一列に攻撃力1.25倍の2連続ダメージ。さらに60%の確率で、2ターンの間、敵を凍結状態にする"
+        }
+      ]
+    },
+    "祖30_フォルネウスB": {
+      "name": "フォルネウスB",
+      "gauge": 5,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "深淵の戦慄＋ 通常",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵全体に攻撃力2倍のダメージ。さらに味方単体を即死させ、50%の確率で、2ターンの間、敵全体を凍結状態にする"
+        }
+      ]
+    },
+    "祖32_アスモデウス": {
+      "name": "アスモデウス",
+      "gauge": 6,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "絶対者の息吹＋",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.25,
+              "turns": 2
+            }
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵単体に攻撃力3.25倍のダメージ。さらに2ターンの間、防御力を25%低下させ、自身の防御力を25%上昇させる"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "絶対者の息吹＋",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.25,
+              "turns": 2
+            }
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "敵単体に攻撃力3.75倍のダメージ。さらに2ターンの間、防御力を25%低下させ、自身の攻撃力と防御力を25%上昇させる"
+        }
+      ]
+    },
+    "祖33_ガープR": {
+      "name": "ガープR",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "スクトゥムバッシュ＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "通常: 敵単体に攻撃力1.25倍のダメージ。さらに70%の確率で、2ターンの間、敵をめまい状態にする／コロッセオ: 敵単体に攻撃力2倍のダメージ。さらに80%の確率で、2ターンの間、敵をめまい状態にする"
+        },
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "スクトゥムバッシュ＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "needsReishou": true,
+          "sourceText": "通常: 敵単体に攻撃力1.25倍のダメージ。さらに70%の確率で、2ターンの間、敵をめまい状態にする／コロッセオ: 敵単体に攻撃力2倍のダメージ。さらに80%の確率で、2ターンの間、敵をめまい状態にする／コロッセオ優勢時: 敵単体に攻撃力2.5倍のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "祖34_フルフルC": {
+      "name": "フルフルC",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "雷召電弧＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に攻撃力1.75倍の雷ダメージ。さらに80%の確率で、2ターンの間、敵を感電状態にする"
+        }
+      ]
+    },
+    "祖35_マルコシアス": {
+      "name": "マルコシアス",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ラピッドファイア＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "通常: 敵横一列に攻撃力1.75倍のダメージ。さらに80%の確率で、2ターンの間、敵をめまい状態にする／Bアーツ: バレットを1個消費し、敵横一列に攻撃力1.75倍のダメージ。さらに90%の確率で2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "祖39_マルファス": {
+      "name": "マルファス",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "レナスリング+",
+          "range": "row",
+          "debuff": {
+            "defDown": {
+              "pct": 0.6,
+              "turns": 2
+            }
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に攻撃力1.75倍のダメージ。さらに80％の確率で、2ターンの間、防御力を60％低下させる"
+        }
+      ]
+    },
+    "祖40_ラウム": {
+      "name": "ラウム",
+      "gauge": 5,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "仏恥義琉！！＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "混乱",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵単体に攻撃力1.35倍の3連続ダメージ。さらに2ターンの間、敵を混乱状態にする"
+        }
+      ]
+    },
+    "祖42_ウェパルB": {
+      "name": "ウェパルB",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "ツイストウェイブ+",
+          "range": "single",
+          "place": {
+            "kind": "heavy",
+            "mult": 3,
+            "fuse": 7
+          },
+          "sourceText": "90%の確率で、敵単体に3倍で7ターン後に弾けるハイドロボム重を付与する"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ウンディーネの戯れ+",
+          "range": "all",
+          "place": {
+            "kind": "fast",
+            "mult": 0.5,
+            "fuse": 3
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵全体に攻撃力0.8倍のダメージさらに80%の確率で、0.5倍で3ターン後に弾けるハイドロボム速を付与する"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "オーシャンティア+",
+          "range": "single",
+          "place": {
+            "kind": "heavy",
+            "mult": 6,
+            "fuse": 7
+          },
+          "debuff": {
+            "defDown": {
+              "pct": 0.2,
+              "turns": 2
+            }
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵単体に6倍で7ターン後に弾けるハイドロボム重を付与し、2ターンの間、防御力を20%低下させる"
+        }
+      ]
+    },
+    "祖43_サブナック": {
+      "name": "サブナック",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "イージスブロー＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "敵単体に攻撃力1.4倍の2連続ダメージ。さらに2ターンの間、敵をめまい状態にし、ターン終了時に自身のHPが5%回復する"
+        }
+      ]
+    },
+    "祖44_シャックス": {
+      "name": "シャックス",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "びりびり斬り+",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍の雷ダメージ。さらに80%の確率で、2ターンの間、敵を感電状態にする"
+        },
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "びりびり斬り+",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "needsReishou": true,
+          "sourceText": "敵単体に攻撃力1.25倍の雷ダメージ。さらに2ターンの間、敵を感電状態にする"
+        }
+      ]
+    },
+    "祖45_ヴィネR": {
+      "name": "ヴィネR",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "水刃のエラルド＋",
+          "range": "single",
+          "place": {
+            "kind": "fast",
+            "mult": 0.5,
+            "fuse": 2
+          },
+          "sourceText": "敵単体に2ターン後に弾ける威力0.5倍のハイドロボム速を付与する"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "戦姫の洗礼＋",
+          "range": "row",
+          "place": {
+            "kind": "fast",
+            "mult": 0.5,
+            "fuse": 2
+          },
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.2,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵横一列に0.5倍で2ターン後に弾けるハイドロボム速を付与し、2ターンの間、攻撃力を20%低下させる"
+        },
+        {
+          "key": "skill:全体",
+          "medium": "スキル",
+          "name": "水刃のエラルド＋（全体）",
+          "range": "all",
+          "place": {
+            "kind": "fast",
+            "mult": 0.5,
+            "fuse": 2
+          },
+          "sourceText": "敵単体に2ターン後に弾ける威力0.5倍のハイドロボム速を付与する",
+          "form": "全体",
+          "formCondition": "HP33.3%以下"
+        }
+      ]
+    },
+    "祖46_ビフロンス": {
+      "name": "ビフロンス",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ダークコフィン＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵単体に攻撃力1.45倍の4連続ダメージ。さらに2ターンの間、敵を呪い状態にする"
+        }
+      ]
+    },
+    "祖47_ウヴァルC": {
+      "name": "ウヴァルC",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "淡紅の眼光＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "執心",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵単体を執心状態にする。さらに自身へのダメージを20%軽減する"
+        }
+      ]
+    },
+    "祖48_ハーゲンティ": {
+      "name": "ハーゲンティ",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ハートオブゴールド＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.2,
+                "turns": 2
+              },
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "2ターンの間、敵全体を暗闇状態にし、攻撃力を20%低下させる"
+        }
+      ]
+    },
+    "祖48_ハーゲンティB": {
+      "name": "ハーゲンティB",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "でっかくなれ～+",
+          "range": "all",
+          "debuff": {
+            "defDown": {
+              "pct": 0.5,
+              "turns": 1
+            }
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵全体に攻撃力1.35倍のダメージさらに1ターンの間、敵の防御力を50%低下。チェイン中、味方単体にチェイン"
+        }
+      ]
+    },
+    "祖51_バラム": {
+      "name": "バラム",
+      "gauge": 5,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "非戦の調停＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.3,
+                "turns": 2
+              },
+              {
+                "type": "めまい",
+                "turns": 2
+              },
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵全体を束縛状態にする。対象が束縛の場合80%の確率で、2ターンの間めまい、80%の確率で攻撃力を30%低下させる"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "非戦の調停＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.3,
+                "turns": 2
+              },
+              {
+                "type": "めまい",
+                "turns": 2
+              },
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ],
+            "weak": {
+              "turns": 3
+            }
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "敵全体を束縛状態と虚弱状態にする。対象が状態異常の場合それぞれ80%の確率で、2ターンの間めまい、攻撃力を30%低下させる"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ディザスターボム＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "素早さ低下",
+                "pct": 0.6,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵横一列に攻撃力3倍のダメージ。さらに80%の確率で、2ターンの間、敵の素早さを60%低下させる"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ディザスターボム＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "素早さ低下",
+                "pct": 0.6,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "敵横一列に攻撃力3倍のダメージ。さらに80%の確率で、2ターンの間、敵の素早さを60%低下させ、対象が状態異常の場合攻撃力、防御力を60%低下させる"
+        }
+      ]
+    },
+    "祖52_アロケルR": {
+      "name": "アロケルR",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "面倒になる前に！＋",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.25,
+              "turns": 2
+            }
+          },
+          "sourceText": "敵単体に攻撃力0.75倍の3連続ダメージ。さらに80%の確率で、2ターンの間、防御力を25%低下する"
+        }
+      ]
+    },
+    "祖53_カイム": {
+      "name": "カイム",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "マインドクラッシュ+",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "封印",
+                "turns": 1
+              }
+            ]
+          },
+          "needsReishou": true,
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに覚醒ゲージを-1し、自身をアタックブレイク状態にする80%の確率で、1ターンの間、敵単体を封印状態にする"
+        }
+      ]
+    },
+    "祖55_オロバス": {
+      "name": "オロバス",
+      "gauge": 2,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "原初の魔法『零』＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに2ターンの間、敵を束縛状態にする"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "原初の魔法『結』＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に攻撃力1.25倍のダメージ。さらに80%の確率で、2ターンの間、敵を呪い状態にする"
+        }
+      ]
+    },
+    "祖55_オロバスC": {
+      "name": "オロバスC",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "我これに報いん＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "執心",
+                "turns": 1
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "1ターンの間、敵全体を執心状態。2ターンの間自身以外の味方が受けるダメージを20%軽減。自身以外の味方に付与されているデスギフトを、最大10個まで自身に移す"
+        }
+      ]
+    },
+    "祖57_オセ": {
+      "name": "オセ",
+      "gauge": 2,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "ポイズンクロー＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに80%の確率で、2ターンの間、敵を毒状態にする"
+        }
+      ]
+    },
+    "祖58_アミー": {
+      "name": "アミー",
+      "gauge": 5,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "捕縛陣＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "素早さ低下",
+                "pct": 0.6,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に攻撃力2倍のダメージ。さらに80%の確率で、2ターンの間、敵の素早さを60%低下させる"
+        }
+      ]
+    },
+    "祖58_アミーC": {
+      "name": "アミーC",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "縛奪絃＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵横一列を束縛状態にする。さらに自身を特殊ブレイク状態にする敵単体に攻撃力0.85倍の3連続ダメージ。さらに、自身の覚醒ゲージを+1"
+        }
+      ]
+    },
+    "祖59_オリアス": {
+      "name": "オリアス",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ヘイルキャノン＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵単体に攻撃力4.25倍のダメージ。さらに2ターンの間、敵を凍結状態にする"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ヘイルキャノン＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "通常: 敵単体に攻撃力4.25倍のダメージ。さらに2ターンの間、敵を凍結状態にする／ネクロ（ソウル4個以上）: ソウルを4つ消費し、敵単体に攻撃力4.25倍のダメージ。2ターンの間、敵を凍結状態にする。さらに味方全体を戦闘不能時にHP25%で蘇生する状態にする"
+        }
+      ]
+    },
+    "祖59_オリアスC": {
+      "name": "オリアスC",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "アイオブプリザーブ＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              },
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵全体を2ターンの間、それぞれ40%の確率で、めまい、呪い状態にする。さらに2ターン繰り返すリザーブ状態になる"
+        }
+      ]
+    },
+    "祖60_ウァプラ": {
+      "name": "ウァプラ",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "雷霆万鈞＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵全体に攻撃力1.35倍の雷ダメージ。さらに70%の確率で、2ターンの間、敵を感電状態にする"
+        }
+      ]
+    },
+    "祖60_ウァプラR": {
+      "name": "ウァプラR",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "奪掠＋",
+          "range": "row",
+          "steal": true,
+          "sourceText": "70%の確率で敵横一列の覚醒ゲージを-1する。さらに敵にハイドロボムが付与されているとき、減少した覚醒ゲージを自身に加算する"
+        },
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "奪掠＋",
+          "range": "row",
+          "steal": true,
+          "needsReishou": true,
+          "sourceText": "70%の確率で敵横一列の覚醒ゲージを-1する（ハイドロボムが付与されている場合100%）。さらに敵にハイドロボムが付与されているとき、減少した覚醒ゲージを自身に加算する"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "水滴石穿＋",
+          "range": "row",
+          "place": {
+            "kind": "fast",
+            "mult": 0.5,
+            "fuse": 2
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "自身の覚醒ゲージを全て消費し、敵横一列に攻撃力0.8倍のダメージ、さらに2ターン後に弾ける威力0.5倍のハイドロボム速を付与"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "千山万水＋",
+          "range": "row",
+          "place": {
+            "kind": "heavy",
+            "mult": 3.25,
+            "fuse": 7
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵横一列に攻撃力1.5倍のダメージ。さらに3.25倍で7ターン後に弾けるハイドロボム重を付与する"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "千山万水＋",
+          "range": "row",
+          "place": {
+            "kind": "heavy",
+            "mult": 3.25,
+            "fuse": 7
+          },
+          "ren": {
+            "base": 0.1,
+            "fuse": 9
+          },
+          "branchOnHeavy": true,
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "敵横一列に攻撃力1.5倍のダメージ。対象の状態に応じてさらに効果が発生3.25倍で7ターン後に弾けるハイドロボム重を付与する0.1倍で9ターン後に弾けるハイドロボム錬を錬成する"
+        }
+      ]
+    },
+    "祖61_ザガン": {
+      "name": "ザガン",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "止むなき猛進＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵単体に攻撃力3.75倍のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "祖62_ウァラク": {
+      "name": "ウァラク",
+      "gauge": 6,
+      "actions": [
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "サイコウェイブ+",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "混乱",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "通常: 敵全体に攻撃力2.25倍のダメージ。さらに70%の確率で、2ターンの間、敵を混乱状態にする／大協奏: 敵全体に攻撃力2.25倍の響撃ダメージ。さらに70%の確率で、3ターンの間、敵を混乱状態にする"
+        },
+        {
+          "key": "ougi:大協奏",
+          "medium": "奥義",
+          "name": "サイコウェイブ+（大協奏）",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "混乱",
+                "turns": 3
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "大協奏: 敵全体に攻撃力2.25倍の響撃ダメージ。さらに70%の確率で、3ターンの間、敵を混乱状態にする",
+          "form": "大協奏"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "サイコウェイブ+",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "混乱",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "通常: 敵全体に攻撃力2倍のダメージ。さらに70%の確率で、2ターンの間、敵を混乱状態にする。1ターン後、遅延行動を行う遅延行動時、2ターンの間、自身の受けるダメージを10%軽減させる。さらに2ターンの間継続する音符を2つ蓄積／大協奏: 敵全体に攻撃力2倍の響撃ダメージ。さらに70%の確率で、3ターンの間、敵を混乱状態にする。1ターン後、遅延行動を行う"
+        },
+        {
+          "key": "ougi:大協奏",
+          "medium": "奥義",
+          "name": "サイコウェイブ+（大協奏）",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "混乱",
+                "turns": 3
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "大協奏: 敵全体に攻撃力2倍の響撃ダメージ。さらに70%の確率で、3ターンの間、敵を混乱状態にする。1ターン後、遅延行動を行う",
+          "form": "大協奏"
+        }
+      ]
+    },
+    "祖62_ウァラクC": {
+      "name": "ウァラクC",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "艶麗の舞＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "執心",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "通常: 2ターンの間、敵単体を執心状態にし、ターン終了時に自身のHPを20%回復する。さらに、味方編成を重奏状態にする／大協奏: 2ターンの間、敵全体を執心状態にし、ターン終了時に自身のHPを20%回復する"
+        },
+        {
+          "key": "skill:大協奏",
+          "medium": "スキル",
+          "name": "艶麗の舞＋（大協奏）",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "執心",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "大協奏: 2ターンの間、敵全体を執心状態にし、ターン終了時に自身のHPを20%回復する",
+          "form": "大協奏"
+        }
+      ]
+    },
+    "祖63_アンドラス": {
+      "name": "アンドラス",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "死毒の縄＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵単体に攻撃力2倍のダメージ。さらに2ターンの間、敵を毒状態にする"
+        }
+      ]
+    },
+    "祖63_アンドラスC": {
+      "name": "アンドラスC",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "ゼクチオンメッサー＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力1倍のダメージ。さらに60%の確率で、2ターンの間、敵を暗闇状態にする"
+        },
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "ゼクチオンメッサー＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "needsReishou": true,
+          "sourceText": "敵横一列に攻撃力1倍のダメージ。さらに80%の確率で、2ターンの間、敵を暗闇状態にする"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "ターヘルアナトミア＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "病気",
+                "turns": 2
+              },
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵横一列に攻撃力2.25倍のダメージさらにそれぞれ70%の確率で、2ターンの間、敵を病気、毒状態にする"
+        }
+      ]
+    },
+    "祖64_フラウロス": {
+      "name": "フラウロス",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "蛇腹剣＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力0.9倍の2連続ダメージ。さらに80%の確率で、2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "祖64_フラウロスB": {
+      "name": "フラウロスB",
+      "gauge": 5,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "水砕剣＋",
+          "range": "row",
+          "place": {
+            "kind": "fast",
+            "mult": 0.5,
+            "fuse": 3
+          },
+          "sourceText": "敵横一列に攻撃力0.65倍の2連続ダメージ。さらに80%の確率で、0.5倍で3ターン後に弾けるハイドロボム速を付与する"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "スタグナントビロー＋",
+          "range": "row",
+          "place": {
+            "kind": "heavy",
+            "mult": 3.5,
+            "fuse": 7
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に攻撃力0.65倍のダメージ。さらに80%の確率で、3.5倍で7ターン後に弾けるハイドロボム重を付与する"
+        }
+      ]
+    },
+    "祖65_アンドレアルフス": {
+      "name": "アンドレアルフス",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "レックレスラッシュ＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵単体に攻撃力0.8倍の6連続ダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "祖66_キマリス": {
+      "name": "キマリス",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "アマゾネスの槍＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに80%の確率で、2ターンの間、敵を暗闇状態にする"
+        }
+      ]
+    },
+    "祖67_アムドゥスキアス": {
+      "name": "アムドゥスキアス",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "眷属の帳+",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に攻撃力1.75倍のダメージ。さらに80%の確率で、2ターンの間、敵を暗闇状態にする"
+        }
+      ]
+    },
+    "祖69_デカラビア": {
+      "name": "デカラビア",
+      "gauge": 3,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "ヴェノムマイン＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍のダメージ。さらに80%の確率で、2ターンの間、敵を毒状態にする"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ブリザード＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に攻撃力1.5倍のダメージ。さらに60%の確率で、2ターンの間、敵を凍結状態にする"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "ブリザード＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "needsReishou": true,
+          "sourceText": "敵横一列に攻撃力1.5倍のダメージ。2ターンの間、氷結の地形効果で0.75倍の継続ダメージを与え、攻撃力を低下させる。さらに60%の確率で、2ターンの間、敵を凍結状態にする"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "トランスジャミング＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "素早さ低下",
+                "pct": 0.3,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "敵全体の覚醒ゲージを-2し、2ターンの間、素早さを30%低下させる"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "トランスジャミング＋",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "素早さ低下",
+                "pct": 0.3,
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "needsReishou": true,
+          "sourceText": "敵全体の覚醒ゲージを-2し、2ターンの間、素早さを30%低下させる。さらに覚醒ゲージの増加を無効化する（1回）"
+        }
+      ]
+    },
+    "祖69_デカラビアB": {
+      "name": "デカラビアB",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "イクセイザ＋",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.25,
+              "turns": 2
+            },
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "通常: 味方単体の覚醒ゲージを+1し、レイズギフト(1)を付与する2ターンの間、敵単体を凍結状態にし、防御力を25%低下させる／ネクロ（ソウル2個以上）: ソウルを2つ消費し、味方単体の覚醒ゲージを+1し、レイズギフト(2)を付与する2ターンの間、敵横一列を凍結状態にし、防御力を25%低下させる"
+        },
+        {
+          "key": "skill:ネクロ",
+          "medium": "スキル",
+          "name": "イクセイザ＋（ネクロ）",
+          "range": "row",
+          "debuff": {
+            "defDown": {
+              "pct": 0.25,
+              "turns": 2
+            },
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "ネクロ（ソウル2個以上）: ソウルを2つ消費し、味方単体の覚醒ゲージを+1し、レイズギフト(2)を付与する2ターンの間、敵横一列を凍結状態にし、防御力を25%低下させる",
+          "form": "ネクロ"
+        },
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "蔓延る害悪＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 1
+              }
+            ]
+          },
+          "levels": [
+            {
+              "lv": 1,
+              "range": "row",
+              "debuff": {
+                "types": [
+                  {
+                    "type": "毒",
+                    "turns": 1
+                  }
+                ]
+              }
+            },
+            {
+              "lv": 2,
+              "range": "row",
+              "debuff": {
+                "types": [
+                  {
+                    "type": "毒",
+                    "turns": 2
+                  }
+                ]
+              }
+            },
+            {
+              "lv": 3,
+              "range": "row",
+              "debuff": {
+                "types": [
+                  {
+                    "type": "毒",
+                    "turns": 3
+                  }
+                ]
+              }
+            },
+            {
+              "lv": 4,
+              "range": "row",
+              "debuff": {
+                "types": [
+                  {
+                    "type": "毒",
+                    "turns": 4
+                  }
+                ]
+              }
+            },
+            {
+              "lv": 5,
+              "range": "row",
+              "debuff": {
+                "types": [
+                  {
+                    "type": "毒",
+                    "turns": 5
+                  }
+                ]
+              }
+            }
+          ],
+          "levelMode": "use",
+          "gaugeUse": "awakened",
+          "sourceText": "敵横一列に攻撃力1.5倍のダメージ。さらに1ターンの間、毒状態にする"
+        }
+      ]
+    },
+    "祖72_アンドロマリウス": {
+      "name": "アンドロマリウス",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "awakened_skill",
+          "medium": "覚醒スキル",
+          "name": "雪玉スコール＋",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "gaugeUse": "awakened",
+          "sourceText": "敵単体に攻撃力2.5倍のダメージ。さらに2ターンの間、敵を凍結状態にする"
+        }
+      ]
+    },
+    "継11_アンダカ": {
+      "name": "アンダカ",
+      "gauge": 4,
+      "actions": [
+        {
+          "key": "skill",
+          "medium": "スキル",
+          "name": "目眩の妙手＋",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力1.1倍の2連続ダメージ。さらに60%の確率で、2ターンの間、敵を暗闇状態にする"
+        },
+        {
+          "key": "ougi",
+          "medium": "奥義",
+          "name": "夜っぴて明ずの箒星＋",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.2,
+              "turns": 2
+            },
+            "types": [
+              {
+                "type": "完殺",
+                "turns": 99
+              }
+            ]
+          },
+          "gaugeUse": "ougi",
+          "sourceText": "2ターンの間、味方全体を暗闇特効（1.75倍）にする。さらに2ターンの間、敵単体の防御力を20%低下させ、完殺状態（永続）にする"
+        }
+      ]
+    }
+  },
+  "orbs": {
+    "orb_004": {
+      "name": "つちのこ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "つちのこ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を暗闇状態にする"
+        }
+      ]
+    },
+    "orb_255": {
+      "name": "アッキピテル",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "アッキピテル",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              },
+              {
+                "type": "暗闇",
+                "turns": 2
+              },
+              {
+                "type": "ゾンビ",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、50%(60%)（束縛状態の敵の場合70%(80%)）の確率で、敵全体を毒、暗闇、ゾンビ状態にする"
+        }
+      ]
+    },
+    "orb_446": {
+      "name": "ア・ローズ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ア・ローズ",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "執心",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵全体を執心状態にし、さらに自身へのダメージを10%(20%)軽減する。2ターンの間継続する音符を1つ蓄積する"
+        }
+      ]
+    },
+    "orb_009": {
+      "name": "ウインドビーク",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ウインドビーク",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_058": {
+      "name": "エノイル",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "エノイル",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "混乱",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)の雷ダメージ。さらに2ターンの間、敵を混乱状態にする"
+        }
+      ]
+    },
+    "orb_129": {
+      "name": "エペロス",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "エペロス",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "混乱",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に20%(28%)の確率で、2ターンの間、敵を混乱状態にする"
+        }
+      ]
+    },
+    "orb_488": {
+      "name": "エリンギーグ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "エリンギーグ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2倍(2.4倍)のダメージ。さらに2ターンの間、敵を感電状態にする"
+        }
+      ]
+    },
+    "orb_288": {
+      "name": "オルトロス",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "オルトロス",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.1,
+              "turns": 2
+            }
+          },
+          "sourceText": "敵単体に攻撃力1.25倍(1.37倍)の2連続ダメージ。さらに2ターンの間、防御力を10%低下させる"
+        }
+      ]
+    },
+    "orb_059": {
+      "name": "オーク剛腕投石兵",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "オーク剛腕投石兵",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_159": {
+      "name": "オーク哨戒部隊長",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "オーク哨戒部隊長",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍(1.49倍)の2連続ダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_421": {
+      "name": "キュービスム",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "キュービスム",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "自身にチャージフォトンを1つ追加する。さらに2ターンの間、状態異常と弱体を無効化する状態になる"
+        }
+      ]
+    },
+    "orb_352": {
+      "name": "クストス",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "クストス",
+          "range": "single",
+          "grantsPhoton": 1,
+          "setsAwakened": true,
+          "sourceText": "自身を覚醒状態にし、アタックフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_569": {
+      "name": "クッド",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "クッド",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "味方単体にアタックフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_098": {
+      "name": "クロクトン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "クロクトン",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "睡眠",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "80%(88%)の確率で、2ターンの間、敵単体を睡眠状態にする"
+        }
+      ]
+    },
+    "orb_297": {
+      "name": "グラディエーター",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "グラディエーター",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力2倍(2.5倍)のダメージ。さらに60%の確率で、2ターンの間、感電状態にする"
+        }
+      ]
+    },
+    "orb_130": {
+      "name": "グングロウ",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "グングロウ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "60%(68%)の確率で、2ターンの間、敵単体をめまい状態にする"
+        }
+      ]
+    },
+    "orb_489": {
+      "name": "グール",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "グール",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2倍(2.4倍)のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_038": {
+      "name": "シルバーアサシン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "シルバーアサシン",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "睡眠",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに70%の確率で、2ターンの間、敵を睡眠状態にする"
+        }
+      ]
+    },
+    "orb_563": {
+      "name": "シレイトーン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "シレイトーン",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.18,
+              "turns": 2
+            },
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.18,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵単体の攻撃力と防御力を10%(18%)低下させる"
+        }
+      ]
+    },
+    "orb_011": {
+      "name": "ジャッカルワスプ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ジャッカルワスプ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_171": {
+      "name": "スカルワイバーン",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "スカルワイバーン",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力1.5倍(1.9倍)のダメージ。さらに50%の確率で、2ターンの間、敵を呪い状態にする"
+        }
+      ]
+    },
+    "orb_141": {
+      "name": "ストームライダー",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ストームライダー",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.1,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍(1.49倍)の2連続ダメージ。さらに2ターンの間、敵の攻撃力を10%低下させる"
+        }
+      ]
+    },
+    "orb_514": {
+      "name": "スペクター",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "スペクター",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.23,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵単体の攻撃力を15%(23%)低下させる"
+        }
+      ]
+    },
+    "orb_309": {
+      "name": "ツインハンター",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ツインハンター",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1倍(1.24倍)の2連続ダメージ。さらに2ターンの間、暗闇状態にする"
+        }
+      ]
+    },
+    "orb_091": {
+      "name": "ディジェスチョン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ディジェスチョン",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "40%(48%)の確率で、2ターンの間、敵横一列を毒状態にする"
+        }
+      ]
+    },
+    "orb_163": {
+      "name": "デクリオンオーク",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "デクリオンオーク",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力1倍(1.24倍)の2連続ダメージ。さらに50%の確率で、2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_123": {
+      "name": "デビ千代",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "デビ千代",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "病気",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を病気状態にする"
+        }
+      ]
+    },
+    "orb_010": {
+      "name": "ドラゴンフェイス",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ドラゴンフェイス",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_401": {
+      "name": "ネクロス",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ネクロス",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "自身にスキルフォトンを1つ追加する。さらに自身への攻撃を1回無効化する"
+        }
+      ]
+    },
+    "orb_583": {
+      "name": "ハサムンガー",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ハサムンガー",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.15,
+              "turns": 2
+            }
+          },
+          "sourceText": "敵単体に攻撃力1.5倍（1.9倍）のダメージ。さらに2ターンの間、防御力を15％低下させる"
+        }
+      ]
+    },
+    "orb_268": {
+      "name": "バインドブレイン",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "バインドブレイン",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力0.5倍(1倍)のダメージ。さらに80%の確率で、2ターンの間、敵を束縛状態にする"
+        }
+      ]
+    },
+    "orb_087": {
+      "name": "バウガード・槍",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "バウガード・槍",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.15,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、攻撃力を15%低下させる"
+        }
+      ]
+    },
+    "orb_434": {
+      "name": "バディラッチェ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "バディラッチェ",
+          "range": "single",
+          "grantsPhoton": 2,
+          "sourceText": "自身にスキルフォトンを2つ追加する。さらに2ターンの間継続する音符を1つ蓄積"
+        }
+      ]
+    },
+    "orb_486": {
+      "name": "バブルウーズ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "バブルウーズ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2倍(2.4倍)のダメージ。さらに2ターンの間、敵を暗闇状態にする"
+        }
+      ]
+    },
+    "orb_565": {
+      "name": "パイルドーン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "パイルドーン",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージさらに80%の確率で、2ターンの間、敵を束縛状態にする"
+        }
+      ]
+    },
+    "orb_027": {
+      "name": "ビーシルフ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ビーシルフ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を暗闇状態にする"
+        }
+      ]
+    },
+    "orb_333": {
+      "name": "ピシアス",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ピシアス",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "2ターンの間、自身の攻撃力を25%(33%)上昇させ、さらにアタックフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_194": {
+      "name": "ブルーツリー",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ブルーツリー",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体を2ターンの間、呪い状態にする"
+        }
+      ]
+    },
+    "orb_003": {
+      "name": "プラント",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "プラント",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_408": {
+      "name": "プリティルン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "プリティルン",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力2倍(2.5倍)のダメージ。さらに70%の確率で、2ターンの間、呪い状態にする"
+        }
+      ]
+    },
+    "orb_088": {
+      "name": "プロッキュ",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "プロッキュ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "60%(68%)の確率で、2ターンの間、敵単体を束縛状態にする"
+        }
+      ]
+    },
+    "orb_071": {
+      "name": "ヘルシザーズ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ヘルシザーズ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_174": {
+      "name": "ペインフィンガー",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ペインフィンガー",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2.3倍(2.7倍)のダメージ。さらに2ターンの間、敵を感電状態にする"
+        }
+      ]
+    },
+    "orb_542": {
+      "name": "ペオル",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ペオル",
+          "range": "single",
+          "grantsPhoton": 1,
+          "setsAwakened": true,
+          "sourceText": "自身のHPを最大HPの50%減らす。さらに覚醒状態にし、アタックフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_552": {
+      "name": "ムルシェーゴ",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ムルシェーゴ",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.3,
+              "turns": 2
+            }
+          },
+          "sourceText": "敵単体に防御力4倍(4.5倍)のダメージ ★3時：＋2ターンの間、敵の防御力を30％低下させる"
+        }
+      ]
+    },
+    "orb_014": {
+      "name": "ランブルバイパー",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ランブルバイパー",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を感電状態にする"
+        }
+      ]
+    },
+    "orb_166": {
+      "name": "レイジファントム",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "レイジファントム",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "ゾンビ",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力2倍(2.4倍)のダメージ。さらに70%の確率で、2ターンの間、敵をゾンビ状態にする"
+        }
+      ]
+    },
+    "orb_269": {
+      "name": "レゼルボア",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "レゼルボア",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "病気",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力0.25倍(0.55倍)の2連続ダメージ。さらに80%の確率で、2ターンの間、敵を病気状態にする"
+        }
+      ]
+    },
+    "orb_225": {
+      "name": "ロクス",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ロクス",
+          "range": "row",
+          "steal": true,
+          "sourceText": "45%(49%)の確率で敵横一列の覚醒ゲージを-1する。さらに減少した覚醒ゲージを自身に加算する"
+        }
+      ]
+    },
+    "orb_035": {
+      "name": "人食い樹",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "人食い樹",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を暗闇状態にする"
+        }
+      ]
+    },
+    "orb_172": {
+      "name": "大喰らいペイスト",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "大喰らいペイスト",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力1倍(1.24倍)の2連続ダメージ。さらに50%の確率で、2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_127": {
+      "name": "天使ハマヤ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "天使ハマヤ",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに自身にチャージフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_445": {
+      "name": "妖霊獣タマモ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "妖霊獣タマモ",
+          "range": "single",
+          "grantsPhoton": 2,
+          "sourceText": "自身にチャージフォトンを2つ追加する。さらにHPを5%(15%)回復する"
+        }
+      ]
+    },
+    "orb_284": {
+      "name": "巨白の門番",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "巨白の門番",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍(1.49倍)の2連続ダメージ。さらに70%の確率で、2ターンの間、敵を凍結状態にする"
+        }
+      ]
+    },
+    "orb_069": {
+      "name": "彷徨う未練",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "彷徨う未練",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を呪い状態にする"
+        }
+      ]
+    },
+    "orb_432": {
+      "name": "敏腕・Ｐ",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "敏腕・Ｐ",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "味方後列にスキルフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_126": {
+      "name": "暴れ魔鹿",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "暴れ魔鹿",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を毒状態にする"
+        }
+      ]
+    },
+    "orb_134": {
+      "name": "村喰らいの双貌獣",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "村喰らいの双貌獣",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.1,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍(1.49倍)の2連続ダメージ。さらに2ターンの間、敵の攻撃力を10%低下させる"
+        }
+      ]
+    },
+    "orb_384": {
+      "name": "死蝶アラストール",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "死蝶アラストール",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "味方前列にスキルフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_151": {
+      "name": "水のクルサ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "水のクルサ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1倍(1.16倍)の3連続ダメージ。さらに2ターンの間、敵を毒状態にする"
+        }
+      ]
+    },
+    "orb_153": {
+      "name": "氷のジバル",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "氷のジバル",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2倍(2.4倍)のダメージ。さらに70%の確率で、2ターンの間、敵を凍結状態にする"
+        }
+      ]
+    },
+    "orb_094": {
+      "name": "狂乱の亡者",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "狂乱の亡者",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "ゾンビ",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに70%の確率で、2ターンの間、敵単体をゾンビ状態にする"
+        }
+      ]
+    },
+    "orb_193": {
+      "name": "緑泥キャタピラ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "緑泥キャタピラ",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "自身にアタックフォトンを1つ追加する。2ターンの間、ターン終了時に自身のHPを10%(18%)回復する"
+        }
+      ]
+    },
+    "orb_263": {
+      "name": "蟻妖帝タイタニア",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "蟻妖帝タイタニア",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.2,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵単体の攻撃力を10%(20%)低下させる。さらに対象の地形を1ターン延長する"
+        }
+      ]
+    },
+    "orb_246": {
+      "name": "輝竜アシュトレト",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "輝竜アシュトレト",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵全体に攻撃力1.5倍(2倍)のダメージ。さらに50%の確率で、2ターンの間、敵を凍結状態にする"
+        }
+      ]
+    },
+    "orb_593": {
+      "name": "陽動の使徒",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "陽動の使徒",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "執心",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "80％(88％)の確率で、2ターンの間、敵単体を執心状態にする"
+        }
+      ]
+    },
+    "orb_487": {
+      "name": "霊魂ムース",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "霊魂ムース",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "睡眠",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2倍(2.4倍)のダメージ。さらに70%の確率で、2ターンの間、敵を睡眠状態にする"
+        }
+      ]
+    },
+    "orb_139": {
+      "name": "アカマル",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "アカマル",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.5,
+              "turns": 2
+            }
+          },
+          "sourceText": "敵単体にかばう効果を無視する攻撃力1.15倍(1.31倍)の3連続ダメージ。さらに2ターンの間、防御力を50%低下"
+        }
+      ]
+    },
+    "orb_398": {
+      "name": "アーティ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "アーティ",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "ゾンビ",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列にペインフォトンを1つ追加し、70%(80%)の確率で、2ターンの間、敵をゾンビ状態にする"
+        }
+      ]
+    },
+    "orb_515": {
+      "name": "カオスファントム",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "カオスファントム",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.58,
+              "turns": 2
+            }
+          },
+          "sourceText": "2ターンの間、敵単体の防御力を50%(58%)低下させる"
+        }
+      ]
+    },
+    "orb_317": {
+      "name": "クランプス",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "クランプス",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.15,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵前列の攻撃力を7%(15%)低下させ、さらに敵をノックバック状態にする"
+        }
+      ]
+    },
+    "orb_036": {
+      "name": "クロウロブスター",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "クロウロブスター",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)の雷ダメージ。さらに2ターンの間、敵を感電状態にする"
+        }
+      ]
+    },
+    "orb_356": {
+      "name": "シーシェルド",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "シーシェルド",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "味方単体にスキルフォトンを1つ追加する。さらに味方単体へチェインする"
+        }
+      ]
+    },
+    "orb_037": {
+      "name": "シードランチャー",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "シードランチャー",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を感電状態にする"
+        }
+      ]
+    },
+    "orb_252": {
+      "name": "ジャガーノート",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ジャガーノート",
+          "range": "single",
+          "setsAwakened": true,
+          "sourceText": "自身を覚醒状態にし、2ターンの間、ダメージを10%(20%)軽減する。さらに自身にチェインする"
+        }
+      ]
+    },
+    "orb_595": {
+      "name": "バグパイダー",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "バグパイダー",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "悪夢",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに70％の確率で、2ターンの間、悪夢状態にする"
+        }
+      ]
+    },
+    "orb_286": {
+      "name": "バジリスク",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "バジリスク",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵全体に攻撃力1倍(2倍)のダメージ。さらに2ターンの間、70%の確率で、敵を毒状態にする"
+        }
+      ]
+    },
+    "orb_298": {
+      "name": "ピローヌ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ピローヌ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2.5倍(3倍)のダメージ。さらに70%の確率で、2ターンの間、めまい状態にする"
+        }
+      ]
+    },
+    "orb_221": {
+      "name": "フリーザーワーム",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "フリーザーワーム",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2倍(2.4倍)のダメージ。さらに70%の確率で、2ターンの間、敵を凍結状態にする"
+        }
+      ]
+    },
+    "orb_189": {
+      "name": "フロストドラゴン",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "フロストドラゴン",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵全体に攻撃力1倍(1.4倍)のダメージ。さらに50%の確率で、2ターンの間、めまい状態にする"
+        }
+      ]
+    },
+    "orb_323": {
+      "name": "ブラッククロース",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ブラッククロース",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2.5倍(2.9倍)のダメージ。さらに70%の確率で2ターンの間、敵を凍結状態にする"
+        }
+      ]
+    },
+    "orb_350": {
+      "name": "ベスティア",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ベスティア",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力2倍(2.5倍)のダメージ。さらに70%の確率で、2ターンの間、敵を束縛状態にする"
+        }
+      ]
+    },
+    "orb_107": {
+      "name": "ボブルス",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ボブルス",
+          "range": "single",
+          "place": {
+            "kind": "fast",
+            "mult": 0.5,
+            "fuse": 3
+          },
+          "sourceText": "敵単体に80%(88%)の確率で0.5倍で3ターン後に弾けるハイドロボム速を付与する"
+        }
+      ]
+    },
+    "orb_162": {
+      "name": "マジェスティ",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "マジェスティ",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "味方後列にチャージフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_198": {
+      "name": "マリスルーク",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "マリスルーク",
+          "range": "single",
+          "place": {
+            "kind": "heavy",
+            "mult": 2,
+            "fuse": 7
+          },
+          "sourceText": "敵単体に掛かっている強化を解除し、さらに92%(100%)の確率で、2倍で7ターン後に弾けるハイドロボム重を付与する"
+        }
+      ]
+    },
+    "orb_186": {
+      "name": "ミツクビ",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ミツクビ",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "睡眠",
+                "turns": 1
+              }
+            ]
+          },
+          "sourceText": "敵全体に攻撃力1倍(1.4倍)のダメージ。さらに20%の確率で、1ターンの間、睡眠状態にする"
+        }
+      ]
+    },
+    "orb_587": {
+      "name": "メギラオン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "メギラオン",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2倍(2.4倍)のダメージ。さらに2ターンの間、敵を呪い状態にする"
+        }
+      ]
+    },
+    "orb_330": {
+      "name": "リュストゥング",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "リュストゥング",
+          "range": "row",
+          "debuff": {
+            "defDown": {
+              "pct": 0.15,
+              "turns": 2
+            },
+            "types": [
+              {
+                "type": "暗闇",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "60%(68%)の確率で、2ターンの間、敵横一列を暗闇状態にするさらに防御力を15%低下させる"
+        }
+      ]
+    },
+    "orb_377": {
+      "name": "レヴィエル",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "レヴィエル",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "睡眠",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "60%(70%)の確率で、2ターンの間、敵単体を睡眠状態にする。対象が睡眠状態の場合は即死させる"
+        }
+      ]
+    },
+    "orb_572": {
+      "name": "ワン・O・ワン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ワン・O・ワン",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_574": {
+      "name": "ヴェスパーマイン",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ヴェスパーマイン",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.2,
+                "turns": 1
+              }
+            ]
+          },
+          "sourceText": "敵全体に攻撃力0.5倍(1倍)の火ダメージ。1ターンの間、炎上の地形効果で0.2倍の継続ダメージを与える ★3時：＋敵の攻撃力を20％低下させる"
+        }
+      ]
+    },
+    "orb_287": {
+      "name": "古き厄災の魔女",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "古き厄災の魔女",
+          "range": "all",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵全体に攻撃力1.5倍(2倍)のダメージ。さらに2ターンの間、70%の確率で、敵を呪い状態にする"
+        }
+      ]
+    },
+    "orb_276": {
+      "name": "地龍帝スムドゥス",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "地龍帝スムドゥス",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "完殺",
+                "turns": 99
+              }
+            ]
+          },
+          "sourceText": "敵単体に掛かっている強化を解除し、さらに敵を完殺状態（永続）にする"
+        }
+      ]
+    },
+    "orb_326": {
+      "name": "夢境龍ファフニル",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "夢境龍ファフニル",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2倍(2.4倍)のダメージ。さらに70%の確率で、2ターンの間、敵を毒状態にする"
+        }
+      ]
+    },
+    "orb_157": {
+      "name": "守護竜ネイロード",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "守護竜ネイロード",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力1.5倍(1.9倍)のダメージ。さらに50%の確率で、2ターンの間、敵を感電状態にする"
+        }
+      ]
+    },
+    "orb_121": {
+      "name": "微睡みの担い手",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "微睡みの担い手",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "睡眠",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに70%の確率で、2ターンの間、敵を睡眠状態にする"
+        }
+      ]
+    },
+    "orb_040": {
+      "name": "忌まわしき影",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "忌まわしき影",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を毒状態にし、チャージを追加する"
+        }
+      ]
+    },
+    "orb_304": {
+      "name": "暴龍ガルグイユ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "暴龍ガルグイユ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2.5倍(2.9倍)のダメージ。さらに2ターンの間、感電状態にする"
+        }
+      ]
+    },
+    "orb_190": {
+      "name": "次元獣アナーケン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "次元獣アナーケン",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "2ターンの間、自身のフォトン容量を+1し、スキルフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_093": {
+      "name": "残海の賢者",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "残海の賢者",
+          "range": "row",
+          "debuff": {
+            "defDown": {
+              "pct": 0.2,
+              "turns": 2
+            }
+          },
+          "sourceText": "敵横一列に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、防御力を20%低下させる"
+        }
+      ]
+    },
+    "orb_079": {
+      "name": "水嶺術士",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "水嶺術士",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を呪い状態にする"
+        }
+      ]
+    },
+    "orb_250": {
+      "name": "氷龍帝オロチ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "氷龍帝オロチ",
+          "range": "single",
+          "setsAwakened": true,
+          "sourceText": "自身を覚醒状態にし、2ターンの間、ダメージを10%(20%)軽減する。さらにアタックを1つ追加する"
+        }
+      ],
+      "traitHeavyBoost": 0.2
+    },
+    "orb_345": {
+      "name": "竜骨王イルベガン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "竜骨王イルベガン",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "ゾンビ",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2.5倍(3倍)のダメージ。さらに2ターンの間、敵をゾンビ状態にする"
+        }
+      ]
+    },
+    "orb_274": {
+      "name": "終告賽クライス",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "終告賽クライス",
+          "range": "row",
+          "place": {
+            "kind": "heavy",
+            "mult": 1.5,
+            "fuse": 7
+          },
+          "sourceText": "敵横一列に攻撃力1.5倍(2倍)のダメージ。さらに1.5倍で7ターン後に弾けるハイドロボム重を付与する"
+        }
+      ]
+    },
+    "orb_415": {
+      "name": "迅狼ルプス",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "迅狼ルプス",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "自身にスキルフォトンを1つ追加し、2ターンの間、スキルを強化する"
+        }
+      ]
+    },
+    "orb_561": {
+      "name": "邪眼王メラ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "邪眼王メラ",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.25,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に掛かっている強化を解除する。さらに2ターンの間、攻撃力を15％(25%)低下させる"
+        }
+      ]
+    },
+    "orb_590": {
+      "name": "アザラク",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "アザラク",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "自身に強化解除無効1回を付与し、さらにスキルフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_385": {
+      "name": "アナキス",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "アナキス",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "味方単体にスキルフォトンを1つ追加し、2ターンの間、スキルを強化する"
+        }
+      ]
+    },
+    "orb_243": {
+      "name": "アビスガード",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "アビスガード",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "病気",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力3倍(3.5倍)のダメージ。さらに70%の確率で、2ターンの間、敵を病気状態にする"
+        }
+      ]
+    },
+    "orb_170": {
+      "name": "アースビートル",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "アースビートル",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.3倍(1.7倍)の2連続ダメージ。さらに70%の確率で、2ターンの間、めまい状態にする"
+        }
+      ]
+    },
+    "orb_111": {
+      "name": "インケングモ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "インケングモ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "束縛",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、80%の確率で敵を束縛状態にする"
+        }
+      ]
+    },
+    "orb_313": {
+      "name": "インサニティ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "インサニティ",
+          "range": "single",
+          "grantsPhoton": 2,
+          "sourceText": "自身にスキルフォトンを2つ追加する"
+        }
+      ]
+    },
+    "orb_116": {
+      "name": "インターセプター",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "インターセプター",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.15,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力0.5倍(0.7倍)の2連続ダメージ。さらに2ターンの間、攻撃力を15%低下させる"
+        }
+      ]
+    },
+    "orb_060": {
+      "name": "ウォーロック",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ウォーロック",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに70%の確率で、2ターンの間、凍結状態にする"
+        }
+      ]
+    },
+    "orb_145": {
+      "name": "エリミネーター",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "エリミネーター",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "睡眠",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍(1.49倍)の2連続ダメージ。さらに70%の確率で、2ターンの間、敵を睡眠状態にする"
+        }
+      ]
+    },
+    "orb_348": {
+      "name": "オクトパロス",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "オクトパロス",
+          "range": "row",
+          "grantsPhoton": 1,
+          "sourceText": "敵横一列に攻撃力2倍(2.5倍)のダメージ。さらに自身にチャージフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_601": {
+      "name": "カトルスの幻影",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "カトルスの幻影",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.15,
+              "turns": 2
+            }
+          },
+          "sourceText": "2ターンの間、敵単体の防御力を5％(15％)低下させ、さらに覚醒ゲージの増加を無効化する(1回)"
+        }
+      ]
+    },
+    "orb_337": {
+      "name": "カンセカスタム",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "カンセカスタム",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "40%(48%)の確率で、2ターンの間、敵横一列を感電状態にする"
+        }
+      ]
+    },
+    "orb_160": {
+      "name": "ギガンテス",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ギガンテス",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "凍結",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2倍(2.4倍)のダメージ。さらに70%の確率で、2ターンの間、敵を凍結状態にする"
+        }
+      ]
+    },
+    "orb_080": {
+      "name": "サイコバスター",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "サイコバスター",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵横一列に攻撃力1.5倍(1.9倍)のダメージ。さらに20%の確率で、2ターンの間、感電状態にする"
+        }
+      ]
+    },
+    "orb_558": {
+      "name": "ジェントルトン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ジェントルトン",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "2ターンの間、自身の攻撃力を25%(35%)上昇。さらに溜まっている覚醒ゲージが1以上なら-1して、スキルフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_400": {
+      "name": "ジャズィー",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ジャズィー",
+          "range": "single",
+          "grantsPhoton": 2,
+          "sourceText": "自身にチャージフォトンとスキルフォトンを1つ追加する。さらに2ターンの間継続する音符を1つ蓄積"
+        }
+      ]
+    },
+    "orb_020": {
+      "name": "スペルウィーゼル",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "スペルウィーゼル",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を呪い状態にする"
+        }
+      ]
+    },
+    "orb_388": {
+      "name": "ソレント",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ソレント",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "味方単体にアタックフォトンを1つ追加し、2ターンの間、アタックを強化する"
+        }
+      ]
+    },
+    "orb_095": {
+      "name": "タクサタベル",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "タクサタベル",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "混乱",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を混乱状態にする"
+        }
+      ]
+    },
+    "orb_109": {
+      "name": "チアリナ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "チアリナ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "睡眠",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに70%の確率で、2ターンの間、敵を睡眠状態にする"
+        }
+      ]
+    },
+    "orb_334": {
+      "name": "デイモン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "デイモン",
+          "range": "row",
+          "place": {
+            "kind": "fast",
+            "mult": 0.5,
+            "fuse": 3
+          },
+          "sourceText": "敵横一列に80%(88%)の確率で、0.5倍で3ターン後に弾けるハイドロボム速を付与する"
+        }
+      ]
+    },
+    "orb_562": {
+      "name": "ハーメルン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ハーメルン",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.13,
+              "turns": 2
+            },
+            "types": [
+              {
+                "type": "混乱",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵単体を混乱状態にするさらに防御力を5%(13%)低下させる"
+        }
+      ]
+    },
+    "orb_023": {
+      "name": "バトルジョーカー",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "バトルジョーカー",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)の雷ダメージ。さらに2ターンの間、敵を呪い状態にする"
+        }
+      ]
+    },
+    "orb_490": {
+      "name": "パイロダンサー",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "パイロダンサー",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2倍(2.4倍)のダメージ。さらに2ターンの間、敵を呪い状態にする"
+        }
+      ]
+    },
+    "orb_319": {
+      "name": "パキラ",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "パキラ",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.23,
+              "turns": 2
+            }
+          },
+          "sourceText": "敵単体に掛かっている強化を解除する。さらに2ターンの間、防御力を15%(23%)低下させる"
+        }
+      ]
+    },
+    "orb_042": {
+      "name": "パワーウッド",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "パワーウッド",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_428": {
+      "name": "ビクリート",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ビクリート",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "2ターンの間、自身が積めるフォトンの量を+1する。さらに自身にスキルフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_395": {
+      "name": "ピエトロ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ピエトロ",
+          "range": "single",
+          "grantsPhoton": 2,
+          "sourceText": "自身にアタックフォトンとスキルフォトンを1つ追加する さらに1ターンの間、攻撃力を10%(20%)上昇させる"
+        }
+      ]
+    },
+    "orb_550": {
+      "name": "フルールロップ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "フルールロップ",
+          "range": "single",
+          "grantsPhoton": 2,
+          "sourceText": "2ターンの間、継続する音符を1つ蓄積。1ターン後、自身にスキルフォトンを2つ追加する ★3時：＋2ターンの間、自身のスキルを強化する"
+        }
+      ]
+    },
+    "orb_373": {
+      "name": "ヘルズブレイン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ヘルズブレイン",
+          "range": "row",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "70%の確率で、2ターンの間、敵横一列を呪い状態にし、覚醒ゲージを-2する"
+        }
+      ]
+    },
+    "orb_183": {
+      "name": "マグニファイ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "マグニファイ",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力0.75倍(0.95倍)の2連続ダメージ。さらに2ターンの間、敵を呪い状態にする"
+        }
+      ]
+    },
+    "orb_311": {
+      "name": "ムタチオン",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ムタチオン",
+          "range": "single",
+          "debuff": {
+            "defDown": {
+              "pct": 0.05,
+              "turns": 2
+            },
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.05,
+                "turns": 2
+              },
+              {
+                "type": "素早さ低下",
+                "pct": 0.05,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2倍(2.4倍)のダメージ。さらに2ターンの間、攻撃力、防御力、素早さをそれぞれ5%ずつ低下させる"
+        }
+      ]
+    },
+    "orb_346": {
+      "name": "ユアーズ",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ユアーズ",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "味方前列にアタックフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_353": {
+      "name": "ラクテンス",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ラクテンス",
+          "range": "single",
+          "grantsPhoton": 2,
+          "sourceText": "2ターンの間、自身へのダメージを10%(20%)軽減する。さらにチャージフォトンを2つ追加する"
+        }
+      ]
+    },
+    "orb_344": {
+      "name": "リャナンシィ",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "リャナンシィ",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "敵単体に攻撃力1.5倍(2倍)のダメージ。さらに自身にアタックフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_057": {
+      "name": "レリックアンバー",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "レリックアンバー",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "感電",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)の雷ダメージ。さらに2ターンの間、敵を感電状態にする"
+        }
+      ]
+    },
+    "orb_041": {
+      "name": "ロイヤルフェザー",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "ロイヤルフェザー",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_048": {
+      "name": "古代蜂",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "古代蜂",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "めまい",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵をめまい状態にする"
+        }
+      ]
+    },
+    "orb_397": {
+      "name": "奏響ヨハネス",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "奏響ヨハネス",
+          "range": "single",
+          "grantsPhoton": 2,
+          "sourceText": "自身にチャージフォトンとアタックフォトンを1つ追加する。さらに2ターンの間継続する音符を1つ付与"
+        }
+      ]
+    },
+    "orb_516": {
+      "name": "怨念の渦",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "怨念の渦",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "素早さ低下",
+                "pct": 0.58,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵単体の素早さを50%(58%)低下させる"
+        }
+      ]
+    },
+    "orb_256": {
+      "name": "成り損ない",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "成り損ない",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "攻撃力低下",
+                "pct": 0.2,
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "2ターンの間、敵単体の攻撃力を10%(20%)低下。さらに覚醒ゲージを-2し、減少した覚醒ゲージを自身に加算する"
+        }
+      ]
+    },
+    "orb_485": {
+      "name": "泥魔神",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "泥魔神",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力2倍(2.4倍)のダメージ。さらに2ターンの間、敵を毒状態にする"
+        }
+      ]
+    },
+    "orb_275": {
+      "name": "流水のまじない師",
+      "ct": 1,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "流水のまじない師",
+          "range": "single",
+          "place": {
+            "kind": "fast",
+            "mult": 0.5,
+            "fuse": 3
+          },
+          "sourceText": "敵単体に90%(100%)の確率で、0.5倍で3ターン後に弾けるハイドロボム速を付与する"
+        }
+      ]
+    },
+    "orb_444": {
+      "name": "炎龍ダヅラース",
+      "ct": 3,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "炎龍ダヅラース",
+          "range": "single",
+          "grantsPhoton": 3,
+          "sourceText": "自身にチャージフォトン2つとアタックフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_439": {
+      "name": "美猴王ゴクウ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "美猴王ゴクウ",
+          "range": "single",
+          "grantsPhoton": 2,
+          "sourceText": "自身にアタックフォトンを2つ追加する"
+        }
+      ]
+    },
+    "orb_594": {
+      "name": "聖戦徒ジャジ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "聖戦徒ジャジ",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "敵単体に攻撃力2倍(2.4倍)のダメージ。さらに自身にアタックフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_006": {
+      "name": "腐肉喰らい",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "腐肉喰らい",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を毒状態にする"
+        }
+      ]
+    },
+    "orb_220": {
+      "name": "貫穿土竜",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "貫穿土竜",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "味方単体にチャージフォトンを1つ追加する。さらに2ターンの間、攻撃力を20%(28%)上昇させる"
+        }
+      ]
+    },
+    "orb_392": {
+      "name": "轟迅狼ベヒモス",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "轟迅狼ベヒモス",
+          "range": "single",
+          "grantsPhoton": 1,
+          "sourceText": "自身のフォトンをアタックに変化させ、さらにアタックを1つ追加する"
+        }
+      ]
+    },
+    "orb_031": {
+      "name": "魔導ビースト",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "魔導ビースト",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "呪い",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.5倍(1.9倍)のダメージ。さらに2ターンの間、敵を呪い状態にする"
+        }
+      ]
+    },
+    "orb_571": {
+      "name": "魔縁ハテンゴ",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "魔縁ハテンゴ",
+          "range": "single",
+          "grantsPhoton": 2,
+          "sourceText": "1ターンの間、自身が積めるフォトンの量を+1する。さらにアタックフォトンとチャージフォトンを1つ追加する"
+        }
+      ]
+    },
+    "orb_138": {
+      "name": "黒き淵の鋏手",
+      "ct": 2,
+      "actions": [
+        {
+          "key": "orb",
+          "medium": "オーブ",
+          "name": "黒き淵の鋏手",
+          "range": "single",
+          "debuff": {
+            "types": [
+              {
+                "type": "毒",
+                "turns": 2
+              }
+            ]
+          },
+          "sourceText": "敵単体に攻撃力1.25倍(1.49倍)の2連続ダメージ。さらに2ターンの間、敵を毒状態にする"
+        }
+      ]
+    }
+  },
+  "me": {
+    "gaugeOnBomb": [
+      {
+        "leaderId": "真21_リヴァイアサン",
+        "slot": "2",
+        "condition": "バースト"
+      },
+      {
+        "leaderId": "真21_リヴァイアサン",
+        "slot": "4",
+        "condition": "バースト"
+      },
+      {
+        "leaderId": "真21_リヴァイアサン",
+        "slot": "leader",
+        "condition": "-"
+      }
+    ],
+    "probNote": [
+      {
+        "leaderId": "真50_シャミハザR",
+        "slot": "1",
+        "condition": "バースト+スナイパー"
+      },
+      {
+        "leaderId": "真50_シャミハザR",
+        "slot": "5",
+        "condition": "バースト+スナイパー"
+      }
+    ]
+  },
+  "reishouBoost": {
+    "reishou_m002": 0.03,
+    "reishou_m017": 0.04
+  }
+}

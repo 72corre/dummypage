@@ -1,0 +1,320 @@
+{
+ "kind": "flag-holders",
+ "version": 1,
+ "note": "戦旗の保持者一覧。corpus-status/戦旗.json（正本）から生成（build/pipeline/generate-flag.mjs）。slots は編成の枠番号（1始まり、3=リーダー）で、左陣=1・2・3／右陣=3・4・5。tokens は発揮条件（空=条件なしで常に成立、複数は OR）。effect は正本の転記から脚注マーカーを取り除いたもの。targetNote は付与先の例外（脚注 *46・*47・*49）の主文で、該当する保持者にだけ付く。effectStages は脚注 *50 のターン表（カガセオだけに付く）: turn はその段階が始まるターン、value は上昇率（通常/＋形）、orLater は「そのターン以降ずっと」の印。",
+ "holders": [
+  {
+   "megidoId": "継07_チユエン",
+   "name": "チユエン",
+   "style": "ラッシュ",
+   "gauge": 4,
+   "target": "left",
+   "targetLabel": "左陣",
+   "slots": [
+    1,
+    2,
+    3
+   ],
+   "conditionText": "T",
+   "conditionLabel": "トルーパー",
+   "tokens": [
+    {
+     "kind": "class",
+     "value": "トルーパー"
+    }
+   ],
+   "effect": "フォトンを使用した行動終了時、20%/25%の確率で消費したフォトンを自身に追加"
+  },
+  {
+   "megidoId": "継06_チューチャオ",
+   "name": "チューチャオ",
+   "style": "ラッシュ",
+   "gauge": 3,
+   "target": "right",
+   "targetLabel": "右陣",
+   "slots": [
+    3,
+    4,
+    5
+   ],
+   "conditionText": "RまたはB",
+   "conditionLabel": "ラッシュまたはバースト",
+   "tokens": [
+    {
+     "kind": "style",
+     "value": "ラッシュ"
+    },
+    {
+     "kind": "style",
+     "value": "バースト"
+    }
+   ],
+   "effect": "地形が無効になり、受けるダメージを20%/30%軽減する"
+  },
+  {
+   "megidoId": "祖58_アミーC",
+   "name": "アミーC",
+   "style": "カウンター",
+   "gauge": 4,
+   "target": "right",
+   "targetLabel": "右陣",
+   "slots": [
+    3,
+    4,
+    5
+   ],
+   "conditionText": "T",
+   "conditionLabel": "トルーパー",
+   "tokens": [
+    {
+     "kind": "class",
+     "value": "トルーパー"
+    }
+   ],
+   "effect": "自身のフォトンによる行動で強化・特殊状態になったときHP25%/30%回復"
+  },
+  {
+   "megidoId": "継03_シェンウー",
+   "name": "シェンウー",
+   "style": "カウンター",
+   "gauge": 3,
+   "target": "right",
+   "targetLabel": "右陣",
+   "slots": [
+    3,
+    4,
+    5
+   ],
+   "conditionText": "TまたはC",
+   "conditionLabel": "トルーパーまたはカウンター",
+   "tokens": [
+    {
+     "kind": "class",
+     "value": "トルーパー"
+    },
+    {
+     "kind": "style",
+     "value": "カウンター"
+    }
+   ],
+   "effect": "受けるダメージを10%/15%軽減する。自身が攻撃か反動ダメージを受けたとき、アーマーを750/1500付与する"
+  },
+  {
+   "megidoId": "継08_ヴリトラ",
+   "name": "ヴリトラ",
+   "style": "カウンター",
+   "gauge": 4,
+   "target": "right",
+   "targetLabel": "右陣",
+   "slots": [
+    3,
+    4,
+    5
+   ],
+   "conditionText": "C",
+   "conditionLabel": "カウンター",
+   "tokens": [
+    {
+     "kind": "style",
+     "value": "カウンター"
+    }
+   ],
+   "effect": "状態異常にかかっている場合、1つにつき攻撃力と防御力が30%/40%上昇する（最大180%/240%）"
+  },
+  {
+   "megidoId": "継09_フーリーチン",
+   "name": "フーリーチン",
+   "style": "カウンター",
+   "gauge": 4,
+   "target": "left",
+   "targetLabel": "左陣",
+   "slots": [
+    1,
+    2,
+    3
+   ],
+   "conditionText": "CまたはR",
+   "conditionLabel": "カウンターまたはラッシュ",
+   "tokens": [
+    {
+     "kind": "style",
+     "value": "カウンター"
+    },
+    {
+     "kind": "style",
+     "value": "ラッシュ"
+    }
+   ],
+   "targetNote": "左陣に戦旗がある場合、右陣に付与する。",
+   "effect": "攻撃力が10%/20%上昇する。さらに与えたダメージの20%/30%を吸収する"
+  },
+  {
+   "megidoId": "継04_チンロン",
+   "name": "チンロン",
+   "style": "カウンター",
+   "gauge": 5,
+   "target": "left",
+   "targetLabel": "左陣",
+   "slots": [
+    1,
+    2,
+    3
+   ],
+   "conditionText": "CまたはB",
+   "conditionLabel": "カウンターまたはバースト",
+   "tokens": [
+    {
+     "kind": "style",
+     "value": "カウンター"
+    },
+    {
+     "kind": "style",
+     "value": "バースト"
+    }
+   ],
+   "effect": "与える雷ダメージが20%/30%上昇し、帯電地形がある敵から、受けるダメージを15%/25%軽減する"
+  },
+  {
+   "megidoId": "継11_アンダカ",
+   "name": "アンダカ",
+   "style": "カウンター",
+   "gauge": 4,
+   "target": "right",
+   "targetLabel": "右陣",
+   "slots": [
+    3,
+    4,
+    5
+   ],
+   "conditionText": "TまたはC",
+   "conditionLabel": "トルーパーまたはカウンター",
+   "tokens": [
+    {
+     "kind": "class",
+     "value": "トルーパー"
+    },
+    {
+     "kind": "style",
+     "value": "カウンター"
+    }
+   ],
+   "effect": "受ける攻撃をMISSにし(50/60%)(奥義、秘奥義、オーブは除く)、敵からのフォトンによる攻撃MISS時、敵単体に攻撃力1.5/1.75倍の暗闇攻撃"
+  },
+  {
+   "megidoId": "継02_マナナンガル",
+   "name": "マナナンガル",
+   "style": "カウンター",
+   "gauge": 3,
+   "target": "left",
+   "targetLabel": "左陣",
+   "slots": [
+    1,
+    2,
+    3
+   ],
+   "conditionText": "CまたはR",
+   "conditionLabel": "カウンターまたはラッシュ",
+   "tokens": [
+    {
+     "kind": "style",
+     "value": "カウンター"
+    },
+    {
+     "kind": "style",
+     "value": "ラッシュ"
+    }
+   ],
+   "targetNote": "左陣に戦旗がある場合、右陣に付与する。",
+   "effect": "HP50%以下の場合、攻撃力が90%/100%上昇し、HP33.3%以下の場合、攻撃力が190%/200%上昇する"
+  },
+  {
+   "megidoId": "真63_アマゼロトB",
+   "name": "アマゼロトB",
+   "style": "バースト",
+   "gauge": 4,
+   "target": "left",
+   "targetLabel": "左陣",
+   "slots": [
+    1,
+    2,
+    3
+   ],
+   "conditionText": "T",
+   "conditionLabel": "トルーパー",
+   "tokens": [
+    {
+     "kind": "class",
+     "value": "トルーパー"
+    }
+   ],
+   "effect": "攻撃力が10%/15%上昇し、自身が敵を撃破するたびにさらに攻撃力が1体につき+45%/50%上昇する（最大190%/215%）"
+  },
+  {
+   "megidoId": "継05_バイフー",
+   "name": "バイフー",
+   "style": "バースト",
+   "gauge": 6,
+   "target": "left",
+   "targetLabel": "左陣",
+   "slots": [
+    1,
+    2,
+    3
+   ],
+   "conditionText": "FまたはT",
+   "conditionLabel": "ファイターまたはトルーパー",
+   "tokens": [
+    {
+     "kind": "class",
+     "value": "ファイター"
+    },
+    {
+     "kind": "class",
+     "value": "トルーパー"
+    }
+   ],
+   "effect": "フォトンを使った行動後2ターンの間、自身の素早さを20%/30%上昇させる。（効果の重複が可能）"
+  },
+  {
+   "megidoId": "継01_カガセオ",
+   "name": "カガセオ",
+   "style": "バースト",
+   "gauge": 6,
+   "target": "left",
+   "targetLabel": "左陣",
+   "slots": [
+    1,
+    2,
+    3
+   ],
+   "effectStages": [
+    {
+     "turn": 1,
+     "value": "5%/10%"
+    },
+    {
+     "turn": 4,
+     "value": "10%/15%"
+    },
+    {
+     "turn": 6,
+     "value": "20%/25%"
+    },
+    {
+     "turn": 8,
+     "value": "30%/35%"
+    },
+    {
+     "turn": 10,
+     "value": "45%/50%",
+     "orLater": true
+    }
+   ],
+   "conditionText": "なし",
+   "conditionLabel": "条件なし",
+   "tokens": [],
+   "targetNote": "左陣に戦旗がある場合、右陣に付与する。",
+   "effect": "攻防早が5%/10%上昇する。特定ターン経過で効果変化"
+  }
+ ]
+}

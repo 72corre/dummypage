@@ -1,0 +1,1445 @@
+{
+ "kind": "kyoen-index",
+ "version": 1,
+ "note": "狂炎シミュレーターの材料の索引。corpus/・corpus-orbs/ から生成（build/pipeline/generate-kyoen.mjs）。倍率は＋版（専用霊宝版は needsReishou）を正とし、オーブは最大強化前提。enjou は地形倍率・持続・範囲と行動自体の火ダメージ、convert は狂炎化（炎帝ムスペルのオーブを含む）、fire は火ダメージの行動（ランダム反復の行動は回数が確定しないため含まない）。extend は「地形の延長」効果（上限の枠外）で enjou / convert / fire に付く。reserve はリザーブ（ターン終了時に発動）でフルーレティBのスキルにだけ付く。ground は撃墜の付与（モレクの覚醒スキル）。delayed は遅延行動（ナベリウスBの覚醒スキル。発動は1ターン後＝次のターンの行動開始時で、反復回数は直前ターンの火ダメージ回数で決まるため、倍率・数え方・上限だけを持つ）。allocMin / allocMax は対象ランダム×回数系の反復範囲（カイムBの炎上の Lv ごとの範囲と、オーブの灼火蝶マヴィの固定3回だけ。シミュレーターでは使う人が敵ごとに割り振る）。counter は反撃の火（フェニックスCの覚醒スキルだけ。攻撃を受けた相手にだけ届く）。bullet は Bアーツ（バレット消費）の炎上形（ベリアルBのスキルだけ。地形決定の段階だけこの倍率で直接ダメージを当てる）。shift は覚醒スキルでスキルがシフトする引き金（バティンBだけ。スキルの fire にはシフト後の原文 shiftAfterText が付き、シフト後は火ではなくなる）。ベリアルBの fire には焼夷フォトンの合成エントリ（shoui）が入る。levels は「使うたびにレベルが上がる」行動の Lv ごとの数値（フィロタヌスの炎上、カイムBの炎上、アイムの火の4件だけ。トップレベルの数値は Lv1 のもの）。form は武器の形で効果が変わる行動の形（タムスだけ。separated が分離武器時、linked が連結武器時で、形ごとに別エントリ）、shiftTo は使うとその形にシフトする行動（タムスの分離時の奥義→連結、連結時の覚醒スキル→分離の5件だけ）。",
+ "megido": {
+  "宵06_モレク": {
+   "name": "モレク",
+   "enjou": [],
+   "convert": [],
+   "fire": [],
+   "ground": [
+    {
+     "type": "ground",
+     "key": "awakened_skill",
+     "medium": "覚醒スキル",
+     "name": "ブラストオフレーザ＋＋",
+     "range": "single",
+     "turns": 2,
+     "dmgMult": 3,
+     "dmgHits": 1,
+     "sourceText": "通常: 敵単体に攻撃力3倍のダメージ。さらに2ターンの間、撃墜状態にする／フォトン充填: 敵単体に攻撃力3倍のダメージ。さらに2ターンの間、撃墜状態にする。自身のフォトン充填値を+20する"
+    }
+   ],
+   "delayed": [],
+   "shift": []
+  },
+  "真31_フルーレティB": {
+   "name": "フルーレティB",
+   "enjou": [
+    {
+     "type": "enjou",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "炎炎たる恋文＋",
+     "range": "single",
+     "mult": 1.25,
+     "duration": 2,
+     "dmgMult": 0.7,
+     "dmgHits": 2,
+     "reserve": {
+      "turns": 3
+     },
+     "sourceText": "3ターンの間、リザーブ状態になる敵単体に攻撃力0.7倍の2連続火ダメージ。さらに2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える"
+    }
+   ],
+   "convert": [
+    {
+     "type": "convert",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "ザ・マスターピース＋",
+     "range": "all",
+     "dmgMult": 0,
+     "dmgHits": 0,
+     "sourceText": "敵全体の炎上地形を狂炎地形にする。さらに味方全体のHPを30%回復する"
+    }
+   ],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "炎炎たる恋文＋",
+     "range": "single",
+     "hits": 2,
+     "dmgMult": 0.7,
+     "reserve": {
+      "turns": 3
+     },
+     "sourceText": "3ターンの間、リザーブ状態になる敵単体に攻撃力0.7倍の2連続火ダメージ。さらに2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "真39_ウコバク": {
+   "name": "ウコバク",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "藍蝶+",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.25,
+     "sourceText": "敵単体に攻撃力1.25倍の火ダメージ。さらに80%の確率で、2ターンの間、攻撃力を20%低下させる"
+    },
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "藍蝶＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.25,
+     "needsReishou": true,
+     "sourceText": "敵単体に攻撃力1.25倍の火ダメージ。さらに2ターンの間、攻撃力を20%低下させ、味方単体の攻撃力を20%上昇させる"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "真44_タムス": {
+   "name": "タムス",
+   "enjou": [
+    {
+     "type": "enjou",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "赤熱レンチ！＋（分離武器時）",
+     "range": "single",
+     "mult": 1.25,
+     "duration": 2,
+     "dmgMult": 1.25,
+     "dmgHits": 1,
+     "sourceText": "敵単体に攻撃力1.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える",
+     "form": "separated"
+    },
+    {
+     "type": "enjou",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "赤熱レンチ！＋（分離武器時）",
+     "range": "single",
+     "mult": 1.25,
+     "duration": 2,
+     "dmgMult": 1.25,
+     "dmgHits": 1,
+     "needsReishou": true,
+     "sourceText": "敵単体に攻撃力1.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える。さらに、自身の覚醒ゲージを+1する",
+     "form": "separated"
+    },
+    {
+     "type": "enjou",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "焦熱リーサルフレア＋（分離武器時）",
+     "range": "all",
+     "mult": 1.5,
+     "duration": 2,
+     "dmgMult": 2,
+     "dmgHits": 1,
+     "shiftTo": "linked",
+     "sourceText": "敵全体に攻撃力2倍の火ダメージ。2ターンの間、炎上の地形効果で1.5倍の継続ダメージ。さらに連結武器にシフトし、スキル、覚醒スキル、奥義の効果が変化する",
+     "form": "separated"
+    },
+    {
+     "type": "enjou",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "焦熱リーサルフレア＋（分離武器時）",
+     "range": "all",
+     "mult": 1.5,
+     "duration": 2,
+     "dmgMult": 2.25,
+     "dmgHits": 1,
+     "shiftTo": "linked",
+     "needsReishou": true,
+     "sourceText": "敵全体に攻撃力2.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.5倍の継続ダメージ。さらに連結武器にシフトし、スキル、覚醒スキル、奥義の効果が変化する",
+     "form": "separated"
+    },
+    {
+     "type": "enjou",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "焦熱リーサルフレア＋（連結武器時）",
+     "range": "all",
+     "mult": 1.5,
+     "duration": 2,
+     "dmgMult": 2,
+     "dmgHits": 1,
+     "sourceText": "敵全体に攻撃力2倍の火ダメージ。2ターンの間、炎上の地形効果で1.5倍の継続ダメージを与える",
+     "form": "linked"
+    },
+    {
+     "type": "enjou",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "焦熱リーサルフレア＋（連結武器時）",
+     "range": "all",
+     "mult": 1.5,
+     "duration": 2,
+     "dmgMult": 2.25,
+     "dmgHits": 1,
+     "needsReishou": true,
+     "sourceText": "敵全体に攻撃力2.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.5倍の継続ダメージを与える。さらに味方全体にアーマーを4000付与する",
+     "form": "linked"
+    }
+   ],
+   "convert": [
+    {
+     "type": "convert",
+     "key": "awakened_skill",
+     "medium": "覚醒スキル",
+     "name": "熱狂フューエル！＋（分離武器時）",
+     "range": "all",
+     "dmgMult": 0,
+     "dmgHits": 0,
+     "sourceText": "自身の覚醒ゲージを全て消費し、敵全体の炎上地形を狂炎地形にする。さらに、自身にアーマーを3000付与する",
+     "form": "separated"
+    }
+   ],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "赤熱レンチ！＋（分離武器時）",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.25,
+     "sourceText": "敵単体に攻撃力1.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える",
+     "form": "separated"
+    },
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "赤熱レンチ！＋（分離武器時）",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.25,
+     "needsReishou": true,
+     "sourceText": "敵単体に攻撃力1.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える。さらに、自身の覚醒ゲージを+1する",
+     "form": "separated"
+    },
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "ブラストフレイム＋（連結武器時）",
+     "range": "single",
+     "hits": 2,
+     "dmgMult": 0.9,
+     "sourceText": "敵単体に攻撃力0.9倍の2連続火ダメージ。さらに、自身の覚醒ゲージを+2する",
+     "form": "linked"
+    },
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "ブラストフレイム＋（連結武器時）",
+     "range": "single",
+     "hits": 2,
+     "dmgMult": 1.1,
+     "needsReishou": true,
+     "sourceText": "敵単体に攻撃力1.1倍の2連続火ダメージ。さらに、自身の覚醒ゲージを+2する",
+     "form": "linked"
+    },
+    {
+     "type": "fire",
+     "key": "awakened_skill",
+     "medium": "覚醒スキル",
+     "name": "フルブラストフレイム＋（連結武器時）",
+     "range": "all",
+     "hits": 8,
+     "dmgMult": 0.8,
+     "shiftTo": "separated",
+     "sourceText": "敵全体に攻撃力0.8倍の8連続火ダメージ。さらに、味方全体への攻撃を1回無効化する。分離武器にシフトし、スキル、覚醒スキル、奥義の効果が変化する",
+     "form": "linked"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "焦熱リーサルフレア＋（分離武器時）",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 2,
+     "shiftTo": "linked",
+     "sourceText": "敵全体に攻撃力2倍の火ダメージ。2ターンの間、炎上の地形効果で1.5倍の継続ダメージ。さらに連結武器にシフトし、スキル、覚醒スキル、奥義の効果が変化する",
+     "form": "separated"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "焦熱リーサルフレア＋（分離武器時）",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 2.25,
+     "shiftTo": "linked",
+     "needsReishou": true,
+     "sourceText": "敵全体に攻撃力2.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.5倍の継続ダメージ。さらに連結武器にシフトし、スキル、覚醒スキル、奥義の効果が変化する",
+     "form": "separated"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "焦熱リーサルフレア＋（連結武器時）",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 2,
+     "sourceText": "敵全体に攻撃力2倍の火ダメージ。2ターンの間、炎上の地形効果で1.5倍の継続ダメージを与える",
+     "form": "linked"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "焦熱リーサルフレア＋（連結武器時）",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 2.25,
+     "needsReishou": true,
+     "sourceText": "敵全体に攻撃力2.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.5倍の継続ダメージを与える。さらに味方全体にアーマーを4000付与する",
+     "form": "linked"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "真61_フィロタヌス": {
+   "name": "フィロタヌス",
+   "enjou": [
+    {
+     "type": "enjou",
+     "key": "awakened_skill",
+     "medium": "覚醒スキル",
+     "name": "対岸の火事＋",
+     "range": "row",
+     "mult": 1.25,
+     "duration": 2,
+     "dmgMult": 0,
+     "dmgHits": 0,
+     "sourceText": "2ターンの間、敵横一列を炎上の地形にし、地形効果で1.25倍の継続ダメージを与える。さらに敵の攻撃力を25%低下させる",
+     "levels": [
+      {
+       "lv": 1,
+       "mult": 1.25,
+       "duration": 2,
+       "dmgMult": 0,
+       "dmgHits": 0
+      },
+      {
+       "lv": 2,
+       "mult": 1.5,
+       "duration": 2,
+       "dmgMult": 0,
+       "dmgHits": 0
+      },
+      {
+       "lv": 3,
+       "mult": 1.75,
+       "duration": 2,
+       "dmgMult": 0,
+       "dmgHits": 0
+      }
+     ]
+    }
+   ],
+   "convert": [
+    {
+     "type": "convert",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "マスオブフレイム＋",
+     "range": "all",
+     "dmgMult": 1.75,
+     "dmgHits": 1,
+     "sourceText": "敵全体に攻撃力1.75倍の火ダメージ。さらに敵に掛かっている強化を解除し、炎上地形を狂炎地形にする"
+    },
+    {
+     "type": "convert",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "マスオブフレイム＋",
+     "range": "all",
+     "dmgMult": 1.75,
+     "dmgHits": 1,
+     "extend": 2,
+     "needsReishou": true,
+     "sourceText": "敵全体に攻撃力1.75倍の火ダメージ。さらに敵に掛かっている強化を解除し、炎上地形を狂炎地形にする。炎上・狂炎地形を2ターン延長する"
+    }
+   ],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "マスオブフレイム＋",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 1.75,
+     "sourceText": "敵全体に攻撃力1.75倍の火ダメージ。さらに敵に掛かっている強化を解除し、炎上地形を狂炎地形にする"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "マスオブフレイム＋",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 1.75,
+     "extend": 2,
+     "needsReishou": true,
+     "sourceText": "敵全体に攻撃力1.75倍の火ダメージ。さらに敵に掛かっている強化を解除し、炎上地形を狂炎地形にする。炎上・狂炎地形を2ターン延長する"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "真64_プロメテウス": {
+   "name": "プロメテウス",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "ルルディダロス＋",
+     "range": "row",
+     "hits": 1,
+     "dmgMult": 3,
+     "sourceText": "敵横一列に攻撃力3倍の火ダメージ。さらに自身以外の味方にスキルフォトンを1つ追加"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "祖07_アモン": {
+   "name": "アモン",
+   "enjou": [
+    {
+     "type": "enjou",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "世界を包む炎獄+",
+     "range": "single",
+     "mult": 1.25,
+     "duration": 2,
+     "dmgMult": 4.25,
+     "dmgHits": 1,
+     "sourceText": "敵単体に攻撃力4.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える"
+    }
+   ],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "awakened_skill",
+     "medium": "覚醒スキル",
+     "name": "ダーティレイド+",
+     "range": "single",
+     "hits": 2,
+     "dmgMult": 1.5,
+     "needsReishou": true,
+     "sourceText": "敵単体に攻撃力1.5倍の2連続火ダメージ。さらに2ターンの間、自身の攻撃力を30%上昇させる"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "世界を包む炎獄+",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 4.25,
+     "sourceText": "敵単体に攻撃力4.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "祖15_エリゴスB": {
+   "name": "エリゴスB",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "無法烈火＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.5,
+     "sourceText": "敵単体に攻撃力1.5倍の火ダメージ"
+    },
+    {
+     "type": "fire",
+     "key": "awakened_skill",
+     "medium": "覚醒スキル",
+     "name": "鋭鋒火急撃＋",
+     "range": "row",
+     "hits": 2,
+     "dmgMult": 1.5,
+     "sourceText": "敵横一列に攻撃力1.5倍の2連続火ダメージ"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "祖18_バティンB": {
+   "name": "バティンB",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "バーンインジェクター＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1,
+     "shiftAfterText": "敵単体のHPを25%回復させる。さらに2ターンの間、受ける火ダメージを40%上昇させる",
+     "sourceText": "敵単体に攻撃力1倍の火ダメージ。さらに敵に掛かっている強化を解除する／シフト後: 敵単体のHPを25%回復させる。さらに2ターンの間、受ける火ダメージを40%上昇させる"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "ブレイズブロッサム＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 5,
+     "sourceText": "敵単体に攻撃力5倍の火ダメージ。さらに敵のHPが95%以上のとき、ダメージが1.75倍になる"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": [
+    {
+     "type": "shift",
+     "key": "awakened_skill",
+     "medium": "覚醒スキル",
+     "name": "ウォームアップ＋",
+     "sourceText": "2ターンの間、自身の攻撃力を50%上昇させる。さらにシフトし、スキルの効果が変化する"
+    }
+   ]
+  },
+  "祖23_アイム": {
+   "name": "アイム",
+   "enjou": [
+    {
+     "type": "enjou",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "炎天の煌めき＋",
+     "range": "all",
+     "mult": 1.25,
+     "duration": 2,
+     "dmgMult": 2.25,
+     "dmgHits": 1,
+     "sourceText": "敵全体に攻撃力2.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える"
+    }
+   ],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "強火クッキング＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.25,
+     "sourceText": "敵単体に攻撃力1.25倍の火ダメージ",
+     "levels": [
+      {
+       "lv": 1,
+       "dmgMult": 1.25,
+       "hits": 1
+      },
+      {
+       "lv": 2,
+       "dmgMult": 1.5,
+       "hits": 1
+      },
+      {
+       "lv": 3,
+       "dmgMult": 1.75,
+       "hits": 1
+      },
+      {
+       "lv": 4,
+       "dmgMult": 2,
+       "hits": 1
+      }
+     ]
+    },
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "強火クッキング＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.25,
+     "needsReishou": true,
+     "sourceText": "敵単体に攻撃力1.25倍の火ダメージ",
+     "levels": [
+      {
+       "lv": 1,
+       "dmgMult": 1.25,
+       "hits": 1
+      },
+      {
+       "lv": 2,
+       "dmgMult": 1.5,
+       "hits": 1
+      },
+      {
+       "lv": 3,
+       "dmgMult": 1.75,
+       "hits": 1
+      },
+      {
+       "lv": 4,
+       "dmgMult": 2,
+       "hits": 1,
+       "terrainBonus": 1.25
+      }
+     ]
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "炎天の煌めき＋",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 2.25,
+     "sourceText": "敵全体に攻撃力2.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "祖24_ナベリウスB": {
+   "name": "ナベリウスB",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "スピニングバーン＋",
+     "range": "row",
+     "hits": 2,
+     "dmgMult": 0.8,
+     "sourceText": "敵横一列に攻撃力0.8倍の2連続火ダメージ"
+    }
+   ],
+   "ground": [],
+   "delayed": [
+    {
+     "type": "delayed",
+     "key": "awakened_skill",
+     "medium": "覚醒スキル",
+     "name": "エクステンドカラー＋",
+     "range": "single",
+     "mult": 0.75,
+     "countSource": "self",
+     "maxReps": 10,
+     "sourceText": "自身の覚醒ゲージを全て消費し、1ターン後、敵単体に0.75倍の火ダメージ ※遅延行動時、直前ターンの自身が与えた火ダメージ回数が2回以上の場合、この行動を同じ相手に同じ回数分行う(行動回数は最大10回)"
+    },
+    {
+     "type": "delayed",
+     "key": "awakened_skill",
+     "medium": "覚醒スキル",
+     "name": "エクステンドカラー＋",
+     "range": "single",
+     "mult": 0.75,
+     "countSource": "ally",
+     "maxReps": 10,
+     "needsReishou": true,
+     "sourceText": "1ターン後、敵単体に0.75倍の火ダメージ。さらに自身にスキルフォトンを1つ追加する ※遅延行動時、直前ターンの味方が与えた火ダメージ回数が2回以上の場合、この行動を同じ相手に同じ回数分行う(行動回数は最大10回)"
+    }
+   ],
+   "shift": []
+  },
+  "祖32_アスモデウス": {
+   "name": "アスモデウス",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "蒼炎の剣＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.25,
+     "sourceText": "敵単体に攻撃力1.25倍の火ダメージ。さらに70%の確率で、敵を煉獄の炎状態にする（永続）"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "破滅を齎す黒炎＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 6.25,
+     "sourceText": "敵単体に攻撃力6.25倍の火ダメージ。さらに2ターンの間、攻撃力、防御力、素早さをそれぞれ30%低下させる"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "破滅を齎す黒炎＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 6.25,
+     "needsReishou": true,
+     "sourceText": "敵単体に攻撃力6.25倍の火ダメージ。さらに2ターンの間、攻撃力、防御力、素早さをそれぞれ30%低下させる／強化4種: 敵単体に攻撃力8.25倍の火ダメージ。ただし自身に掛かっている強化を解除する"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "祖32_アスモデウスR": {
+   "name": "アスモデウスR",
+   "enjou": [
+    {
+     "type": "enjou",
+     "key": "secret_ougi",
+     "medium": "秘奥義",
+     "name": "七火",
+     "range": "all",
+     "mult": 1.5,
+     "duration": 7,
+     "dmgMult": 4,
+     "dmgHits": 1,
+     "sourceText": "敵全体に攻撃力4倍の火ダメージ。7ターンの間、炎上の地形効果で1.5倍の継続ダメージを与え、さらに、煉獄の炎状態にする（永続）"
+    }
+   ],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "secret_ougi",
+     "medium": "秘奥義",
+     "name": "七火",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 4,
+     "sourceText": "敵全体に攻撃力4倍の火ダメージ。7ターンの間、炎上の地形効果で1.5倍の継続ダメージを与え、さらに、煉獄の炎状態にする（永続）"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "祖33_ガープ": {
+   "name": "ガープ",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "awakened_skill",
+     "medium": "覚醒スキル",
+     "name": "ジールバッシュ＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 4,
+     "sourceText": "敵単体に自身のHPが少ないほど威力の高い火ダメージ(最大で攻撃力4倍の火ダメージ)"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "祖37_フェニックス": {
+   "name": "フェニックス",
+   "enjou": [
+    {
+     "type": "enjou",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "紅焔剣+",
+     "range": "single",
+     "mult": 1.25,
+     "duration": 2,
+     "dmgMult": 1.25,
+     "dmgHits": 1,
+     "sourceText": "敵単体に攻撃力1.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える"
+    }
+   ],
+   "convert": [
+    {
+     "type": "convert",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "不死鳥の羽ばたき+",
+     "range": "all",
+     "dmgMult": 2.25,
+     "dmgHits": 1,
+     "needsReishou": true,
+     "sourceText": "敵全体に攻撃力2.25倍の火ダメージ。さらに炎上地形を狂炎地形にし、戦闘不能の味方を、最大HPの35％で蘇生させる"
+    }
+   ],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "紅焔剣+",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.25,
+     "sourceText": "敵単体に攻撃力1.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "不死鳥の羽ばたき+",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 2.25,
+     "sourceText": "敵全体に攻撃力2.25倍の火ダメージ。さらに戦闘不能の味方を、最大HPの35％で蘇生させる"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "不死鳥の羽ばたき+",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 2.25,
+     "needsReishou": true,
+     "sourceText": "敵全体に攻撃力2.25倍の火ダメージ。さらに炎上地形を狂炎地形にし、戦闘不能の味方を、最大HPの35％で蘇生させる"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "祖37_フェニックスC": {
+   "name": "フェニックスC",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "業火剣＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.75,
+     "sourceText": "敵単体に攻撃力1.75倍の火ダメージ。ただし反動で、自身が最大HPの30%ダメージを受ける"
+    },
+    {
+     "type": "fire",
+     "key": "awakened_skill",
+     "medium": "覚醒スキル",
+     "name": "不鎮の炎＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.25,
+     "counter": true,
+     "sourceText": "自身が戦闘不能時にHP10%で蘇生する状態になり、さらに2ターンの間、攻撃を受けたとき攻撃力1.25倍の火ダメージで反撃する"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "祖53_カイムB": {
+   "name": "カイムB",
+   "enjou": [
+    {
+     "type": "enjou",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "燐寸はいかが＋",
+     "range": "single",
+     "mult": 1.25,
+     "duration": 2,
+     "dmgMult": 0.95,
+     "dmgHits": 3,
+     "sourceText": "2ターンの間、敵単体を炎上の地形にし、地形効果で1.25倍の継続ダメージを与える。さらに自身をチャージブレイク状態にする敵単体に攻撃力0.95倍の3連続火ダメージ。さらに自身の覚醒ゲージを+1する"
+    },
+    {
+     "type": "enjou",
+     "key": "awakened_skill",
+     "medium": "覚醒スキル",
+     "name": "インフェルノ＋",
+     "range": "single",
+     "mult": 1.25,
+     "duration": 2,
+     "dmgMult": 1.5,
+     "dmgHits": 1,
+     "allocMin": 2,
+     "allocMax": 3,
+     "sourceText": "ランダム敵単体にかばう無視の攻撃力1.5倍火ダメージ。2ターンの間、炎上の地形効果で1.25倍継続ダメージ。この行動を2回から3回ランダムな回数で行う[使用後スキルLv上昇]",
+     "levels": [
+      {
+       "lv": 1,
+       "mult": 1.25,
+       "duration": 2,
+       "dmgMult": 1.5,
+       "dmgHits": 1,
+       "allocMin": 2,
+       "allocMax": 3
+      },
+      {
+       "lv": 2,
+       "mult": 1.25,
+       "duration": 2,
+       "dmgMult": 1.5,
+       "dmgHits": 1,
+       "allocMin": 2,
+       "allocMax": 4
+      },
+      {
+       "lv": 3,
+       "mult": 1.25,
+       "duration": 2,
+       "dmgMult": 1.5,
+       "dmgHits": 1,
+       "allocMin": 2,
+       "allocMax": 5
+      }
+     ]
+    }
+   ],
+   "convert": [
+    {
+     "type": "convert",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "狂炎まわし＋",
+     "range": "all",
+     "dmgMult": 1,
+     "dmgHits": 2,
+     "sourceText": "敵全体に攻撃力1倍の2連続火ダメージ。さらに炎上地形を狂炎地形にし、自身をチャージブレイク状態にする"
+    }
+   ],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "燐寸はいかが＋",
+     "range": "single",
+     "hits": 3,
+     "dmgMult": 0.95,
+     "sourceText": "2ターンの間、敵単体を炎上の地形にし、地形効果で1.25倍の継続ダメージを与える。さらに自身をチャージブレイク状態にする敵単体に攻撃力0.95倍の3連続火ダメージ。さらに自身の覚醒ゲージを+1する"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "狂炎まわし＋",
+     "range": "all",
+     "hits": 2,
+     "dmgMult": 1,
+     "sourceText": "敵全体に攻撃力1倍の2連続火ダメージ。さらに炎上地形を狂炎地形にし、自身をチャージブレイク状態にする"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "祖58_アミー": {
+   "name": "アミー",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "ブレイズスラッシュ＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 5.25,
+     "sourceText": "敵単体に攻撃力5.25倍の火ダメージ。さらに味方前列にアタックフォトンを1つ追加する"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "祖64_フラウロス": {
+   "name": "フラウロス",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "レオパルドブロー＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 3.25,
+     "sourceText": "敵単体に攻撃力3.25倍の火ダメージ。さらに90%の確率で、積まれているフォトンを1つ奪う"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "レオパルドブロー＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 3.5,
+     "needsReishou": true,
+     "sourceText": "敵単体に攻撃力3.5倍の火ダメージ。さらに90%の確率で、積まれているフォトンを1つ奪う。フォトン奪取に失敗した場合、1ターンの間、全てのフォトンを劣化させる"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "祖68_ベリアルB": {
+   "name": "ベリアルB",
+   "enjou": [
+    {
+     "type": "enjou",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "焙烙射撃＋",
+     "range": "single",
+     "mult": 1.25,
+     "duration": 2,
+     "dmgMult": 1.25,
+     "dmgHits": 1,
+     "bullet": {
+      "cost": 1,
+      "dmgMult": 1.4
+     },
+     "sourceText": "通常: 敵単体に攻撃力1.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える／Bアーツ: バレットを1個消費し、敵単体に攻撃力1.4倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える"
+    }
+   ],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "skill",
+     "medium": "スキル",
+     "name": "焙烙射撃＋",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.25,
+     "sourceText": "通常: 敵単体に攻撃力1.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える／Bアーツ: バレットを1個消費し、敵単体に攻撃力1.4倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える"
+    },
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "凶星の煌き＋",
+     "range": "single",
+     "hits": 5,
+     "dmgMult": 1.35,
+     "sourceText": "敵単体に攻撃力1.35倍の5連続火ダメージ。さらに対象の位置に炎上・狂炎地形が存在する場合、ダメージが1.5倍になる",
+     "terrainBonus": 1.5
+    },
+    {
+     "type": "fire",
+     "key": "shoui",
+     "medium": "焼夷フォトン",
+     "name": "焼夷フォトン",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 0,
+     "shoui": true,
+     "sourceText": "2ターンの間、自身が焼夷砲火状態になる"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  },
+  "継01_カガセオ": {
+   "name": "カガセオ",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "ougi",
+     "medium": "奥義",
+     "name": "焼尽ノ極炎＋",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 2.15,
+     "sourceText": "Lv1: 敵全体に攻撃力2.15倍の火ダメージ。敵を煉獄の炎状態にし(永続)、1ターン経過させる／Lv2: 敵全体に攻撃力2.4倍の火ダメージ。敵を煉獄の炎状態にし(永続)、1ターン経過させる／Lv3: 敵全体に攻撃力2.9倍の火ダメージ。敵を煉獄の炎状態にし(永続)、1ターン経過させる／Lv4: 敵全体に攻撃力3.65倍の火ダメージ。敵を煉獄の炎状態にし(永続)、1ターン経過させる／Lv5: 敵全体に攻撃力4.65倍の火ダメージ。敵を煉獄の炎状態にし(永続)、1ターン経過させる。さらに、敵が煉獄の炎状態の場合、ダメージが2倍になる"
+    }
+   ],
+   "ground": [],
+   "delayed": [],
+   "shift": []
+  }
+ },
+ "orbs": {
+  "orb_270": {
+   "name": "アビスハンター",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "アビスハンター",
+     "range": "single",
+     "hits": 2,
+     "dmgMult": 0.55,
+     "sourceText": "敵単体に攻撃力0.55倍の2連続火ダメージ。さらに80%(90%)の確率で、敵を煉獄の炎状態にする(永続)"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_494": {
+   "name": "コロナフォース",
+   "enjou": [
+    {
+     "type": "enjou",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "コロナフォース",
+     "range": "single",
+     "mult": 1,
+     "duration": 2,
+     "dmgMult": 2.4,
+     "dmgHits": 1,
+     "sourceText": "敵単体に攻撃力2倍(2.4倍)の火ダメージ。2ターンの間、炎上の地形効果で1倍の継続ダメージを与える"
+    }
+   ],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "コロナフォース",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 2.4,
+     "sourceText": "敵単体に攻撃力2倍(2.4倍)の火ダメージ。2ターンの間、炎上の地形効果で1倍の継続ダメージを与える"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_072": {
+   "name": "バーニングアイ",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "バーニングアイ",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.9,
+     "sourceText": "敵単体に攻撃力1.5倍(1.9倍)の火ダメージ"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_083": {
+   "name": "ヒートブレイダー",
+   "enjou": [
+    {
+     "type": "enjou",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "ヒートブレイダー",
+     "range": "single",
+     "mult": 1,
+     "duration": 2,
+     "dmgMult": 1.4,
+     "dmgHits": 1,
+     "sourceText": "敵単体に攻撃力1倍(1.4倍)の火ダメージ。2ターンの間、炎上の地形効果で1倍の継続ダメージを与える"
+    }
+   ],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "ヒートブレイダー",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.4,
+     "sourceText": "敵単体に攻撃力1倍(1.4倍)の火ダメージ。2ターンの間、炎上の地形効果で1倍の継続ダメージを与える"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_449": {
+   "name": "ヘルカイト",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "ヘルカイト",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 1.9,
+     "sourceText": "敵全体に攻撃力1.5倍(1.9倍)の火ダメージ"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_418": {
+   "name": "ルッキオラ",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "ルッキオラ",
+     "range": "single",
+     "hits": 3,
+     "dmgMult": 1.3,
+     "sourceText": "敵単体に攻撃力1.1倍(1.3倍)の3連続火ダメージ"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_084": {
+   "name": "レッドラット",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "レッドラット",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 0.9,
+     "sourceText": "敵全体に攻撃力0.5倍(0.9)の火ダメージ"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_574": {
+   "name": "ヴェスパーマイン",
+   "enjou": [
+    {
+     "type": "enjou",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "ヴェスパーマイン",
+     "range": "all",
+     "mult": 0.2,
+     "duration": 1,
+     "dmgMult": 1,
+     "dmgHits": 1,
+     "sourceText": "敵全体に攻撃力0.5倍(1倍)の火ダメージ。1ターンの間、炎上の地形効果で0.2倍の継続ダメージを与える ★3時：＋敵の攻撃力を20％低下させる"
+    }
+   ],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "ヴェスパーマイン",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 1,
+     "sourceText": "敵全体に攻撃力0.5倍(1倍)の火ダメージ。1ターンの間、炎上の地形効果で0.2倍の継続ダメージを与える ★3時：＋敵の攻撃力を20％低下させる"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_422": {
+   "name": "灼火蝶マヴィ",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "灼火蝶マヴィ",
+     "range": "single",
+     "hits": 3,
+     "dmgMult": 1.4,
+     "allocMin": 3,
+     "allocMax": 3,
+     "sourceText": "ランダムな敵単体にかばう効果を無視する攻撃力0.5倍(1.4倍)の火ダメージ。この行動を3回行う"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_279": {
+   "name": "炎帝ムスペル",
+   "enjou": [],
+   "convert": [
+    {
+     "type": "convert",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "炎帝ムスペル",
+     "range": "all",
+     "dmgMult": 1.2,
+     "dmgHits": 1,
+     "sourceText": "敵全体に攻撃力1倍(1.2倍）の火ダメージ。さらに炎上地形を狂炎地形にする"
+    }
+   ],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "炎帝ムスペル",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 1.2,
+     "sourceText": "敵全体に攻撃力1倍(1.2倍）の火ダメージ。さらに炎上地形を狂炎地形にする"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_340": {
+   "name": "番犬ロクサーン",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "番犬ロクサーン",
+     "range": "all",
+     "hits": 3,
+     "dmgMult": 0.8,
+     "sourceText": "敵全体に攻撃力0.5倍(0.8倍)の3連続火ダメージ"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_007": {
+   "name": "魔導コボルト",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "魔導コボルト",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.9,
+     "sourceText": "敵単体に攻撃力1.5倍(1.9倍)の火ダメージ。さらにチャージを追加する"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_115": {
+   "name": "フレイミン",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "フレイミン",
+     "range": "all",
+     "hits": 1,
+     "dmgMult": 0.9,
+     "sourceText": "敵全体に攻撃力0.5倍(0.9倍)の火ダメージ"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_065": {
+   "name": "フレイムリリィ",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "フレイムリリィ",
+     "range": "single",
+     "hits": 1,
+     "dmgMult": 1.9,
+     "sourceText": "敵単体に攻撃力1.5倍(1.9倍)の火ダメージ"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  },
+  "orb_150": {
+   "name": "火のザウラク",
+   "enjou": [],
+   "convert": [],
+   "fire": [
+    {
+     "type": "fire",
+     "key": "orb",
+     "medium": "オーブ",
+     "name": "火のザウラク",
+     "range": "single",
+     "hits": 3,
+     "dmgMult": 1.16,
+     "sourceText": "敵単体に攻撃力1倍(1.16倍)の3連続火ダメージ。さらにアタックを追加する"
+    }
+   ],
+   "ground": [],
+   "delayed": []
+  }
+ }
+}
