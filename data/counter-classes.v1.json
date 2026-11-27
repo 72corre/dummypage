@@ -1,0 +1,2316 @@
+{
+  "kind": "counter-classes",
+  "version": 1,
+  "note": "脅威→対策クラスの著述。methods は「敵の付与・発動方法によって有効かどうか」の条件（all=方法によらず有効）。ゲーム事実の最終判断はマスター",
+  "threats": [
+    {
+      "id": "ailment:毒",
+      "kind": "ailment",
+      "name": "毒",
+      "summary": "ターン終了時に最大HPの20%のダメージ",
+      "note": "HP1で踏みとどまることはなく死亡する。ボスの場合は最大HPの8%ダメージ",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "毒への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:毒",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "endure",
+          "label": "被害を回復で相殺する",
+          "how": "状態異常そのものは防がない。ダメージを伴う状態異常で、受けた被害を回復して戦い続ける形",
+          "effects": [
+            "heal",
+            "revive"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:病気",
+      "kind": "ailment",
+      "name": "病気",
+      "summary": "HP回復の効果を受け付けなくなる",
+      "note": "自然回復と吸収も無効にされる。ゾンビと重複した状態でHP回復が行われた場合、ゾンビが優先されダメージになる",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "病気への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:病気",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:ゾンビ",
+      "kind": "ailment",
+      "name": "ゾンビ",
+      "summary": "最大HPが50%、攻撃力が25%上昇。防御力と素早さが0になる。HP回復でダメージを受ける",
+      "note": "吸収や自然回復でもダメージを受ける。ゾンビ状態になった時、現在HPも1.5倍になる。ゾンビ状態が解除された時、現在HPは最大HPを超えないなら維持される。病気と重複した状態でHP回復が行われた場合、ゾンビが優先されダメージになる。ゾンビによるHP上昇と攻撃力上昇はバフとは枠が異なるため乗算される",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "ゾンビへの耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:ゾンビ",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:感電",
+      "kind": "ailment",
+      "name": "感電",
+      "summary": "スキルフォトンによる行動がキャンセルされる",
+      "note": "固定砲台やライブなどでフォトンの効果が変化していてもキャンセルされる",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "感電への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:感電",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:凍結",
+      "kind": "ailment",
+      "name": "凍結",
+      "summary": "すべての行動がキャンセルされる、被ダメージが2倍になる",
+      "note": "一度攻撃を受けると解除される",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "凍結への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:凍結",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:睡眠",
+      "kind": "ailment",
+      "name": "睡眠",
+      "summary": "すべての行動がキャンセルされる",
+      "note": "攻撃を受けても解除されない（目覚めない）",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "睡眠への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:睡眠",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:悪夢",
+      "kind": "ailment",
+      "name": "悪夢",
+      "summary": "行動不能になり、ターン終了時に最大HPの10%のダメージ",
+      "note": "ボスの場合は最大HPの4%ダメージ。睡眠とは別の状態異常",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "悪夢への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:悪夢",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "endure",
+          "label": "被害を回復で相殺する",
+          "how": "状態異常そのものは防がない。ダメージを伴う状態異常で、受けた被害を回復して戦い続ける形",
+          "effects": [
+            "heal",
+            "revive"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:混乱",
+      "kind": "ailment",
+      "name": "混乱",
+      "summary": "50%の確率で行動がキャンセルされ、自身以外の味方にアタックを行う",
+      "note": "パーティが自身のみの場合は混乱の効果は発動しない。混乱によるアタックはめまいでキャンセルされる。混乱によるアタックでは覚醒ゲージは増えない。全体化されていても攻撃対象は味方1体のみ",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "混乱への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:混乱",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:魅了",
+      "kind": "ailment",
+      "name": "魅了",
+      "summary": "この状態を発生させたキャラクターがアタックを行ったとき、フォトンに関係なく即座に「アタック」を行う",
+      "note": "アタックそのものであるためアタック強化等の影響を受ける。覚醒ゲージも増える。付与対象は他者、トリガーは付与者のアタック",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "魅了への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:魅了",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:めまい",
+      "kind": "ailment",
+      "name": "めまい",
+      "summary": "アタックフォトンによる行動がキャンセルされる",
+      "note": "固定砲台やライブなどでフォトンの効果が変化していてもキャンセルされる。追撃や魅了などで発動するアタックもキャンセルされる",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "めまいへの耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:めまい",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:暗闇",
+      "kind": "ailment",
+      "name": "暗闇",
+      "summary": "アタック・スキル・覚醒スキルによる攻撃が50%の確率でMISSになる",
+      "note": "複数回攻撃は1hitごとに判定される。列、全体攻撃は個別に判定される。奥義・オーブ・秘奥義による攻撃は対象外（必中）。アタックを外しても、覚醒ゲージは上昇する。ダメージ+毒のような攻撃が外れた場合、追加効果（この場合は毒）は発生しない",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "暗闇への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:暗闇",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:束縛",
+      "kind": "ailment",
+      "name": "束縛",
+      "summary": "すべての強化を受け付けなくなる",
+      "note": "すでに発動している強化は解除されない",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "束縛への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:束縛",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:捕縛",
+      "kind": "ailment",
+      "name": "捕縛",
+      "summary": "ステージ96のボス、ステージ112のボスが扱う特殊状態",
+      "note": "メモ: このページには捕縛そのものの効果の定義文はなく、扱うボスと編成制限の記述のみ",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "捕縛への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:捕縛",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:封印",
+      "kind": "ailment",
+      "name": "封印",
+      "summary": "奥義が発動不可になる特殊状態",
+      "note": "封印を付与する技で同時に付与される強化効果は、通常の強化効果と同様に強化解除の対象となる",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "封印への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:封印",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:呪い",
+      "kind": "ailment",
+      "name": "呪い",
+      "summary": "チャージフォトンによる行動がキャンセルされる",
+      "note": "アタックによるゲージ増加（+1）は有効。キャラクターの技やオーブによる覚醒ゲージ増加も有効。固定砲台やライブなどでフォトンの効果が変化していてもキャンセルされる",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "呪いへの耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:呪い",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:虚弱",
+      "kind": "ailment",
+      "name": "虚弱",
+      "summary": "弱体や状態異常が付与されているときに、その数に応じて被ダメージが上昇する特殊状態",
+      "note": "使用者: 専用霊宝バラム・ガギゾン（敵付与）。詳細はバラムのキャラページ参照とされている",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "虚弱への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:虚弱",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:煉獄の炎",
+      "kind": "ailment",
+      "name": "煉獄の炎",
+      "summary": "ターン終了時に最大HPの10%のダメージ。ターンごとにダメージが5%ずつ上昇（最大30%）",
+      "note": "ボスの場合は最大HPの4%ダメージ（2%ずつ上昇で最大12%）",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "煉獄の炎への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:煉獄の炎",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "endure",
+          "label": "被害を回復で相殺する",
+          "how": "状態異常そのものは防がない。ダメージを伴う状態異常で、受けた被害を回復して戦い続ける形",
+          "effects": [
+            "heal",
+            "revive"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:ねずみ化",
+      "kind": "ailment",
+      "name": "ねずみ化",
+      "summary": "チャージ以外の行動がアタックに変化。さらに最大HPと全ステータスが20%低下。種族が「獣」に変化",
+      "note": "オーブの使用はキャンセルされる。スキルフォトンによるアタックは感電ではなくめまいでキャンセルされる。種族が変化するため、獣特効が通用したり、飛行持ちにも地形効果が発生するようになる",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "ねずみ化への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:ねずみ化",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:即死",
+      "kind": "ailment",
+      "name": "即死",
+      "summary": "キャラクターが死亡する",
+      "note": "状態異常治癒では蘇生しない",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "即死への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:即死",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "endure",
+          "label": "倒されても蘇生で立て直す",
+          "how": "即死はHPを削らずに倒すため、回復では相殺できない。倒されたら蘇生で立て直す形",
+          "effects": [
+            "revive"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:エレキ",
+      "kind": "ailment",
+      "name": "エレキ",
+      "summary": "雷ダメージを受けるほどエレキレベルが上昇し、エレキ解除時に固定ダメージが発生する特殊状態",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "エレキへの耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:エレキ",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "endure",
+          "label": "被害を回復で相殺する",
+          "how": "状態異常そのものは防がない。ダメージを伴う状態異常で、受けた被害を回復して戦い続ける形",
+          "effects": [
+            "heal",
+            "revive"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:点穴",
+      "kind": "ailment",
+      "name": "点穴",
+      "summary": "溜めた点穴を消費して固定値の追加ダメージを与えられる特殊状態。溜めた点穴の量は「点穴レベル」で表現され、オーブ以外で攻撃すると消費されて0になる",
+      "note": "通常ダメージが0になる場合は点穴ダメージが発生しない。回数バリア、無敵、100%以上のダメージ軽減には通らない。ダメージブロックは点穴込みのトータルダメージが対象",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "点穴への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:点穴",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:ハイドロボム",
+      "kind": "ailment",
+      "name": "ハイドロボム",
+      "summary": "ターン経過で爆発する時限爆弾を付与する特殊状態。ハイドロボムは弾けた際に誘爆して、他のハイドロボムを爆発させる特性がある",
+      "note": "ページ内では「ハイドロボム（Hボム）」と表記。用語集では速・重・錬が別キーになっている",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "ハイドロボムへの耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:ハイドロボム",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "endure",
+          "label": "被害を回復で相殺する",
+          "how": "状態異常そのものは防がない。ダメージを伴う状態異常で、受けた被害を回復して戦い続ける形",
+          "effects": [
+            "heal",
+            "revive"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:完殺",
+      "kind": "ailment",
+      "name": "完殺",
+      "summary": "完殺状態で戦闘不能になると蘇生無効になる",
+      "note": "完殺状態で戦闘不能になった場合の復帰手段はない。MEや特性による自動蘇生も対象",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "完殺への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:完殺",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:執心",
+      "kind": "ailment",
+      "name": "執心",
+      "summary": "執心を付与してきた相手しか狙えなくなる",
+      "note": "攻撃を伴わない状態異常のみの技などにも有効。ランダム攻撃には無効。「敵後列を優先して」等、列を指定する攻撃には有効。「最も攻撃力の高い敵単体」等、特定単体を指定する攻撃には無効",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "執心への耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:執心",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:ノックバック",
+      "kind": "ailment",
+      "name": "ノックバック",
+      "summary": "後列に強制移動させられている",
+      "note": "スナイパーには無効。治癒した場合は、ターン終了時に位置を復帰。ターン終了時の位置復帰は、睡眠や凍結などで行動不能の場合は行われない",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "ノックバックへの耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:ノックバック",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "ailment:引き寄せ",
+      "kind": "ailment",
+      "name": "引き寄せ",
+      "summary": "前列に強制移動させられている",
+      "note": "ファイター、トルーパーには無効。治癒した場合は、ターン終了時に位置を復帰。ターン終了時の位置復帰は、睡眠や凍結などで行動不能の場合は行われない",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "引き寄せへの耐性・無効を持つ",
+          "how": "付与されても無効化できる。なお絶好調の味方は、ゲームの仕様で全ての状態異常への耐性が50%上がっている",
+          "effects": [
+            "resist:引き寄せ",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "付与される前に止める（フォトン干渉）",
+          "how": "付与の技に使うフォトンを破壊・奪取し、発動自体を遅らせる",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効。特性・自動発動による付与は止められない"
+        },
+        {
+          "id": "gauge-stop",
+          "label": "覚醒ゲージを下げて遅らせる",
+          "how": "覚醒ゲージを下げ、付与の奥義・覚醒スキルの発動自体を遅らせる",
+          "effects": [
+            "gauge:down"
+          ],
+          "methods": [
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "ゲージを発動条件にする奥義・覚醒スキルにだけ有効。通常スキル・特性による付与は止められない"
+        },
+        {
+          "id": "cure",
+          "label": "付与されたら直す",
+          "how": "付与された後に、状態異常の回復・解除で処理する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "rush",
+          "label": "付与される前に倒し切る",
+          "how": "短期決戦にする方針。候補の提示ではなく、編成の割り切りの提示",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "tactic:kabau",
+      "kind": "tactic",
+      "name": "かばう",
+      "summary": "味方単体を対象とする攻撃を、自身が代わりに受ける状態。攻撃を分散させるのではなく、1体に集約する仕組み",
+      "classes": [
+        {
+          "id": "ignore",
+          "label": "かばうを無視して本体を狙う",
+          "how": "かばう無視の攻撃は、庇う者を飛ばして対象を直接攻撃できる",
+          "effects": [
+            "kabau:ignore"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "area",
+          "label": "列・全体攻撃で狙う",
+          "how": "かばうが受け持つのは「味方単体を対象とする攻撃」だけ。列・全体攻撃は庇われない",
+          "effects": [],
+          "methods": "all"
+        },
+        {
+          "id": "stop-holder",
+          "label": "かばう役を行動不能にする",
+          "how": "睡眠・凍結・束縛などで庇う者を止める。入るかどうかは敵の耐性しだい",
+          "effects": [
+            "inflict:睡眠",
+            "inflict:凍結",
+            "inflict:束縛",
+            "inflict:混乱"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "use-funnel",
+          "label": "集約される側を利用する",
+          "how": "攻撃が1体に集まるなら、その1体の耐久と回復を用意すれば他の味方は攻撃を受けない",
+          "effects": [
+            "barrier:count",
+            "heal"
+          ],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "tactic:photon-destroy",
+      "kind": "tactic",
+      "name": "フォトン破壊（敵）",
+      "summary": "こちらのフォトンを破壊され、技や奥義の発動が遅れる",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "フォトン破壊への耐性を持つ",
+          "how": "破壊そのものを受けにくくする",
+          "effects": [
+            "photon:destroy-resist"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "preempt",
+          "label": "先に相手のフォトンを断つ",
+          "how": "相手の破壊役のフォトンを破壊・奪取して、干渉の回数自体を減らす",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "相手の干渉が特性・自動発動の場合は効かない"
+        },
+        {
+          "id": "spread",
+          "label": "奥義の要を1体に寄せない",
+          "how": "方針の提示。破壊されても立て直せるよう、勝ち筋を複数持つ",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "tactic:charge-interference",
+      "kind": "tactic",
+      "name": "チャージ干渉（敵）",
+      "summary": "チャージフォトンを奪われる・破壊される等で、奥義の回転が崩れる",
+      "classes": [
+        {
+          "id": "preempt",
+          "label": "干渉役のフォトンを断つ",
+          "how": "干渉役の行動回数を、フォトン破壊・奪取で減らす",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "相手の干渉が特性・自動発動の場合は効かない"
+        },
+        {
+          "id": "independence",
+          "label": "チャージに依存しない勝ち筋を持つ",
+          "how": "方針の提示。奥義以外（スキル・アタック）の打点でも削れる編成にする",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "combo:curse-amplify",
+      "kind": "combo",
+      "name": "呪い増幅",
+      "summary": "呪い状態の味方が受けるダメージが増える組み合わせ。呪いの付与と増幅が揃うと被害が跳ねる",
+      "classes": [
+        {
+          "id": "resist",
+          "label": "呪いへの耐性・無効を持つ",
+          "how": "増幅の前提である呪い自体を付けさせない",
+          "effects": [
+            "resist:呪い",
+            "resist:any"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "cure",
+          "label": "呪いを早めに直す",
+          "how": "呪いが付いたら、増幅の被害が出る前に回復・解除する",
+          "effects": [
+            "cure:ailment"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "stop",
+          "label": "呪いの付与を止める（フォトン干渉）",
+          "how": "呪いを付ける技のフォトンを断つ",
+          "effects": [
+            "photon:destroy",
+            "photon:steal"
+          ],
+          "methods": [
+            "skill",
+            "awakened",
+            "ougi"
+          ],
+          "methodNote": "フォトンで発動する技にだけ有効"
+        }
+      ]
+    },
+    {
+      "id": "tactic:barrier",
+      "kind": "tactic",
+      "name": "敵のバリア",
+      "summary": "回数バリア等でこちらの攻撃が吸われる。バリアは強化の一種として扱われる",
+      "classes": [
+        {
+          "id": "dispel",
+          "label": "強化解除で剥がす",
+          "how": "バリアは強化解除で消せる",
+          "effects": [
+            "dispel:buff"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "multi-hit",
+          "label": "攻撃の回数で消費させる",
+          "how": "方針の提示。回数バリアは当たった回数だけ減るため、連続攻撃・列攻撃で先に剥がす",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "tactic:death-buff",
+      "kind": "tactic",
+      "name": "死亡で強くなる敵",
+      "summary": "味方（取り巻き）が倒れるたびに本体が強化される類。倒す順番を誤ると手が付けられなくなる",
+      "classes": [
+        {
+          "id": "order",
+          "label": "取り巻きを残して本体から倒す",
+          "how": "方針の提示。強化の材料を増やさない。単体火力に寄せ、全体攻撃は避ける",
+          "effects": [],
+          "methods": "all"
+        },
+        {
+          "id": "funnel",
+          "label": "攻撃を集約して受け止める",
+          "how": "本体の反撃をかばうで1体に集め、他を守る",
+          "effects": [
+            "kabau"
+          ],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:不定形",
+      "kind": "race",
+      "name": "種族「不定形」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「不定形」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:不定形"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:古代生物",
+      "kind": "race",
+      "name": "種族「古代生物」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「古代生物」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:古代生物"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:多足類",
+      "kind": "race",
+      "name": "種族「多足類」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「多足類」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:多足類"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:大幻獣",
+      "kind": "race",
+      "name": "種族「大幻獣」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「大幻獣」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:大幻獣"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:悪魔",
+      "kind": "race",
+      "name": "種族「悪魔」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「悪魔」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:悪魔"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:植物",
+      "kind": "race",
+      "name": "種族「植物」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「植物」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:植物"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:死者",
+      "kind": "race",
+      "name": "種族「死者」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「死者」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:死者"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:海洋生物",
+      "kind": "race",
+      "name": "種族「海洋生物」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「海洋生物」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:海洋生物"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:爬虫類",
+      "kind": "race",
+      "name": "種族「爬虫類」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「爬虫類」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:爬虫類"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:物体",
+      "kind": "race",
+      "name": "種族「物体」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「物体」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:物体"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:獣",
+      "kind": "race",
+      "name": "種族「獣」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「獣」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:獣"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:獣人",
+      "kind": "race",
+      "name": "種族「獣人」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「獣人」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:獣人"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:神",
+      "kind": "race",
+      "name": "種族「神」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「神」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:神"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:精霊",
+      "kind": "race",
+      "name": "種族「精霊」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「精霊」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:精霊"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:虫",
+      "kind": "race",
+      "name": "種族「虫」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「虫」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:虫"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:飛行",
+      "kind": "race",
+      "name": "種族「飛行」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「飛行」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:飛行"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    },
+    {
+      "id": "race:龍",
+      "kind": "race",
+      "name": "種族「龍」",
+      "summary": "",
+      "classes": [
+        {
+          "id": "bonus",
+          "label": "種族「龍」への特効で押し切る",
+          "how": "特効はダメージの倍率が大きく、短期決戦の軸になる",
+          "effects": [
+            "bonus:race:龍"
+          ],
+          "methods": "all"
+        },
+        {
+          "id": "state-bonus",
+          "label": "弱点の状態異常と組み合わせる",
+          "how": "敵の耐性表で◎（弱点）の状態異常を付け、その状態への特効で畳む。弱点は敵の情報に表示される",
+          "effects": [],
+          "methods": "all"
+        }
+      ]
+    }
+  ]
+}

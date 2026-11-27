@@ -1,0 +1,240 @@
+{
+  "kind": "damage-reduction",
+  "version": 1,
+  "note": "受けダメージ見積もり（積4）の軽減材料。編成時点で固定している割合軽減だけを原文から機械抽出（特性は文全体が無条件のもの、オーブは無条件の節・最大強化値）。ME 由来は実行時に me.v1.json から読む。生成: pipeline/generate-damage-reduction.mjs",
+  "megido": {
+    "祖30_フォルネウス": [
+      {
+        "pct": 15,
+        "scope": "all",
+        "needsReishou": false,
+        "second": false,
+        "name": "自信過剰"
+      }
+    ],
+    "祖53_カイム": [
+      {
+        "pct": 15,
+        "scope": "all",
+        "needsReishou": false,
+        "second": false,
+        "name": "傲岸不遜"
+      }
+    ],
+    "祖58_アミーC": [
+      {
+        "pct": 15,
+        "scope": "all",
+        "needsReishou": false,
+        "second": false,
+        "name": "織絃城鎧"
+      }
+    ]
+  },
+  "orbs": {
+    "orb_002": [
+      {
+        "pct": 11,
+        "scope": "all"
+      }
+    ],
+    "orb_022": [
+      {
+        "pct": 11,
+        "scope": "all"
+      }
+    ],
+    "orb_026": [
+      {
+        "pct": 11,
+        "scope": "all"
+      }
+    ],
+    "orb_029": [
+      {
+        "pct": 11,
+        "scope": "all"
+      }
+    ],
+    "orb_070": [
+      {
+        "pct": 11,
+        "scope": "all"
+      }
+    ],
+    "orb_092": [
+      {
+        "pct": 17,
+        "kind": "skill"
+      }
+    ],
+    "orb_095": [
+      {
+        "pct": 11,
+        "scope": "all"
+      }
+    ],
+    "orb_104": [
+      {
+        "pct": 11,
+        "scope": "all"
+      }
+    ],
+    "orb_116": [
+      {
+        "pct": 17,
+        "element": "雷"
+      }
+    ],
+    "orb_130": [
+      {
+        "pct": 11,
+        "scope": "all"
+      }
+    ],
+    "orb_181": [
+      {
+        "pct": 17,
+        "scope": "all"
+      }
+    ],
+    "orb_198": [
+      {
+        "pct": 13,
+        "element": "火"
+      }
+    ],
+    "orb_211": [
+      {
+        "pct": 20,
+        "element": "雷"
+      }
+    ],
+    "orb_226": [
+      {
+        "pct": 14,
+        "scope": "all"
+      }
+    ],
+    "orb_228": [
+      {
+        "pct": 28,
+        "kind": "ultimate"
+      }
+    ],
+    "orb_233": [
+      {
+        "pct": 20,
+        "element": "雷"
+      }
+    ],
+    "orb_245": [
+      {
+        "pct": 25,
+        "scope": "all"
+      }
+    ],
+    "orb_249": [
+      {
+        "pct": 15,
+        "scope": "all"
+      }
+    ],
+    "orb_274": [
+      {
+        "pct": 25,
+        "race": "物体"
+      }
+    ],
+    "orb_279": [
+      {
+        "pct": 18,
+        "element": "火"
+      }
+    ],
+    "orb_290": [
+      {
+        "pct": 14,
+        "scope": "all"
+      }
+    ],
+    "orb_317": [
+      {
+        "pct": 17,
+        "scope": "all"
+      }
+    ],
+    "orb_352": [
+      {
+        "pct": 25,
+        "scope": "all"
+      }
+    ],
+    "orb_372": [
+      {
+        "pct": 22,
+        "scope": "all"
+      }
+    ],
+    "orb_393": [
+      {
+        "pct": 22,
+        "scope": "all"
+      }
+    ],
+    "orb_400": [
+      {
+        "pct": 28,
+        "kind": "skill"
+      }
+    ],
+    "orb_405": [
+      {
+        "pct": 22,
+        "scope": "all"
+      }
+    ],
+    "orb_436": [
+      {
+        "pct": 22,
+        "scope": "all"
+      }
+    ],
+    "orb_441": [
+      {
+        "pct": 22,
+        "scope": "all"
+      }
+    ],
+    "orb_449": [
+      {
+        "pct": 17,
+        "scope": "all"
+      }
+    ],
+    "orb_450": [
+      {
+        "pct": 17,
+        "scope": "all"
+      }
+    ],
+    "orb_485": [
+      {
+        "pct": 14,
+        "scope": "all"
+      }
+    ],
+    "orb_543": [
+      {
+        "pct": 22,
+        "scope": "all"
+      }
+    ],
+    "orb_593": [
+      {
+        "pct": 11,
+        "scope": "all"
+      }
+    ]
+  }
+}

@@ -1,0 +1,949 @@
+{
+  "kind": "chain",
+  "version": 1,
+  "source": "build/data/abilities の能力原文への機械検出（generate-chain.mjs）。条件のうち専用霊宝（reishou / noReishou）とチェイン数の範囲（chainMin / chainMax）は判定で使い、残りは実行時の注記。me は ME の正本データ（me.v1.json）の枠効果から抜いた始動（リーダーごとに、枠と条件つき）。orbs はオーブのスキル文から抜いたチェイン（媒体はオーブ）。",
+  "megido": {
+    "真03_サキュバスB": {
+      "start": [
+        {
+          "medium": "奥義",
+          "conditions": []
+        }
+      ],
+      "relay": [],
+      "grant": [],
+      "selfChain": [],
+      "scaler": true
+    },
+    "真06_アラストールB": {
+      "start": [
+        {
+          "medium": "奥義",
+          "conditions": []
+        }
+      ],
+      "relay": [
+        {
+          "medium": "スキル",
+          "conditions": []
+        },
+        {
+          "medium": "覚醒スキル",
+          "conditions": []
+        },
+        {
+          "medium": "奥義",
+          "conditions": []
+        }
+      ],
+      "grant": [],
+      "selfChain": [],
+      "scaler": true
+    },
+    "真14_サラB": {
+      "start": [
+        {
+          "medium": "奥義",
+          "conditions": []
+        }
+      ],
+      "relay": [],
+      "grant": [
+        {
+          "medium": "奥義",
+          "scope": "ally",
+          "conditions": []
+        }
+      ],
+      "selfChain": [],
+      "scaler": false
+    },
+    "真15_サタナキアB": {
+      "start": [
+        {
+          "medium": "覚醒スキル",
+          "conditions": []
+        }
+      ],
+      "relay": [
+        {
+          "medium": "奥義",
+          "conditions": []
+        }
+      ],
+      "grant": [],
+      "selfChain": [],
+      "scaler": true
+    },
+    "真26_オレイ": {
+      "start": [
+        {
+          "medium": "スキル",
+          "conditions": [
+            {
+              "type": "reishou"
+            }
+          ]
+        },
+        {
+          "medium": "覚醒スキル",
+          "conditions": []
+        },
+        {
+          "medium": "奥義",
+          "conditions": []
+        }
+      ],
+      "relay": [
+        {
+          "medium": "スキル",
+          "conditions": []
+        }
+      ],
+      "grant": [],
+      "selfChain": [],
+      "scaler": true
+    },
+    "真27_マルチネ": {
+      "start": [],
+      "relay": [],
+      "grant": [
+        {
+          "medium": "覚醒スキル",
+          "scope": "ally",
+          "conditions": []
+        }
+      ],
+      "selfChain": [
+        {
+          "medium": "スキル",
+          "conditions": [
+            {
+              "type": "reishou"
+            },
+            {
+              "type": "chainMin",
+              "min": 1
+            },
+            {
+              "type": "chainMax",
+              "max": 1
+            }
+          ]
+        },
+        {
+          "medium": "奥義",
+          "conditions": [
+            {
+              "type": "reishou"
+            }
+          ]
+        }
+      ],
+      "scaler": true
+    },
+    "真33_ハックB": {
+      "start": [
+        {
+          "medium": "スキル",
+          "conditions": [],
+          "restrict": "maxAtk"
+        },
+        {
+          "medium": "覚醒スキル",
+          "conditions": [
+            {
+              "type": "reishou"
+            }
+          ]
+        },
+        {
+          "medium": "奥義",
+          "conditions": []
+        }
+      ],
+      "relay": [],
+      "grant": [
+        {
+          "medium": "覚醒スキル",
+          "scope": "self",
+          "conditions": []
+        }
+      ],
+      "selfChain": [],
+      "scaler": false
+    },
+    "真43_サルガタナス": {
+      "start": [
+        {
+          "medium": "特性",
+          "conditions": [
+            {
+              "type": "reishou"
+            }
+          ]
+        },
+        {
+          "medium": "奥義",
+          "conditions": []
+        }
+      ],
+      "relay": [],
+      "grant": [
+        {
+          "medium": "覚醒スキル",
+          "scope": "all",
+          "conditions": [
+            {
+              "type": "reishou"
+            }
+          ]
+        }
+      ],
+      "selfChain": [],
+      "scaler": true
+    },
+    "真51_プルフラスB": {
+      "start": [],
+      "relay": [
+        {
+          "medium": "奥義",
+          "conditions": [
+            {
+              "type": "chainMax",
+              "max": 3
+            }
+          ]
+        }
+      ],
+      "grant": [],
+      "selfChain": [
+        {
+          "medium": "奥義",
+          "conditions": [
+            {
+              "type": "chainMin",
+              "min": 4
+            },
+            {
+              "type": "chainMax",
+              "max": 4
+            }
+          ],
+          "addsPhoton": "アタック"
+        },
+        {
+          "medium": "奥義",
+          "conditions": [
+            {
+              "type": "chainMin",
+              "min": 5
+            },
+            {
+              "type": "chainMax",
+              "max": 5
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ],
+          "addsPhoton": "アタック"
+        },
+        {
+          "medium": "奥義",
+          "conditions": [
+            {
+              "type": "chainMin",
+              "min": 6
+            },
+            {
+              "type": "chainMax",
+              "max": 6
+            },
+            {
+              "type": "prob",
+              "pct": 5
+            }
+          ],
+          "addsPhoton": "アタック"
+        }
+      ],
+      "scaler": true
+    },
+    "真69_バールゼフォン": {
+      "start": [
+        {
+          "medium": "特性",
+          "conditions": [
+            {
+              "type": "gauge",
+              "min": 60
+            },
+            {
+              "type": "photon",
+              "photon": "チャージ"
+            }
+          ]
+        },
+        {
+          "medium": "特性",
+          "conditions": [
+            {
+              "type": "reishou"
+            },
+            {
+              "type": "photon",
+              "photon": "チャージ"
+            }
+          ]
+        },
+        {
+          "medium": "スキル",
+          "conditions": [
+            {
+              "type": "reishou"
+            }
+          ]
+        },
+        {
+          "medium": "覚醒スキル",
+          "conditions": []
+        }
+      ],
+      "relay": [],
+      "grant": [],
+      "selfChain": [],
+      "scaler": true
+    },
+    "祖13_ベレトB": {
+      "start": [
+        {
+          "medium": "スキル",
+          "conditions": []
+        }
+      ],
+      "relay": [
+        {
+          "medium": "スキル",
+          "conditions": []
+        },
+        {
+          "medium": "覚醒スキル",
+          "conditions": []
+        }
+      ],
+      "grant": [
+        {
+          "medium": "奥義",
+          "scope": "all",
+          "conditions": []
+        }
+      ],
+      "selfChain": [],
+      "scaler": true
+    },
+    "祖28_ベリトB": {
+      "start": [
+        {
+          "medium": "覚醒スキル",
+          "conditions": [],
+          "restrict": "maxAtk"
+        }
+      ],
+      "relay": [],
+      "grant": [],
+      "selfChain": [],
+      "scaler": true
+    },
+    "祖35_マルコシアスB": {
+      "start": [
+        {
+          "medium": "特性",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "アタック"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            },
+            {
+              "type": "noReishou"
+            }
+          ]
+        },
+        {
+          "medium": "覚醒スキル",
+          "conditions": []
+        }
+      ],
+      "relay": [],
+      "grant": [],
+      "selfChain": [
+        {
+          "medium": "奥義",
+          "conditions": [
+            {
+              "type": "reishou"
+            }
+          ]
+        },
+        {
+          "medium": "特性",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "アタック"
+            },
+            {
+              "type": "reishou"
+            }
+          ]
+        }
+      ],
+      "scaler": true
+    },
+    "祖39_マルファスB": {
+      "start": [
+        {
+          "medium": "奥義",
+          "conditions": []
+        }
+      ],
+      "relay": [
+        {
+          "medium": "スキル",
+          "conditions": []
+        }
+      ],
+      "grant": [
+        {
+          "medium": "覚醒スキル",
+          "scope": "self",
+          "conditions": []
+        }
+      ],
+      "selfChain": [],
+      "scaler": false
+    },
+    "祖44_シャックスB": {
+      "start": [
+        {
+          "medium": "覚醒スキル",
+          "conditions": [],
+          "restrict": "minSpd"
+        }
+      ],
+      "relay": [
+        {
+          "medium": "スキル",
+          "conditions": []
+        }
+      ],
+      "grant": [],
+      "selfChain": [],
+      "scaler": true
+    },
+    "祖48_ハーゲンティB": {
+      "start": [
+        {
+          "medium": "スキル",
+          "conditions": [
+            {
+              "type": "reishou"
+            }
+          ]
+        },
+        {
+          "medium": "奥義",
+          "conditions": []
+        }
+      ],
+      "relay": [
+        {
+          "medium": "覚醒スキル",
+          "conditions": []
+        }
+      ],
+      "grant": [],
+      "selfChain": [],
+      "scaler": true
+    }
+  },
+  "me": {
+    "真03_サキュバスB": {
+      "name": "ラブデスアラモード",
+      "ways": [
+        {
+          "slot": "1",
+          "condition": "バースト",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "チャージ"
+            },
+            {
+              "type": "prob",
+              "pct": 30
+            }
+          ]
+        },
+        {
+          "slot": "5",
+          "condition": "バースト",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "チャージ"
+            },
+            {
+              "type": "prob",
+              "pct": 30
+            }
+          ]
+        }
+      ]
+    },
+    "真06_アラストールB": {
+      "name": "鮮烈のトルトゥーラ",
+      "ways": [
+        {
+          "slot": "1",
+          "condition": "バースト+トルーパー",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "スキル"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        },
+        {
+          "slot": "5",
+          "condition": "バースト+トルーパー",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "スキル"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        },
+        {
+          "slot": "leader",
+          "condition": "-",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "アタック"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        }
+      ]
+    },
+    "真15_サタナキアB": {
+      "name": "科学者の矜持",
+      "ways": [
+        {
+          "slot": "leader",
+          "condition": "-",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "アタック"
+            }
+          ]
+        }
+      ]
+    },
+    "真26_オレイ": {
+      "name": "怪盗の美学",
+      "ways": [
+        {
+          "slot": "1",
+          "condition": "バースト+ファイター",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "スキル"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        },
+        {
+          "slot": "5",
+          "condition": "バースト+ファイター",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "スキル"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        }
+      ]
+    },
+    "真27_マルチネ": {
+      "name": "ツッパリハート",
+      "ways": [
+        {
+          "slot": "1",
+          "condition": "バースト+トルーパー",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "スキル"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        },
+        {
+          "slot": "5",
+          "condition": "バースト+トルーパー",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "スキル"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        }
+      ]
+    },
+    "真43_サルガタナス": {
+      "name": "勝たせてあげるわ",
+      "ways": [
+        {
+          "slot": "leader",
+          "condition": "-",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "スキル"
+            }
+          ]
+        }
+      ]
+    },
+    "真51_プルフラスB": {
+      "name": "復讐のその先へ",
+      "ways": [
+        {
+          "slot": "1",
+          "condition": "バースト+ファイター",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "スキル"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        },
+        {
+          "slot": "2",
+          "condition": "バースト+スナイパー",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "アタック"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        },
+        {
+          "slot": "4",
+          "condition": "バースト+スナイパー",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "アタック"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        },
+        {
+          "slot": "5",
+          "condition": "バースト+ファイター",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "スキル"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        }
+      ]
+    },
+    "祖28_ベリトB": {
+      "name": "ボルトセラピー",
+      "ways": [
+        {
+          "slot": "1",
+          "condition": "バースト+ファイター",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "アタック"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        },
+        {
+          "slot": "5",
+          "condition": "バースト+ファイター",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "アタック"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        }
+      ]
+    },
+    "祖35_マルコシアスB": {
+      "name": "ジャスティスフォース",
+      "ways": [
+        {
+          "slot": "2",
+          "condition": "バースト+トルーパー",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "アタック"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        },
+        {
+          "slot": "4",
+          "condition": "バースト+トルーパー",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "アタック"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        }
+      ]
+    },
+    "祖39_マルファスB": {
+      "name": "知的好奇心",
+      "ways": [
+        {
+          "slot": "2",
+          "condition": "バースト+スナイパー",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "スキル"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        },
+        {
+          "slot": "4",
+          "condition": "バースト+スナイパー",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "スキル"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        }
+      ]
+    },
+    "祖48_ハーゲンティB": {
+      "name": "レッツゴー黄金伝説！",
+      "ways": [
+        {
+          "slot": "2",
+          "condition": "バースト+スナイパー",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "スキル"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        },
+        {
+          "slot": "4",
+          "condition": "バースト+スナイパー",
+          "medium": "マスエフェクト",
+          "conditions": [
+            {
+              "type": "photon",
+              "photon": "スキル"
+            },
+            {
+              "type": "prob",
+              "pct": 50
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "orbs": {
+    "orb_204": {
+      "name": "ドカグイ",
+      "start": [
+        {
+          "medium": "オーブ",
+          "conditions": []
+        }
+      ],
+      "relay": [],
+      "grant": [],
+      "selfChain": [],
+      "scaler": false
+    },
+    "orb_252": {
+      "name": "ジャガーノート",
+      "start": [],
+      "relay": [],
+      "grant": [],
+      "selfChain": [
+        {
+          "medium": "オーブ",
+          "conditions": []
+        }
+      ],
+      "scaler": false
+    },
+    "orb_356": {
+      "name": "シーシェルド",
+      "start": [
+        {
+          "medium": "オーブ",
+          "conditions": []
+        }
+      ],
+      "relay": [],
+      "grant": [],
+      "selfChain": [],
+      "scaler": false
+    },
+    "orb_409": {
+      "name": "カルコス",
+      "start": [],
+      "relay": [
+        {
+          "medium": "オーブ",
+          "conditions": []
+        }
+      ],
+      "grant": [],
+      "selfChain": [],
+      "scaler": false
+    },
+    "orb_429": {
+      "name": "マスクド・マッド",
+      "start": [
+        {
+          "medium": "オーブ",
+          "conditions": []
+        }
+      ],
+      "relay": [],
+      "grant": [],
+      "selfChain": [],
+      "scaler": false
+    },
+    "orb_431": {
+      "name": "呪王セルウィウス",
+      "start": [
+        {
+          "medium": "オーブ",
+          "conditions": []
+        }
+      ],
+      "relay": [],
+      "grant": [],
+      "selfChain": [],
+      "scaler": false
+    }
+  }
+}
