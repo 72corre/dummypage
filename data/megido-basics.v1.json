@@ -1,0 +1,4917 @@
+{
+  "kind": "megido-basics",
+  "version": 1,
+  "explorationPower": {
+    "base": "攻撃力×素早さ/1000 + HP×防御力/10000",
+    "factors": {
+      "ougiLevel": "1 + 奥義レベル×0.05（対象は現在の奥義レベル。最大奥義レベルを上げただけでは上がらない）",
+      "condition": {
+        "絶好調": 1.3,
+        "好調": 1.1,
+        "普通": 1,
+        "不調": 0.8,
+        "絶不調": 0.5
+      },
+      "recommendation": "おすすめ（クラス・スタイル）が合致すると1.8倍"
+    },
+    "note": "探索力 = 基礎値 × 奥義レベル補正 × コンディション補正 × おすすめ補正"
+  },
+  "megido": [
+    {
+      "id": "宵01_リリス",
+      "no": "宵01",
+      "name": "リリス",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 10094,
+        "atk": 404,
+        "def": 610,
+        "spd": 718
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": true,
+      "trait": "飛行"
+    },
+    {
+      "id": "宵02_バールベリト",
+      "no": "宵02",
+      "name": "バールベリト",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8215,
+        "atk": 1183,
+        "def": 440,
+        "spd": 677
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": true,
+      "trait": null
+    },
+    {
+      "id": "宵03_エウリノーム",
+      "no": "宵03",
+      "name": "エウリノーム",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 10683,
+        "atk": 1407,
+        "def": 495,
+        "spd": 302
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": true,
+      "trait": null
+    },
+    {
+      "id": "宵04_ベルゼブフ",
+      "no": "宵04",
+      "name": "ベルゼブフ",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 9629,
+        "atk": 1396,
+        "def": 303,
+        "spd": 610
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": true,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "宵05_サタン",
+      "no": "宵05",
+      "name": "サタン",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 11369,
+        "atk": 1638,
+        "def": 438,
+        "spd": 274
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": true,
+      "trait": null
+    },
+    {
+      "id": "宵06_モレク",
+      "no": "宵06",
+      "name": "モレク",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8018,
+        "atk": 1228,
+        "def": 860,
+        "spd": 256
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": true,
+      "trait": null
+    },
+    {
+      "id": "真01_リリム",
+      "no": "真01",
+      "name": "リリム",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7342,
+        "atk": 1198,
+        "def": 415,
+        "spd": 496
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "真01_リリムR",
+      "no": "真01",
+      "name": "リリムR",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6022,
+        "atk": 814,
+        "def": 677,
+        "spd": 533
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "真02_ニバス",
+      "no": "真02",
+      "name": "ニバス",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6143,
+        "atk": 1429,
+        "def": 406,
+        "spd": 480
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真02_ニバスB",
+      "no": "真02",
+      "name": "ニバスB",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 9089,
+        "atk": 1058,
+        "def": 482,
+        "spd": 420
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真03_サキュバス",
+      "no": "真03",
+      "name": "サキュバス",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7530,
+        "atk": 952,
+        "def": 429,
+        "spd": 631
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真03_サキュバスB",
+      "no": "真03",
+      "name": "サキュバスB",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8637,
+        "atk": 707,
+        "def": 495,
+        "spd": 534
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真04_ユフィール",
+      "no": "真04",
+      "name": "ユフィール",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7042,
+        "atk": 632,
+        "def": 635,
+        "spd": 614
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真04_ユフィールC",
+      "no": "真04",
+      "name": "ユフィールC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7070,
+        "atk": 700,
+        "def": 640,
+        "spd": 610
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真05_フリアエ",
+      "no": "真05",
+      "name": "フリアエ",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6079,
+        "atk": 771,
+        "def": 635,
+        "spd": 647
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真05_フリアエR",
+      "no": "真05",
+      "name": "フリアエR",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7862,
+        "atk": 692,
+        "def": 491,
+        "spd": 648
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真06_アラストール",
+      "no": "真06",
+      "name": "アラストール",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 9208,
+        "atk": 776,
+        "def": 424,
+        "spd": 627
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "真06_アラストールB",
+      "no": "真06",
+      "name": "アラストールB",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8231,
+        "atk": 909,
+        "def": 514,
+        "spd": 491
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "真07_ヒュトギン",
+      "no": "真07",
+      "name": "ヒュトギン",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7616,
+        "atk": 784,
+        "def": 493,
+        "spd": 619
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真07_ヒュトギンC",
+      "no": "真07",
+      "name": "ヒュトギンC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6178,
+        "atk": 852,
+        "def": 619,
+        "spd": 621
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真08_ロキ",
+      "no": "真08",
+      "name": "ロキ",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7010,
+        "atk": 1101,
+        "def": 451,
+        "spd": 517
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真08_ロキR",
+      "no": "真08",
+      "name": "ロキR",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7008,
+        "atk": 1101,
+        "def": 440,
+        "spd": 528
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真09_インキュバス",
+      "no": "真09",
+      "name": "インキュバス",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6209,
+        "atk": 1177,
+        "def": 489,
+        "spd": 497
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真09_インキュバスC",
+      "no": "真09",
+      "name": "インキュバスC",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8527,
+        "atk": 1370,
+        "def": 302,
+        "spd": 449
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真10_グリマルキン",
+      "no": "真10",
+      "name": "グリマルキン",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7347,
+        "atk": 859,
+        "def": 483,
+        "spd": 652
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真10_グリマルキンR",
+      "no": "真10",
+      "name": "グリマルキンR",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7705,
+        "atk": 726,
+        "def": 473,
+        "spd": 655
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真11_コルソン",
+      "no": "真11",
+      "name": "コルソン",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8949,
+        "atk": 788,
+        "def": 416,
+        "spd": 563
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真11_コルソンR",
+      "no": "真11",
+      "name": "コルソンR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7104,
+        "atk": 986,
+        "def": 480,
+        "spd": 502
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真12_ジニマル",
+      "no": "真12",
+      "name": "ジニマル",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5904,
+        "atk": 859,
+        "def": 612,
+        "spd": 538
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真12_ジニマルR",
+      "no": "真12",
+      "name": "ジニマルR",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7978,
+        "atk": 730,
+        "def": 611,
+        "spd": 498
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真13_バフォメット",
+      "no": "真13",
+      "name": "バフォメット",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6898,
+        "atk": 1180,
+        "def": 369,
+        "spd": 645
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真14_サラ",
+      "no": "真14",
+      "name": "サラ",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 9190,
+        "atk": 638,
+        "def": 615,
+        "spd": 503
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真14_サラB",
+      "no": "真14",
+      "name": "サラB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8769,
+        "atk": 438,
+        "def": 509,
+        "spd": 686
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真15_サタナキア",
+      "no": "真15",
+      "name": "サタナキア",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8818,
+        "atk": 624,
+        "def": 646,
+        "spd": 505
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真15_サタナキアB",
+      "no": "真15",
+      "name": "サタナキアB",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8986,
+        "atk": 815,
+        "def": 475,
+        "spd": 537
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真16_タナトス",
+      "no": "真16",
+      "name": "タナトス",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7120,
+        "atk": 1215,
+        "def": 424,
+        "spd": 458
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真17_ティアマト",
+      "no": "真17",
+      "name": "ティアマト",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7349,
+        "atk": 1155,
+        "def": 621,
+        "spd": 280
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真17_ティアマトR",
+      "no": "真17",
+      "name": "ティアマトR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6845,
+        "atk": 1176,
+        "def": 302,
+        "spd": 646
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真18_ブニ",
+      "no": "真18",
+      "name": "ブニ",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8805,
+        "atk": 1080,
+        "def": 471,
+        "spd": 430
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真18_ブニB",
+      "no": "真18",
+      "name": "ブニB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8032,
+        "atk": 949,
+        "def": 279,
+        "spd": 688
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真19_オリエンス",
+      "no": "真19",
+      "name": "オリエンス",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6612,
+        "atk": 1124,
+        "def": 423,
+        "spd": 558
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真19_オリエンスB",
+      "no": "真19",
+      "name": "オリエンスB",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6241,
+        "atk": 1377,
+        "def": 252,
+        "spd": 666
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真20_アリオク",
+      "no": "真20",
+      "name": "アリオク",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7727,
+        "atk": 1203,
+        "def": 404,
+        "spd": 481
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真21_リヴァイアサン",
+      "no": "真21",
+      "name": "リヴァイアサン",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 9551,
+        "atk": 446,
+        "def": 532,
+        "spd": 711
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真22_カスピエル",
+      "no": "真22",
+      "name": "カスピエル",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7399,
+        "atk": 1053,
+        "def": 490,
+        "spd": 478
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真22_カスピエルC",
+      "no": "真22",
+      "name": "カスピエルC",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6797,
+        "atk": 1269,
+        "def": 288,
+        "spd": 617
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真23_ネフィリム",
+      "no": "真23",
+      "name": "ネフィリム",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8966,
+        "atk": 1098,
+        "def": 483,
+        "spd": 270
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真23_ネフィリムB",
+      "no": "真23",
+      "name": "ネフィリムB",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7733,
+        "atk": 882,
+        "def": 488,
+        "spd": 523
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真24_ミノソン",
+      "no": "真24",
+      "name": "ミノソン",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 9084,
+        "atk": 1077,
+        "def": 482,
+        "spd": 404
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真25_ニスロク",
+      "no": "真25",
+      "name": "ニスロク",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8840,
+        "atk": 1226,
+        "def": 421,
+        "spd": 438
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真25_ニスロクB",
+      "no": "真25",
+      "name": "ニスロクB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 9321,
+        "atk": 1385,
+        "def": 417,
+        "spd": 281
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真26_オレイ",
+      "no": "真26",
+      "name": "オレイ",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7291,
+        "atk": 922,
+        "def": 538,
+        "spd": 471
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真27_マルチネ",
+      "no": "真27",
+      "name": "マルチネ",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6697,
+        "atk": 1353,
+        "def": 417,
+        "spd": 488
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真27_マルチネC",
+      "no": "真27",
+      "name": "マルチネC",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7854,
+        "atk": 905,
+        "def": 471,
+        "spd": 521
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真28_アザゼル",
+      "no": "真28",
+      "name": "アザゼル",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7098,
+        "atk": 1222,
+        "def": 409,
+        "spd": 497
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "真29_アルマロス",
+      "no": "真29",
+      "name": "アルマロス",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8810,
+        "atk": 865,
+        "def": 538,
+        "spd": 431
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真30_バラキエル",
+      "no": "真30",
+      "name": "バラキエル",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6568,
+        "atk": 739,
+        "def": 643,
+        "spd": 531
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真31_フルーレティ",
+      "no": "真31",
+      "name": "フルーレティ",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7716,
+        "atk": 1004,
+        "def": 421,
+        "spd": 611
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真31_フルーレティB",
+      "no": "真31",
+      "name": "フルーレティB",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8713,
+        "atk": 739,
+        "def": 512,
+        "spd": 492
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真32_ガギゾン",
+      "no": "真32",
+      "name": "ガギゾン",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7621,
+        "atk": 947,
+        "def": 475,
+        "spd": 501
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真33_ハック",
+      "no": "真33",
+      "name": "ハック",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8902,
+        "atk": 1001,
+        "def": 287,
+        "spd": 629
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真33_ハックB",
+      "no": "真33",
+      "name": "ハックB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7969,
+        "atk": 848,
+        "def": 464,
+        "spd": 618
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真34_マスティマ",
+      "no": "真34",
+      "name": "マスティマ",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7587,
+        "atk": 1072,
+        "def": 496,
+        "spd": 492
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "真35_ブリフォー",
+      "no": "真35",
+      "name": "ブリフォー",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6889,
+        "atk": 1080,
+        "def": 439,
+        "spd": 622
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真36_メフィスト",
+      "no": "真36",
+      "name": "メフィスト",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 5899,
+        "atk": 1194,
+        "def": 417,
+        "spd": 648
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真36_メフィストC",
+      "no": "真36",
+      "name": "メフィストC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7452,
+        "atk": 615,
+        "def": 637,
+        "spd": 634
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真37_ネビロス",
+      "no": "真37",
+      "name": "ネビロス",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7593,
+        "atk": 1154,
+        "def": 438,
+        "spd": 480
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "真38_アガリアレプト",
+      "no": "真38",
+      "name": "アガリアレプト",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7702,
+        "atk": 968,
+        "def": 276,
+        "spd": 676
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真38_アガリアレプトR",
+      "no": "真38",
+      "name": "アガリアレプトR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6390,
+        "atk": 1100,
+        "def": 271,
+        "spd": 706
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真39_ウコバク",
+      "no": "真39",
+      "name": "ウコバク",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7272,
+        "atk": 739,
+        "def": 523,
+        "spd": 535
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真40_グザファン",
+      "no": "真40",
+      "name": "グザファン",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7070,
+        "atk": 1144,
+        "def": 460,
+        "spd": 514
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "真41_アマイモン",
+      "no": "真41",
+      "name": "アマイモン",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 5997,
+        "atk": 1354,
+        "def": 429,
+        "spd": 503
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真41_アマイモンR",
+      "no": "真41",
+      "name": "アマイモンR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6733,
+        "atk": 890,
+        "def": 538,
+        "spd": 515
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真42_ルキフゲス",
+      "no": "真42",
+      "name": "ルキフゲス",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7270,
+        "atk": 1133,
+        "def": 468,
+        "spd": 483
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真43_サルガタナス",
+      "no": "真43",
+      "name": "サルガタナス",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6503,
+        "atk": 763,
+        "def": 618,
+        "spd": 608
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真44_タムス",
+      "no": "真44",
+      "name": "タムス",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7970,
+        "atk": 1141,
+        "def": 457,
+        "spd": 493
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真45_チェルノボグ",
+      "no": "真45",
+      "name": "チェルノボグ",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6328,
+        "atk": 1385,
+        "def": 400,
+        "spd": 500
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真46_アガシオン",
+      "no": "真46",
+      "name": "アガシオン",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8444,
+        "atk": 700,
+        "def": 700,
+        "spd": 410
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真47_ヴェルドレ",
+      "no": "真47",
+      "name": "ヴェルドレ",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6442,
+        "atk": 1366,
+        "def": 438,
+        "spd": 405
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真48_ウトゥック",
+      "no": "真48",
+      "name": "ウトゥック",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6982,
+        "atk": 927,
+        "def": 479,
+        "spd": 624
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真49_サタナイル",
+      "no": "真49",
+      "name": "サタナイル",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8189,
+        "atk": 838,
+        "def": 459,
+        "spd": 630
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真50_シャミハザ",
+      "no": "真50",
+      "name": "シャミハザ",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 5786,
+        "atk": 1221,
+        "def": 427,
+        "spd": 619
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真50_シャミハザR",
+      "no": "真50",
+      "name": "シャミハザR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8026,
+        "atk": 996,
+        "def": 460,
+        "spd": 474
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真51_プルフラス",
+      "no": "真51",
+      "name": "プルフラス",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7528,
+        "atk": 1209,
+        "def": 414,
+        "spd": 498
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真51_プルフラスB",
+      "no": "真51",
+      "name": "プルフラスB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7771,
+        "atk": 1219,
+        "def": 419,
+        "spd": 450
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真52_ジズ",
+      "no": "真52",
+      "name": "ジズ",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5955,
+        "atk": 840,
+        "def": 494,
+        "spd": 687
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真52_ジズR",
+      "no": "真52",
+      "name": "ジズR",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7004,
+        "atk": 1309,
+        "def": 397,
+        "spd": 514
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真53_ベバル",
+      "no": "真53",
+      "name": "ベバル",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7228,
+        "atk": 789,
+        "def": 617,
+        "spd": 504
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真53_ベバルC",
+      "no": "真53",
+      "name": "ベバルC",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7272,
+        "atk": 719,
+        "def": 611,
+        "spd": 610
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真54_アバラム",
+      "no": "真54",
+      "name": "アバラム",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7286,
+        "atk": 1176,
+        "def": 497,
+        "spd": 414
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真54_アバラムC",
+      "no": "真54",
+      "name": "アバラムC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7113,
+        "atk": 1179,
+        "def": 412,
+        "spd": 515
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真55_アリトン",
+      "no": "真55",
+      "name": "アリトン",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6020,
+        "atk": 841,
+        "def": 628,
+        "spd": 648
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真56_バロール",
+      "no": "真56",
+      "name": "バロール",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7283,
+        "atk": 1400,
+        "def": 285,
+        "spd": 495
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真57_ベヒモス",
+      "no": "真57",
+      "name": "ベヒモス",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7450,
+        "atk": 1350,
+        "def": 273,
+        "spd": 499
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "通常アタック回数：1/6"
+    },
+    {
+      "id": "真57_ベヒモスB",
+      "no": "真57",
+      "name": "ベヒモスB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8003,
+        "atk": 1183,
+        "def": 387,
+        "spd": 496
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：1/2"
+    },
+    {
+      "id": "真58_ダゴン",
+      "no": "真58",
+      "name": "ダゴン",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 9316,
+        "atk": 1200,
+        "def": 420,
+        "spd": 276
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真58_ダゴンR",
+      "no": "真58",
+      "name": "ダゴンR",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8778,
+        "atk": 1227,
+        "def": 404,
+        "spd": 413
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真59_スコルベノト",
+      "no": "真59",
+      "name": "スコルベノト",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7066,
+        "atk": 949,
+        "def": 575,
+        "spd": 504
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真59_スコルベノトR",
+      "no": "真59",
+      "name": "スコルベノトR",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7046,
+        "atk": 530,
+        "def": 610,
+        "spd": 688
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真60_メルコム",
+      "no": "真60",
+      "name": "メルコム",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8818,
+        "atk": 907,
+        "def": 528,
+        "spd": 420
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真61_フィロタヌス",
+      "no": "真61",
+      "name": "フィロタヌス",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6858,
+        "atk": 764,
+        "def": 658,
+        "spd": 448
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真62_インプ",
+      "no": "真62",
+      "name": "インプ",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6148,
+        "atk": 818,
+        "def": 643,
+        "spd": 616
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "真62_インプR",
+      "no": "真62",
+      "name": "インプR",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6298,
+        "atk": 1114,
+        "def": 438,
+        "spd": 535
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "真63_アマゼロト",
+      "no": "真63",
+      "name": "アマゼロト",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6816,
+        "atk": 1280,
+        "def": 393,
+        "spd": 527
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "真63_アマゼロトB",
+      "no": "真63",
+      "name": "アマゼロトB",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7677,
+        "atk": 1303,
+        "def": 610,
+        "spd": 269
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "真64_プロメテウス",
+      "no": "真64",
+      "name": "プロメテウス",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8712,
+        "atk": 637,
+        "def": 625,
+        "spd": 569
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真64_プロメテウスC",
+      "no": "真64",
+      "name": "プロメテウスC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7378,
+        "atk": 852,
+        "def": 516,
+        "spd": 524
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真65_ベルフェゴール",
+      "no": "真65",
+      "name": "ベルフェゴール",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 10192,
+        "atk": 1325,
+        "def": 442,
+        "spd": 363
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "真66_マモン",
+      "no": "真66",
+      "name": "マモン",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8102,
+        "atk": 1274,
+        "def": 496,
+        "spd": 449
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "真67_ルシファー",
+      "no": "真67",
+      "name": "ルシファー",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8555,
+        "atk": 1328,
+        "def": 451,
+        "spd": 424
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "飛行 通常アタック回数：2"
+    },
+    {
+      "id": "真68_ネルガル",
+      "no": "真68",
+      "name": "ネルガル",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8302,
+        "atk": 1359,
+        "def": 491,
+        "spd": 279
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真68_ネルガルB",
+      "no": "真68",
+      "name": "ネルガルB",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7828,
+        "atk": 1106,
+        "def": 474,
+        "spd": 450
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "真69_バールゼフォン",
+      "no": "真69",
+      "name": "バールゼフォン",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7245,
+        "atk": 629,
+        "def": 630,
+        "spd": 643
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真69_バールゼフォンC",
+      "no": "真69",
+      "name": "バールゼフォンC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8310,
+        "atk": 890,
+        "def": 468,
+        "spd": 507
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真70_アスラフィル",
+      "no": "真70",
+      "name": "アスラフィル",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8137,
+        "atk": 908,
+        "def": 639,
+        "spd": 421
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真71_アクィエル",
+      "no": "真71",
+      "name": "アクィエル",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8024,
+        "atk": 857,
+        "def": 425,
+        "spd": 681
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真71_アクィエルB",
+      "no": "真71",
+      "name": "アクィエルB",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7111,
+        "atk": 1116,
+        "def": 414,
+        "spd": 612
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "真72_ゲイボルグ",
+      "no": "真72",
+      "name": "ゲイボルグ",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8703,
+        "atk": 1201,
+        "def": 285,
+        "spd": 492
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "祖01_バエル",
+      "no": "祖01",
+      "name": "バエル",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 4570,
+        "atk": 943,
+        "def": 487,
+        "spd": 689
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖01_バエルC",
+      "no": "祖01",
+      "name": "バエルC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7000,
+        "atk": 1103,
+        "def": 417,
+        "spd": 620
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖02_アガレス",
+      "no": "祖02",
+      "name": "アガレス",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 10712,
+        "atk": 971,
+        "def": 418,
+        "spd": 427
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖02_アガレスC",
+      "no": "祖02",
+      "name": "アガレスC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6106,
+        "atk": 1218,
+        "def": 394,
+        "spd": 616
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖03_ウァサゴ",
+      "no": "祖03",
+      "name": "ウァサゴ",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5743,
+        "atk": 980,
+        "def": 500,
+        "spd": 614
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖03_ウァサゴB",
+      "no": "祖03",
+      "name": "ウァサゴB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7736,
+        "atk": 935,
+        "def": 538,
+        "spd": 460
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖04_ガミジン",
+      "no": "祖04",
+      "name": "ガミジン",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8729,
+        "atk": 1193,
+        "def": 418,
+        "spd": 417
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖04_ガミジンB",
+      "no": "祖04",
+      "name": "ガミジンB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8467,
+        "atk": 1070,
+        "def": 423,
+        "spd": 492
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖05_マルバス",
+      "no": "祖05",
+      "name": "マルバス",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7262,
+        "atk": 628,
+        "def": 489,
+        "spd": 719
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖05_マルバスR",
+      "no": "祖05",
+      "name": "マルバスR",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7730,
+        "atk": 597,
+        "def": 586,
+        "spd": 657
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖06_ウァレフォル",
+      "no": "祖06",
+      "name": "ウァレフォル",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5855,
+        "atk": 1150,
+        "def": 287,
+        "spd": 678
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "祖06_ウァレフォルC",
+      "no": "祖06",
+      "name": "ウァレフォルC",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6806,
+        "atk": 1340,
+        "def": 390,
+        "spd": 509
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖07_アモン",
+      "no": "祖07",
+      "name": "アモン",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 4598,
+        "atk": 1194,
+        "def": 417,
+        "spd": 685
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖07_アモンR",
+      "no": "祖07",
+      "name": "アモンR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6039,
+        "atk": 1200,
+        "def": 420,
+        "spd": 627
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：3"
+    },
+    {
+      "id": "祖08_バルバトス",
+      "no": "祖08",
+      "name": "バルバトス",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7659,
+        "atk": 960,
+        "def": 476,
+        "spd": 474
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖08_バルバトスR",
+      "no": "祖08",
+      "name": "バルバトスR",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7713,
+        "atk": 1226,
+        "def": 421,
+        "spd": 492
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖09_パイモン",
+      "no": "祖09",
+      "name": "パイモン",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7172,
+        "atk": 1191,
+        "def": 420,
+        "spd": 472
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖09_パイモンB",
+      "no": "祖09",
+      "name": "パイモンB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7092,
+        "atk": 1194,
+        "def": 381,
+        "spd": 610
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖10_ブエル",
+      "no": "祖10",
+      "name": "ブエル",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7275,
+        "atk": 642,
+        "def": 477,
+        "spd": 716
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖10_ブエルR",
+      "no": "祖10",
+      "name": "ブエルR",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7733,
+        "atk": 640,
+        "def": 523,
+        "spd": 648
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖11_グシオン",
+      "no": "祖11",
+      "name": "グシオン",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7727,
+        "atk": 857,
+        "def": 430,
+        "spd": 697
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖11_グシオンB",
+      "no": "祖11",
+      "name": "グシオンB",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8586,
+        "atk": 1037,
+        "def": 430,
+        "spd": 491
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖12_シトリー",
+      "no": "祖12",
+      "name": "シトリー",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5667,
+        "atk": 1176,
+        "def": 494,
+        "spd": 476
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "祖12_シトリーR",
+      "no": "祖12",
+      "name": "シトリーR",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8547,
+        "atk": 1001,
+        "def": 487,
+        "spd": 421
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖13_ベレト",
+      "no": "祖13",
+      "name": "ベレト",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5968,
+        "atk": 1206,
+        "def": 411,
+        "spd": 626
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖13_ベレトB",
+      "no": "祖13",
+      "name": "ベレトB",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7097,
+        "atk": 1354,
+        "def": 407,
+        "spd": 470
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖14_レラジェ",
+      "no": "祖14",
+      "name": "レラジェ",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5980,
+        "atk": 1386,
+        "def": 424,
+        "spd": 475
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖14_レラジェR",
+      "no": "祖14",
+      "name": "レラジェR",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6116,
+        "atk": 1210,
+        "def": 644,
+        "spd": 430
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖15_エリゴス",
+      "no": "祖15",
+      "name": "エリゴス",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5896,
+        "atk": 768,
+        "def": 622,
+        "spd": 627
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "祖15_エリゴスB",
+      "no": "祖15",
+      "name": "エリゴスB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7119,
+        "atk": 1280,
+        "def": 410,
+        "spd": 462
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "祖16_ゼパル",
+      "no": "祖16",
+      "name": "ゼパル",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6210,
+        "atk": 1209,
+        "def": 271,
+        "spd": 693
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖16_ゼパルC",
+      "no": "祖16",
+      "name": "ゼパルC",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6210,
+        "atk": 1150,
+        "def": 409,
+        "spd": 642
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖17_ボティス",
+      "no": "祖17",
+      "name": "ボティス",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8845,
+        "atk": 761,
+        "def": 717,
+        "spd": 286
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖17_ボティスR",
+      "no": "祖17",
+      "name": "ボティスR",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6545,
+        "atk": 1070,
+        "def": 505,
+        "spd": 500
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖18_バティン",
+      "no": "祖18",
+      "name": "バティン",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 9140,
+        "atk": 1222,
+        "def": 431,
+        "spd": 423
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖18_バティンB",
+      "no": "祖18",
+      "name": "バティンB",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7379,
+        "atk": 1362,
+        "def": 419,
+        "spd": 431
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖19_サレオス",
+      "no": "祖19",
+      "name": "サレオス",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8474,
+        "atk": 945,
+        "def": 490,
+        "spd": 424
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖19_サレオスC",
+      "no": "祖19",
+      "name": "サレオスC",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8330,
+        "atk": 881,
+        "def": 525,
+        "spd": 479
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖20_プルソン",
+      "no": "祖20",
+      "name": "プルソン",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8688,
+        "atk": 975,
+        "def": 412,
+        "spd": 475
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖20_プルソンB",
+      "no": "祖20",
+      "name": "プルソンB",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7094,
+        "atk": 1225,
+        "def": 514,
+        "spd": 392
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖21_モラクス",
+      "no": "祖21",
+      "name": "モラクス",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6025,
+        "atk": 1218,
+        "def": 414,
+        "spd": 614
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖21_モラクスR",
+      "no": "祖21",
+      "name": "モラクスR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6519,
+        "atk": 1318,
+        "def": 285,
+        "spd": 644
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "祖22_イポス",
+      "no": "祖22",
+      "name": "イポス",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 9320,
+        "atk": 984,
+        "def": 286,
+        "spd": 646
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖22_イポスC",
+      "no": "祖22",
+      "name": "イポスC",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8705,
+        "atk": 617,
+        "def": 630,
+        "spd": 489
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖23_アイム",
+      "no": "祖23",
+      "name": "アイム",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5630,
+        "atk": 1171,
+        "def": 426,
+        "spd": 644
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖23_アイムR",
+      "no": "祖23",
+      "name": "アイムR",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8455,
+        "atk": 751,
+        "def": 674,
+        "spd": 280
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖24_ナベリウス",
+      "no": "祖24",
+      "name": "ナベリウス",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7544,
+        "atk": 948,
+        "def": 501,
+        "spd": 503
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖24_ナベリウスB",
+      "no": "祖24",
+      "name": "ナベリウスB",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7261,
+        "atk": 1080,
+        "def": 438,
+        "spd": 506
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖25_グラシャラボラス",
+      "no": "祖25",
+      "name": "グラシャラボラス",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7290,
+        "atk": 1170,
+        "def": 416,
+        "spd": 494
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖25_グラシャラボラスC",
+      "no": "祖25",
+      "name": "グラシャラボラスC",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7356,
+        "atk": 1213,
+        "def": 467,
+        "spd": 440
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖26_ブネ",
+      "no": "祖26",
+      "name": "ブネ",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 9049,
+        "atk": 949,
+        "def": 497,
+        "spd": 414
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖26_ブネB",
+      "no": "祖26",
+      "name": "ブネB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 9000,
+        "atk": 1430,
+        "def": 420,
+        "spd": 271
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖27_ロノウェ",
+      "no": "祖27",
+      "name": "ロノウェ",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 10836,
+        "atk": 645,
+        "def": 714,
+        "spd": 285
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖27_ロノウェR",
+      "no": "祖27",
+      "name": "ロノウェR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 9010,
+        "atk": 1070,
+        "def": 612,
+        "spd": 285
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖28_ベリト",
+      "no": "祖28",
+      "name": "ベリト",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 5631,
+        "atk": 1226,
+        "def": 428,
+        "spd": 623
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖28_ベリトB",
+      "no": "祖28",
+      "name": "ベリトB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7942,
+        "atk": 1053,
+        "def": 518,
+        "spd": 432
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖29_アスタロト",
+      "no": "祖29",
+      "name": "アスタロト",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7365,
+        "atk": 1075,
+        "def": 496,
+        "spd": 476
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖29_アスタロトB",
+      "no": "祖29",
+      "name": "アスタロトB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5945,
+        "atk": 1216,
+        "def": 545,
+        "spd": 413
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖30_フォルネウス",
+      "no": "祖30",
+      "name": "フォルネウス",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8521,
+        "atk": 635,
+        "def": 487,
+        "spd": 616
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖30_フォルネウスB",
+      "no": "祖30",
+      "name": "フォルネウスB",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7642,
+        "atk": 1201,
+        "def": 408,
+        "spd": 487
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖31_フォラス",
+      "no": "祖31",
+      "name": "フォラス",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 5724,
+        "atk": 746,
+        "def": 491,
+        "spd": 691
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖31_フォラスC",
+      "no": "祖31",
+      "name": "フォラスC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6507,
+        "atk": 884,
+        "def": 524,
+        "spd": 611
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖32_アスモデウス",
+      "no": "祖32",
+      "name": "アスモデウス",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8686,
+        "atk": 1402,
+        "def": 423,
+        "spd": 283
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖32_アスモデウスR",
+      "no": "祖32",
+      "name": "アスモデウスR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8983,
+        "atk": 1548,
+        "def": 454,
+        "spd": 450
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": true,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "祖33_ガープ",
+      "no": "祖33",
+      "name": "ガープ",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 10133,
+        "atk": 854,
+        "def": 642,
+        "spd": 279
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖33_ガープR",
+      "no": "祖33",
+      "name": "ガープR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7733,
+        "atk": 1324,
+        "def": 532,
+        "spd": 269
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖34_フルフル",
+      "no": "祖34",
+      "name": "フルフル",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8688,
+        "atk": 1178,
+        "def": 487,
+        "spd": 285
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖34_フルフルC",
+      "no": "祖34",
+      "name": "フルフルC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8517,
+        "atk": 1089,
+        "def": 524,
+        "spd": 308
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖35_マルコシアス",
+      "no": "祖35",
+      "name": "マルコシアス",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7701,
+        "atk": 1152,
+        "def": 431,
+        "spd": 473
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖35_マルコシアスB",
+      "no": "祖35",
+      "name": "マルコシアスB",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6761,
+        "atk": 1338,
+        "def": 465,
+        "spd": 462
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖36_ストラス",
+      "no": "祖36",
+      "name": "ストラス",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7407,
+        "atk": 1167,
+        "def": 411,
+        "spd": 488
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖36_ストラスR",
+      "no": "祖36",
+      "name": "ストラスR",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7952,
+        "atk": 1081,
+        "def": 420,
+        "spd": 479
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖37_フェニックス",
+      "no": "祖37",
+      "name": "フェニックス",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7259,
+        "atk": 967,
+        "def": 472,
+        "spd": 490
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖37_フェニックスC",
+      "no": "祖37",
+      "name": "フェニックスC",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7571,
+        "atk": 1144,
+        "def": 413,
+        "spd": 600
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖38_ハルファス",
+      "no": "祖38",
+      "name": "ハルファス",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6022,
+        "atk": 1400,
+        "def": 643,
+        "spd": 269
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖38_ハルファスR",
+      "no": "祖38",
+      "name": "ハルファスR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8836,
+        "atk": 953,
+        "def": 612,
+        "spd": 381
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "祖39_マルファス",
+      "no": "祖39",
+      "name": "マルファス",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7461,
+        "atk": 981,
+        "def": 504,
+        "spd": 499
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "祖39_マルファスB",
+      "no": "祖39",
+      "name": "マルファスB",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7010,
+        "atk": 1154,
+        "def": 419,
+        "spd": 527
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "祖40_ラウム",
+      "no": "祖40",
+      "name": "ラウム",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 10094,
+        "atk": 1155,
+        "def": 418,
+        "spd": 277
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖40_ラウムC",
+      "no": "祖40",
+      "name": "ラウムC",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 9069,
+        "atk": 955,
+        "def": 618,
+        "spd": 282
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖41_フォカロル",
+      "no": "祖41",
+      "name": "フォカロル",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7601,
+        "atk": 993,
+        "def": 504,
+        "spd": 487
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖41_フォカロルR",
+      "no": "祖41",
+      "name": "フォカロルR",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7219,
+        "atk": 728,
+        "def": 507,
+        "spd": 626
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖42_ウェパル",
+      "no": "祖42",
+      "name": "ウェパル",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5646,
+        "atk": 1188,
+        "def": 287,
+        "spd": 699
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖42_ウェパルB",
+      "no": "祖42",
+      "name": "ウェパルB",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8606,
+        "atk": 639,
+        "def": 646,
+        "spd": 493
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖43_サブナック",
+      "no": "祖43",
+      "name": "サブナック",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8573,
+        "atk": 751,
+        "def": 682,
+        "spd": 274
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖43_サブナックB",
+      "no": "祖43",
+      "name": "サブナックB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8782,
+        "atk": 740,
+        "def": 700,
+        "spd": 300
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖44_シャックス",
+      "no": "祖44",
+      "name": "シャックス",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7581,
+        "atk": 954,
+        "def": 478,
+        "spd": 501
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖44_シャックスB",
+      "no": "祖44",
+      "name": "シャックスB",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7327,
+        "atk": 1157,
+        "def": 428,
+        "spd": 478
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖45_ヴィネ",
+      "no": "祖45",
+      "name": "ヴィネ",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7394,
+        "atk": 841,
+        "def": 416,
+        "spd": 708
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖45_ヴィネR",
+      "no": "祖45",
+      "name": "ヴィネR",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7354,
+        "atk": 746,
+        "def": 495,
+        "spd": 647
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖46_ビフロンス",
+      "no": "祖46",
+      "name": "ビフロンス",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7604,
+        "atk": 1189,
+        "def": 493,
+        "spd": 424
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖46_ビフロンスC",
+      "no": "祖46",
+      "name": "ビフロンスC",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6422,
+        "atk": 1214,
+        "def": 464,
+        "spd": 468
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖47_ウヴァル",
+      "no": "祖47",
+      "name": "ウヴァル",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7585,
+        "atk": 1404,
+        "def": 275,
+        "spd": 501
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖47_ウヴァルC",
+      "no": "祖47",
+      "name": "ウヴァルC",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8527,
+        "atk": 1366,
+        "def": 388,
+        "spd": 422
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖48_ハーゲンティ",
+      "no": "祖48",
+      "name": "ハーゲンティ",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7382,
+        "atk": 968,
+        "def": 418,
+        "spd": 628
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖48_ハーゲンティB",
+      "no": "祖48",
+      "name": "ハーゲンティB",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7004,
+        "atk": 1199,
+        "def": 454,
+        "spd": 494
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖49_クロケル",
+      "no": "祖49",
+      "name": "クロケル",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5688,
+        "atk": 1197,
+        "def": 287,
+        "spd": 703
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖49_クロケルR",
+      "no": "祖49",
+      "name": "クロケルR",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5835,
+        "atk": 1164,
+        "def": 476,
+        "spd": 500
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖50_フルカス",
+      "no": "祖50",
+      "name": "フルカス",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7649,
+        "atk": 1190,
+        "def": 406,
+        "spd": 477
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖50_フルカスC",
+      "no": "祖50",
+      "name": "フルカスC",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7671,
+        "atk": 1136,
+        "def": 441,
+        "spd": 479
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖51_バラム",
+      "no": "祖51",
+      "name": "バラム",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 5846,
+        "atk": 838,
+        "def": 594,
+        "spd": 676
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖51_バラムR",
+      "no": "祖51",
+      "name": "バラムR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7429,
+        "atk": 1303,
+        "def": 438,
+        "spd": 447
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖52_アロケル",
+      "no": "祖52",
+      "name": "アロケル",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7110,
+        "atk": 1199,
+        "def": 500,
+        "spd": 427
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖52_アロケルR",
+      "no": "祖52",
+      "name": "アロケルR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7153,
+        "atk": 1150,
+        "def": 440,
+        "spd": 496
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖53_カイム",
+      "no": "祖53",
+      "name": "カイム",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 9032,
+        "atk": 615,
+        "def": 472,
+        "spd": 636
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖53_カイムB",
+      "no": "祖53",
+      "name": "カイムB",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 9036,
+        "atk": 712,
+        "def": 610,
+        "spd": 463
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖54_ムルムル",
+      "no": "祖54",
+      "name": "ムルムル",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5901,
+        "atk": 990,
+        "def": 501,
+        "spd": 626
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "祖54_ムルムルC",
+      "no": "祖54",
+      "name": "ムルムルC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7327,
+        "atk": 1123,
+        "def": 440,
+        "spd": 502
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "祖55_オロバス",
+      "no": "祖55",
+      "name": "オロバス",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8990,
+        "atk": 1207,
+        "def": 483,
+        "spd": 284
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖55_オロバスC",
+      "no": "祖55",
+      "name": "オロバスC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6133,
+        "atk": 1345,
+        "def": 446,
+        "spd": 482
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖56_グレモリー",
+      "no": "祖56",
+      "name": "グレモリー",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8773,
+        "atk": 989,
+        "def": 485,
+        "spd": 416
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖56_グレモリーR",
+      "no": "祖56",
+      "name": "グレモリーR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8129,
+        "atk": 1155,
+        "def": 302,
+        "spd": 611
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖57_オセ",
+      "no": "祖57",
+      "name": "オセ",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7351,
+        "atk": 1152,
+        "def": 283,
+        "spd": 614
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖57_オセC",
+      "no": "祖57",
+      "name": "オセC",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7619,
+        "atk": 1073,
+        "def": 415,
+        "spd": 610
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖58_アミー",
+      "no": "祖58",
+      "name": "アミー",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7331,
+        "atk": 953,
+        "def": 406,
+        "spd": 626
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖58_アミーC",
+      "no": "祖58",
+      "name": "アミーC",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7705,
+        "atk": 962,
+        "def": 427,
+        "spd": 612
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖59_オリアス",
+      "no": "祖59",
+      "name": "オリアス",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 5947,
+        "atk": 1191,
+        "def": 278,
+        "spd": 711
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "祖59_オリアスC",
+      "no": "祖59",
+      "name": "オリアスC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7486,
+        "atk": 750,
+        "def": 610,
+        "spd": 502
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "祖60_ウァプラ",
+      "no": "祖60",
+      "name": "ウァプラ",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 5948,
+        "atk": 1375,
+        "def": 409,
+        "spd": 490
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖60_ウァプラR",
+      "no": "祖60",
+      "name": "ウァプラR",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7826,
+        "atk": 953,
+        "def": 624,
+        "spd": 381
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖61_ザガン",
+      "no": "祖61",
+      "name": "ザガン",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8492,
+        "atk": 975,
+        "def": 472,
+        "spd": 406
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖61_ザガンR",
+      "no": "祖61",
+      "name": "ザガンR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8150,
+        "atk": 640,
+        "def": 506,
+        "spd": 645
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖62_ウァラク",
+      "no": "祖62",
+      "name": "ウァラク",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7703,
+        "atk": 943,
+        "def": 502,
+        "spd": 490
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "祖62_ウァラクC",
+      "no": "祖62",
+      "name": "ウァラクC",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7885,
+        "atk": 900,
+        "def": 454,
+        "spd": 610
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "祖63_アンドラス",
+      "no": "祖63",
+      "name": "アンドラス",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 9109,
+        "atk": 849,
+        "def": 490,
+        "spd": 481
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖63_アンドラスC",
+      "no": "祖63",
+      "name": "アンドラスC",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7535,
+        "atk": 639,
+        "def": 618,
+        "spd": 609
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖64_フラウロス",
+      "no": "祖64",
+      "name": "フラウロス",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7308,
+        "atk": 1184,
+        "def": 405,
+        "spd": 483
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "祖64_フラウロスB",
+      "no": "祖64",
+      "name": "フラウロスB",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7702,
+        "atk": 1005,
+        "def": 504,
+        "spd": 485
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "祖65_アンドレアルフス",
+      "no": "祖65",
+      "name": "アンドレアルフス",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 9087,
+        "atk": 988,
+        "def": 285,
+        "spd": 637
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "祖65_アンドレアルフスC",
+      "no": "祖65",
+      "name": "アンドレアルフスC",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8713,
+        "atk": 1165,
+        "def": 411,
+        "spd": 449
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖66_キマリス",
+      "no": "祖66",
+      "name": "キマリス",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 4270,
+        "atk": 1159,
+        "def": 405,
+        "spd": 673
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖66_キマリスC",
+      "no": "祖66",
+      "name": "キマリスC",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6698,
+        "atk": 1111,
+        "def": 419,
+        "spd": 627
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖67_アムドゥスキアス",
+      "no": "祖67",
+      "name": "アムドゥスキアス",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7171,
+        "atk": 756,
+        "def": 500,
+        "spd": 645
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "祖67_アムドゥスキアスB",
+      "no": "祖67",
+      "name": "アムドゥスキアスB",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6993,
+        "atk": 950,
+        "def": 500,
+        "spd": 510
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "祖68_ベリアル",
+      "no": "祖68",
+      "name": "ベリアル",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7630,
+        "atk": 976,
+        "def": 431,
+        "spd": 644
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖68_ベリアルB",
+      "no": "祖68",
+      "name": "ベリアルB",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7915,
+        "atk": 1096,
+        "def": 628,
+        "spd": 381
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖69_デカラビア",
+      "no": "祖69",
+      "name": "デカラビア",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 5906,
+        "atk": 1152,
+        "def": 421,
+        "spd": 642
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖69_デカラビアB",
+      "no": "祖69",
+      "name": "デカラビアB",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 6808,
+        "atk": 886,
+        "def": 515,
+        "spd": 536
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖70_セーレ",
+      "no": "祖70",
+      "name": "セーレ",
+      "style": "カウンター",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 5741,
+        "atk": 944,
+        "def": 416,
+        "spd": 711
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖70_セーレR",
+      "no": "祖70",
+      "name": "セーレR",
+      "style": "ラッシュ",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7922,
+        "atk": 884,
+        "def": 646,
+        "spd": 413
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖71_ダンタリオン",
+      "no": "祖71",
+      "name": "ダンタリオン",
+      "style": "バースト",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7462,
+        "atk": 1387,
+        "def": 491,
+        "spd": 270
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖71_ダンタリオンR",
+      "no": "祖71",
+      "name": "ダンタリオンR",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6988,
+        "atk": 1212,
+        "def": 446,
+        "spd": 471
+      },
+      "specialReishou": true,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖72_アンドロマリウス",
+      "no": "祖72",
+      "name": "アンドロマリウス",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7094,
+        "atk": 752,
+        "def": 472,
+        "spd": 643
+      },
+      "specialReishou": false,
+      "bondReishou": false,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "祖72_アンドロマリウスC",
+      "no": "祖72",
+      "name": "アンドロマリウスC",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 7914,
+        "atk": 640,
+        "def": 610,
+        "spd": 621
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "継01_カガセオ",
+      "no": "継01",
+      "name": "カガセオ",
+      "style": "バースト",
+      "class": "ファイター",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7615,
+        "atk": 1220,
+        "def": 502,
+        "spd": 383
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "継02_マナナンガル",
+      "no": "継02",
+      "name": "マナナンガル",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8223,
+        "atk": 524,
+        "def": 507,
+        "spd": 668
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "継03_シェンウー",
+      "no": "継03",
+      "name": "シェンウー",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 9017,
+        "atk": 739,
+        "def": 722,
+        "spd": 281
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "継04_チンロン",
+      "no": "継04",
+      "name": "チンロン",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8801,
+        "atk": 1300,
+        "def": 438,
+        "spd": 391
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    },
+    {
+      "id": "継05_バイフー",
+      "no": "継05",
+      "name": "バイフー",
+      "style": "バースト",
+      "class": "トルーパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 8471,
+        "atk": 530,
+        "def": 499,
+        "spd": 650
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "継06_チューチャオ",
+      "no": "継06",
+      "name": "チューチャオ",
+      "style": "ラッシュ",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 6298,
+        "atk": 1347,
+        "def": 381,
+        "spd": 612
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "飛行 通常アタック回数：2"
+    },
+    {
+      "id": "継07_チユエン",
+      "no": "継07",
+      "name": "チユエン",
+      "style": "ラッシュ",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7015,
+        "atk": 1208,
+        "def": 381,
+        "spd": 611
+      },
+      "specialReishou": true,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：3"
+    },
+    {
+      "id": "継08_ヴリトラ",
+      "no": "継08",
+      "name": "ヴリトラ",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 8025,
+        "atk": 1087,
+        "def": 388,
+        "spd": 612
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": null
+    },
+    {
+      "id": "継09_フーリーチン",
+      "no": "継09",
+      "name": "フーリーチン",
+      "style": "カウンター",
+      "class": "スナイパー",
+      "gender": "女性",
+      "statsStar6": {
+        "hp": 9281,
+        "atk": 477,
+        "def": 538,
+        "spd": 610
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "飛行"
+    },
+    {
+      "id": "継11_アンダカ",
+      "no": "継11",
+      "name": "アンダカ",
+      "style": "カウンター",
+      "class": "トルーパー",
+      "gender": "男性",
+      "statsStar6": {
+        "hp": 7272,
+        "atk": 957,
+        "def": 291,
+        "spd": 706
+      },
+      "specialReishou": false,
+      "bondReishou": true,
+      "singularity": false,
+      "trait": "通常アタック回数：2"
+    }
+  ]
+}

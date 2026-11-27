@@ -1,0 +1,1516 @@
+{
+  "kind": "photon-supply",
+  "version": 1,
+  "source": "能力原文（build/data/abilities）・オーブ原文（corpus-orbs）・マスエフェクト（build/data/me.v1.json）への機械検出（generate-photon.mjs）。種別の特定できるフォトン追加と、フォトン容量の上昇だけを抜く。出来事・状態が条件の追加は数えない。",
+  "megido": {
+    "宵01_リリス": {
+      "self": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真03_サキュバス": {
+      "self": [],
+      "selfProb": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル",
+          "pct": 60
+        }
+      ],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真10_グリマルキンR": {
+      "self": [],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "奥義",
+          "scope": "single"
+        }
+      ]
+    },
+    "真13_バフォメット": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真17_ティアマトR": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真19_オリエンスB": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "奥義",
+          "scope": "others"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真24_ミノソン": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "奥義"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真29_アルマロス": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "特性"
+        },
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真33_ハックB": {
+      "self": [],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "奥義",
+          "scope": "single"
+        }
+      ]
+    },
+    "真38_アガリアレプトR": {
+      "self": [],
+      "selfProb": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル",
+          "pct": 30
+        }
+      ],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真45_チェルノボグ": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "奥義",
+          "scope": "all"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真48_ウトゥック": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真50_シャミハザ": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "奥義"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真51_プルフラス": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真51_プルフラスB": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "奥義"
+        }
+      ],
+      "selfProb": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "奥義",
+          "pct": 50
+        }
+      ],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真57_ベヒモス": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "覚醒スキル"
+        },
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "奥義"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真57_ベヒモスB": {
+      "self": [],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "スキル",
+          "scope": "self"
+        }
+      ]
+    },
+    "真58_ダゴン": {
+      "self": [],
+      "selfProb": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "覚醒スキル",
+          "pct": 70
+        }
+      ],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真58_ダゴンR": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真59_スコルベノトR": {
+      "self": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "奥義"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "覚醒スキル",
+          "scope": "self"
+        }
+      ]
+    },
+    "真63_アマゼロト": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 2,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真64_プロメテウス": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "奥義",
+          "scope": "others"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真64_プロメテウスC": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "奥義",
+          "scope": "others"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "真67_ルシファー": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖01_バエル": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "奥義",
+          "scope": "back"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖08_バルバトス": {
+      "self": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "スキル",
+          "pct": 60
+        }
+      ],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖09_パイモン": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "覚醒スキル"
+        },
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "奥義"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖09_パイモンB": {
+      "self": [],
+      "selfProb": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "スキル",
+          "pct": 80
+        }
+      ],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖10_ブエルR": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "奥義"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖13_ベレト": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "特性"
+        }
+      ],
+      "selfProb": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル",
+          "pct": 60
+        }
+      ],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖14_レラジェ": {
+      "self": [],
+      "selfProb": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル",
+          "pct": 80
+        }
+      ],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖15_エリゴスB": {
+      "self": [],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 2,
+          "medium": "特性",
+          "scope": "self"
+        }
+      ]
+    },
+    "祖16_ゼパル": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖16_ゼパルC": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "覚醒スキル",
+          "scope": "all"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖22_イポスC": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "特性"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖24_ナベリウスB": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖27_ロノウェR": {
+      "self": [],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "奥義",
+          "scope": "self"
+        }
+      ]
+    },
+    "祖28_ベリトB": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖30_フォルネウス": {
+      "self": [],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "覚醒スキル",
+          "scope": "self"
+        }
+      ]
+    },
+    "祖33_ガープR": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖38_ハルファス": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "奥義",
+          "scope": "front"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖38_ハルファスR": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 3,
+          "medium": "奥義"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖41_フォカロル": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖41_フォカロルR": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "奥義",
+          "scope": "single"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖42_ウェパル": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル",
+          "pct": 60
+        }
+      ],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖43_サブナックB": {
+      "self": [],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "スキル",
+          "scope": "single"
+        }
+      ]
+    },
+    "祖47_ウヴァル": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "奥義"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖50_フルカス": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル",
+          "pct": 25
+        }
+      ],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖51_バラムR": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル",
+          "pct": 30
+        }
+      ],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖54_ムルムル": {
+      "self": [],
+      "selfProb": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル",
+          "pct": 60
+        }
+      ],
+      "ally": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "奥義",
+          "scope": "all"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "覚醒スキル",
+          "scope": "all"
+        }
+      ]
+    },
+    "祖57_オセ": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "覚醒スキル"
+        },
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "奥義"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖58_アミー": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "奥義",
+          "scope": "front"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖58_アミーC": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "奥義"
+        }
+      ],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "奥義",
+          "scope": "neighbors"
+        },
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "奥義",
+          "scope": "front"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖60_ウァプラ": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "奥義",
+          "scope": "all"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖66_キマリス": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖68_ベリアル": {
+      "self": [],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "覚醒スキル",
+          "scope": "self"
+        }
+      ]
+    },
+    "祖68_ベリアルB": {
+      "self": [],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "覚醒スキル",
+          "scope": "self"
+        }
+      ]
+    },
+    "祖71_ダンタリオンR": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 3,
+          "medium": "覚醒スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "特性",
+          "scope": "self"
+        }
+      ]
+    },
+    "祖72_アンドロマリウス": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "奥義",
+          "scope": "all"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "祖72_アンドロマリウスC": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "特性"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "継07_チユエン": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "継09_フーリーチン": {
+      "self": [],
+      "selfProb": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "スキル",
+          "pct": 80
+        }
+      ],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    }
+  },
+  "orbs": {
+    "orb_421": {
+      "self": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_352": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_569": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル",
+          "scope": "single"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_401": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_434": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 2,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_333": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_542": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_127": {
+      "self": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_445": {
+      "self": [
+        {
+          "photon": "チャージ",
+          "count": 2,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_432": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル",
+          "scope": "back"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_384": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル",
+          "scope": "front"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_193": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_356": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル",
+          "scope": "single"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_162": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "スキル",
+          "scope": "back"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_190": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "スキル",
+          "scope": "self"
+        }
+      ]
+    },
+    "orb_415": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_590": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_385": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル",
+          "scope": "single"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_313": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 2,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_348": {
+      "self": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_558": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_400": {
+      "self": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "スキル"
+        },
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_388": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル",
+          "scope": "single"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_224": {
+      "self": [],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "スキル",
+          "scope": "self"
+        }
+      ]
+    },
+    "orb_428": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "スキル",
+          "scope": "self"
+        }
+      ]
+    },
+    "orb_395": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル"
+        },
+        {
+          "photon": "スキル",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_550": {
+      "self": [
+        {
+          "photon": "スキル",
+          "count": 2,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_346": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル",
+          "scope": "front"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_353": {
+      "self": [
+        {
+          "photon": "チャージ",
+          "count": 2,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_344": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_397": {
+      "self": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "スキル"
+        },
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_444": {
+      "self": [
+        {
+          "photon": "チャージ",
+          "count": 2,
+          "medium": "スキル"
+        },
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_439": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 2,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_594": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "特性"
+        },
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_220": {
+      "self": [],
+      "selfProb": [],
+      "ally": [
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "スキル",
+          "scope": "single"
+        }
+      ],
+      "allyProb": [],
+      "capacityUp": []
+    },
+    "orb_571": {
+      "self": [
+        {
+          "photon": "アタック",
+          "count": 1,
+          "medium": "スキル"
+        },
+        {
+          "photon": "チャージ",
+          "count": 1,
+          "medium": "スキル"
+        }
+      ],
+      "selfProb": [],
+      "ally": [],
+      "allyProb": [],
+      "capacityUp": [
+        {
+          "amount": 1,
+          "medium": "スキル",
+          "scope": "self"
+        }
+      ]
+    }
+  },
+  "me": {
+    "真50_シャミハザR": [
+      {
+        "photon": "アタック",
+        "count": 1,
+        "slot": "1",
+        "condition": "バースト+スナイパー"
+      },
+      {
+        "photon": "アタック",
+        "count": 1,
+        "slot": "5",
+        "condition": "バースト+スナイパー"
+      }
+    ],
+    "真67_ルシファー": [
+      {
+        "photon": "アタック",
+        "count": 1,
+        "slot": "1",
+        "condition": "ラッシュ＋ファイター",
+        "condText": "Fインパルス中、行動開始時"
+      },
+      {
+        "photon": "アタック",
+        "count": 1,
+        "slot": "5",
+        "condition": "ラッシュ＋ファイター",
+        "condText": "Fインパルス中、行動開始時"
+      }
+    ],
+    "祖13_ベレトB": [
+      {
+        "photon": "スキル",
+        "count": 1,
+        "slot": "leader",
+        "condition": "-",
+        "condText": "従属チェイン状態の味方がいる時"
+      }
+    ],
+    "祖51_バラムR": [
+      {
+        "photon": "アタック",
+        "count": 1,
+        "slot": "leader",
+        "condition": "-",
+        "condText": "奥義使用時"
+      }
+    ],
+    "継07_チユエン": [
+      {
+        "photon": "スキル",
+        "count": 1,
+        "slot": "leader",
+        "condition": "-"
+      }
+    ]
+  }
+}

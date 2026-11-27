@@ -1,0 +1,1638 @@
+{
+  "kind": "data-meta",
+  "dataVersion": 1,
+  "pipelineVersion": 3,
+  "generatedAt": "2026-11-26T13:58:23.637Z",
+  "nodeVersion": "v24.22.1",
+  "inputs": {
+    "research/tower.json": {
+      "sha256": "87520eb96f1200764cfa82f024645e36aeac494663ea8ac63ac969aaa735d9fb",
+      "bytes": 117518
+    },
+    "research/constants.js": {
+      "sha256": "72481ba6780c5e0d530fd3e44c5a3719a5fc6c37dcf975a66daa71035349a7a3",
+      "bytes": 12828
+    },
+    "research/enemy_all_data.js": {
+      "sha256": "b7509fbab34fd3c09d9f5bb2844b1c02b3fcc132fffd07bb903ab47f24754949",
+      "bytes": 186266
+    },
+    "corpus-enemies/": {
+      "files": 206,
+      "aggregateSha256": "db11b80747ae6c6747851bc403db7b4c526fc209824cd6e656f9038812e9f723",
+      "note": "取得日 2026-11-18（corpus-enemies/PROGRESS.md）"
+    },
+    "corpus/": {
+      "files": 272,
+      "aggregateSha256": "09deb17f506eedf7f321b2527640f739b3a69ea8967edf8446f630cb407b7816",
+      "note": "取得日 2026-11-18（corpus/PROGRESS.md）。全272件で星6ステータスは megido.json と一致（取得時に照合済み、生成時にも再照合する）"
+    },
+    "corpus-orbs/": {
+      "files": 611,
+      "aggregateSha256": "e096120369318a6c6e274feb096f3a5effb7b066799e21341903851055e9ff76",
+      "note": "取得日 2026-11-18（corpus-orbs/PROGRESS.md）"
+    },
+    "corpus-me/": {
+      "files": 272,
+      "aggregateSha256": "e04213be3291bffedae7c54d4a4ce9ba6d2984574f762bfb7d1e0d31f2fa5a0e",
+      "note": "取得完了 272/272（2026-11-19、corpus-me/PROGRESS.md）"
+    },
+    "corpus-status/": {
+      "files": 145,
+      "note": "状態・状態異常の定義（corpus-status/）"
+    },
+    "corpus-gender/megido-gender.json": {
+      "sha256": "cb5f97d63ca1b759c87e6b675ad8f43492ca32a279bb658e2e530fc1869c6355",
+      "bytes": 4547,
+      "note": "性別表（全160キャラクター、ユーザー提供の一覧表が正本。2026-11-19 取り込み）"
+    },
+    "research/megido.json": {
+      "sha256": "a9f67170a5dd3c1c5a5eb22f20f7d4804ffb1a29aa97227cb68f92e6783ae100",
+      "bytes": 114121
+    },
+    "research/orbs.json": {
+      "sha256": "313ec9cd7327576403e8bc6fb0931da483160b919f833dc7cbf69d0fdda3e1a3",
+      "bytes": 202523
+    }
+  },
+  "validationSummary": {
+    "pass": 34,
+    "warn": 4,
+    "fail": 0
+  },
+  "outputs": [
+    {
+      "path": "build/data/tower-structure.v1.json",
+      "bytes": 169007,
+      "sha256": "7748958c4486b7cf8967a580df9f42c65fd6087036cf5568e2d2be67d37b83b8"
+    },
+    {
+      "path": "build/data/enemies/floor-01.v1.json",
+      "bytes": 19220,
+      "sha256": "112ff67762728f28a21dcf29508dd459301652222328d33b6ca561651b2df0de"
+    },
+    {
+      "path": "build/data/enemies/floor-02.v1.json",
+      "bytes": 63054,
+      "sha256": "8a7c8decdba352cf1d641951f2948de71edb1bb75f04a4db644365b666cca57c"
+    },
+    {
+      "path": "build/data/enemies/floor-03.v1.json",
+      "bytes": 62284,
+      "sha256": "1119a84e9f734aaf87ea417183292a1012488f69b2ffce37e2d3013a749dd4c4"
+    },
+    {
+      "path": "build/data/enemies/floor-04.v1.json",
+      "bytes": 58157,
+      "sha256": "3661e96df1ff6f8787639eb100caf2740c7b9907bf4dc9538159a5c07eb5f61c"
+    },
+    {
+      "path": "build/data/enemies/floor-05.v1.json",
+      "bytes": 67749,
+      "sha256": "2acd3fe2050b670bff5a031ccf4b36977e4d81ef69a18e0938e967063a60bd8e"
+    },
+    {
+      "path": "build/data/enemies/floor-06.v1.json",
+      "bytes": 71711,
+      "sha256": "8379541e9810d683656db340600180e544f914f14108dfa2ce756245362bac44"
+    },
+    {
+      "path": "build/data/enemies/floor-07.v1.json",
+      "bytes": 66174,
+      "sha256": "b05fbf1c51264951a35bcfa869868d4d5c23a0d271ccb589d8169a88c2b649d6"
+    },
+    {
+      "path": "build/data/enemies/floor-08.v1.json",
+      "bytes": 66112,
+      "sha256": "ab94c9033c9ee131da4765186931ca4966e82612b809a77bd6aa4a8071d6d054"
+    },
+    {
+      "path": "build/data/enemies/floor-09.v1.json",
+      "bytes": 67082,
+      "sha256": "55c3b7dbfa9a5b4e2cf186d2dfb70c3dc48a9a76d049a381a4ed7014c4d6d23c"
+    },
+    {
+      "path": "build/data/enemies/floor-10.v1.json",
+      "bytes": 75060,
+      "sha256": "3ef6f8a0f9f71cbaf81cbf47b0718f730b9185704331cc69e87fe6f66e8f64d6"
+    },
+    {
+      "path": "build/data/enemies/floor-11.v1.json",
+      "bytes": 80425,
+      "sha256": "9d7611881dac7e31d972f693e33582d1b5442f7b303894488c465c016cdaf497"
+    },
+    {
+      "path": "build/data/enemies/floor-12.v1.json",
+      "bytes": 82554,
+      "sha256": "51e9dd29079112f4e97b22bf08eda63b5bf03d2dd22ce9d5fe8806679e82f38f"
+    },
+    {
+      "path": "build/data/enemies/floor-13.v1.json",
+      "bytes": 81847,
+      "sha256": "5def0bccbb534eda561ef40b5529e77615fd2116ddd71ed5a47f17135b7bd1eb"
+    },
+    {
+      "path": "build/data/enemies/floor-14.v1.json",
+      "bytes": 82717,
+      "sha256": "14e19db048fa8ecd99f77fa634030090046a4cc312bd7f85e212d401b9d1aec9"
+    },
+    {
+      "path": "build/data/enemies/floor-15.v1.json",
+      "bytes": 68704,
+      "sha256": "1e1893292b727666be7947509bd9e123c5aee2f2492fe582a75a6cf53627281f"
+    },
+    {
+      "path": "build/data/enemies/floor-16.v1.json",
+      "bytes": 123975,
+      "sha256": "c5eda3b1970c4fbca10e99850548761bc0f980a849f981464f7668bfe1a1021d"
+    },
+    {
+      "path": "build/data/enemies/floor-17.v1.json",
+      "bytes": 85367,
+      "sha256": "2760e5d5d4f5f307d9e38c307f799edefe2856df52f2ab1ee81c116bff8edc0b"
+    },
+    {
+      "path": "build/data/enemies/floor-18.v1.json",
+      "bytes": 122657,
+      "sha256": "a78b8c08c87c1509f91a9796641156a117f12d574e94dfe77fbdc69a6e84199c"
+    },
+    {
+      "path": "build/data/enemies/floor-19.v1.json",
+      "bytes": 81432,
+      "sha256": "2f8ec14d3966bc42fdd440891097c69f9b2fa8b5e775974963d0872265ec9087"
+    },
+    {
+      "path": "build/data/enemies/floor-20.v1.json",
+      "bytes": 78066,
+      "sha256": "14a8a8b4569297190fb365936e41091e2664467f397b03cd423e42113d912cfc"
+    },
+    {
+      "path": "build/data/enemies/floor-21.v1.json",
+      "bytes": 104469,
+      "sha256": "013dcc3e2633e455d7f9bb2b6cd1585556cddf8c73383c4854b58da059bc8801"
+    },
+    {
+      "path": "build/data/enemies/floor-22.v1.json",
+      "bytes": 104400,
+      "sha256": "e64ea7388b9ea67f39abf6829c903930143e37acd7b1ad136faa87478cb8e524"
+    },
+    {
+      "path": "build/data/enemies/floor-23.v1.json",
+      "bytes": 118607,
+      "sha256": "3aeb08195c8ed795c73762d1e4a5ddf380320bc40aec1949bfb2f30f5993ce1e"
+    },
+    {
+      "path": "build/data/enemies/floor-24.v1.json",
+      "bytes": 107942,
+      "sha256": "527b4585d133210eae009dddfeb25f65844e2f337ebf67442ce8175e39187710"
+    },
+    {
+      "path": "build/data/enemies/floor-25.v1.json",
+      "bytes": 118296,
+      "sha256": "7600c85b3e23928ed8d7aedc064d9e8d2ecaeaf3f1b6abddc5ef874a653892a0"
+    },
+    {
+      "path": "build/data/enemies/floor-26.v1.json",
+      "bytes": 99939,
+      "sha256": "837a3e998b276c1624c50aa74b6917c07b2aca72784d6da33e45300e627a6d92"
+    },
+    {
+      "path": "build/data/enemies/floor-27.v1.json",
+      "bytes": 117445,
+      "sha256": "9bc66032d5013dfc21e12965f8cc5a4f19202c2cb19baadbb0c80d438e8580a4"
+    },
+    {
+      "path": "build/data/enemies/floor-28.v1.json",
+      "bytes": 126611,
+      "sha256": "f72f6242018ec05de5b1b63632b975c6711182778fbcd2cfa63115fc7c8885ef"
+    },
+    {
+      "path": "build/data/enemies/floor-29.v1.json",
+      "bytes": 117392,
+      "sha256": "6fb466742d4cdddf61d37c2e96531019f89f5c4da8dfd1c4061f71a266cc96c7"
+    },
+    {
+      "path": "build/data/enemies/floor-30.v1.json",
+      "bytes": 50771,
+      "sha256": "7d0c636ead48ca8fb78cd61a230c06415263b5fb11736a268970bc24af23b8c8"
+    },
+    {
+      "path": "build/data/enemies/floor-31.v1.json",
+      "bytes": 83976,
+      "sha256": "4211b13d4cb813f720f974cfba254d388734ec2bee724819e2e9279d2b666b52"
+    },
+    {
+      "path": "build/data/enemies/floor-32.v1.json",
+      "bytes": 113682,
+      "sha256": "e0cf22d994c3b82d6d615a36ce9b601716e7f41529d055516dc5450e3ffdafba"
+    },
+    {
+      "path": "build/data/enemies/floor-33.v1.json",
+      "bytes": 120700,
+      "sha256": "4113ae963e8afe197a08b3512e06feb63191d90416b828fa8e50222da2fe90ff"
+    },
+    {
+      "path": "build/data/enemies/floor-34.v1.json",
+      "bytes": 113281,
+      "sha256": "fe226fbddb141caea2b5b62ba59ee181d95fd63405139e5e95cd1028a534b436"
+    },
+    {
+      "path": "build/data/enemies/floor-35.v1.json",
+      "bytes": 124166,
+      "sha256": "0b13f3ad0edd550b1d4063bc59dd18f47e1dcd9af2b95c4565a5ac120b328d82"
+    },
+    {
+      "path": "build/data/megido-basics.v1.json",
+      "bytes": 83094,
+      "sha256": "8dfbf87eaf562fa5177adf46bca96ec671a2d088dc349eef8cca08221caebd10"
+    },
+    {
+      "path": "build/data/abilities/宵01_リリス.v1.json",
+      "bytes": 8551,
+      "sha256": "cf41b47a22430ed49d20a12409d57902b9e1170b37dd96e1cf6af9c8699ccbed"
+    },
+    {
+      "path": "build/data/abilities/宵02_バールベリト.v1.json",
+      "bytes": 9710,
+      "sha256": "5737468c5a1320650a0ff8e4539e8b3016447d3b3c6d5cbf25d15f3a8029142d"
+    },
+    {
+      "path": "build/data/abilities/宵03_エウリノーム.v1.json",
+      "bytes": 6850,
+      "sha256": "1ee28f1cc1ae08d958d9666b2d9f0c202e8f6f10df1d7ccdafd3db3a76a62d0d"
+    },
+    {
+      "path": "build/data/abilities/宵04_ベルゼブフ.v1.json",
+      "bytes": 7419,
+      "sha256": "fbfe6dacc88c372009a8404c8e9f4342eaa159fd11faab137f1c789f9db15bdc"
+    },
+    {
+      "path": "build/data/abilities/宵05_サタン.v1.json",
+      "bytes": 11627,
+      "sha256": "29caccd26c1740a1bd198240727277c92db47e14044c70d5e20e8370e0567839"
+    },
+    {
+      "path": "build/data/abilities/宵06_モレク.v1.json",
+      "bytes": 10452,
+      "sha256": "ab901447f447e8e5cbb97b096ad13ff576e1c227a7deb787e9599aec8d39db97"
+    },
+    {
+      "path": "build/data/abilities/真01_リリム.v1.json",
+      "bytes": 9796,
+      "sha256": "913b4d77442d35eb88c809006e57c044aa31f372100b8d1dc55b344e451000ff"
+    },
+    {
+      "path": "build/data/abilities/真01_リリムR.v1.json",
+      "bytes": 4423,
+      "sha256": "49625b9ebe4963537d3d7de762b2596858592a018f45babeab5ddb1f46e05135"
+    },
+    {
+      "path": "build/data/abilities/真02_ニバス.v1.json",
+      "bytes": 7825,
+      "sha256": "7486121dea607a7ad326e525f6ffb173178dc6bc251545a09998e25700e45e3f"
+    },
+    {
+      "path": "build/data/abilities/真02_ニバスB.v1.json",
+      "bytes": 8384,
+      "sha256": "6d3aa60fe1e16ce21cfbe20aaee6395833ed94bc305042a8d401a310d9dbd4bf"
+    },
+    {
+      "path": "build/data/abilities/真03_サキュバス.v1.json",
+      "bytes": 9124,
+      "sha256": "d178cb95fb5d110e2de811a03d3f9801cf0367914e12187e2998a6f09577ee5f"
+    },
+    {
+      "path": "build/data/abilities/真03_サキュバスB.v1.json",
+      "bytes": 8133,
+      "sha256": "d90923bf051c6af7f9fc88c13325936b0e41de95c26bc24467554a2d5592bc7e"
+    },
+    {
+      "path": "build/data/abilities/真04_ユフィール.v1.json",
+      "bytes": 4167,
+      "sha256": "42221df81bae0655edf8ade2842d7032c4709f4177dbe5f92932c7b9b047395b"
+    },
+    {
+      "path": "build/data/abilities/真04_ユフィールC.v1.json",
+      "bytes": 5649,
+      "sha256": "1c6a6a607f27178f115aa8aabf1ff570cb78b2876603a5d1188163ed863e136c"
+    },
+    {
+      "path": "build/data/abilities/真05_フリアエ.v1.json",
+      "bytes": 4511,
+      "sha256": "229bf6d73cdbf2178bcded0154b18eef107b37100bc66a3b5cc62c6a8a3dc877"
+    },
+    {
+      "path": "build/data/abilities/真05_フリアエR.v1.json",
+      "bytes": 9977,
+      "sha256": "7bd83ae76ef89bc55c22ecaca1c69275754a1e1e6ab8cd3cf236a362b07cc605"
+    },
+    {
+      "path": "build/data/abilities/真06_アラストール.v1.json",
+      "bytes": 8810,
+      "sha256": "e8e25bcd1eafd7750546baa654f6517c90468cf68c4e4d51caf5377807f86e58"
+    },
+    {
+      "path": "build/data/abilities/真06_アラストールB.v1.json",
+      "bytes": 9612,
+      "sha256": "947047466c20f1cf5a8f9fb827393d55bab7ce22f914c34566434b626073c3fe"
+    },
+    {
+      "path": "build/data/abilities/真07_ヒュトギン.v1.json",
+      "bytes": 6386,
+      "sha256": "8b90e37ac285f4d01462f619edc2f264cd46d236a8c9815711f8af025fca0b90"
+    },
+    {
+      "path": "build/data/abilities/真07_ヒュトギンC.v1.json",
+      "bytes": 9113,
+      "sha256": "d4d606a172bd6296b891f34226189148f9248ba79cf25c91e9cd6f9a98101d4f"
+    },
+    {
+      "path": "build/data/abilities/真08_ロキ.v1.json",
+      "bytes": 13378,
+      "sha256": "d29801e95d8c4f7d3bf2f4e119fb11bde1ffbf69c87c0f64989c1b851eaef7a3"
+    },
+    {
+      "path": "build/data/abilities/真08_ロキR.v1.json",
+      "bytes": 8564,
+      "sha256": "f0086254bc3e9f43c7927defc10f8336cd9d4ba3353e71e133f4f24b2b0480fb"
+    },
+    {
+      "path": "build/data/abilities/真09_インキュバス.v1.json",
+      "bytes": 7097,
+      "sha256": "b82101b643f42a2be7f44e5a728f0f514171550ef4ba9172ed35eef0af66566c"
+    },
+    {
+      "path": "build/data/abilities/真09_インキュバスC.v1.json",
+      "bytes": 5658,
+      "sha256": "5bacb33bae338647225ac506d2f52a8f822ba6da1eda98ebb69dd7568ff84d25"
+    },
+    {
+      "path": "build/data/abilities/真10_グリマルキン.v1.json",
+      "bytes": 8713,
+      "sha256": "4f0d751a306e3803c9aeb3da19647178b5a241171d0843ae5c6e3d05263e7a4d"
+    },
+    {
+      "path": "build/data/abilities/真10_グリマルキンR.v1.json",
+      "bytes": 4346,
+      "sha256": "b8a467f255a87a3d3acebee4816022e8fd4c7b630b735b11b17b06a5a6fa4d22"
+    },
+    {
+      "path": "build/data/abilities/真11_コルソン.v1.json",
+      "bytes": 14014,
+      "sha256": "31339fb60064d5512e30f263ed1c566df4e9c620338b575a1558ef38821701b1"
+    },
+    {
+      "path": "build/data/abilities/真11_コルソンR.v1.json",
+      "bytes": 11360,
+      "sha256": "ede39dbadca87c19eb3a4c19b38fc2b709baedfe9c0ef3d303f4a9d4fde94245"
+    },
+    {
+      "path": "build/data/abilities/真12_ジニマル.v1.json",
+      "bytes": 8011,
+      "sha256": "63be0e40bcaaeb76f9bca751717da02f7e1923510b8f4403e3708fe4ea016001"
+    },
+    {
+      "path": "build/data/abilities/真12_ジニマルR.v1.json",
+      "bytes": 5191,
+      "sha256": "7db524d2bf20502fd3dc61dfdb7308c58fba13ffb7f1e1b13f3c5b4703169fbf"
+    },
+    {
+      "path": "build/data/abilities/真13_バフォメット.v1.json",
+      "bytes": 6396,
+      "sha256": "b90625830b96ee1d39009b8e5f029a2ed8f981cc697f9846ab69b30beb172f1f"
+    },
+    {
+      "path": "build/data/abilities/真14_サラ.v1.json",
+      "bytes": 4017,
+      "sha256": "fe81ef6bafb22cabdd50fa94f79ddec2e8b2aad2e897ba4afc576d3bb7b01040"
+    },
+    {
+      "path": "build/data/abilities/真14_サラB.v1.json",
+      "bytes": 4631,
+      "sha256": "28c929d03822b69c11d1ae20c83e0310379c3fc948b78c500a96f3c4c43d26a9"
+    },
+    {
+      "path": "build/data/abilities/真15_サタナキア.v1.json",
+      "bytes": 4105,
+      "sha256": "7635696e98f7cb32cc4754fba79750266fd017267906ba75728f3fffecee9d78"
+    },
+    {
+      "path": "build/data/abilities/真15_サタナキアB.v1.json",
+      "bytes": 4783,
+      "sha256": "e6f010e124b85adee816d7b2a600ec9384aa63a7a490170316ac119595a15e66"
+    },
+    {
+      "path": "build/data/abilities/真16_タナトス.v1.json",
+      "bytes": 6721,
+      "sha256": "107f9eec4f218f6eefec6774de1c04fc3a574f8a66c75a1386f4a8970bea7485"
+    },
+    {
+      "path": "build/data/abilities/真17_ティアマト.v1.json",
+      "bytes": 9701,
+      "sha256": "b8818ae90aec7875356b91ef6d26d6a233650d18919a0ff95e34735641ecd419"
+    },
+    {
+      "path": "build/data/abilities/真17_ティアマトR.v1.json",
+      "bytes": 6042,
+      "sha256": "b17849704f3b7d1006c8c1a9d142363d26c72b4639772739ea63f727617de786"
+    },
+    {
+      "path": "build/data/abilities/真18_ブニ.v1.json",
+      "bytes": 4094,
+      "sha256": "07748af9fbed52a3ad6b7ec7c4a312c288f8777029f585c26309ca4167a4fc42"
+    },
+    {
+      "path": "build/data/abilities/真18_ブニB.v1.json",
+      "bytes": 4714,
+      "sha256": "1762af3432d6bcae34ee00a45e3d1e4217e12623b913dc2bc5b282cabbbfcbdf"
+    },
+    {
+      "path": "build/data/abilities/真19_オリエンス.v1.json",
+      "bytes": 5996,
+      "sha256": "57fabd1f0959111926dc743c8aa46ddc519e4fa84037baa2c202d074047c7aed"
+    },
+    {
+      "path": "build/data/abilities/真19_オリエンスB.v1.json",
+      "bytes": 6961,
+      "sha256": "358efb25e144eea2d7b8a720e5dd8803c964c8fdc6aded843155534d788fb8e7"
+    },
+    {
+      "path": "build/data/abilities/真20_アリオク.v1.json",
+      "bytes": 14889,
+      "sha256": "0af4e9425114865a7bf4e3299de2604bfc8181a839faf3d68bec36520aa0638a"
+    },
+    {
+      "path": "build/data/abilities/真21_リヴァイアサン.v1.json",
+      "bytes": 6280,
+      "sha256": "a8c158e024c9a07450bfe6bfad662ce9eb237ec965453f31f7b980906985b37b"
+    },
+    {
+      "path": "build/data/abilities/真22_カスピエル.v1.json",
+      "bytes": 4642,
+      "sha256": "32ebaf92c95e5427e4b5f45d156e5c2fb47bd7908bc99816b0c47f3abfdc36ec"
+    },
+    {
+      "path": "build/data/abilities/真22_カスピエルC.v1.json",
+      "bytes": 6468,
+      "sha256": "9851e7ddcea0b259728ac978940b5800f8d8d6b3e46b4278a385cef3e4956abc"
+    },
+    {
+      "path": "build/data/abilities/真23_ネフィリム.v1.json",
+      "bytes": 12585,
+      "sha256": "d49960ef91dc3c22155e21b1a82ce7f657303ef68803db394e17649436033858"
+    },
+    {
+      "path": "build/data/abilities/真23_ネフィリムB.v1.json",
+      "bytes": 6422,
+      "sha256": "7b15f9e59fa160a9136e1d40f19ebae2ade3c235f7b8bd50cb2556cba62dba95"
+    },
+    {
+      "path": "build/data/abilities/真24_ミノソン.v1.json",
+      "bytes": 4904,
+      "sha256": "46647eb0b01088c3df3ad22618b47b5138b0cd08eede137d9012ba3488346796"
+    },
+    {
+      "path": "build/data/abilities/真25_ニスロク.v1.json",
+      "bytes": 10139,
+      "sha256": "88afd55dc76c4cd2b9ad3c58e04a5d77ab5de8502b827ce45bbd2ccd857fbd79"
+    },
+    {
+      "path": "build/data/abilities/真25_ニスロクB.v1.json",
+      "bytes": 5031,
+      "sha256": "514e71048f6b6485fb886bfbe8b053a516c916e51414b2e5c2c2437d9e33515a"
+    },
+    {
+      "path": "build/data/abilities/真26_オレイ.v1.json",
+      "bytes": 9991,
+      "sha256": "00fe0d4f003cb7299f2041f12775da5dbc776bab1df7da77110ec8c68548a2fe"
+    },
+    {
+      "path": "build/data/abilities/真27_マルチネ.v1.json",
+      "bytes": 17707,
+      "sha256": "2e40327bd6770ccb137bcf637a1d1cd1de4379cc0a3e1765d49d97d4a8578539"
+    },
+    {
+      "path": "build/data/abilities/真27_マルチネC.v1.json",
+      "bytes": 4656,
+      "sha256": "28369c019edb06cf9df8068f89bd1f21727500aa34d63458617987e0edea89e7"
+    },
+    {
+      "path": "build/data/abilities/真28_アザゼル.v1.json",
+      "bytes": 13918,
+      "sha256": "85e4e961706c9466b9ebabaa7c17f9a261107c60cf7bf4ca0c8772c1867b1d3d"
+    },
+    {
+      "path": "build/data/abilities/真29_アルマロス.v1.json",
+      "bytes": 8500,
+      "sha256": "0c3b2c13d70b8436427fb2910a623b9433d0fb33624fecd47097d6dcb88a2efc"
+    },
+    {
+      "path": "build/data/abilities/真30_バラキエル.v1.json",
+      "bytes": 10847,
+      "sha256": "4aa94936765e807b0cd4c46d26ffb3f76032ef7a489bde3f5ec34033300210c4"
+    },
+    {
+      "path": "build/data/abilities/真31_フルーレティ.v1.json",
+      "bytes": 11881,
+      "sha256": "450ae660758703f846c3314784077b5e8f44f803ad2c6f583f3a20d38e067429"
+    },
+    {
+      "path": "build/data/abilities/真31_フルーレティB.v1.json",
+      "bytes": 5011,
+      "sha256": "1b551d4cffd1f9e1d627bfea4c6d7700c49edda380511df81ee08c1ad12ebb73"
+    },
+    {
+      "path": "build/data/abilities/真32_ガギゾン.v1.json",
+      "bytes": 8085,
+      "sha256": "784ca24573b624dfb9aaf985ce0dca818e78ca3e70d09ee922e2dea96aa3497c"
+    },
+    {
+      "path": "build/data/abilities/真33_ハック.v1.json",
+      "bytes": 4926,
+      "sha256": "4bb2020241dcd72f27783ad715c487a1155be431da26904afa3e42364e33c19e"
+    },
+    {
+      "path": "build/data/abilities/真33_ハックB.v1.json",
+      "bytes": 6436,
+      "sha256": "fccd7699dc84aabfa3a866cc97f0c29eeae73553933faa4bb6d880c081686ab5"
+    },
+    {
+      "path": "build/data/abilities/真34_マスティマ.v1.json",
+      "bytes": 10006,
+      "sha256": "7a02d5d34b7ecb27ffa025390db0b3abc7e1c95315569bca25344dd6f4a2d1dd"
+    },
+    {
+      "path": "build/data/abilities/真35_ブリフォー.v1.json",
+      "bytes": 6328,
+      "sha256": "8950bce3844fd36b46bb5557e1286e34926c36651abf0e5b248de9170489d60e"
+    },
+    {
+      "path": "build/data/abilities/真36_メフィスト.v1.json",
+      "bytes": 7291,
+      "sha256": "58e8d22f3ab8a325342818d8ce6cad5618669e52a0cb344f8421899436a29851"
+    },
+    {
+      "path": "build/data/abilities/真36_メフィストC.v1.json",
+      "bytes": 5465,
+      "sha256": "918b755b349b833c0251942133abed0c1bfa1172be7cbe3ad6a0ff337703de09"
+    },
+    {
+      "path": "build/data/abilities/真37_ネビロス.v1.json",
+      "bytes": 13592,
+      "sha256": "826c876c831fad16f63525d5dd631a8d951906557ae651ef4989e036a7eb97d3"
+    },
+    {
+      "path": "build/data/abilities/真38_アガリアレプト.v1.json",
+      "bytes": 7479,
+      "sha256": "b809269f1f5252f29fe20d1f65f1a6fba0aac319eb1243b304d891cd048cead3"
+    },
+    {
+      "path": "build/data/abilities/真38_アガリアレプトR.v1.json",
+      "bytes": 16131,
+      "sha256": "9ac0238abfe9048b64c534c12aca1d63e3239df44b1334892f8462318959c13c"
+    },
+    {
+      "path": "build/data/abilities/真39_ウコバク.v1.json",
+      "bytes": 7047,
+      "sha256": "2c2c2019f2d4e94dcd31e7942cde13decaeb8e018d95f780a90fb9166d228096"
+    },
+    {
+      "path": "build/data/abilities/真40_グザファン.v1.json",
+      "bytes": 6469,
+      "sha256": "7303f497b4d4cd2bfea80065259bc9624d240c079d0b8466e6300b7f42ca4277"
+    },
+    {
+      "path": "build/data/abilities/真41_アマイモン.v1.json",
+      "bytes": 8305,
+      "sha256": "243eb7a56352d3e49141d41671d12c8a13b78559951194ba045d8dc193d3a171"
+    },
+    {
+      "path": "build/data/abilities/真41_アマイモンR.v1.json",
+      "bytes": 6279,
+      "sha256": "279d0fc4a2c13bb36f59720db8a57d39816aa39d41a58b6c92cc16cfda0711ce"
+    },
+    {
+      "path": "build/data/abilities/真42_ルキフゲス.v1.json",
+      "bytes": 10626,
+      "sha256": "3ebdc9752b712c2596dd1b21ddca633ed029b5868c4631aad722e9ff0ee21adb"
+    },
+    {
+      "path": "build/data/abilities/真43_サルガタナス.v1.json",
+      "bytes": 10262,
+      "sha256": "0f8609c494e32aa1660a585efc32738909b571aca7cd318f75ae1b8bebfe855a"
+    },
+    {
+      "path": "build/data/abilities/真44_タムス.v1.json",
+      "bytes": 15586,
+      "sha256": "ff4963397aff2aec82865e2211d191119887c2688087b133e98c5188b128f50d"
+    },
+    {
+      "path": "build/data/abilities/真45_チェルノボグ.v1.json",
+      "bytes": 13215,
+      "sha256": "855ed2ccceabd9611059a5cfd4c9fbf0ca8e971f980fc1d0e944cc5e55024a9a"
+    },
+    {
+      "path": "build/data/abilities/真46_アガシオン.v1.json",
+      "bytes": 7997,
+      "sha256": "2e4ebf4a370dea6be37ffe0412335e3639bb8f6f545b8fe69eca3ccaf8620e3d"
+    },
+    {
+      "path": "build/data/abilities/真47_ヴェルドレ.v1.json",
+      "bytes": 6633,
+      "sha256": "485d19de44ace34de658d01a927bcbe5b1b9f23197a258d131d3bd4233efabfc"
+    },
+    {
+      "path": "build/data/abilities/真48_ウトゥック.v1.json",
+      "bytes": 11469,
+      "sha256": "bc2e52a0f9a83d0b2d6e2baae2dbc4012f645a091db23ae0f91f106e1d877571"
+    },
+    {
+      "path": "build/data/abilities/真49_サタナイル.v1.json",
+      "bytes": 8354,
+      "sha256": "3fd5ae39c9caa50ec9cd45913c323c3f5a728dfc0a4355e4dde562c27fd18a51"
+    },
+    {
+      "path": "build/data/abilities/真50_シャミハザ.v1.json",
+      "bytes": 4811,
+      "sha256": "b1c52c34e45c79d610b3d3a614e9c928a87c8127ae3bd048cfd06351bdde9afc"
+    },
+    {
+      "path": "build/data/abilities/真50_シャミハザR.v1.json",
+      "bytes": 5506,
+      "sha256": "3a78d63b6e8fc9a96ec6df82a8d8c282fce8ffb454b4eb5e9f7fec15b591202f"
+    },
+    {
+      "path": "build/data/abilities/真51_プルフラス.v1.json",
+      "bytes": 8159,
+      "sha256": "d9940279149acb8ae21141d4a8521e9b00dc6acc4196d6997bb6cac3f1e78d42"
+    },
+    {
+      "path": "build/data/abilities/真51_プルフラスB.v1.json",
+      "bytes": 10548,
+      "sha256": "0c0cd945b8730d51b0b399cf463319f295beafd364bdbd9810a8861f76bd252b"
+    },
+    {
+      "path": "build/data/abilities/真52_ジズ.v1.json",
+      "bytes": 4996,
+      "sha256": "c4dd0a05b78fead5455c5cb51daf7563ed2eda4580d5f8547bf2359c63fb7f38"
+    },
+    {
+      "path": "build/data/abilities/真52_ジズR.v1.json",
+      "bytes": 5259,
+      "sha256": "16de4cc104a3fc5ba1174b8e76465b9e72db1b99a9b84229eda66a136546373d"
+    },
+    {
+      "path": "build/data/abilities/真53_ベバル.v1.json",
+      "bytes": 9891,
+      "sha256": "f940c2723fa8a68386eabd2f0a903bc7e23d8b9acab074c044620cc42e877846"
+    },
+    {
+      "path": "build/data/abilities/真53_ベバルC.v1.json",
+      "bytes": 6874,
+      "sha256": "bf5cfa63eb6028824a02c3e3ef7db2e3f0e775e28c9871ca5cc50baa458b1962"
+    },
+    {
+      "path": "build/data/abilities/真54_アバラム.v1.json",
+      "bytes": 6649,
+      "sha256": "ce8dfdf126bb0b6af2f2df08b2fb76f13e0a01d7862ab51c3530a518a92d7cee"
+    },
+    {
+      "path": "build/data/abilities/真54_アバラムC.v1.json",
+      "bytes": 7123,
+      "sha256": "d2e2867d6c0203f34e79121c12baab075b82d552fba8835c1d8fe8f224b1d38d"
+    },
+    {
+      "path": "build/data/abilities/真55_アリトン.v1.json",
+      "bytes": 10341,
+      "sha256": "8cc6550204659e31a2b9468e54f6a4f9e8702ce74ed105f31cbe0c14a3fcfab5"
+    },
+    {
+      "path": "build/data/abilities/真56_バロール.v1.json",
+      "bytes": 10773,
+      "sha256": "2cecde846383c12eca0cbfe414f654d72b867de2d789e332e0ffb2c08e70adca"
+    },
+    {
+      "path": "build/data/abilities/真57_ベヒモス.v1.json",
+      "bytes": 7040,
+      "sha256": "c1180915fd3dadbf986ab5214a07f1f48aa2d3bc17ecbe4a2d411409d2691c99"
+    },
+    {
+      "path": "build/data/abilities/真57_ベヒモスB.v1.json",
+      "bytes": 14503,
+      "sha256": "a03acad114636fd467735c685d8ad77e0c48dc7a907a646c35f9fc07cd1f0e3d"
+    },
+    {
+      "path": "build/data/abilities/真58_ダゴン.v1.json",
+      "bytes": 10228,
+      "sha256": "f2dda23eab938e8056cfa35b791de8ac99d1f4f9ba304170235bd77b46fc65df"
+    },
+    {
+      "path": "build/data/abilities/真58_ダゴンR.v1.json",
+      "bytes": 4251,
+      "sha256": "f6ffdb04b63041e7ffd561373600b6a248084636e54d35fc26994c8ebcde96b1"
+    },
+    {
+      "path": "build/data/abilities/真59_スコルベノト.v1.json",
+      "bytes": 5182,
+      "sha256": "0e312b9230cfbef6cdb236430e3e14bf4491c26d668e26f72fdb3f0d0a52b260"
+    },
+    {
+      "path": "build/data/abilities/真59_スコルベノトR.v1.json",
+      "bytes": 4227,
+      "sha256": "f568e036d17e930ef6383dfb27033d43f4a0b86bc43bdf1948a60bb2387065a4"
+    },
+    {
+      "path": "build/data/abilities/真60_メルコム.v1.json",
+      "bytes": 8289,
+      "sha256": "c6ab35a4280e9170a8e930c1b72fd61e98a0e8c3c100a3d7920ca9481a9bb84a"
+    },
+    {
+      "path": "build/data/abilities/真61_フィロタヌス.v1.json",
+      "bytes": 10397,
+      "sha256": "b87a2992912aa8a2171c7dc07d2cfac96db8490abadcef9c0847b73a921c1cb5"
+    },
+    {
+      "path": "build/data/abilities/真62_インプ.v1.json",
+      "bytes": 7802,
+      "sha256": "9577662939274a0def08b5bdbd274455758e06a80f3e3a3ff341875969152a22"
+    },
+    {
+      "path": "build/data/abilities/真62_インプR.v1.json",
+      "bytes": 4895,
+      "sha256": "7e2323684cf71539078bcc53f23b564ad2ab194105beb62e1625de5ab5f5be36"
+    },
+    {
+      "path": "build/data/abilities/真63_アマゼロト.v1.json",
+      "bytes": 8864,
+      "sha256": "c28acc7c459f29bd4bc618c49f16f3915fcd00bae28cdd34b5251beb2c7ab4e1"
+    },
+    {
+      "path": "build/data/abilities/真63_アマゼロトB.v1.json",
+      "bytes": 6726,
+      "sha256": "154381bf85510e6a43b8eaa4941d4fff441d63b6cc6e64e2c28cfb7a283155bb"
+    },
+    {
+      "path": "build/data/abilities/真64_プロメテウス.v1.json",
+      "bytes": 6378,
+      "sha256": "170999e7b4224d61999328c3e48c4339401afded63cefbb80d6889a16a560fa2"
+    },
+    {
+      "path": "build/data/abilities/真64_プロメテウスC.v1.json",
+      "bytes": 6328,
+      "sha256": "ca445193401be3c53fb69c150656dcce596c612e2d4b4edff47b53ca8f238b05"
+    },
+    {
+      "path": "build/data/abilities/真65_ベルフェゴール.v1.json",
+      "bytes": 7571,
+      "sha256": "930b38464614efced05e410f14786bf6a75f76831f996adbd59faa8fbd7d5134"
+    },
+    {
+      "path": "build/data/abilities/真66_マモン.v1.json",
+      "bytes": 10180,
+      "sha256": "de58479e826e266ae7ed33753944dd2fb9239d3b254a5df4f663067c9178f90a"
+    },
+    {
+      "path": "build/data/abilities/真67_ルシファー.v1.json",
+      "bytes": 6615,
+      "sha256": "ee5c9ed2846e2975158b37aa8041cb34366573194c681e5fe75d6cf8a74393e3"
+    },
+    {
+      "path": "build/data/abilities/真68_ネルガル.v1.json",
+      "bytes": 9514,
+      "sha256": "b19865682c05589fa4eeeace10b0c89cbb03d4bd6ca7e180e2b97dc6b5e44df0"
+    },
+    {
+      "path": "build/data/abilities/真68_ネルガルB.v1.json",
+      "bytes": 8459,
+      "sha256": "aa6cce825f8912fa472a8ffdb17467be5e3053d5d13892cde0bf6da550cd475a"
+    },
+    {
+      "path": "build/data/abilities/真69_バールゼフォン.v1.json",
+      "bytes": 12104,
+      "sha256": "0dafcdd1402da2c1e779ba4606c57c67d0c7592814eef5db8cac8974a42e9f1d"
+    },
+    {
+      "path": "build/data/abilities/真69_バールゼフォンC.v1.json",
+      "bytes": 6471,
+      "sha256": "ff616483062fc0cea2fa18b9dfe0401e3a1f62f5fdd9b8fcc7cca66a6ab55b6f"
+    },
+    {
+      "path": "build/data/abilities/真70_アスラフィル.v1.json",
+      "bytes": 9786,
+      "sha256": "a43349b906835a0b34df4705303d86c12f9cf0cb96aefcdd945a874789aba31e"
+    },
+    {
+      "path": "build/data/abilities/真71_アクィエル.v1.json",
+      "bytes": 9544,
+      "sha256": "23f825acc62e9299c835dca7db82ef73aaa18351c5a4ec4d046dae764360b557"
+    },
+    {
+      "path": "build/data/abilities/真71_アクィエルB.v1.json",
+      "bytes": 7429,
+      "sha256": "77127514233529cd13f1786a2dc74c0b78333a33777679c7977e77e638f7bed7"
+    },
+    {
+      "path": "build/data/abilities/真72_ゲイボルグ.v1.json",
+      "bytes": 8889,
+      "sha256": "c17215837c4ec8a8ca2d0fe081f20eadeeeb081fc63cfed2e7086cf494380171"
+    },
+    {
+      "path": "build/data/abilities/祖01_バエル.v1.json",
+      "bytes": 4832,
+      "sha256": "a56449a4d175e8a3485a9fc8ea3649c0e3ca0320cbc3e2515d5899836553e067"
+    },
+    {
+      "path": "build/data/abilities/祖01_バエルC.v1.json",
+      "bytes": 7109,
+      "sha256": "7f4de0eed25d194d9a9567972803e6dc2c2b39afb2891d2e29eef8d7b3a0a8c7"
+    },
+    {
+      "path": "build/data/abilities/祖02_アガレス.v1.json",
+      "bytes": 9542,
+      "sha256": "8a83a8e4243040415654b9e36ad6b7af0508d8a0674e840909bfdd731e0fd742"
+    },
+    {
+      "path": "build/data/abilities/祖02_アガレスC.v1.json",
+      "bytes": 5297,
+      "sha256": "f08e6cd40c4c374fcd1fa3e21373301be3fae8a0135d50c82e599a0f7761c209"
+    },
+    {
+      "path": "build/data/abilities/祖03_ウァサゴ.v1.json",
+      "bytes": 5713,
+      "sha256": "c19816e5a0745ba55195979568bee5554baac9036979de70d616aa1e5f417359"
+    },
+    {
+      "path": "build/data/abilities/祖03_ウァサゴB.v1.json",
+      "bytes": 4811,
+      "sha256": "4d8e46c13a97a90c135f34695e99a59664784fae875e0bfafc8aa37abcff396d"
+    },
+    {
+      "path": "build/data/abilities/祖04_ガミジン.v1.json",
+      "bytes": 6289,
+      "sha256": "a16cdfb8d19668f93b812e2f43026711477cb76579d8fec4c6c18f4b20ac0113"
+    },
+    {
+      "path": "build/data/abilities/祖04_ガミジンB.v1.json",
+      "bytes": 5602,
+      "sha256": "98c33d9bed537aabd35687362594431aca4ac5391916f86914fb58942b266ad0"
+    },
+    {
+      "path": "build/data/abilities/祖05_マルバス.v1.json",
+      "bytes": 4980,
+      "sha256": "205e1efe593f8db6a55a05992f9ac86cdf0f115a71495fd48f50615ea7d31906"
+    },
+    {
+      "path": "build/data/abilities/祖05_マルバスR.v1.json",
+      "bytes": 8996,
+      "sha256": "6e975bcf7a91360569a2bf5e250ac65bd7c746f060529b4e5cbd015c8a22f3f7"
+    },
+    {
+      "path": "build/data/abilities/祖06_ウァレフォル.v1.json",
+      "bytes": 8062,
+      "sha256": "29dc42825ad66c243ae8035d39e6c77b01cae74e323586cb78ac8aaabf5e288d"
+    },
+    {
+      "path": "build/data/abilities/祖06_ウァレフォルC.v1.json",
+      "bytes": 6084,
+      "sha256": "aee632a6e7d40a49f48ecedbc3b9ea688ef8b1faaa58da372ba23df4870f4bb2"
+    },
+    {
+      "path": "build/data/abilities/祖07_アモン.v1.json",
+      "bytes": 6777,
+      "sha256": "f9130af2916d1410b7c2c10e85caf709154fe19c0d249e9fc559ef3fd9754d21"
+    },
+    {
+      "path": "build/data/abilities/祖07_アモンR.v1.json",
+      "bytes": 4701,
+      "sha256": "feb5661b16db48209ed68aeeebe4e47289fcb7605da9f04e2148338568892e35"
+    },
+    {
+      "path": "build/data/abilities/祖08_バルバトス.v1.json",
+      "bytes": 9225,
+      "sha256": "bc287b4706a1d2ffdfdc2ddced3345a688b09369c42c0639b57f1125a8af1efe"
+    },
+    {
+      "path": "build/data/abilities/祖08_バルバトスR.v1.json",
+      "bytes": 4769,
+      "sha256": "dc0306f5286611a7ac51dfa2ab639bdbc4310c022c3e4c8ffdcea2bee8b57fad"
+    },
+    {
+      "path": "build/data/abilities/祖09_パイモン.v1.json",
+      "bytes": 6561,
+      "sha256": "a9a94108bebe5ad0361b82d5c8c978ae57b23fb62d3200f6e5d20bfb105fde3d"
+    },
+    {
+      "path": "build/data/abilities/祖09_パイモンB.v1.json",
+      "bytes": 4725,
+      "sha256": "1ba359f1262ee4857afd88318e0884b0062e76d25aef38fecbfe1288a301b92e"
+    },
+    {
+      "path": "build/data/abilities/祖10_ブエル.v1.json",
+      "bytes": 4187,
+      "sha256": "d4695b3ec6dcec97dba4f87e9d702c0bd198db1ba7a97fc9a1060985228edbf6"
+    },
+    {
+      "path": "build/data/abilities/祖10_ブエルR.v1.json",
+      "bytes": 4739,
+      "sha256": "300e39a0c699fe4cc93518d720c12c306f9e3f015fceb74c3f67c4037c1c678a"
+    },
+    {
+      "path": "build/data/abilities/祖11_グシオン.v1.json",
+      "bytes": 5342,
+      "sha256": "89f044dd7249cdc511d931ffb660c63070f2685ed9311508aba067fc7cd1a8bb"
+    },
+    {
+      "path": "build/data/abilities/祖11_グシオンB.v1.json",
+      "bytes": 5417,
+      "sha256": "fe4cedf7835eb11e3b73d5e47ac4fc1fa72eb73af30cdfaa42f8d6ae39d76184"
+    },
+    {
+      "path": "build/data/abilities/祖12_シトリー.v1.json",
+      "bytes": 5100,
+      "sha256": "52502d7a65a8d3b5cf35d165439ee880966d21a55f3cd763b560f963312d9624"
+    },
+    {
+      "path": "build/data/abilities/祖12_シトリーR.v1.json",
+      "bytes": 7867,
+      "sha256": "e77c6f6571f1298549a2ea70b5122c3bfea1e4b55ea46025e5a33ef2cd6d131c"
+    },
+    {
+      "path": "build/data/abilities/祖13_ベレト.v1.json",
+      "bytes": 10186,
+      "sha256": "fe5cfa811bd7e6d9f74d2a4c45fcd29d661e75088fc80d10ba3edf21387cfb95"
+    },
+    {
+      "path": "build/data/abilities/祖13_ベレトB.v1.json",
+      "bytes": 9198,
+      "sha256": "7cb26a9ef94dcd7512ecad12928f5bc7565e21465d9f2ffa34cb099f79bc61f5"
+    },
+    {
+      "path": "build/data/abilities/祖14_レラジェ.v1.json",
+      "bytes": 12646,
+      "sha256": "1056411d9e64d99ae68681b212991bf9826968930bbec12c53aec0d056df3407"
+    },
+    {
+      "path": "build/data/abilities/祖14_レラジェR.v1.json",
+      "bytes": 4976,
+      "sha256": "25921163cee85211c36ce37ba6cd3e51e68ef25dfeb48615b7e27e09c1cf9935"
+    },
+    {
+      "path": "build/data/abilities/祖15_エリゴス.v1.json",
+      "bytes": 8172,
+      "sha256": "6e2be27983a37719daeb2573dd0c1a6a7a6929f33c3e665034f1d0f61990b6fd"
+    },
+    {
+      "path": "build/data/abilities/祖15_エリゴスB.v1.json",
+      "bytes": 3914,
+      "sha256": "68055eb8a85da9d9f603a0b49369c1219bc9dceebf5875c78c2af80a3a4edcb5"
+    },
+    {
+      "path": "build/data/abilities/祖16_ゼパル.v1.json",
+      "bytes": 7451,
+      "sha256": "dae2afea74b14785ab0054b34c8f1d3618a299fcdccb85a1e3bd3a12b8592b40"
+    },
+    {
+      "path": "build/data/abilities/祖16_ゼパルC.v1.json",
+      "bytes": 5187,
+      "sha256": "45afa1ac9e56109ea04beb8e31d5cfc7bedb2ea5df15d50548bc74be6463e472"
+    },
+    {
+      "path": "build/data/abilities/祖17_ボティス.v1.json",
+      "bytes": 10042,
+      "sha256": "9654a3be2f78a74f61b1dee4e485a56fb10591e89e636501f4f898a3148a6d89"
+    },
+    {
+      "path": "build/data/abilities/祖17_ボティスR.v1.json",
+      "bytes": 6401,
+      "sha256": "fa100700fd221107a9b4349df01a7f6842620f26a6c1d40eb4cbdecb0dfe08f9"
+    },
+    {
+      "path": "build/data/abilities/祖18_バティン.v1.json",
+      "bytes": 9599,
+      "sha256": "2ccd418873650d024ed07672c89bd0baa6b954285f0f259c8e781dd43c0486cb"
+    },
+    {
+      "path": "build/data/abilities/祖18_バティンB.v1.json",
+      "bytes": 5367,
+      "sha256": "3b36d4204720aee6049f8d1c95074029c6bdcb7cecc1d0ba3c94f3ff4ae96f39"
+    },
+    {
+      "path": "build/data/abilities/祖19_サレオス.v1.json",
+      "bytes": 4255,
+      "sha256": "900373a48560dad270696ec03befa388148efd0c7ef454c1b78cde15040b6a6e"
+    },
+    {
+      "path": "build/data/abilities/祖19_サレオスC.v1.json",
+      "bytes": 10831,
+      "sha256": "0d5f77c989b2f1310ea46058f32357f41a24df674c3fea4fd85e9f497642ddf8"
+    },
+    {
+      "path": "build/data/abilities/祖20_プルソン.v1.json",
+      "bytes": 4627,
+      "sha256": "e50caeaeb5ea6fc6f2f021df6dacf5c4454487a4c58260cf0cea521a57f2a701"
+    },
+    {
+      "path": "build/data/abilities/祖20_プルソンB.v1.json",
+      "bytes": 4625,
+      "sha256": "4ecf441549a32cf1664a958117faa671428f817d7ed32b64b3c082d9a3695f84"
+    },
+    {
+      "path": "build/data/abilities/祖21_モラクス.v1.json",
+      "bytes": 7398,
+      "sha256": "442ded28e3ec43b43d8799c6415a7860e871c5e6da2267d282d117775da4bf79"
+    },
+    {
+      "path": "build/data/abilities/祖21_モラクスR.v1.json",
+      "bytes": 4868,
+      "sha256": "7db32e5be003b74c98cc09dc5fc835f5b9141d68486fc8f6f4af0affeaa69dc4"
+    },
+    {
+      "path": "build/data/abilities/祖22_イポス.v1.json",
+      "bytes": 5569,
+      "sha256": "cc400b490407fe84a79b947ccde1f947a4a34ff730bb7f28d1734b63ec8732d1"
+    },
+    {
+      "path": "build/data/abilities/祖22_イポスC.v1.json",
+      "bytes": 5653,
+      "sha256": "c391705b945a6c061a2e2dda3e204fc962450d545af5a05155ae00be492ba28e"
+    },
+    {
+      "path": "build/data/abilities/祖23_アイム.v1.json",
+      "bytes": 9159,
+      "sha256": "9c3b116a5169511d76e882a113dfb2caa29920fbe305552b147eb855111f8739"
+    },
+    {
+      "path": "build/data/abilities/祖23_アイムR.v1.json",
+      "bytes": 4416,
+      "sha256": "c08ed60277ac60ed5d58abc222bc694c4f4d16acff42d8c0248c146d3f1915ce"
+    },
+    {
+      "path": "build/data/abilities/祖24_ナベリウス.v1.json",
+      "bytes": 3688,
+      "sha256": "25d7169d22c1071738fc0790e917022392a80a0b3e94219a60f2cd08caa26185"
+    },
+    {
+      "path": "build/data/abilities/祖24_ナベリウスB.v1.json",
+      "bytes": 8709,
+      "sha256": "669029ff193d1c03dcdeb1340fe6f9cd23bfe63bf2b7b3528f14f116f2043751"
+    },
+    {
+      "path": "build/data/abilities/祖25_グラシャラボラス.v1.json",
+      "bytes": 7633,
+      "sha256": "922558a531365f45e188c9fadab003cda57a29c6835df25098ce4af879701786"
+    },
+    {
+      "path": "build/data/abilities/祖25_グラシャラボラスC.v1.json",
+      "bytes": 5266,
+      "sha256": "62b6787fa7e0c0d45b3516580caad7f30ebf31134fb672d9a3bfef4b18dd9523"
+    },
+    {
+      "path": "build/data/abilities/祖26_ブネ.v1.json",
+      "bytes": 4942,
+      "sha256": "2a5566a98a35b75d2b593352bb662c7f70cec8b61de4539b8674f759753e7466"
+    },
+    {
+      "path": "build/data/abilities/祖26_ブネB.v1.json",
+      "bytes": 4122,
+      "sha256": "be4cf7c6f111ea23c683cf7e53a33d162e153c9034e4a451751877252474c027"
+    },
+    {
+      "path": "build/data/abilities/祖27_ロノウェ.v1.json",
+      "bytes": 4012,
+      "sha256": "234b10d11d8b5dc26c621abfbe0d870044a8ad5e936add27bc0306fa0b59f55f"
+    },
+    {
+      "path": "build/data/abilities/祖27_ロノウェR.v1.json",
+      "bytes": 8599,
+      "sha256": "16e0fcc29374276dc5328e38b4c4de8de25e31efdb6e1f80c515ffd1a3a547b3"
+    },
+    {
+      "path": "build/data/abilities/祖28_ベリト.v1.json",
+      "bytes": 5994,
+      "sha256": "65e28f853d2bfa371b706ad492dc40fd82a7445bf143002bfc3094144a14cc5a"
+    },
+    {
+      "path": "build/data/abilities/祖28_ベリトB.v1.json",
+      "bytes": 5339,
+      "sha256": "f1ac3a79677406ac81b7434d23403aab799cd3b9ad077efccd54f10e844b60aa"
+    },
+    {
+      "path": "build/data/abilities/祖29_アスタロト.v1.json",
+      "bytes": 4142,
+      "sha256": "8e80570c5e6bab2c3323a04e3545a4f847e817fe013e71c65c28294acf5c427b"
+    },
+    {
+      "path": "build/data/abilities/祖29_アスタロトB.v1.json",
+      "bytes": 9175,
+      "sha256": "b236569001bb9916fc215466fb87984bf24eeeeff4854f05e4e7810b5ce0a7a3"
+    },
+    {
+      "path": "build/data/abilities/祖30_フォルネウス.v1.json",
+      "bytes": 7858,
+      "sha256": "344d1c372f0e12baae1038f733290402751be466c224f339b0acd26876c530d5"
+    },
+    {
+      "path": "build/data/abilities/祖30_フォルネウスB.v1.json",
+      "bytes": 6253,
+      "sha256": "249c5803518d99174695b633b02a7a12756fc6f5eb333c4715309695f7870c06"
+    },
+    {
+      "path": "build/data/abilities/祖31_フォラス.v1.json",
+      "bytes": 3747,
+      "sha256": "e0415b899c666044ff3571d8135110e1fe4b4429a0361125832e874ca7e7d4e6"
+    },
+    {
+      "path": "build/data/abilities/祖31_フォラスC.v1.json",
+      "bytes": 5255,
+      "sha256": "abf8c6892557efb71f43ac20794eff293f8fe3d86e993e62eb041d0250e2e7b4"
+    },
+    {
+      "path": "build/data/abilities/祖32_アスモデウス.v1.json",
+      "bytes": 8340,
+      "sha256": "27908149dc80e7646fef20f49cb41ae08ff758d6bb635a66d9b9e25bea8a369b"
+    },
+    {
+      "path": "build/data/abilities/祖32_アスモデウスR.v1.json",
+      "bytes": 6774,
+      "sha256": "7d998fe57d95e6b5f104be30af4c5e15666bd75440fd811aef2e42245640987e"
+    },
+    {
+      "path": "build/data/abilities/祖33_ガープ.v1.json",
+      "bytes": 4208,
+      "sha256": "76bedbea38585765e6b5edf695b4aec722dc9088a56911fdcfe42547e08b8525"
+    },
+    {
+      "path": "build/data/abilities/祖33_ガープR.v1.json",
+      "bytes": 10713,
+      "sha256": "059899bd4a9ede12ce9d87e91b15ccc97df14087d5716b08c25f0884520dc3bc"
+    },
+    {
+      "path": "build/data/abilities/祖34_フルフル.v1.json",
+      "bytes": 7591,
+      "sha256": "63b143861719be168ef79da393ae3a85a9165fa14be158b477d331dfe6c23c23"
+    },
+    {
+      "path": "build/data/abilities/祖34_フルフルC.v1.json",
+      "bytes": 6299,
+      "sha256": "b9efc05ab2ab278b1819824cc10de074134cd55b3fe8774d516740f5561fb6f7"
+    },
+    {
+      "path": "build/data/abilities/祖35_マルコシアス.v1.json",
+      "bytes": 6475,
+      "sha256": "f8e486f0b1944be323b792118b4cb0060212a1ee2b75e61082df1a87eee27410"
+    },
+    {
+      "path": "build/data/abilities/祖35_マルコシアスB.v1.json",
+      "bytes": 10729,
+      "sha256": "0743138cba2d85b0b7b2bf32e36a7e746860549e9bf65143ed593380babfd53e"
+    },
+    {
+      "path": "build/data/abilities/祖36_ストラス.v1.json",
+      "bytes": 4361,
+      "sha256": "c1c53b25921cce4eb33bfd912aa0dbb956808693c62c48e281240b0e3d1a8a4e"
+    },
+    {
+      "path": "build/data/abilities/祖36_ストラスR.v1.json",
+      "bytes": 9077,
+      "sha256": "5f71cc9b1731ca0a150fc676a9cfddfba1b81c38a0c07beb303bfa0971123e6f"
+    },
+    {
+      "path": "build/data/abilities/祖37_フェニックス.v1.json",
+      "bytes": 6314,
+      "sha256": "f39011717b96dfa6e859a25d46c9f8eb667838862b3771fbaaefafd79c1b1dea"
+    },
+    {
+      "path": "build/data/abilities/祖37_フェニックスC.v1.json",
+      "bytes": 4641,
+      "sha256": "93270294d325813de5a60d09a55b0dd61a267346400f308afbd961eb31e5a57f"
+    },
+    {
+      "path": "build/data/abilities/祖38_ハルファス.v1.json",
+      "bytes": 5239,
+      "sha256": "a36753503299c18b2a9503d6ee3c239a024a98ce344e9cf80eb74e8250ec30a4"
+    },
+    {
+      "path": "build/data/abilities/祖38_ハルファスR.v1.json",
+      "bytes": 11596,
+      "sha256": "74102e23ac165d6e7212c6ad181fc8c0a79c0e498dd58b73309fde7144cf05ed"
+    },
+    {
+      "path": "build/data/abilities/祖39_マルファス.v1.json",
+      "bytes": 6629,
+      "sha256": "040c7e97f6108113de0c817d2958563eed576c87de302732623b23a42161907f"
+    },
+    {
+      "path": "build/data/abilities/祖39_マルファスB.v1.json",
+      "bytes": 5995,
+      "sha256": "adde357553a01669dfa62779459b30b66b1a645a0cb8b61637843344c7d564f5"
+    },
+    {
+      "path": "build/data/abilities/祖40_ラウム.v1.json",
+      "bytes": 4097,
+      "sha256": "083bc656ca5c1601dc544c5065a16718d6ab98ccaf4c70d103626b895420ed7e"
+    },
+    {
+      "path": "build/data/abilities/祖40_ラウムC.v1.json",
+      "bytes": 6437,
+      "sha256": "344f4a8d924be047f5ca377e5ce01054364ebf64bc5bf1a059d7e881bb922d3f"
+    },
+    {
+      "path": "build/data/abilities/祖41_フォカロル.v1.json",
+      "bytes": 13010,
+      "sha256": "7c3b7a408a878df98b3771dde3c4b51f5fb38659394dcb267a1563cd44282575"
+    },
+    {
+      "path": "build/data/abilities/祖41_フォカロルR.v1.json",
+      "bytes": 5054,
+      "sha256": "73ea736ff4722a2d328c091b1b44e9ebe144f85706c11178587ac894fa7370d9"
+    },
+    {
+      "path": "build/data/abilities/祖42_ウェパル.v1.json",
+      "bytes": 5592,
+      "sha256": "b8ce8ac111e7e328ccc11531ad26cdf696d19b995b5862e5a8976c3bb76eee9b"
+    },
+    {
+      "path": "build/data/abilities/祖42_ウェパルB.v1.json",
+      "bytes": 4658,
+      "sha256": "9d13cb21e62bf7fb07b05c12acf8efcd688bfbca844baa5fc745d705931656e4"
+    },
+    {
+      "path": "build/data/abilities/祖43_サブナック.v1.json",
+      "bytes": 10481,
+      "sha256": "93ba4793e8785c88c4c30ce1cbef0f5fd903cc84eee85c5f461af7978c3731b2"
+    },
+    {
+      "path": "build/data/abilities/祖43_サブナックB.v1.json",
+      "bytes": 4931,
+      "sha256": "b6b6f4764e931045fe1ce58f3993cd800eeae14c773451e486a57e28a464aee8"
+    },
+    {
+      "path": "build/data/abilities/祖44_シャックス.v1.json",
+      "bytes": 12626,
+      "sha256": "5902654db41e388a26614c46269a76be7b5a7daaa05c75f781a6939d929d18b8"
+    },
+    {
+      "path": "build/data/abilities/祖44_シャックスB.v1.json",
+      "bytes": 5259,
+      "sha256": "61e17b71553938bb23f873b2061fc5166191264cd3e8c4b7aac21375f0c7a24f"
+    },
+    {
+      "path": "build/data/abilities/祖45_ヴィネ.v1.json",
+      "bytes": 4967,
+      "sha256": "ab700d68b10e8f0be5ac6b26f307cdc65d333f095d585d691c6a2248f818447b"
+    },
+    {
+      "path": "build/data/abilities/祖45_ヴィネR.v1.json",
+      "bytes": 4271,
+      "sha256": "6ffd07ebcf3e47292b3ef011e13ad4bbed42bd7bab7bbffe4e144746b204907d"
+    },
+    {
+      "path": "build/data/abilities/祖46_ビフロンス.v1.json",
+      "bytes": 3907,
+      "sha256": "771dfaeaf5f380261341ba3236e148f2cb829ed91042eaa0d1ecb6508ad640b6"
+    },
+    {
+      "path": "build/data/abilities/祖46_ビフロンスC.v1.json",
+      "bytes": 13310,
+      "sha256": "da9b95b27be5abfbff4152df027ecfd38f0def41efb0a34075e5edbaaa8700f1"
+    },
+    {
+      "path": "build/data/abilities/祖47_ウヴァル.v1.json",
+      "bytes": 7732,
+      "sha256": "29e19d05d9e63777c956980244973cb6026ad2e9527226a022b222edd34790ad"
+    },
+    {
+      "path": "build/data/abilities/祖47_ウヴァルC.v1.json",
+      "bytes": 5248,
+      "sha256": "2ece0df2afd2a3bac4a54ed3a041b73fdf31a87ee8ee449d69a27da10e02a3de"
+    },
+    {
+      "path": "build/data/abilities/祖48_ハーゲンティ.v1.json",
+      "bytes": 3953,
+      "sha256": "a672027c0d8001ab57e2c3c9110e119b2d0be7584a98c36150acc66ac3b7ee95"
+    },
+    {
+      "path": "build/data/abilities/祖48_ハーゲンティB.v1.json",
+      "bytes": 13339,
+      "sha256": "21e6d1487332368a40d28e0459de45b7c8e9007bdfc632cf8310a718e921c66d"
+    },
+    {
+      "path": "build/data/abilities/祖49_クロケル.v1.json",
+      "bytes": 5514,
+      "sha256": "85e313d6c0816d74eb3db96e491f9447baab41d5bd7c8e345f0e6e14a614ad85"
+    },
+    {
+      "path": "build/data/abilities/祖49_クロケルR.v1.json",
+      "bytes": 5344,
+      "sha256": "e50446ceede3e92278b5bcfcba7e976dd2cb5358ffcd36851b15daac2418a028"
+    },
+    {
+      "path": "build/data/abilities/祖50_フルカス.v1.json",
+      "bytes": 10023,
+      "sha256": "326635fa3cfb9c8e733618ea5096cad13a66e0594d38da7eef6b165484b176fa"
+    },
+    {
+      "path": "build/data/abilities/祖50_フルカスC.v1.json",
+      "bytes": 5234,
+      "sha256": "d097f3351cb3a52880471feb219287cb4cd638725c66dd00f5748b16cca67dcf"
+    },
+    {
+      "path": "build/data/abilities/祖51_バラム.v1.json",
+      "bytes": 10565,
+      "sha256": "12d578a3c0426f3cbe8574f123c61fa9eb25281c6e7f77794c881712e65d27a5"
+    },
+    {
+      "path": "build/data/abilities/祖51_バラムR.v1.json",
+      "bytes": 5539,
+      "sha256": "1c03695360f5d35da08337638e0492f58a389fcc59ab156f20f1f183141fe5a4"
+    },
+    {
+      "path": "build/data/abilities/祖52_アロケル.v1.json",
+      "bytes": 4379,
+      "sha256": "84f92e62d0b3e43913b6284f94b0232a3a494be5b7bcc3f8fb36f93deb8b2898"
+    },
+    {
+      "path": "build/data/abilities/祖52_アロケルR.v1.json",
+      "bytes": 6269,
+      "sha256": "80b7e17839d3e0810d3610e020d7969b35f8d920d1a46a99a5bde25dd34dda01"
+    },
+    {
+      "path": "build/data/abilities/祖53_カイム.v1.json",
+      "bytes": 6119,
+      "sha256": "f52e5680dc7821f773dd057f324d6ca17506a99afbc54600ccdab5a2b7a33c81"
+    },
+    {
+      "path": "build/data/abilities/祖53_カイムB.v1.json",
+      "bytes": 8443,
+      "sha256": "a5f780ca28157f27b83344728d3fbdc0d4dfed05b5bdae886dc0820f79900121"
+    },
+    {
+      "path": "build/data/abilities/祖54_ムルムル.v1.json",
+      "bytes": 5414,
+      "sha256": "462947a0612a96b35a2309f33c330f5a9a874b6b7217ffc10cb08cf3fcece6ab"
+    },
+    {
+      "path": "build/data/abilities/祖54_ムルムルC.v1.json",
+      "bytes": 9798,
+      "sha256": "2007a3f8be7d0b4afa6288918cac94d3e10e589eecc18b7368188f42359e52f7"
+    },
+    {
+      "path": "build/data/abilities/祖55_オロバス.v1.json",
+      "bytes": 6659,
+      "sha256": "a89f5e4ecb61c73055d3ef7417c2c303cab58eb52ed9779b238a710652a12585"
+    },
+    {
+      "path": "build/data/abilities/祖55_オロバスC.v1.json",
+      "bytes": 9133,
+      "sha256": "522daec126bc29d72f765743958a571a7003b6c16e119e160fcb0306b646aea7"
+    },
+    {
+      "path": "build/data/abilities/祖56_グレモリー.v1.json",
+      "bytes": 6771,
+      "sha256": "e077df6963e4c04cbf472f1d10e15416f50d65a5141acc53f87618b37f692ec5"
+    },
+    {
+      "path": "build/data/abilities/祖56_グレモリーR.v1.json",
+      "bytes": 5342,
+      "sha256": "277a947b36699a373ea072cc9dfc7bb3d152fe2828ec4bbe7cbf4143cea7658c"
+    },
+    {
+      "path": "build/data/abilities/祖57_オセ.v1.json",
+      "bytes": 6259,
+      "sha256": "e333d4bf9c04bebcff61c22e3d1ff3d64f20ab0ccd4d0fa6f0c31f7457df1c3b"
+    },
+    {
+      "path": "build/data/abilities/祖57_オセC.v1.json",
+      "bytes": 7012,
+      "sha256": "9fceb0c8c78a79e7c9a7bd8d89f0b4a097a97fdd2bb148ab3562266043157d75"
+    },
+    {
+      "path": "build/data/abilities/祖58_アミー.v1.json",
+      "bytes": 5176,
+      "sha256": "b1834b143d1bfc1f3bd931432aede7f70697f0bbb396312edfea86b4bf9d664f"
+    },
+    {
+      "path": "build/data/abilities/祖58_アミーC.v1.json",
+      "bytes": 6675,
+      "sha256": "28dd16a2af2158c42a6b981d90a31b3bd0d0e5542f63b3d2108723051aa6a457"
+    },
+    {
+      "path": "build/data/abilities/祖59_オリアス.v1.json",
+      "bytes": 8441,
+      "sha256": "527203c6f429b89baa8e8e84722901d175db9f1316ad58931ac3db531ed813e8"
+    },
+    {
+      "path": "build/data/abilities/祖59_オリアスC.v1.json",
+      "bytes": 5790,
+      "sha256": "251da036a4a7fbc78895b6ce01f1ea646b469bd5d508d3088721a02f2ac4b42e"
+    },
+    {
+      "path": "build/data/abilities/祖60_ウァプラ.v1.json",
+      "bytes": 4990,
+      "sha256": "62769b3e640a9f953a06e0a0ab0c28e5d68034f007bde32287c1675f23b507cd"
+    },
+    {
+      "path": "build/data/abilities/祖60_ウァプラR.v1.json",
+      "bytes": 9483,
+      "sha256": "9de05122b02eca5c4b1bca9c41250990f1ca1ad7db54b3910ce03812f96cd243"
+    },
+    {
+      "path": "build/data/abilities/祖61_ザガン.v1.json",
+      "bytes": 6252,
+      "sha256": "243d13b4cae0affce506a49b78779a3d37ee0ccd6312a12d7296b547191996aa"
+    },
+    {
+      "path": "build/data/abilities/祖61_ザガンR.v1.json",
+      "bytes": 5674,
+      "sha256": "d72dc85f726133ed161952b50aff6f18d86b82a5bcf22c5da38acd6a230f65ca"
+    },
+    {
+      "path": "build/data/abilities/祖62_ウァラク.v1.json",
+      "bytes": 10279,
+      "sha256": "36f0da49abb93bd8161014996510144a33e410340c306d0ad4e99520cb90fe83"
+    },
+    {
+      "path": "build/data/abilities/祖62_ウァラクC.v1.json",
+      "bytes": 6084,
+      "sha256": "6b76cabf2628a844c1faf0668534208220ee0d6461c895f50daf269f8f8ecc86"
+    },
+    {
+      "path": "build/data/abilities/祖63_アンドラス.v1.json",
+      "bytes": 3611,
+      "sha256": "0d3bb283fe6aacf8913cd77a30361815b697733656dfdf2bb9376da50f216814"
+    },
+    {
+      "path": "build/data/abilities/祖63_アンドラスC.v1.json",
+      "bytes": 8111,
+      "sha256": "042b55500732d805b121ce7529920b357e6c1eb4c0667d88905fc8f7b909f5aa"
+    },
+    {
+      "path": "build/data/abilities/祖64_フラウロス.v1.json",
+      "bytes": 7053,
+      "sha256": "e30754227bed337a4f5eac38cc86bf12d9a981e1a19df88c5c38935ab8a1cbbb"
+    },
+    {
+      "path": "build/data/abilities/祖64_フラウロスB.v1.json",
+      "bytes": 5422,
+      "sha256": "86815624a043b120a84b7fcfba517ba4dc0cd79e613f25a2f2e351e282fc95d2"
+    },
+    {
+      "path": "build/data/abilities/祖65_アンドレアルフス.v1.json",
+      "bytes": 4350,
+      "sha256": "183e6c82ed79ba9a63ca0112a0d0948928fa610e59e94f5980a98ea525ef3d09"
+    },
+    {
+      "path": "build/data/abilities/祖65_アンドレアルフスC.v1.json",
+      "bytes": 7954,
+      "sha256": "905f3bd963e3fd4865dddaf5d0158d4b8f7bbe4b7180e3435d6c5d775d1cc003"
+    },
+    {
+      "path": "build/data/abilities/祖66_キマリス.v1.json",
+      "bytes": 4463,
+      "sha256": "a121eee39db5f2564d70632dbb8fcecec5285139cbf4d884ce93cb2aa0bb6b81"
+    },
+    {
+      "path": "build/data/abilities/祖66_キマリスC.v1.json",
+      "bytes": 5512,
+      "sha256": "cc9bb696b100196795ecfefd2605f3cf0fee21fa1dcd12fb4b95abdf545b635d"
+    },
+    {
+      "path": "build/data/abilities/祖67_アムドゥスキアス.v1.json",
+      "bytes": 4277,
+      "sha256": "74185dd7ee70bbf3beeec264ac4a90d44377c7b4f9f77cb56e38571e4b7560d9"
+    },
+    {
+      "path": "build/data/abilities/祖67_アムドゥスキアスB.v1.json",
+      "bytes": 8363,
+      "sha256": "b30ba8bf4651cbfc41db50db11b0b97afc955d80aeb690c7d34bab014c1f0dcf"
+    },
+    {
+      "path": "build/data/abilities/祖68_ベリアル.v1.json",
+      "bytes": 6401,
+      "sha256": "b3cd74d2c42147552c0f44c0e04308606b4b01cd1c27a3028b91236a8f831498"
+    },
+    {
+      "path": "build/data/abilities/祖68_ベリアルB.v1.json",
+      "bytes": 5439,
+      "sha256": "0ab250fb1cbcbeb32e8108fcae3ab5e1ff4e78792412f1d4f0be49a38dcccd01"
+    },
+    {
+      "path": "build/data/abilities/祖69_デカラビア.v1.json",
+      "bytes": 8273,
+      "sha256": "1644e8748d92ed8fe984b03d4aa9a71ea4e8c2b8f2c9ede15829f7ca09ddacf1"
+    },
+    {
+      "path": "build/data/abilities/祖69_デカラビアB.v1.json",
+      "bytes": 9311,
+      "sha256": "a4c0d19026f3cec7467fc8e30163a75e92b8221b9c2ed97870c79f98e0dd66a6"
+    },
+    {
+      "path": "build/data/abilities/祖70_セーレ.v1.json",
+      "bytes": 5132,
+      "sha256": "42b230e78e268c9ccd5136051b8690f252e8ebf9f3edb7d4c0b9810b47998eaa"
+    },
+    {
+      "path": "build/data/abilities/祖70_セーレR.v1.json",
+      "bytes": 7987,
+      "sha256": "65669901401bd578517f0a89f74a56a9c591651175c0da3f6a07b17f6cd97459"
+    },
+    {
+      "path": "build/data/abilities/祖71_ダンタリオン.v1.json",
+      "bytes": 3577,
+      "sha256": "3f40a578203575a75ef7a32d05345c164fbcf46ad79ac50e3b369bae9531b590"
+    },
+    {
+      "path": "build/data/abilities/祖71_ダンタリオンR.v1.json",
+      "bytes": 10170,
+      "sha256": "3e0794cbec08b223858cc9c40536d09474dd62f42166970e9d201cf6423c176f"
+    },
+    {
+      "path": "build/data/abilities/祖72_アンドロマリウス.v1.json",
+      "bytes": 4142,
+      "sha256": "bbaa36b6ad9a90ea420efafd16a5f48ff9a4b09f6918d99bd6065c1de3a10a32"
+    },
+    {
+      "path": "build/data/abilities/祖72_アンドロマリウスC.v1.json",
+      "bytes": 5338,
+      "sha256": "be6d4c75ef88cc601243adac1a4804a178afc7875d7734278a89d37d7e80dc0f"
+    },
+    {
+      "path": "build/data/abilities/継01_カガセオ.v1.json",
+      "bytes": 7597,
+      "sha256": "e8a7428abb0acb6fab8bccfe2534d8a730732b1bf2e030e33d1aecdeb7f32711"
+    },
+    {
+      "path": "build/data/abilities/継02_マナナンガル.v1.json",
+      "bytes": 5728,
+      "sha256": "3da276b28edcfb4ec38ab325bb4ba5c5275f94db6ed25636085ae1e6cbc3cfe4"
+    },
+    {
+      "path": "build/data/abilities/継03_シェンウー.v1.json",
+      "bytes": 5682,
+      "sha256": "708a637d395ba198ab62c0245bf0101edaee7664f25679c08c252005c390ccbb"
+    },
+    {
+      "path": "build/data/abilities/継04_チンロン.v1.json",
+      "bytes": 6514,
+      "sha256": "cde14aa6ba9060c5dfcdc5d3e3efa468aac4ba4cc25a20a1c38d5f340ce7cb41"
+    },
+    {
+      "path": "build/data/abilities/継05_バイフー.v1.json",
+      "bytes": 5337,
+      "sha256": "4ae16b0113b677ad59c438b71bb607c148e513f1f055815b5c93571f91fdad89"
+    },
+    {
+      "path": "build/data/abilities/継06_チューチャオ.v1.json",
+      "bytes": 4820,
+      "sha256": "8c312d5a039dfc603bf3e7c687b3e3901857010e19044f371ba86c8a6c2e8a34"
+    },
+    {
+      "path": "build/data/abilities/継07_チユエン.v1.json",
+      "bytes": 8415,
+      "sha256": "a84e7bf72b8ac4a38b77aa593aff2e0b71d50ec67a083da63adef4c1684442b2"
+    },
+    {
+      "path": "build/data/abilities/継08_ヴリトラ.v1.json",
+      "bytes": 7039,
+      "sha256": "e68e7b5f2e9cbdcbdaec646138b0ddfcfc23b12bf127fb94c01da983f7e2d64d"
+    },
+    {
+      "path": "build/data/abilities/継09_フーリーチン.v1.json",
+      "bytes": 5838,
+      "sha256": "23a6a6ada558705055f0257482b13c24b09941070b0ca847e2f5ffc175ac1edb"
+    },
+    {
+      "path": "build/data/abilities/継11_アンダカ.v1.json",
+      "bytes": 5862,
+      "sha256": "02e488be5b05a45ca153a1dfec079886749d5aa26d1a537f7f3b7498f86bbb3b"
+    },
+    {
+      "path": "build/data/orbs.v1.json",
+      "bytes": 290427,
+      "sha256": "f3e2f7646dd980f70a7602cf638b931a8e4280103cbf2a3c58b48703622753c8"
+    },
+    {
+      "path": "build/data/means-index.v1.json",
+      "bytes": 874320,
+      "sha256": "25f2bc1bf2773a808f1fa95420ff79b8d8543c9f954eefaf8aa8d7e695cb7bbf"
+    },
+    {
+      "path": "build/data/me.v1.json",
+      "bytes": 592712,
+      "sha256": "924d1d36126e0be64da45aef128201a5c1c79356d7d3f58b1e22ccf33a24ecaa"
+    },
+    {
+      "path": "build/data/counter-classes.v1.json",
+      "bytes": 85163,
+      "sha256": "06295b3d7333949934073bc2ae3aaa9a25ccbe8c4b851eed38874e9bb34bb8e8"
+    },
+    {
+      "path": "build/data/validation-report.v1.json",
+      "bytes": 22888,
+      "sha256": "e00a127d694fe08e7cac30d3c7b6e843adb264ce3379306b13db594f26ad6ae8"
+    }
+  ],
+  "deferred": [
+    "手段の索引への ME 由来の手段の追加と逆引き全項目の照合: 完了（2026-11-19、ME統合ラウンド）。照合で残った不一致は build/app/README.md の ME統合ラウンド記録に理由つきで残す"
+  ]
+}

@@ -1,0 +1,4418 @@
+{
+  "kind": "reishou",
+  "version": 1,
+  "date": "2026-11-19",
+  "note": "現行ツールのマスタ（data/reishou.json、251件）の ID が正本。reishouIds はこの ID を参照する。系譜なしは lineage: null。装備可否は styles（スタイル名の配列）だけで決まる。stats（ステータス修正値）と size は Wiki 由来の corpus-reishou/ から名前で結合したもの（2026-11-19）。stats が null の件は修正値の収録が無い。lineagePoints（系譜ポイント）も同じ結合で付けたもの（2026-11-20）。系譜名が一致しない件・系譜が無い件は null。",
+  "reishou": [
+    {
+      "id": "reishou_b001",
+      "name": "冬至のピグメント",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 28,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b002",
+      "name": "ピーチマフラー",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 208,
+        "atk": null,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b003",
+      "name": "ブラックトルク",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": 28,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b004",
+      "name": "紅の香炉",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 24,
+        "def": 4,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b005",
+      "name": "漆黒のマフラー",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 177,
+        "atk": 4,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b006",
+      "name": "アンデッドスカル",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 31,
+        "atk": null,
+        "def": 24,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b007",
+      "name": "ブルーポンチョ",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 177,
+        "atk": null,
+        "def": 4,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b008",
+      "name": "魔毒の封瓶",
+      "lineage": null,
+      "effects": "火ダメージが3%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 50,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b009",
+      "name": "スプリングフード",
+      "lineage": null,
+      "effects": "HPが3%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 366,
+        "atk": null,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b010",
+      "name": "タフネスチョーカー",
+      "lineage": null,
+      "effects": "自身のHPが50%以下のとき、4%の確率でダメージを無効にする",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": 50,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b011",
+      "name": "ワンダーインセンス",
+      "lineage": null,
+      "effects": "全体攻撃のダメージが5%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 35,
+        "def": 15,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b012",
+      "name": "オンブラポンチョ",
+      "lineage": null,
+      "effects": "行動開始時、4%の確率でチャージフォトンが追加される",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 256,
+        "atk": 15,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b013",
+      "name": "メタリックネイル",
+      "lineage": null,
+      "effects": "覚醒ゲージ量が多いほど、防御力が上昇する（最大値6%）",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 55,
+        "atk": null,
+        "def": 42,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b014",
+      "name": "シアンフード",
+      "lineage": null,
+      "effects": "毎ターン終了時、 6%の確率で覚醒ゲージが+1される",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 256,
+        "atk": null,
+        "def": 15,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b015",
+      "name": "グレイシアボトル",
+      "lineage": "烈火",
+      "effects": "火ダメージが4%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 58,
+        "def": null,
+        "spd": 3
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_b016",
+      "name": "雷魂の火種",
+      "lineage": "烈火",
+      "effects": "覚醒ゲージ量が多いほど、攻撃力が上昇する（最大値6%）",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 58,
+        "def": null,
+        "spd": 3
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_b017",
+      "name": "紅蓮の塗料",
+      "lineage": "烈火",
+      "effects": "全体攻撃のダメージが8%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 69,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_b018",
+      "name": "桜花の法衣",
+      "lineage": "烈火",
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": 10,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_b019",
+      "name": "陽炎の法衣",
+      "lineage": "烈火",
+      "effects": "行動開始時、5%の確率でチャージフォトンが追加される",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": 10,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_b020",
+      "name": "水流の法衣",
+      "lineage": "烈火",
+      "effects": "毎ターン終了時、8%の確率で覚醒ゲージが+1される",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": null,
+        "spd": 3
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_b021",
+      "name": "クーリッシュカラー",
+      "lineage": "烈火",
+      "effects": "自身のHPが50%以下のとき、6%の確率でダメージを無効にする",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 21,
+        "def": null,
+        "spd": 12
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_b022",
+      "name": "ストラーナヘッド",
+      "lineage": "烈火",
+      "effects": "覚醒ゲージ量が多いほど、防御力が上昇する（最大値9%）",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 21,
+        "def": null,
+        "spd": 12
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_b023",
+      "name": "アルジャンスカル",
+      "lineage": "烈火",
+      "effects": "ステータス弱体耐性が13%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 21,
+        "def": null,
+        "spd": 12
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_b024",
+      "name": "フロイデ・ハット",
+      "lineage": "連鎖",
+      "effects": "フォトン使用時、チェイン中なら攻撃力が4%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 69,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_b025",
+      "name": "紅蓮の祭服",
+      "lineage": "連鎖",
+      "effects": "毎ターン終了時、HPが3%回復する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": 10,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_b026",
+      "name": "生命のチョーカー",
+      "lineage": "連鎖",
+      "effects": "フォトン使用時、チェイン中ならステータス弱体の命中率が8%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": null,
+        "spd": 17
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_b027",
+      "name": "紫雲の雷霆液",
+      "lineage": "轟雷",
+      "effects": "雷ダメージが4%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 69,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_b028",
+      "name": "ゴールドトラッシュ",
+      "lineage": "轟雷",
+      "effects": "全体攻撃のダメージが7%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": 10,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_b029",
+      "name": "深淵の黒髑髏",
+      "lineage": "轟雷",
+      "effects": "自身が発生させた帯電による、感電付与確率が8%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 21,
+        "def": null,
+        "spd": 12
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_b030",
+      "name": "螺旋の棘盾",
+      "lineage": "類型",
+      "effects": "戦闘中、徐々に防御力が上昇する（最大値15%）",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 101,
+        "atk": 14,
+        "def": 41,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_b031",
+      "name": "浅葱の鉄鏡",
+      "lineage": "類型",
+      "effects": "覚醒ゲージ量が多いほど、防御力が上昇する（最大値10%）",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 152,
+        "atk": 14,
+        "def": 34,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_b032",
+      "name": "冬暁ウッドパイ",
+      "lineage": "類型",
+      "effects": "毎ターン終了時、HPが3%回復する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 203,
+        "atk": 14,
+        "def": 27,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_b033",
+      "name": "レイマスク",
+      "lineage": "光芒",
+      "effects": "覚醒状態時、単体ダメージが5%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 152,
+        "atk": 64,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_b034",
+      "name": "ヴァーミリオン",
+      "lineage": "光芒",
+      "effects": "覚醒ゲージ量が多いほど、防御力が上昇する（最大10％）",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 203,
+        "atk": 34,
+        "def": 7,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_b035",
+      "name": "ボルテクスカル",
+      "lineage": "光芒",
+      "effects": "覚醒ゲージ量が多いほど、受けるダメージを軽減する（最大値5%）",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 254,
+        "atk": 27,
+        "def": 7,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_b036",
+      "name": "センチュリオン",
+      "lineage": "地裂",
+      "effects": "破断ダメージが8%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 51,
+        "atk": 62,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_b037",
+      "name": "穿孔ヘルメット",
+      "lineage": "地裂",
+      "effects": "列・全体ダメージが5%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 101,
+        "atk": 55,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_b038",
+      "name": "天元の腕輪",
+      "lineage": "地裂",
+      "effects": "戦闘中、徐々に防御力が上昇する（最大値13%）",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 101,
+        "atk": 41,
+        "def": null,
+        "spd": 3
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_b039",
+      "name": "ルベルプリムス",
+      "lineage": "烈火",
+      "effects": "列・全体ダメージが10%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 73,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_b040",
+      "name": "ロイヤルコート",
+      "lineage": "烈火",
+      "effects": "HPが5%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 537,
+        "atk": 13,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_b041",
+      "name": "スカルクエージョ",
+      "lineage": "烈火",
+      "effects": "自身のHPが50%以下のとき、7%の確率でダメージを無効にする",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 26,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_b042",
+      "name": "エトワールハット",
+      "lineage": "連鎖",
+      "effects": "フォトン使用時、チェイン中なら攻撃力が5%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 73,
+        "def": 13,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_b043",
+      "name": "ノーブルスーツ",
+      "lineage": "連鎖",
+      "effects": "毎ターン終了時、HPが4%回復する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 537,
+        "atk": 13,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_b044",
+      "name": "ピュアバングル",
+      "lineage": "連鎖",
+      "effects": "フォトン使用時、チェイン中ならステータス弱体の命中率が9%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": null,
+        "spd": 21
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_b045",
+      "name": "守護神の闘盾",
+      "lineage": "地裂",
+      "effects": "破断ダメージが9%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 73,
+        "def": 13,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_b046",
+      "name": "悠遠の探検帽",
+      "lineage": "地裂",
+      "effects": "列・全体ダメージが6%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 537,
+        "atk": 13,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_b047",
+      "name": "探求の掘削槌",
+      "lineage": "地裂",
+      "effects": "戦闘中、徐々に防御力が上昇する（最大値16%）",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 26,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_b048",
+      "name": "ジェイドマスク",
+      "lineage": null,
+      "effects": "HPが7%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 456,
+        "atk": null,
+        "def": 7,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b049",
+      "name": "グレースマント",
+      "lineage": null,
+      "effects": "HPが6%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 355,
+        "atk": null,
+        "def": 21,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b050",
+      "name": "大海原の心",
+      "lineage": null,
+      "effects": "HPが5%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 254,
+        "atk": null,
+        "def": 34,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b051",
+      "name": "氷床の晶剣",
+      "lineage": null,
+      "effects": "列・全体攻撃のダメージが8%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 62,
+        "def": 7,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b052",
+      "name": "グラキエース・ソル",
+      "lineage": null,
+      "effects": "列・全体攻撃のダメージが7%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 48,
+        "def": 21,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b053",
+      "name": "希望の指輪",
+      "lineage": null,
+      "effects": "列・全体攻撃のダメージが6%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 34,
+        "def": 34,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b054",
+      "name": "堅氷の大盾",
+      "lineage": null,
+      "effects": "防御力が8%上昇し、 素早さが5%減少する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": 10,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b055",
+      "name": "魔影のエストック",
+      "lineage": null,
+      "effects": "単体のダメージが6%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 62,
+        "def": 7,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b056",
+      "name": "艶麗チンクエディア",
+      "lineage": null,
+      "effects": "単体のダメージが5%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 48,
+        "def": 21,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b057",
+      "name": "明澄の首飾り",
+      "lineage": null,
+      "effects": "単体のダメージが4%上昇する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 34,
+        "def": 34,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b058",
+      "name": "スピネルホーン",
+      "lineage": null,
+      "effects": "覚醒ゲージ量が多いほど、攻撃力が上昇する（最大値6%）",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 256,
+        "atk": 10,
+        "def": 5,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_b059",
+      "name": "マキニスエンジン",
+      "lineage": null,
+      "effects": "毎ターン終了時、HPが3%回復する",
+      "styles": [
+        "バースト"
+      ],
+      "stats": {
+        "hp": 256,
+        "atk": null,
+        "def": null,
+        "spd": 4
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c001",
+      "name": "レッドサーチャー",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 28,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c002",
+      "name": "ミラーストーン",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 208,
+        "atk": null,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c003",
+      "name": "スウィートパウダー",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": 28,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c004",
+      "name": "プレミアムメタル",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 24,
+        "def": 4,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c005",
+      "name": "悪魔殺しの槌",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 177,
+        "atk": 4,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c006",
+      "name": "深緑の絞り汁",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 31,
+        "atk": null,
+        "def": 24,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c007",
+      "name": "グリーンスケイル",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 177,
+        "atk": null,
+        "def": 4,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c008",
+      "name": "ルーメンレンズ",
+      "lineage": null,
+      "effects": "攻撃を受けたとき、5%の確率で攻撃力1.2倍のダメージで反撃する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 50,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c009",
+      "name": "シルバーミラー",
+      "lineage": null,
+      "effects": "受けるダメージを3%軽減する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 256,
+        "atk": null,
+        "def": 15,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c010",
+      "name": "ビーンズペースト",
+      "lineage": null,
+      "effects": "毎ターン終了時、HPが2%回復する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": null,
+        "def": 35,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c011",
+      "name": "極銀の片眼鏡",
+      "lineage": null,
+      "effects": "状態異常命中率が3%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 35,
+        "def": 15,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c012",
+      "name": "破魔の盾",
+      "lineage": null,
+      "effects": "3%の確率でダメージを無効にする",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 256,
+        "atk": 15,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c013",
+      "name": "若草のケーキ",
+      "lineage": null,
+      "effects": "自身が与える回復量が3%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 55,
+        "atk": null,
+        "def": 42,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c014",
+      "name": "毒除けの盾",
+      "lineage": null,
+      "effects": "5%の確率で、味方への単体攻撃を受け持つ",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 256,
+        "atk": null,
+        "def": 15,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c015",
+      "name": "ハンターゴーグル",
+      "lineage": "剛堅",
+      "effects": "攻撃を受けたとき、8%の確率で攻撃力1.2倍のダメージで反撃する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 69,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_c016",
+      "name": "紅のプロトポロス",
+      "lineage": "剛堅",
+      "effects": "状態異常命中率が4%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 58,
+        "def": 10,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_c017",
+      "name": "蒼のエピファネイア",
+      "lineage": "剛堅",
+      "effects": "ステータス弱体の命中率が4%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 58,
+        "def": 10,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_c018",
+      "name": "極光の金鏡",
+      "lineage": "剛堅",
+      "effects": "受けるダメージを4%軽減する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": 10,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_c019",
+      "name": "神罰の重盾",
+      "lineage": "剛堅",
+      "effects": "4%の確率でダメージを無効にする",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": 10,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_c020",
+      "name": "断罪の重盾",
+      "lineage": "剛堅",
+      "effects": "6%の確率で、味方への単体攻撃を受け持つ",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": 10,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_c021",
+      "name": "紫芋のケーキ",
+      "lineage": "剛堅",
+      "effects": "毎ターン終了時、 HPが3%回復する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 152,
+        "atk": null,
+        "def": null,
+        "spd": 12
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_c022",
+      "name": "カフェモカロール",
+      "lineage": "剛堅",
+      "effects": "自身が与える回復量が5%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 76,
+        "atk": null,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_c023",
+      "name": "マグワートロール",
+      "lineage": "剛堅",
+      "effects": "全ての状態異常への耐性が8%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 76,
+        "atk": null,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_c024",
+      "name": "シトロンの塗料",
+      "lineage": "轟雷",
+      "effects": "雷ダメージが4%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 69,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_c025",
+      "name": "スリリングトリック",
+      "lineage": "轟雷",
+      "effects": "3%の確率で、敵に雷ダメージで反撃する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": 10,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_c026",
+      "name": "プランダー・スカル",
+      "lineage": "轟雷",
+      "effects": "自身が発生させた帯電による、感電付与確率が8%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 21,
+        "def": null,
+        "spd": 12
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_c027",
+      "name": "雄々しき勇姿",
+      "lineage": "廻天",
+      "effects": "戦闘不能を蘇生するとき、HP割合量が10%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": 10,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_c028",
+      "name": "霊験なる盃",
+      "lineage": "廻天",
+      "effects": "全ての状態異常への耐性が8%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": 48,
+        "spd": 5
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_c029",
+      "name": "蠱惑の肉球",
+      "lineage": "廻天",
+      "effects": "自身が与える回復量が5%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 48,
+        "def": 21,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_c030",
+      "name": "逆境の蛮角",
+      "lineage": "狂勇",
+      "effects": "自身のHPが50%以下のとき、攻撃力が5%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 152,
+        "atk": 48,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_c031",
+      "name": "血潮の頑強",
+      "lineage": "狂勇",
+      "effects": "防御力が6%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 355,
+        "atk": 10,
+        "def": 10,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_c032",
+      "name": "穿孔の首飾り",
+      "lineage": "狂勇",
+      "effects": "攻撃時、敵の防御力を1%無視する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 152,
+        "atk": null,
+        "def": null,
+        "spd": 12
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_c033",
+      "name": "マスタリーハット",
+      "lineage": "剛堅",
+      "effects": "攻撃を受けたとき、9%の確率で攻撃力1.2倍のダメージで反撃する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 73,
+        "def": 13,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_c034",
+      "name": "審判の鏡盾",
+      "lineage": "剛堅",
+      "effects": "5%の確率でダメージを無効にする",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 537,
+        "atk": null,
+        "def": 13,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_c035",
+      "name": "レインボーロール",
+      "lineage": "剛堅",
+      "effects": "全ての状態異常への耐性が10%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": null,
+        "spd": 21
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_c036",
+      "name": "安らぎを齎す聖女",
+      "lineage": "廻天",
+      "effects": "戦闘不能を蘇生するとき、HP割合量が11%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 73,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_c037",
+      "name": "秘水オードヴィ",
+      "lineage": "廻天",
+      "effects": "全ての状態異常への耐性が10%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 442,
+        "atk": null,
+        "def": 26,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_c038",
+      "name": "抱擁の肉球",
+      "lineage": "廻天",
+      "effects": "自身が与える回復量が6%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 190,
+        "atk": null,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_c039",
+      "name": "絶淵の赤蛮角",
+      "lineage": "狂勇",
+      "effects": "自身のHPが50%以下のとき、攻撃力が6%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 73,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_c040",
+      "name": "怒気衝天の盾",
+      "lineage": "狂勇",
+      "effects": "防御力が7％上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 537,
+        "atk": 13,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_c041",
+      "name": "スカルローグ",
+      "lineage": "狂勇",
+      "effects": "攻撃時、敵の防御力を4%無視する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 26,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_c042",
+      "name": "アピロマスカレード",
+      "lineage": null,
+      "effects": "HPが7%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 456,
+        "atk": null,
+        "def": 7,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c043",
+      "name": "信者のマント",
+      "lineage": null,
+      "effects": "HPが6%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 355,
+        "atk": null,
+        "def": 21,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c044",
+      "name": "ペリドットウィング",
+      "lineage": null,
+      "effects": "HPが5%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 254,
+        "atk": null,
+        "def": 34,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c045",
+      "name": "薄桜の晶剣",
+      "lineage": null,
+      "effects": "列・全体攻撃のダメージが8%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 62,
+        "def": 7,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c046",
+      "name": "ソール・エッジ",
+      "lineage": null,
+      "effects": "列・全体攻撃のダメージが7%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 48,
+        "def": 21,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c047",
+      "name": "慈しみの指輪",
+      "lineage": null,
+      "effects": "列・全体攻撃のダメージが6%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 34,
+        "def": 34,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c048",
+      "name": "紅蓮の大盾",
+      "lineage": null,
+      "effects": "防御力が8%上昇し、 素早さが5%減少する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": 10,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c049",
+      "name": "名剣マクシミリアン",
+      "lineage": null,
+      "effects": "単体のダメージが6%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 62,
+        "def": 7,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c050",
+      "name": "施しのバゼラード",
+      "lineage": null,
+      "effects": "単体のダメージが5%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 48,
+        "def": 21,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c051",
+      "name": "妖光の首飾り",
+      "lineage": null,
+      "effects": "単体のダメージが4%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 34,
+        "def": 34,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c052",
+      "name": "冥界ノ栞",
+      "lineage": null,
+      "effects": "自身のHPが50%以下のとき、 毎ターン終了時、HPが4%回復する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 15,
+        "def": 35,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c053",
+      "name": "信念のカンテラ",
+      "lineage": null,
+      "effects": "4%の確率でダメージを無効にする",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": 40,
+        "spd": 2
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_c054",
+      "name": "残留の半面",
+      "lineage": null,
+      "effects": "蘇生されたとき、攻撃力が5%上昇する",
+      "styles": [
+        "カウンター"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 35,
+        "def": 15,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m001",
+      "name": "蒼霊水の水時計",
+      "lineage": "水心",
+      "effects": "ハイドロボムを付与したとき、HPを5%回復する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": null,
+        "spd": 3
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_m002",
+      "name": "修羅の仮面",
+      "lineage": "水心",
+      "effects": "ハイドロボムのダメージが3%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 152,
+        "atk": null,
+        "def": 48,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_m003",
+      "name": "紺碧の魔塔ドーム",
+      "lineage": "水心",
+      "effects": "ハイドロボムの命中率が5%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 48,
+        "def": 21,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_m004",
+      "name": "ブックフォーソウル",
+      "lineage": "回生",
+      "effects": "HPが5%上昇する",
+      "styles": [
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 55,
+        "def": 14,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_m005",
+      "name": "スウェルゴブレット",
+      "lineage": "回生",
+      "effects": "毎ターン終了時、HPが4%回復する",
+      "styles": [
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 355,
+        "atk": null,
+        "def": 21,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_m006",
+      "name": "目眩ましのランタン",
+      "lineage": "回生",
+      "effects": "全ての状態異常への耐性が8%上昇する",
+      "styles": [
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 254,
+        "atk": null,
+        "def": 34,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_m007",
+      "name": "ドリルバックラー",
+      "lineage": "類型",
+      "effects": "全快時、受けるダメージを6%軽減する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 304,
+        "atk": null,
+        "def": 27,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_m008",
+      "name": "託宣の鏡",
+      "lineage": "類型",
+      "effects": "自身のHPが50%以下のとき、8%の確率でダメージを無効にする",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 254,
+        "atk": null,
+        "def": 34,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_m009",
+      "name": "スプリングバウム",
+      "lineage": "類型",
+      "effects": "ステータス弱体耐性が13%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 203,
+        "atk": null,
+        "def": 41,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_m010",
+      "name": "紅藍モノクル",
+      "lineage": "寄生",
+      "effects": "ステータス弱体の命中率が4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 64,
+        "def": 27,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_m011",
+      "name": "フォトン焼けの紙束",
+      "lineage": "寄生",
+      "effects": "素早さが6%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 355,
+        "atk": null,
+        "def": 21,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_m012",
+      "name": "明けの方位指針",
+      "lineage": "寄生",
+      "effects": "HPが3%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 254,
+        "atk": 21,
+        "def": 14,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_m013",
+      "name": "激情のアロマ",
+      "lineage": "轟雷",
+      "effects": "雷ダメージが5%上昇する",
+      "styles": [
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 73,
+        "def": 13,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_m014",
+      "name": "天の占星具",
+      "lineage": "轟雷",
+      "effects": "全体ダメージが8%上昇する",
+      "styles": [
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 537,
+        "atk": null,
+        "def": 13,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_m015",
+      "name": "クォーツスカル",
+      "lineage": "轟雷",
+      "effects": "自身が発生させた帯電による、感電付与確率が9%上昇する",
+      "styles": [
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 26,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_m016",
+      "name": "碧深海の水時計",
+      "lineage": "水心",
+      "effects": "ハイドロボムを付与したとき、HPを6%回復する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 73,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_m017",
+      "name": "慈愛と安寧の香炉",
+      "lineage": "水心",
+      "effects": "ハイドロボムのダメージが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 442,
+        "atk": null,
+        "def": 26,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_m018",
+      "name": "群青の蒼薔薇ドーム",
+      "lineage": "水心",
+      "effects": "ハイドロボムの命中率が10%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 190,
+        "atk": null,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_m019",
+      "name": "智喰の魔導本",
+      "lineage": "回生",
+      "effects": "HPが6%上昇する",
+      "styles": [
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 73,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_m020",
+      "name": "サージオブライフ",
+      "lineage": "回生",
+      "effects": "毎ターン終了時、HPが5%回復する",
+      "styles": [
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 537,
+        "atk": 13,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_m021",
+      "name": "夢心地のランタン",
+      "lineage": "回生",
+      "effects": "全ての状態異常への耐性が10%上昇する",
+      "styles": [
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 26,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_m022",
+      "name": "セインツシールド",
+      "lineage": "類型",
+      "effects": "全快時、受けるダメージを7%軽減する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 73,
+        "def": 13,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_m023",
+      "name": "敬虔なる聖白鏡",
+      "lineage": "類型",
+      "effects": "与えたダメージの5%を吸収する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 537,
+        "atk": 13,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_m024",
+      "name": "クラウンハニー",
+      "lineage": "類型",
+      "effects": "毎ターン終了時、HPが4%回復する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 26,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_m025",
+      "name": "ルミナスマスク",
+      "lineage": "光芒",
+      "effects": "覚醒状態時、攻撃力が5%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 73,
+        "def": 13,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_m026",
+      "name": "秘薬エリクシル",
+      "lineage": "光芒",
+      "effects": "与えたダメージの5%を吸収する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 537,
+        "atk": null,
+        "def": 13,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_m027",
+      "name": "煌煌の骸骨水晶",
+      "lineage": "光芒",
+      "effects": "覚醒ゲージ量が多いほど、受けるダメージを軽減する（最大値6%）",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": null,
+        "spd": 21
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_m028",
+      "name": "フロンティアアイ",
+      "lineage": "寄生",
+      "effects": "ステータス弱体の命中率が5%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 73,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_m029",
+      "name": "探求と研鑽の道導",
+      "lineage": "寄生",
+      "effects": "素早さが7%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 442,
+        "atk": null,
+        "def": 26,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_m030",
+      "name": "宵の方位指針",
+      "lineage": "寄生",
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": null,
+        "spd": 21
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_m031",
+      "name": "スウィートポップ",
+      "lineage": null,
+      "effects": "「カカオの森の黒い犬」のクエストでのみHPが10%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": 28,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m032",
+      "name": "ハブ・ア・バイト",
+      "lineage": null,
+      "effects": "「カカオの森の黒い犬」のクエストでのみ攻撃力が100%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 15,
+        "def": 35,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m033",
+      "name": "プチボヌール",
+      "lineage": null,
+      "effects": "「カカオの森の黒い犬」のクエストでのみHPが100%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": null,
+        "def": 35,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m034",
+      "name": "プレシャスタイム",
+      "lineage": null,
+      "effects": "毎ターン終了時、HPが3%回復する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 51,
+        "atk": 48,
+        "def": 7,
+        "spd": 2
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m035",
+      "name": "蒼星のループタイ",
+      "lineage": null,
+      "effects": "HPが9%上昇し、素早さが5%減少する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 406,
+        "atk": null,
+        "def": 14,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m036",
+      "name": "蒼星のブレスレット",
+      "lineage": null,
+      "effects": "HPが8%上昇し、素早さが5%減少する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 355,
+        "atk": null,
+        "def": 21,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m037",
+      "name": "蒼星のブローチ",
+      "lineage": null,
+      "effects": "HPが7%上昇し、素早さが5%減少する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 304,
+        "atk": null,
+        "def": 27,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m038",
+      "name": "フラワーパレード",
+      "lineage": null,
+      "effects": "全ての状態異常への耐性が8%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 355,
+        "atk": null,
+        "def": null,
+        "spd": 5
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m039",
+      "name": "ダッソーの守る心",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": null,
+        "def": 25,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m040",
+      "name": "ボロボロスの誓い",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": 25,
+        "def": null,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m041",
+      "name": "レプレの宝物",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 219,
+        "atk": 10,
+        "def": 10,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m042",
+      "name": "メージンの賛辞",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 20,
+        "def": 20,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m043",
+      "name": "グローマの匠の技",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": null,
+        "def": 25,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m044",
+      "name": "シンデルの遺志",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": 25,
+        "def": null,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m045",
+      "name": "ケノックスの挑戦状",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 219,
+        "atk": 10,
+        "def": 10,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m046",
+      "name": "夢の妖精の贈り物",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 20,
+        "def": 20,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m047",
+      "name": "フェスティンの謝状",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": null,
+        "def": 25,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m048",
+      "name": "オバンバのグラス",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": 25,
+        "def": null,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m049",
+      "name": "モフからの感謝の印",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 219,
+        "atk": 10,
+        "def": 10,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m050",
+      "name": "シバの表彰状",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 20,
+        "def": 20,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m051",
+      "name": "クジョコの羽根",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": null,
+        "def": 25,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m052",
+      "name": "エンシュッツの台本",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": 25,
+        "def": null,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m053",
+      "name": "ヴィアベルの首飾り",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 219,
+        "atk": 10,
+        "def": 10,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m054",
+      "name": "サンダさんの帽子",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 20,
+        "def": 20,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m055",
+      "name": "小さな記念メダル",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": null,
+        "def": 25,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m056",
+      "name": "思い出の瓦礫片",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": 25,
+        "def": null,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m057",
+      "name": "遺跡の残留物",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 219,
+        "atk": 10,
+        "def": 10,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m058",
+      "name": "王女の感謝状",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 20,
+        "def": 20,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m059",
+      "name": "不良たちの贈り物",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 25,
+        "def": 25,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m060",
+      "name": "獣討伐の記録",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": null,
+        "def": 25,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m061",
+      "name": "縁と屑の刻目",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": 25,
+        "def": null,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m062",
+      "name": "ツケの酒瓶",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": 25,
+        "def": null,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m063",
+      "name": "兄貴の伝説譚",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 25,
+        "def": 25,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m064",
+      "name": "流浪看護師のカルテ",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 219,
+        "atk": 10,
+        "def": 10,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m065",
+      "name": "心配な日のごちそう",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 20,
+        "def": 20,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m066",
+      "name": "どこでも快眠術",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": null,
+        "def": 25,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m067",
+      "name": "刑執行申請書",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": 25,
+        "def": null,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m068",
+      "name": "魔法少女の物語",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 219,
+        "atk": 10,
+        "def": 10,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m069",
+      "name": "元お頭の紹介状",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 20,
+        "def": 20,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m070",
+      "name": "話術に付する血統",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 25,
+        "def": 25,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m071",
+      "name": "フリアエの書簡",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": null,
+        "def": 25,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m072",
+      "name": "無罪証明書",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": 25,
+        "def": null,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m073",
+      "name": "拷問いろは",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 183,
+        "atk": 25,
+        "def": null,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m074",
+      "name": "王都への文",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 25,
+        "def": 25,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m075",
+      "name": "サーカス演目リスト",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 219,
+        "atk": 10,
+        "def": 10,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_m076",
+      "name": "名誉ハルマ証明書",
+      "lineage": null,
+      "effects": "HPが4%上昇する",
+      "styles": [
+        "ラッシュ",
+        "カウンター",
+        "バースト"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 20,
+        "def": 20,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r001",
+      "name": "コールドエッジ",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 28,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r002",
+      "name": "雨乞いの願糸",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 208,
+        "atk": null,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r003",
+      "name": "アルジェントパール",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": 28,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r004",
+      "name": "魔蛇の彫像",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 24,
+        "def": 4,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r005",
+      "name": "ベルデエトワール",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 177,
+        "atk": 4,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r006",
+      "name": "デビルズリング",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 31,
+        "atk": null,
+        "def": 24,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r007",
+      "name": "マリスコスジェム",
+      "lineage": null,
+      "effects": null,
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 177,
+        "atk": null,
+        "def": 4,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r008",
+      "name": "ゴシックダガー",
+      "lineage": null,
+      "effects": "攻撃時、敵の防御力を2%無視する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 50,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r009",
+      "name": "スカイブルーファン",
+      "lineage": null,
+      "effects": "与えたダメージの3%を吸収する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 366,
+        "atk": null,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r010",
+      "name": "ハートブローチ",
+      "lineage": null,
+      "effects": "攻撃時、Lv×1の固定追加ダメージを付与する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": 50,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r011",
+      "name": "アルターエッジ",
+      "lineage": null,
+      "effects": "単体ダメージが3%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 42,
+        "def": 7,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r012",
+      "name": "繁栄のフェイス",
+      "lineage": null,
+      "effects": "致死ダメージを受けたとき、3%の確率で踏みとどまる",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 256,
+        "atk": 15,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r013",
+      "name": "アムールリング",
+      "lineage": null,
+      "effects": "行動開始時、4%の確率でスキルフォトンが追加される",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 55,
+        "atk": null,
+        "def": 42,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r014",
+      "name": "エベーヌフェイス",
+      "lineage": null,
+      "effects": "素早さが5%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 256,
+        "atk": null,
+        "def": 15,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r015",
+      "name": "金のアマルティア",
+      "lineage": "猛撃",
+      "effects": "攻撃時、敵の防御力を3%無視する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 48,
+        "def": null,
+        "spd": 5
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_r016",
+      "name": "銀のティモリア",
+      "lineage": "猛撃",
+      "effects": "単体ダメージが4%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 48,
+        "def": null,
+        "spd": 5
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_r017",
+      "name": "ヴェリタスの彫像",
+      "lineage": "猛撃",
+      "effects": "連続ダメージが4%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 48,
+        "def": null,
+        "spd": 5
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_r018",
+      "name": "情熱のパトス",
+      "lineage": "猛撃",
+      "effects": "与えたダメージの4%を吸収する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": null,
+        "spd": 3
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_r019",
+      "name": "金色のエトス",
+      "lineage": "猛撃",
+      "effects": "致死ダメージを受けたとき、4%の確率で踏みとどまる",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": null,
+        "spd": 3
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_r020",
+      "name": "漆黒のロゴス",
+      "lineage": "猛撃",
+      "effects": "素早さが6%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": null,
+        "spd": 3
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_r021",
+      "name": "レディアントパール",
+      "lineage": "猛撃",
+      "effects": "攻撃時、Lv×1の固定追加ダメージを付与する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": 55,
+        "spd": 3
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_r022",
+      "name": "桃真珠の首輪",
+      "lineage": "猛撃",
+      "effects": "行動開始時、5%の確率でアタックフォトンが追加される",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 152,
+        "atk": null,
+        "def": null,
+        "spd": 12
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_r023",
+      "name": "トレラントリング",
+      "lineage": "猛撃",
+      "effects": "行動開始時、5%の確率でスキルフォトンが追加される",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 152,
+        "atk": null,
+        "def": null,
+        "spd": 12
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_r024",
+      "name": "紺碧の清浄液",
+      "lineage": "一心",
+      "effects": "自身の点穴の値が高いほど、毎ターン終了時、HPが回復する（最大5%）",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 69,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_r025",
+      "name": "黄金色の羽扇子",
+      "lineage": "一心",
+      "effects": "点穴によってダメージを与えた際、与えたダメージの1%を吸収する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": 10,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_r026",
+      "name": "歓喜の雫",
+      "lineage": "一心",
+      "effects": "自身の点穴の値が高いほど、防御力が上昇する（最大10%）",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 76,
+        "atk": null,
+        "def": 10,
+        "spd": 12
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_r027",
+      "name": "撃手の鉄兜",
+      "lineage": "滅丸",
+      "effects": "単体ダメージが4%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 152,
+        "atk": 48,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_r028",
+      "name": "銃歩兵の鎧",
+      "lineage": "滅丸",
+      "effects": "与えたダメージの4%を吸収する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 34,
+        "def": 34,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_r029",
+      "name": "ラメールの筒",
+      "lineage": "滅丸",
+      "effects": "行動開始時、5%の確率でスキルフォトンが追加される",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 101,
+        "atk": null,
+        "def": 55,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_r030",
+      "name": "一角の棘皮盾",
+      "lineage": "類型",
+      "effects": "攻撃時、敵の防御力を3%無視する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 203,
+        "atk": 41,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_r031",
+      "name": "紫色の結晶鏡",
+      "lineage": "類型",
+      "effects": "与えたダメージの4%を吸収する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 254,
+        "atk": 34,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_r032",
+      "name": "秋色ウッドパイ",
+      "lineage": "類型",
+      "effects": "行動開始時、5%の確率でアタックフォトンが追加される",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 304,
+        "atk": 27,
+        "def": null,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_r033",
+      "name": "フォーカスマスク",
+      "lineage": "光芒",
+      "effects": "覚醒状態時、攻撃力が4%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 64,
+        "def": null,
+        "spd": 2
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_r034",
+      "name": "ピュア・ゴブレット",
+      "lineage": "光芒",
+      "effects": "与えたダメージの4%を吸収する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 55,
+        "def": null,
+        "spd": 3
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_r035",
+      "name": "ネオンスカル",
+      "lineage": "光芒",
+      "effects": "素早さが5%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": null,
+        "def": null,
+        "spd": 17
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_r036",
+      "name": "ブレイブヘルム",
+      "lineage": "勇将",
+      "effects": "6％の確率でダメージを無効にする",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 48,
+        "def": null,
+        "spd": 5
+      },
+      "size": "大",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_r037",
+      "name": "闘剣レヴェイル",
+      "lineage": "勇将",
+      "effects": "単体ダメージが3％上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 41,
+        "def": null,
+        "spd": 7
+      },
+      "size": "中",
+      "lineagePoints": 10
+    },
+    {
+      "id": "reishou_r038",
+      "name": "勝鬨の盃",
+      "lineage": "勇将",
+      "effects": "受けるダメージを3％軽減する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 101,
+        "atk": 34,
+        "def": null,
+        "spd": 5
+      },
+      "size": "小",
+      "lineagePoints": 5
+    },
+    {
+      "id": "reishou_r039",
+      "name": "聖銀のベネディクト",
+      "lineage": "猛撃",
+      "effects": "攻撃時、敵の防御力を4%無視する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 190,
+        "atk": 60,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_r040",
+      "name": "絢爛のアルカナ",
+      "lineage": "猛撃",
+      "effects": "素早さが7%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 442,
+        "atk": null,
+        "def": 26,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_r041",
+      "name": "ドリーマーリング",
+      "lineage": "猛撃",
+      "effects": "行動開始時、6%の確率でスキルフォトンが追加される",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 190,
+        "atk": null,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_r042",
+      "name": "陽光の龍香",
+      "lineage": "一心",
+      "effects": "自身の点穴の値が高いほど、毎ターン終了時、HPが回復する（最大6%）",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 73,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_r043",
+      "name": "豪華絢爛の鉄扇",
+      "lineage": "一心",
+      "effects": "点穴によってダメージを与えた際、与えたダメージの2%を吸収する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 442,
+        "atk": null,
+        "def": 26,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_r044",
+      "name": "トリロジーロール",
+      "lineage": "一心",
+      "effects": "自身の点穴の値が高いほど、防御力が上昇する（最大11%）",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 190,
+        "atk": null,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_r045",
+      "name": "フォーカスオン",
+      "lineage": "滅丸",
+      "effects": "単体ダメージが5%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 73,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_r046",
+      "name": "対極地戦防護服",
+      "lineage": "滅丸",
+      "effects": "与えたダメージの5%を吸収する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 442,
+        "atk": null,
+        "def": 26,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_r047",
+      "name": "戦火の大勲章",
+      "lineage": "滅丸",
+      "effects": "行動開始時、6%の確率でスキルフォトンが追加される",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 26,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_r048",
+      "name": "栄光の金兜",
+      "lineage": "勇将",
+      "effects": "7%の確率でダメージを無効にする",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 73,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": 25
+    },
+    {
+      "id": "reishou_r049",
+      "name": "名誉の結晶剣",
+      "lineage": "勇将",
+      "effects": "単体ダメージが4%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 537,
+        "atk": 13,
+        "def": null,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": 20
+    },
+    {
+      "id": "reishou_r050",
+      "name": "昔日の盃",
+      "lineage": "勇将",
+      "effects": "受けるダメージを4%軽減する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 26,
+        "def": null,
+        "spd": 15
+      },
+      "size": "小",
+      "lineagePoints": 15
+    },
+    {
+      "id": "reishou_r051",
+      "name": "深甚のマスク",
+      "lineage": null,
+      "effects": "HPが7%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 456,
+        "atk": null,
+        "def": 7,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r052",
+      "name": "ノーブルマント",
+      "lineage": null,
+      "effects": "HPが6%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 355,
+        "atk": null,
+        "def": 21,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r053",
+      "name": "バーミリオンハート",
+      "lineage": null,
+      "effects": "HPが5%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 254,
+        "atk": null,
+        "def": 34,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r054",
+      "name": "紫檀の晶剣",
+      "lineage": null,
+      "effects": "列・全体攻撃のダメージが8%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 62,
+        "def": 7,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r055",
+      "name": "ブレードコサージュ",
+      "lineage": null,
+      "effects": "列・全体攻撃のダメージが7%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 48,
+        "def": 21,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r056",
+      "name": "誇りの指輪",
+      "lineage": null,
+      "effects": "列・全体攻撃のダメージが6%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 34,
+        "def": 34,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r057",
+      "name": "霹靂の大盾",
+      "lineage": null,
+      "effects": "防御力が8%上昇し、 素早さが5%減少する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 431,
+        "atk": null,
+        "def": 10,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r058",
+      "name": "レアメタルサーベル",
+      "lineage": null,
+      "effects": "単体のダメージが6%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 62,
+        "def": 7,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r059",
+      "name": "見せしめのプギオ",
+      "lineage": null,
+      "effects": "単体のダメージが5%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 48,
+        "def": 21,
+        "spd": null
+      },
+      "size": "中",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r060",
+      "name": "晦冥の首飾り",
+      "lineage": null,
+      "effects": "単体のダメージが4%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": null,
+        "atk": 34,
+        "def": 34,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r061",
+      "name": "アシストスープ",
+      "lineage": null,
+      "effects": "連続ダメージが5%上昇する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 35,
+        "def": null,
+        "spd": null
+      },
+      "size": "大",
+      "lineagePoints": null
+    },
+    {
+      "id": "reishou_r062",
+      "name": "改良型テツマリ",
+      "lineage": null,
+      "effects": "与えたダメージの4%を吸収する",
+      "styles": [
+        "ラッシュ"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": null,
+        "def": 35,
+        "spd": null
+      },
+      "size": "小",
+      "lineagePoints": null
+    }
+  ]
+}
